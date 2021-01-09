@@ -11,4 +11,4 @@ Sitios de referencia:
 - https://www.grid.com.ar/
 - https://www.chelsea.com.ar/
 
-Seleccionamos estos sitios ya que apuntan al mismo publico que nuestro proyecto, son visualmente atractivos, dinámicos y funcionales
+Seleccionamos estos sitios ya que apuntan al mismo publico que nuestro proyecto y ofrecen los mimsmos servicios. Ademas son visualmente atractivos, dinámicos y funcionales.
