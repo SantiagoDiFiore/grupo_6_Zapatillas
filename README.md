@@ -9,10 +9,11 @@ Buscamos desarrollar un site que sea funcional para los usuarios, con un diseño
 - **Santiago Di Fiore**: Tengo 23 años y soy de Buenos Aires. Vengo trabajando con programacion en otros lenguajes hace 2 años y comence el curso para afirmar mis conocimientos y darle un tono mas profesional. 
 
 ### **Sitios de referencia**
-- https://www.adidas.com.ar/
-- https://www.dafiti.com.ar/
+
 - https://www.moovbydexter.com.ar/home
+- https://www.dafiti.com.ar/
 - https://www.grid.com.ar/
+- https://www.adidas.com.ar/
 - https://www.chelsea.com.ar/
 
 Seleccionamos estos sitios ya que apuntan al mismo público que nuestro proyecto y ofrecen servicios similares. Ademas son visualmente atractivos, dinámicos y funcionales.
