@@ -17,3 +17,6 @@ Buscamos desarrollar un site que sea funcional para los usuarios, con un diseño
 - https://www.chelsea.com.ar/
 
 Seleccionamos estos sitios ya que apuntan al mismo público que nuestro proyecto y ofrecen servicios similares. Ademas son visualmente atractivos, dinámicos y funcionales.
+
+### **- Sprint N°1/Notas**
+Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del logo, los cuales continuaremos desarrollando y puliendo.
