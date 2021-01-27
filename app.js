@@ -10,18 +10,20 @@ app.listen(3000, ()=>{
     console.log("servidor corriendo en puerto 3000");
 });
 
-app.get("/" , (req,res)=>{
-    res.sendFile(path.resolve("./views/index.html"))
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname , "/views/index.html"));
 });
-app.get("/views/productCart" , (req,res)=>{
-    res.sendFile(path.resolve("./views/productCart.html"))
+
+app.get('/productCart', (req, res) => {
+    res.sendFile(path.join(__dirname , "/views/productCart.html"));
 });
-app.get("/views/productDetail" , (req,res)=>{
-    res.sendFile(path.resolve("./views/productDetail.html"))
+app.get("/productDetail" , (req,res)=>{
+    res.sendFile(path.join(__dirname , "/views/productDetail.html"))
 });
-app.get("/views/login" , (req,res)=>{
-    res.sendFile(path.resolve("./views/login.html"))
+app.get("/login" , (req,res)=>{
+    res.sendFile(path.join(__dirname , "/views/login.html"))
 });
-app.get("/views/register" , (req,res)=>{
-    res.sendFile(path.resolve("./views/register.html"))
+app.get("/register" , (req,res)=>{
+    res.sendFile(path.join(__dirname , "/views/register.html"))
 });
