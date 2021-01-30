@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+
+.main-header{
+    background-color:#f2e4bb ;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.header-top-bar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.home{
+    width: 30%;
+}
+.logo{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.icons-section{
+    width: 30%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.icons-section i{
+    padding: 0px 5px;
+    color:black;
+    font-size: 18px;
+   
+}
+
+.search-form{
+    display: flex;
+    align-self: center;
+    width: 50%;
+    justify-content: center;
+}
+
+.campo-busqueda{
+    text-align: center;
+    font-size: 12px;
+    border: none;
+    font-family: roboto;
+    padding:8px;
+    width: 85%;
+}
+.search-button{
+    font-size: 12px;
+    border: none;
+    padding: 8px;
+    background-color: white;
+    width:15%;
+    
+}
+
+.contenedor-menu{
+    width: 30%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-desplegable{
+    font-size: 16px;
+    background-color:#d97f11;
+    padding: 5px;
+    border-radius: 5px;
+    width: 30px;
+    text-align: center;
+    color: white;
+    align-self: center;
+    margin-top: 10px;
+}
+
+
+.header-bottom-bar{
+    padding:5px;
+    margin-top: 10px; 
+    background-color:#f2e4bb ;
+    border-top: solid 1px #d97f11;
+    display: none;
+    
+}
+
+.header-bottom-bar ul{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    }
+.linknav{
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+    
+}
+
+
+
+/*paleta{
+azulverde: #2D5955;
+crema: #f2e4bb;
+naranja: #d97f11;
+marron:#40241e;
+bordó:#8c2e2e
+}*/
+
+@media (min-width:768px){
+.main-header{
+    padding:10px
+}
+.header-top-bar{
+    justify-content: space-around;
+}
+.header-bottom-bar{
+    display: block;
+}
+.contenedor-menu{
+    display: none;
+}
+
+.search-form{
+    width:50%;
+    order: 1;
+}
+.icons-section{
+    order:2;
+    width: 10%;
+}
+
+}

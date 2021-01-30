@@ -8,12 +8,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">   
+    <link rel="stylesheet" href="/css/styles-seba.css">   
 </head>
 <body>
-    <div>
-        <img src="/images/kicks.png" alt="logo kicks">
-    </div>
+    <header class="main-header">
+        <div class="header-top-bar">
+            <div class="contenedor-menu">
+                <i class="fas fa-bars menu-desplegable"></i>
+            </div>
+            <a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo"></a>
+            <div class="icons-section">
+               <a href="/login"><i class="fas fa-user"></i></a> 
+               <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>  
+                <a href="/"><i class="fas fa-share-alt-square"></i></a>
+            </div>
+            <form action="/productDetail" method="GET" class="search-form">
+                <input type="text" name="search" placeholder="¿Qué estás buscando?" class="campo-busqueda">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+        
+        <nav class="header-bottom-bar">
+            <ul>
+                <li><a href="#" class="linknav">HOMBRE</a></li>
+                <li><a href="#" class="linknav">MUJER</a></li>
+                <li><a href="#" class="linknav">NIÑO</a></li>
+                <li><a href="#" class="linknav">DEPORTES</a></li>
+                <li><a href="#" class="linknav">MARCAS</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+    
     
 </body>
 </html>
