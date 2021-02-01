@@ -14,7 +14,7 @@ body{
 }
 
 .main-header{
-    background-color:#f2e4bb ;
+    background-color: #000000 ;
     padding-top: 10px;
 }
 .header-top-bar{
@@ -42,7 +42,7 @@ body{
 }
 .icons-section i{
     padding: 0px 5px;
-    color:black;
+    color:#ffffff;
     font-size: 18px;
    
 }
@@ -140,14 +140,128 @@ h2 {
   }
   h2.linea span {
   
-    background: #fff;
+    background: #ffffff;
     padding: 0 15px;
   }
 
+.images{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+    
+}
+.marca_img{
+    width: 15%;
+    
+    
+}
+.icons-marca{
+    width: 100%;
+    align-self: center;
+    display: flex;
+}
+
+.icons-marca i{
+    padding: 0px 5px;
+    color:black;
+    font-size: 20px;
+    
+}
+
+.description{
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+}
+.price{
+    text-align: center;
+    
+}
+
+
+main section article img{
+    width: 90%;
+}
+
+
+.products{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+article{
+    width: 100%;
+    border: dotted 0.5px #D97F11;
+    margin-top: 10px;
+
+    
+}
+
+article.none{
+    display: none;
+}
+article.none1{
+    display: none;
+}
+
+main{
+    padding: 10px;
+}
+
+.main-article{
+    background-color: #f2e4bb;
+
+}
+
+.envios{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:#f2e4bb;
+    padding:10px;
+    width: 100%;
+}
+
+footer{
+    background-color: #000000;
+    color: white;
+}
+
+.linkfooter{
+    color: #666;
+    text-decoration: none;
+    font-size: 12px;
+    
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+div.italic {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
 
 
 
-@media(min-width: 361px){
+
+
+
+
+@media(min-width: 478px){
+    article{
+        width: 45%;
+    }
+    article.none{
+        display: block;
+    }
 }
 
 
@@ -174,9 +288,21 @@ h2 {
         order:2;
         width: 10%;
     }
-
     
+    article{
+        width: 22%;
     }
+    article.none1{
+        display: block;
+    }
+    }
+
+@media (min-width: 1200px){
+    article{
+        width: 22%;
+    }
+    
+}
 
 
  
