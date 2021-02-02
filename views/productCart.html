@@ -40,7 +40,146 @@
         </nav>
 
     </header>
+
+    <main>
+        <div class="encabezado-carrito">
+            <h2>MI CARRITO</h2>
+            <a href="/">ELEGIR MÁS PRODUCTOS</a>
+        </div>
+        <section class="elementos-carrito">
+            <div class="titulos">
+                <div class="titulo-producto-carrito">PRODUCTOS</div>
+                <div>PRECIOS</div>
+                <div>CANTIDAD</div>
+                <div>SUBTOTAL</div>
+            </div>
+            <article class="producto">
+                <img src="/images/new-balance3.png" alt="NEW BALANCE 997" class="miniatura">
+                <div class="modelo">NEW BALANCE 997 SPORT CHINESE NEW YEAR / TALLE 36</div>
+                <div class="precio">PRECIO $15.799</div>
+                <form action="/productCart" method="GET" class="form-cantidad">
+                    <label for="cantidad">u.</label>
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    </form>
+                    <div class="precio">TOTAL $15.799</div>
+                    <div class="eliminar">
+                        <i class="far fa-times-circle boton-eliminar"></i> 
+                    </div>
+            </article>
+            <article class="producto">
+                <img src="/images/vans1.png" alt="vans old skool" class="miniatura">
+                <div class="modelo">VANS OLD SKOOL BLACK WHITE / TALLE 40</div>
+                <div class="precio">PRECIO $11.200</div>
+                <form action="/productCart" method="GET" class="form-cantidad">
+                    <label for="cantidad">u.</label>
+                    <select name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    </form>
+                    <div class="precio">TOTAL $11.200</div>
+                    <div class="eliminar">
+                        <i class="far fa-times-circle boton-eliminar"></i> 
+                    </div>
+            </article>
+            <article class="finalizar-compra">
+                <form action="productCart" method="GET" class="finalizar-form">
+                    <label for="TOTAL">TOTAL $26.999</label>
+                    <button type="submit" class="boton-compra">FINALIZAR COMPRA</button>
+                </form>
+            </article>
+            <article class="medios">
+                <div class="envios"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!</div>
+                
+                <div class="medios-pago">
+                    <div class="titulo-medios">MEDIOS DE PAGO</div>
+                    <img src="images/medios-pago-varios.png" alt="pagoelectronico" class="imagen-pago">
+                    <img src="images/medios-pago-efectivo.jpg" alt="pagoefectivo" class="imagen-pago2">
+                </div>
+            </article>
+        </section>
+        <div class="titular-recomendados">
+            <hr>
+            <h2>RECOMENDADOS</h2>
+            <hr>
+        </div>
+        <section class="recomendados">
+            
+            <article class="recomendado-article a1">
+                <img src="/images/puma3.png" alt="PUMA FUTURE RIDER NES">
+                <div class="contenedor-descripcion">
+                    <div >PUMA FUTURE RIDER NES (2020)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio" >$ 22.000</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+            <article class="recomendado-article a2">
+                <img src="/images/adidas1.png" alt="ADIDAS OZWEEGO ORANGE (YOUTH)">
+                <div class="contenedor-descripcion">
+                    <div >ADIDAS OZWEEGO ORANGE (YOUTH)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio" >$ 21.700</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+            <article class="recomendado-article a3">
+                <img src="/images/nike3.png" alt="NIKE AIR MAX 90 INFRARED (2020)">
+                <div class="contenedor-descripcion">
+                    <div >NIKE AIR MAX 90 INFRARED (2020)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio" >$ 21.700</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+            <article class="recomendado-article a4">
+                <img src="/images/new-balance4.png" alt="NIKE AIR MAX 90 INFRARED (2020)">
+                <div class="contenedor-descripcion">
+                    <div >NIKE AIR MAX 90 INFRARED (2020)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio" >$ 21.700</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <ul class="nosotros">
+        <li><a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo-footer"></a></li>
+        <li><a href="#">Quiénes Somos</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Sucursales</a></li>
+        <li><a href="#">Formas de pago</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Políticas de cambios</a></li>  
+       </ul>
+           
+           
+       <div class="contacto">
+           <img src="/images/qr-kicks.png" alt="qr-contacto" class="qr">
+           <div>CONTACTANOS</div>
+        </div>
+       
+           <form action="/register" method="GET" class="form-suscripcion">
+               <label for="suscripcion">SUSCRIBITE</label>
+               <input type="email" name="email" id="suscripcion" placeholder="nombre@email.com">
+               <div class="redes">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-pinterest-square"></i>
+            </div>
+           </form>
+           
+       
+
+   </footer>
     
-    
-</body>
+    </body>
 </html>

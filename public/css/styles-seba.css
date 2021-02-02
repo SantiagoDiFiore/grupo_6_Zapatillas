@@ -10,6 +10,8 @@ body{
 }
 
 
+/*estilos header*/
+
 .main-header{
     background-color:#f2e4bb ;
     padding-top: 10px;
@@ -110,15 +112,282 @@ body{
     
 }
 
+/*estilos main*/
+.encabezado-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
 
+}
+.encabezado-carrito a{
+    font-size: 10px;
+    align-self: center;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.titulos{
+    display: none;
+}
+
+main{
+    padding: 10px;
+}
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 2px black;
+    margin-top: 10px;
+    padding: 5px;
+    
+}
+.miniatura{
+    width: 30%;
+}
+.modelo{
+    font-size: 12px;
+    width: 60%;
+    align-self: center;
+}
+.form-cantidad{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.precio{
+    font-size: 18px;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+.eliminar{
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    
+}
+.boton-eliminar{
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    font-size: 18px;
+       
+}
+.finalizar-compra{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 2px black;
+    margin-top: 10px;
+    padding: 5px;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.finalizar-form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.finalizar-form label{
+    padding:15px;
+    font-weight: bold;
+}
+.boton-compra{
+font-family: roboto;
+background-color:#d97f11;
+padding:0px 10px;
+border:none;
+border-radius: 5px;
+width: 140px;
+height: 40px;
+color: white;
+}
+.envios{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:#f2e4bb;
+    padding:10px;
+}
+.medios-pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.titulo-medios{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.imagen-pago{
+    width:137.5px;
+    align-self: center;
+}
+.imagen-pago2{
+    width:25%;
+}
+
+.titular-recomendados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+ 
+
+hr {
+    width: 20%;
+    align-self: center;
+    border-color:black;
+    border-width: 0,2px;
+}
+
+.recomendado-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    border: dotted 0.5px #d97f11;
+}
+.recomendado-article img{
+    width: 100%;
+}
+.contenedor-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f2e4bb;
+}
+.contenedor-descripcion div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-descripcion div.precio{
+    width: 80%;
+}
+.a2 , .a3 , .a4{
+    display: none;
+}
+
+/*footer*/
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f2e4bb;
+    margin-top: 20px;
+    padding:15px 10px;
+    
+}
+.nosotros{
+    width: 45%;
+    margin-bottom: 20px;;
+}
+.logo-footer{
+    width: 50%;
+}
+.compra-online{
+    width: 45%;
+    align-self: center;
+    padding-top: 5px;
+}
+footer ul{
+    list-style: none;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.contacto{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 45%;
+    
+
+}
+.contacto div{
+    
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 0px;
+}
+.redes{
+    text-align: center;
+    text-indent: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    width:100%;
+    margin-right:20px;
+   
+}
+
+.qr{
+    width:50%;
+    margin: auto;
+    margin-top: 10px;
+    
+}
 
 /*paleta{
 azulverde: #2D5955;
 crema: #f2e4bb;
 naranja: #d97f11;
 marron:#40241e;
-bordó:#8c2e2e
+bordó:#8c2e2e;
+
+● Tamaños Tipográficos
+Cuerpos de texto: 16px
+Titulares: 24px
+Precios: 18px
+Descuentos: 16px
+
 }*/
+
+
+
+
+
+
+/*Media querys*/
+
+@media (min-width:478px){
+hr{
+    width:25%;
+}
+.recomendados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.a1, .a2 , .a3, .a4{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+.a1, .a2 , .a3, .a4 div{
+    text-align: center;
+}
+.izarrow , .derarrow{
+    display: none;
+}
+
+}
+
+
 
 @media (min-width:768px){
 .main-header{
@@ -142,5 +411,53 @@ bordó:#8c2e2e
     order:2;
     width: 10%;
 }
+.titulos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top:15px;
+    margin-left:20px;
+    
+}
+.titulo-producto-carrito{
+    flex-grow: 0.5;
+}
+div.modelo{
+    width: 20%;
+}
+div.precio{
+    width:15%;
+    font-size:14px;
+    align-self: center;
+}
+.form-cantidad{
+    align-self: center;
+    width:18%;
+}
+div.eliminar{
+    width:100%
+}
+h2{
+    font-size: 28px;
+}
+.a1, .a2 , .a3, .a4{
+    width: 22%;
+    
+}
+.contacto , .nosotros{
+    width: 30%;
+}
+.form-suscripcion{
+    width: 30%;
+    align-self: center;
 
+}
+.redes{
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    width: 169px;
+    margin-left: 0px;
+
+}
 }
