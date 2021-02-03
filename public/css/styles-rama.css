@@ -440,6 +440,8 @@ div.italic {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
     }
     
     .izarrow , .derarrow{
@@ -580,6 +582,10 @@ div.italic {
         border-top: solid 1px #ffffff;
         padding-top: 7px ;
     }
+    .recomendados{
+        margin-left: 75px;
+        margin-right: 75px;
+    }  
     
 
     }
@@ -602,5 +608,9 @@ div.italic {
     .logo{
         width: 65%;
     }
-   
+    .recomendados{
+        margin-left: 100px;
+        margin-right: 100px;
+    }  
+    
 }
