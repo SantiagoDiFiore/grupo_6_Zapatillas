@@ -15,7 +15,11 @@
 <body>
 
     <header class="main-header">
+        <div class="arriba">
+            <h3>¡3 , 6 y 12 CUOTAS SIN INTERES!</h3>
+        </div>
         <div class="header-top-bar">
+
             <div class="contenedor-menu">
                 <i class="fas fa-bars menu-desplegable"></i>
             </div>
@@ -47,26 +51,29 @@
     </header>
 
     <section class="banner">
-        <img src="/images/banner-nike-airforce.jpg" alt="Banner de ofertas">
+        <img src="/images/banner-nike.jpg" alt="Banner de ofertas">
+        <img src="/images/banner-adidas-classic.jpg" alt="Banner de ofertas" class="none3">
     </section>
+    <div class="dots">
+        <i class="fas fa-ellipsis-h centrado"></i>
+    </div>
+
 
 
     <main>
         <section class="marcas">
             <div class="title">
-                <h2 class="linea"><span>MARCAS</span></h2>
+                <h2 class="linea"><span>COMPRÁ POR MARCA</span></h2>
             </div>
-            <div class="images">
+            <div class="images padding">
+                <i class="fas fa-chevron-left previous icons-marca"></i>
                 <img src="images/marca-nike.png" alt="Nike" class="marca_img">
                 <img src="images/marca-adidas.png" alt="Adidas" class="marca_img">
                 <img src="images/marca-puma.png" alt="Puma" class="marca_img">
-                <img src="images/marca-converse.png" alt="Converse" class="marca_img">
-                <img src="images/marca-vans.png" alt="Vans" class="marca_img">
-                <img src="images/marca-newbalance.png" alt="Newbalance" class="marca_img">
-            </div>
-            <div class="icons-marca">
-                <i class="fas fa-chevron-left previous"></i>
-                <i class="fas fa-chevron-right next"></i>
+                <img src="images/marca-converse.png" alt="Converse" class="marca_img none">
+                <img src="images/marca-vans.png" alt="Vans" class="marca_img none1">
+                <img src="images/marca-newbalance.png" alt="Newbalance" class="marca_img none1">
+                <i class="fas fa-chevron-right next icons-marca"></i>
             </div>
 
         </section>
@@ -75,49 +82,75 @@
             <div class="title">
                 <h2 class="linea"><span>DESTACADOS</span></h2>
             </div>
-            <div class="products">
-                <article>
-                    <img src="images/adidas1.png" alt="Adidas1" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">Adidas Ozweego Orange (Youth)</h4>
-                        <p class="price">$11.700</p>
-                    </div>
-                </article>
-                <article class="none">
+            <div class="recomendados padding">
+                <article class="recomendado-article a1">
                     <img src="images/nike1.png" alt="Nike1" class="product_img">
                     <div class="main-article">
                         <h4 class="description">Nike Air Max 95 OG Neon (2020)</h4>
                         <p class="price">$25.499</p>
                     </div>
+
                 </article>
-                <article class="none1">
+                <article class="recomendado-article a2 none">
+                    <img src="images/adidas1.png" alt="Adidas1" class="product_img">
+                    <div class="main-article">
+                        <h4 class="description">Adidas Ozweego Orange (Youth)</h4>
+                        <p class="price">$11.700</p>
+
+                    </div>
+                </article>
+                <article class="recomendado-article a3 none1">
                     <img src="images/puma1.png" alt="Puma1" class="product_img">
                     <div class="main-article">
                         <h4 class="description">Puma RS-X Toys Bonnie Blue (W)</h4>
                         <p class="price">$12.499</p>
+
                     </div>
                 </article>
-                <article class="none1">
+                <article class="recomendado-article a4 none1">
                     <img src="images/new-balance1.png" alt="Newbalance1" class="product_img">
                     <div class="main-article">
-                        <h4 class="description">Puma RS-X Toys Bonnie Blue (W)</h4>
-                        <p class="price">$12.499</p>
+                        <h4 class="description">New Balance 992 Grey (2020)</h4>
+                        <p class="price">$17.000</p>
                     </div>
                 </article>
+        </section>
+        <div class="dots1">
+            <i class="fas fa-ellipsis-h centrado"></i>
+        </div>
+
+        <div class="medios-pago">
+            <div class="titulo-medios">MEDIOS DE PAGO</div>
+            <img src="images/medios-pago-varios.png" alt="pagoelectronico" class="imagen-pago">
+            <img src="images/medios-pago-efectivo.jpg" alt="pagoefectivo" class="imagen-pago2">
+        </div>
 
 
+        <div class="envios padding">
+            <i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!
+        </div>
 
-                <div class="envios">
-                    <i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!
-                </div>
+        </div class="newsletter">
 
+        <form action="/" method="POST" class="newsletter">
+
+            <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
+            <div class="control-formulario">
+                <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
+                <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
+            </div>
+        </form>
+
+        </div>
     </main>
 
     <footer>
 
         <section>
-            <br />
-            <h4 class="titulo">INSTITUCIONAL</h4>
+            
+        <div class="main-footer">
+            <article class="footer-article">
+            <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none2"></i></h4>
             <div class="italic center gris-oscuro padding">
                 <ul class="footer">
                     <li><a href="#" class="linkfooter">Quienes somos</a></li>
@@ -125,10 +158,9 @@
                     <li><a href="#" class="linkfooter">Terminos y condiciones</a></li>
                 </ul>
             </div>
-
-            <br />
-    
-            <h4 class="titulo">AYUDA</h4>
+        </article>
+        <article class="footer-article">
+            <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none2"></i></h4>
             <div class="italic center gris-oscuro padding">
                 <ul class="footer">
                     <li><a href="#" class="linkfooter">Preguntas frecuentes</a></li>
@@ -138,21 +170,29 @@
                     <li><a href="#" class="linkfooter">Cambios</a></li>
                 </ul>
             </div>
-
-            <br />
-
-            <h4 class="titulo">CONTACTO</h4>
-            <div class="italic  ">
+        </article>
+        <article class="footer-article">
+            <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none2"></i></h4>
+            <div class="italic">
                 <ul class="footer">
-                    <li><a href="#" class="linkfooter">0800-888-8888</a></li>
-                    <li><a href="#" class="linkfooter">Lunes a Sábado de 9 a 18 hs</a></li>
-                    <li><a href="#" class="linkfooter"><i class="far fa-envelope"></i>Envianos un mensaje</a></li>
+                    <li><a href="" class="linkfooter">0800-888-8888</a></li>
+                    <li><a href="" class="linkfooter">Lunes a Sábado de 9 a 18 hs</a></li>
+                    <li><a href="#" class="linkfooter"><i class="far fa-envelope "></i>Envianos un mensaje</a></li>
                 </ul>
             </div>
+        </article>
+        </div>
 
             <br />
 
-            <p class="gris-oscuro font-size">Copyright © 2020 KICKS S.R.L.</p>
+            <div>
+                <p class="gris-oscuro font-size center1 ">Copyright © 2020 KICKS S.R.L.</p>
+                <div class="redes">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-whatsapp-square"></i>
+                </div>
+            </div>
         </section>
 
     </footer>
