@@ -312,7 +312,7 @@ div.italic {
     display: flex;
     justify-content: center;
     margin-bottom: 5px;
-    font-size: 25px;
+    font-size: 22px;
     font-family: sans-serif;
     padding-top: 15px;
 }
@@ -612,5 +612,8 @@ div.italic {
         margin-left: 100px;
         margin-right: 100px;
     }  
+    .imagen-pago,.imagen-pago2{
+        width: 13%;
+    }
     
 }
