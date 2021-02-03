@@ -8,10 +8,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles-rama.css">   
+    <link rel="stylesheet" href="/css/styles-seba.css">   
 </head>
 <body>
-    
     <header class="main-header">
         <div class="header-top-bar">
             <div class="contenedor-menu">
@@ -39,16 +38,84 @@
             </ul>
 
         </nav>
-
-        </header>
-
+    </header>
+    
     <main>
+        <h2 class="titulo-registro">REGISTRARME</h2>
+        <form action="/register" method="POST" class="register-form">
+         <div class="register-container"> 
+            <h3 class="datos-personales">DATOS PERSONALES</h3>
+            <div>
+            <input type="text" name="nombre" placeholder="NOMBRE" class="ingreso" required>
+            </div>
+            <div>
+            <input type="text" name="apellido" placeholder="APELLIDO" class="ingreso" required>
+            </div> 
+            <div>
+            <label for="fecha-nacimiento">FECHA DE NACIMIENTO</label>
+            <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="ingreso" required>
+            </div>
+            <div>
+            <label>GENERO</label>
+            </div>
+            <div class="genero">
+            <label for="masculino" class="label-sexo">MASCULINO</label>
+            <input type="radio" name="sexo" value="masculino" id="masculino" required>
+            <label for="femenino" class="label-sexo">FEMENINO</label>
+            <input type="radio" name="sexo" value="femenino" id="femenino" required>
+            <label for="otros" class="label-sexo">OTROS</label>
+            <input type="radio" name="sexo" value="otros" id="otros" required>
+            </div>
+         </div>
+         <div class="register-container"> 
+            <h3 class="info-cuenta">SOBRE TU CUENTA</h3>
+            <input type="email" name="email" placeholder="EMAIL" class="ingreso" required>
+            <input type="password" name="password" placeholder="CONTRASEÑA" class="ingreso" required>
+            <i class="fas fa-eye-slash"></i>
+            <input type="password" name="password-confirm" placeholder="CONFIRMAR CONTRASEÑA" class="ingreso" required>
+            <i class="fas fa-eye-slash"></i>
+         </div>
+            <hr>
+         <div class="register-container-end"> 
+            <input type="checkbox" name="terminos" value="terminos" id="terminos" required>
+            <label for="terminos">ACEPTO LAS POLITICAS DE PRIVACIDAD Y LOS TERMINOS Y CONDICIONES</label>
+            <input type="checkbox" name="ofertas" value="ofertas" id="ofertas">
+            <label for="ofertas">DESEO RECIBIR OFERTAS POR EMAIL</label>
+            <button type="submit" class="submit-button">CREAR CUENTA</button>
+         </div>
+        </form>
+
 
     </main>
 
     <footer>
-
-    </footer>
+        <ul class="nosotros">
+        <li><a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo-footer"></a></li>
+        <li><a href="#">Quiénes Somos</a></li>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+        <li><a href="#">Sucursales</a></li>
+        <li><a href="#">Formas de pago</a></li>
+        <li><a href="#">Términos y condiciones</a></li>
+        <li><a href="#">Políticas de cambios</a></li>  
+       </ul>
+           
+           
+       <div class="contacto">
+           <img src="/images/qr-kicks.png" alt="qr-contacto" class="qr">
+           <div>CONTACTANOS</div>
+        </div>
+       
+           <form action="/register" method="GET" class="form-suscripcion">
+               <label for="suscripcion">SUSCRIBITE</label>
+               <input type="email" name="email" id="suscripcion" placeholder="nombre@email.com">
+               <div class="redes">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-pinterest-square"></i>
+            </div>
+           </form>
+   </footer>
+    
     
 </body>
 </html>

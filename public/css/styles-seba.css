@@ -342,6 +342,60 @@ footer a{
     
 }
 
+/*registro*/
+.titulo-registro{
+    text-align: center;
+    padding:10px 10px 0px 10px;
+}
+
+.ingreso{
+  width: 90%;
+  font: roboto;
+  margin: 0px 0px 10px 0px;  
+}
+.register-container label{
+   
+    font-size:14px;
+    
+}
+.register-container h3{
+margin: 15px 0px 10px 0px;
+}
+.genero{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 80%;
+
+}
+.register-form{
+    padding:10px;
+}
+.register-form hr{
+    width:90%;
+}
+.register-container-end{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    align-content: center;
+}
+.register-container-end input{
+    width: 10%;
+    align-self: center;
+}
+.register-container-end label{
+    width: 90%;
+    padding-bottom: 10px;
+    align-self: center;
+    margin-top:10px;
+}
+.submit-button{
+    margin-top: 10px;
+    width: 30%;
+    margin:auto;
+}
+
 /*paleta{
 azulverde: #2D5955;
 crema: #f2e4bb;
@@ -398,7 +452,9 @@ hr{
 }
 .header-bottom-bar{
     display: block;
+    
 }
+
 .contenedor-menu{
     display: none;
 }
@@ -419,20 +475,24 @@ hr{
     margin-left:20px;
     
 }
+.miniatura{
+    width: 15%;
+}
 .titulo-producto-carrito{
     flex-grow: 0.5;
 }
 div.modelo{
-    width: 20%;
+    width: 42%;
 }
 div.precio{
-    width:15%;
+    width:10%;
     font-size:14px;
     align-self: center;
 }
 .form-cantidad{
     align-self: center;
-    width:18%;
+    width:19%;
+    margin-right: 10px;
 }
 div.eliminar{
     width:100%

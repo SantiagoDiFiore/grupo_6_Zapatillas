@@ -27,3 +27,8 @@ app.get("/login" , (req,res)=>{
 app.get("/register" , (req,res)=>{
     res.sendFile(path.resolve("./views/register.html"))
 });
+
+
+app.post("/register" , (req,res)=>{
+    res.sendFile(path.resolve("./views/register.html"))
+});
