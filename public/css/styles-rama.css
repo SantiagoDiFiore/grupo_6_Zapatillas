@@ -13,8 +13,8 @@ body{
     font-size: 16px;
 }
 
-.main-header{
-    background-color: #000000 ;
+.header-top-bar{
+    background-color: #222021  ;
     padding-top: 10px;
 }
 .header-top-bar{
@@ -61,6 +61,7 @@ body{
     font-family: roboto;
     padding:8px;
     width: 85%;
+    border-bottom: solid 3px #222021 ;
 }
 .search-button{
     font-size: 12px;
@@ -68,6 +69,7 @@ body{
     padding: 8px;
     background-color: white;
     width:15%;
+    border-bottom: solid 3px #222021 ;
     
 }
 
@@ -92,10 +94,8 @@ body{
 
 
 .header-bottom-bar{
-    padding:5px;
-    margin-top: 10px; 
-    background-color:#f2e4bb ;
-    border-top: solid 1px #d97f11;
+    padding:10px;
+    border-bottom: solid 2px#222021 ;
     display: none;
     
 }
@@ -111,6 +111,12 @@ body{
     text-decoration: none;
     font-size: 12px;
     
+}
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 section.banner img{
@@ -157,7 +163,6 @@ h2 {
     
 }
 .icons-marca{
-    width: 100%;
     align-self: center;
     display: flex;
 }
@@ -165,20 +170,18 @@ h2 {
 .icons-marca i{
     padding: 0px 5px;
     color:black;
-    font-size: 20px;
+    font-size: 2px;
     
 }
 
-.description{
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-align: center;
+.none{
+    display: none;
 }
-.price{
-    text-align: center;
-    
+.none1{
+    display: none;
 }
+
+
 
 
 main section article img{
@@ -194,8 +197,8 @@ main section article img{
 }
 article{
     width: 100%;
-    border: dotted 0.5px #D97F11;
     margin-top: 10px;
+
 
     
 }
@@ -207,15 +210,34 @@ article.none1{
     display: none;
 }
 
-main{
+.padding{
     padding: 10px;
 }
 
 .main-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
     background-color: #f2e4bb;
+}
+.main-article div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.main-article div.price{
+    width: 100%;
+}
+.footer-article{
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
 
 }
-
 .envios{
     display: flex;
     justify-content: center;
@@ -223,18 +245,24 @@ main{
     background-color:#f2e4bb;
     padding:10px;
     width: 100%;
+    border: solid 1px #000000;
 }
 
 footer{
     background-color: #000000;
     color: white;
+    
+    
 }
 
+
 .linkfooter{
-    color: #666;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 12px;
-    
+    font-size: 16px;
+    padding: 7px 20px;
+    font-family: "Roboto";
+    display: flex;
 }
 
 .footer{
@@ -242,14 +270,139 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    border-bottom: dotted 1px #ffffff;
 }
 div.italic {
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
 }
 
+.newsletter{
+    margin: 15px;
+    
+}
 
+.newsletter-title{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.titulo{
+    padding: 15px;
+    
+}
+
+.icon-title{
+   align-items: center;
+}
+
+.medios-pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+    border-top: solid 1px #000000;
+    border-bottom: solid 1px #000000;
+    
+}
+.titulo-medios{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-family: sans-serif;
+    padding-top: 15px;
+}
+.imagen-pago{
+    width:25%;
+    align-self: center;
+}
+.imagen-pago2{
+    width:23%;
+}
+.arriba{
+    background-color: #f2e4bb;
+    text-align: center;
+    border-bottom: solid 2px #f2e4bb;
+    border-radius: 2px;
+    padding: 7px;
+
+}
+.control-formulario{
+    margin-bottom: 15px;
+
+}
+
+
+.control{
+    width: 100%;
+    padding: 8px;
+}
+.boton-suscribe{
+    background-color: #000000;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    width: 100%;
+    margin-top: 2px;    
+}
+.redes{
+    text-align: center;
+    text-indent: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    width:100%;
+    margin-right:20px;
+    padding-bottom: 10px;
+   
+}
+.center{
+    text-align: center;
+}
+.centrado{
+    align-self: center;
+}
+.recomendado-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    border: dotted 0.5px #d97f11;
+}
+.recomendado-article img{
+    width: 100%;
+}
+.price{
+    font-size: 18px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2em;
+    color: #222021;
+}
+.dots1{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2em;
+    color: #222021; 
+}
+.center1{
+    text-align: center;
+}
+.none3{
+    display: none;
+}
 
 
 
@@ -262,6 +415,60 @@ div.italic {
     article.none{
         display: block;
     }
+    .none{
+        display: block;
+    }
+    .newsletter{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        border-top: solid 1px #000000;
+        border-bottom: solid 1px #000000;
+    }
+    .newsletter-title{
+        font-size: 20px;
+        padding-right: 5px;
+        margin-top: 7px;
+        padding-top: 15px;
+    }
+    .control-formulario{
+       padding-top: 7px;
+       padding-right:7px ;
+    
+    }
+    .recomendados{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .izarrow , .derarrow{
+        display: none;
+    }
+    .a1, .a2 , .a3, .a4{
+        display: flex;
+        width: 45%;
+        justify-content: space-between;
+    }
+    .a1, .a2 , .a3, .a4 div{
+        text-align: center;
+    }
+    .dots{
+        display: none;
+    }
+    .dots1{
+        display: none;
+    }
+    .none3{
+        display: block;
+    }
+    section.banner img{
+    width: 50%;
+
+}
+
+    
+    
 }
 
 
@@ -295,14 +502,105 @@ div.italic {
     article.none1{
         display: block;
     }
+    section.banner img{
+        padding-left: 5px;
+        padding-right: 5px;
+    
+    }
+    .none1{
+        display: block;
+    }
+    .previous, .next{
+        display: none;
+    }
+    
+    .newsletter-title{
+        text-align: center;
+        font-size: 22px;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 13px;
+        
+    }
+    .control-formulario{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boton-suscribe{
+        width: 35%;
+        margin-left: 0px;
+        margin-top: 3px;    
+    }
+    .control{
+        width: 35%;
+    
+    }
+    .newsletter{
+        display: block;
+        justify-content: space-between;
+        flex-wrap: wrap
+    
+    }
+
+    .newsletter-title{
+        width: 100%;
+        display: block;
+    }
+    .control-formulario{
+       justify-content: center;
+    }
+    .a1, .a2 , .a3, .a4{
+        width: 22%;
+        
+    }
+    .footer{
+        border: none;
+        list-style-type: none;
+        
+    }
+    .main-footer{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .none2{
+        display: none;
+    }
+    .center{
+        text-align: inherit;
+    }
+    .titulo{
+        text-align: center;
+    }
+    .linkfooter{
+        justify-content: center;
+    }
+    .center1{
+        border-top: solid 1px #ffffff;
+        padding-top: 7px ;
+    }
+    
+
     }
 
 @media (min-width: 1200px){
     article{
         width: 22%;
-    }
     
+    }
+    .boton-suscribe{
+        width: 25%;
+    }
+    .control{
+        width: 25%;
+    }   
+    .marca_img{
+        width: 10%;
+        padding: 10px;
+    }
+    .logo{
+        width: 65%;
+    }
+   
 }
-
-
- 
