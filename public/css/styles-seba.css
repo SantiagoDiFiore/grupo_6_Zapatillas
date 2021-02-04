@@ -520,4 +520,18 @@ h2{
     margin-left: 0px;
 
 }
+.register-form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.register-container{
+    width: 45%;
+}
+.register-container-end{
+    width:50%;
+}
+.register-form hr{
+    margin-top: 20px;
+}
 }
