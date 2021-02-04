@@ -8,12 +8,163 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">   
+    <link rel="stylesheet" href="/css/styles-santi.css">   
 </head>
 <body>
-    <div>
-        <img src="/images/kicks.png" alt="logo kicks">
+    <header>
+    <div class="main-nav">   
+        <div class="main-logo">
+            <img src="/images/kicks.png" alt="logo kicks" class="logo">
+        </div>
+        <div class="search-bar">
+            <form action="/busqueda">
+                <input type="text" name="busqueda de productos" id="busqueda de productos" placeholder="Buscar...">
+            </form>
+        </div>
+        <ul class="items">
+            <li class="header-item"><a href=#><i class="fas fa-sign-in-alt"></a></i></li>
+            <li class="header-item"><a href=#><i class="fas fa-user-circle"></a></i></li>
+            <li class="header-item"><a href=#><i class="fab fa-shopify"></a></i></li>
+        </ul>
     </div>
-    
+
+    <ul class="nav-categorias">
+        <li><a href=#>Hombres</a></li>
+        <li><a href=#>Mujeres</a</li>
+        <li><a href=#>Marcas</a></li>
+        <li><a href=#>Sale</a></li>
+    </ul>
+
+    </header>
+    <main>
+        <div class="navegacion de sitios">
+        <ol class="nav-site">
+            <li><a href=#>Inicio</a></li>
+            <span>></span>
+            <li><a href=#>Hombres</a></li>
+            <span>></span>
+            <li><a href=#>Calzado</a></li>
+        </ol>
+        </div>
+        
+        <section class="main-article">
+            <div class="imagen-principal">
+                <img src="/images/adidas1.png" alt="Adidas Ozweego Orange" class="main-product-image">
+            </div>
+            <div class="data-principal">
+                <div class="product-body">
+                    <h2 class="main-title">Adidas Ozweego Orange (Youth)</h2>
+                    <p class="precio">$13.999</p>
+                    <h3 class="talle">Elegi tu talle</h3>
+                <div class="Talle">
+                    <p><a href=#><i class="fas fa-ruler-horizontal"></i>Guia de talles</a></p>
+                    <form action="/talle" class="tallesdisponibles">
+                        <input type="button" name="talle" value="39" class="boton-talle">
+                        <input type="button" name="talle" value="40" class="boton-talle">
+                        <input type="button" name="talle" value="41" class="boton-talle">
+                        <input type="button" name="talle" value="42" class="boton-talle">
+                        <input type="button" name="talle" value="43" class="boton-talle">
+                        <input type="button" name="talle" value="44" class="boton-talle">
+                    </form>
+                </div>
+                <div class="Cantidad">
+                    <p>Cantidad:</p>
+                    <form action="/cantidad" class="cantidaditem">
+                    <select name="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </form>
+                </div>
+                <div class="realizar-compra">
+                    <a href=# class="BotondeCompra">Compra<i class="fas fa-shopping-bag"></i></a><br>
+                    
+                </div>
+                <div class="enviosgratis">
+                    <p class="Envios"><i class="fas fa-shipping-fast"></i>Envios gratis a partir de $$$$</p>
+                </div>
+            </div>
+        </section>
+
+        <h3 class="header-details">Detalles</h3>
+        <div class="descripcion">
+        <ul class="DetallesLista1">
+            <li><i class="fas fa-chevron-circle-right"></i>Forro interno textil. Suela de caucho</li>
+            <li><i class="fas fa-chevron-circle-right"></i>Exterior de malla con revestimientos de gamuza y TPU</li>
+            <li><i class="fas fa-chevron-circle-right"></i>Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón</li>
+        </ul>
+        <ul class="DetallesLista2">
+            <li><i class="fas fa-chevron-circle-right"></i>Forro interno textil. Suela de caucho</li>
+            <li><i class="fas fa-chevron-circle-right"></i>Exterior de malla con revestimientos de gamuza y TPU</li>
+            <li><i class="fas fa-chevron-circle-right"></i>Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón</li>
+        </ul>
+        </div>  
+
+
+    <section class="opciones">   
+        <h3>Otros productos que podrian interesarte...</h3>
+        <div class="opciones-recomendadas">
+        <article class="otrasopciones">
+            <a href=# title="Adidas Ultra Boost 4.0 Running White">
+                <img src="/images/adidas3.png" alt="Adidas Ultra Boost 4.0 Running White">
+            </a>
+            <p class="product-name">Adidas Ultra Boost 4.0 Running White</p>
+            <p class="product-price">$15.000</p>
+        </article>
+        <article class="otrasopciones">
+            <a href=# title="Adidas Deerupt Solar Red Bluebird">
+                <img src="/images/adidas5.png" alt="Adidas Deerupt Solar Red Bluebird">
+            </a>
+            <p class="product-name">Adidas Deerupt Solar Red Bluebird</p>
+            <p class="product-price">$13.500</p>
+        </article>
+        <article class="otrasopciones">
+            <a href=# title="Adidas Nite Jogger 3M Navy">
+                <img src="/images/adidas2.png" alt="Adidas Nite Jogger 3M Navy">
+            </a>
+            <p class="product-name">Adidas Nite Jogger 3M Navy</p>
+            <p class="product-price">$11.000</p>
+        </article>
+        <article class="otrasopciones">
+            <a href=# title="adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron">
+                <img src="/images/adidas4.png" alt="adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron">
+            </a>
+            <p class="product-name">adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron</p>
+            <p class="product-price">$18.000</p>
+        </article>
+        </div>
+    </section>
+    </main>
+    <footer>
+        <div class="infofooter">
+            <div class="contacto">
+                <b>CONTACTANOS</b>
+                <p>Lunes a viernes de 9 a 18 hs. <br>Sabados de 9 a 14 hs. <br> 0800-111-1234</p>
+            </div>
+            
+            <div class="clientes">
+                <b>CLIENTES</b>
+                <ul>
+                    <li><a href=#>Promociones Bancarias</a></li>
+                    <li><a href=#>Como Comprar</a></li>
+                    <li><a href=#>FAQ</a></li>
+                </ul>
+            </div>
+            <div class="inst">
+                <b>INSTITUCIONAL</b>
+                <ul>
+                    <li><a href=#>Sobre nosotros</a></li>
+                    <li><a href=#>Locales</a></li>
+                    <li><a href=#>Terminos y Condiciones</a></li>
+                </ul>
+
+            
+            </div>
+        </div>
+        <img src="/images/kicks.png" alt="logo kicks" class="logofooter">
+    </footer>
 </body>
 </html>

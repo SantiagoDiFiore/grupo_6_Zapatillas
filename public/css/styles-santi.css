@@ -1,0 +1,289 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto";
+  background-color: #ffffff;  
+}
+
+.main-nav{
+    background-color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 100px;
+}
+
+.items{
+    display: flex;
+    
+}
+
+.header-item{
+    color:#ffffff;
+    list-style: none;
+    padding: 0px 5px;
+}
+
+.search-bar,.items{
+    align-self: center;
+}
+
+.fa-sign-in-alt,.fa-user-circle,.fa-shopify{
+    color: #ffffff;
+}
+
+.nav-categorias{
+    display: none;
+}
+
+
+.nav-categorias li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-site{
+    display:flex;
+}
+
+
+.nav-site li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ol{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+.main-article{
+    margin: 10px 5px;
+    background-color: #f2efe7;  
+}
+
+.main-title{
+    font-weight: bolder;
+}
+
+.precio{
+    font-size: 35px;
+    font-weight: bold;
+    color: #8c2e2e;
+    margin: 10px;
+}
+
+.Cantidad{
+    display: flex;
+    align-items: center;
+}
+
+.tallesdisponibles{
+    margin: 5px;
+}
+
+.boton-talle{
+    border-radius: 30px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.cantidaditem{
+    margin: 5px;
+}
+
+.realizar-compra{
+    margin: 10px 5px;
+}
+
+.BotondeCompra{
+    font-size: 45px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #fdb400;
+    text-decoration: none;
+}
+
+.enviosgratis{
+    max-width: 250px;
+}
+
+.Envios{
+    background-color: #2d5955;
+    color: #ffffff;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.descripcion{
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+.header-details{
+    padding: 5px 5px;
+}
+
+.DetallesLista1 li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px 5px ;
+}
+
+.DetallesLista2 li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px 5px ;
+}
+
+.opciones{
+    padding: 5px 5px;
+}
+
+.otrasopciones{
+    margin: 3px 0;
+    border: dotted 0.5px #D97F11;
+    background-color: #f2efe7;  
+}
+
+.product-name{
+    font-weight: bold;
+}
+
+.product-price{
+    font-size: 20px;
+    font-weight: bold;
+    color: #8c2e2e;
+}
+
+footer{
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.clientes,.inst{
+    padding: 5px;
+}
+
+.clientes li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.inst li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.contacto{
+    padding: 5px;
+}
+
+@media (min-width:478px) {
+    .nav-categorias{
+        display:flex;
+        justify-content: space-around;
+        list-style-type: none;
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .main-title{
+        font-weight: bolder;
+        font-size: 200%;
+    }
+
+    .precio{
+        font-size: 50px;
+        font-weight: bold;
+        color: #8c2e2e;
+        margin: 10px;
+    }
+
+    .talle{
+        font-size: 25px;
+    }
+
+    .Talle{
+        font-size: 25px;
+    }
+
+    .Cantidad{
+        font-size: 25px;
+    }
+
+    .descripcion{
+        display: flex;
+    }
+
+    .opciones-recomendadas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .otrasopciones{
+        width: 45%;
+    }
+
+    .infofooter{
+        display: flex;
+    }
+
+    .infofooter li{
+        list-style-type: none; ;
+    }
+
+    .logofooter{
+        width: 20%;
+    }
+
+}
+
+@media (min-width:768px) {
+    
+    .main-article,.items,.search-bar{
+        justify-content: space-between;
+    }
+
+    .main-article{
+        display: flex;
+    }
+
+    .imagen-principal{
+        width: 60%;
+    }
+
+    .data-principal{
+        width: 40%;
+    }
+
+    .main-product-image{
+        height: 100%;
+    }
+
+    .otrasopciones{
+        width: 20%;
+    }
+
+    .infofooter{
+        justify-content: space-between;
+    }
+
+    .logofooter{
+        width: 10%;
+    }
+}
