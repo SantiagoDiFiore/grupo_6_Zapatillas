@@ -194,6 +194,13 @@ color: white;
     flex-wrap: wrap;
     justify-content:space-around;
     margin-top: 20px;
+    align-content: center;
+}
+.titular-recomendados h2{
+    width:40%;
+    font-size: 18px;
+    align-self: center;
+    margin:0px;
 }
  
 
@@ -573,7 +580,7 @@ div.italic {
     align-self: center;
 }
 .recomendado-article{
-    display: flex;
+    
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
