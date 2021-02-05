@@ -4,6 +4,227 @@
     padding: 0px;
 }
 
+
+/* Estilos Main Register*/
+.titulo-registro{
+    text-align: center;
+    padding:10px 10px 0px 10px;
+}
+
+.ingreso{
+  width: 90%;
+  font: roboto;
+  margin: 0px 0px 10px 0px;  
+}
+.register-container label{
+   
+    font-size:14px;
+    
+}
+.register-container h3{
+margin: 15px 0px 10px 0px;
+}
+.genero{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+width: 80%;
+
+}
+.register-form{
+    padding:10px;
+}
+.register-form hr{
+    width:90%;
+}
+.register-container-end{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    align-content: center;
+}
+.register-container-end input{
+    width: 10%;
+    align-self: center;
+}
+.register-container-end label{
+    width: 90%;
+    padding-bottom: 10px;
+    align-self: center;
+    margin-top:10px;
+}
+.submit-button{
+    margin-top: 10px;
+    width: 30%;
+    margin:auto;
+}
+/*---------------------fin estilos main register--------*/
+
+/*estilos main carrito*/
+.encabezado-carrito{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 20px;
+
+}
+.encabezado-carrito a{
+    font-size: 10px;
+    align-self: center;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.titulos{
+    display: none;
+}
+
+main{
+    padding: 10px;
+}
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 2px black;
+    margin-top: 10px;
+    padding: 5px;
+    
+}
+.miniatura{
+    width: 30%;
+}
+.modelo{
+    font-size: 12px;
+    width: 60%;
+    align-self: center;
+}
+.form-cantidad{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+.precio{
+    font-size: 18px;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+}
+.eliminar{
+    display: flex;
+    width: 90%;
+    justify-content: flex-end;
+    
+}
+.boton-eliminar{
+    display: flex;
+    width: 25px;
+    justify-content: center;
+    font-size: 18px;
+       
+}
+.finalizar-compra{
+    display: flex;
+    flex-wrap: wrap;
+    border-top: solid 2px black;
+    margin-top: 10px;
+    padding: 5px;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+.finalizar-form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.finalizar-form label{
+    padding:15px;
+    font-weight: bold;
+}
+.boton-compra{
+font-family: roboto;
+background-color:#d97f11;
+padding:0px 10px;
+border:none;
+border-radius: 5px;
+width: 140px;
+height: 40px;
+color: white;
+}
+.envios{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color:#f2e4bb;
+    padding:10px;
+}
+.medios-pago{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+.titulo-medios{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.imagen-pago{
+    width:137.5px;
+    align-self: center;
+}
+.imagen-pago2{
+    width:25%;
+}
+
+.titular-recomendados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    margin-top: 20px;
+}
+ 
+
+hr {
+    width: 20%;
+    align-self: center;
+    border-color:black;
+    border-width: 0,2px;
+}
+
+.recomendado-article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    border: dotted 0.5px #d97f11;
+}
+.recomendado-article img{
+    width: 100%;
+}
+.contenedor-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #f2e4bb;
+}
+.contenedor-descripcion div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-descripcion div.precio{
+    width: 80%;
+}
+.a2 , .a3 , .a4{
+    display: none;
+}
+/*--------------fin main carrito---------------------*/
+
 html,body {
     height: 100vh;
 }
@@ -390,6 +611,30 @@ div.medios-pago{
 }
 
 @media(min-width: 478px){
+      /*media querys carrito*/
+.producto , .finalizar-compra , .medios{
+        width:100%;
+        }
+hr{
+    width:25%;
+}
+.recomendados{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.a1, .a2 , .a3, .a4{
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+}
+.a1, .a2 , .a3, .a4 div{
+    text-align: center;
+}
+.izarrow , .derarrow{
+    display: none;
+}
+/*-----fin media querys carrito*/
     article{
         width: 45%;
     }
@@ -452,6 +697,68 @@ div.medios-pago{
 }
 
 @media (min-width:768px){
+    /*media query register*/
+    .register-form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .register-container{
+        width: 45%;
+    }
+    .register-container-end{
+        width:50%;
+    }
+    .register-form hr{
+        margin-top: 20px;
+    }
+    
+    /*-----fin media query register*/
+
+    /*media query carrito */
+    .titulos{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top:15px;
+        margin-left:20px;
+        
+    }
+    .miniatura{
+        width: 15%;
+    }
+    .titulo-producto-carrito{
+        flex-grow: 0.5;
+    }
+    div.modelo{
+        width: 42%;
+    }
+    div.precio{
+        width:10%;
+        font-size:14px;
+        align-self: center;
+    }
+    .form-cantidad{
+        align-self: center;
+        width:19%;
+        margin-right: 10px;
+    }
+    div.eliminar{
+        width:100%
+    }
+    h2{
+        font-size: 28px;
+    }
+    .a1, .a2 , .a3, .a4{
+        width: 22%;
+        
+    }
+
+
+
+
+
+    /*----fin media query carrito*/
     .main-header{
         padding:10px
     }
