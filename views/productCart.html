@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kicks>Cart</title>
+    <title>Finalizar la compra</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
@@ -12,14 +12,18 @@
 </head>
 <body>
     <header class="main-header">
+        <div class="arriba">
+            <h3>¡3 , 6 y 12 CUOTAS SIN INTERES!</h3>
+        </div>
         <div class="header-top-bar">
+
             <div class="contenedor-menu">
                 <i class="fas fa-bars menu-desplegable"></i>
             </div>
             <a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo"></a>
             <div class="icons-section">
-               <a href="/login"><i class="fas fa-user"></i></a> 
-               <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>  
+                <a href="/login"><i class="fas fa-user"></i></a>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
                 <a href="/"><i class="fas fa-share-alt-square"></i></a>
             </div>
             <form action="/productDetail" method="GET" class="search-form">
@@ -27,8 +31,8 @@
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        
-        
+
+
     </header>
 
     <main>
@@ -141,35 +145,58 @@
         </section>
     </main>
     <footer>
-        <ul class="nosotros">
-        <li><a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo-footer"></a></li>
-        <li><a href="#">Quiénes Somos</a></li>
-        <li><a href="#">Preguntas Frecuentes</a></li>
-        <li><a href="#">Sucursales</a></li>
-        <li><a href="#">Formas de pago</a></li>
-        <li><a href="#">Términos y condiciones</a></li>
-        <li><a href="#">Políticas de cambios</a></li>  
-       </ul>
-           
-           
-       <div class="contacto">
-           <img src="/images/qr-kicks.png" alt="qr-contacto" class="qr">
-           <div>CONTACTANOS</div>
-        </div>
-       
-           <form action="/register" method="GET" class="form-suscripcion">
-               <label for="suscripcion">SUSCRIBITE</label>
-               <input type="email" name="email" id="suscripcion" placeholder="nombre@email.com">
-               <div class="redes">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-instagram-square"></i>
-                <i class="fab fa-pinterest-square"></i>
-            </div>
-           </form>
-           
-       
 
-   </footer>
+        <section>
+
+            <div class="main-footer">
+                <article class="footer-article">
+                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none2"></i></h4>
+                    <div class="italic center gris-oscuro padding">
+                        <ul class="footer">
+                            <li><a href="#" class="linkfooter">Quienes somos</a></li>
+                            <li><a href="#" class="linkfooter">Politicas de privacidad</a></li>
+                            <li><a href="#" class="linkfooter">Terminos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="footer-article">
+                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none2"></i></h4>
+                    <div class="italic center gris-oscuro padding">
+                        <ul class="footer">
+                            <li><a href="#" class="linkfooter">Preguntas frecuentes</a></li>
+                            <li><a href="#" class="linkfooter">Sucursales</a></li>
+                            <li><a href="#" class="linkfooter">Pagos</a></li>
+                            <li><a href="#" class="linkfooter">Entregas</a></li>
+                            <li><a href="#" class="linkfooter">Cambios</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="footer-article">
+                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none2"></i></h4>
+                    <div class="italic">
+                        <ul class="footer">
+                            <li><a href="" class="linkfooter">0800-888-8888</a></li>
+                            <li><a href="" class="linkfooter">Lunes a Sábado de 9 a 18 hs</a></li>
+                            <li><a href="#" class="linkfooter"><i class="far fa-envelope "></i>Envianos un mensaje</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+
+            <br />
+
+            <div>
+                <p class="gris-oscuro font-size center1 ">Copyright © 2020 KICKS S.R.L.</p>
+                <div class="redes">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-whatsapp-square"></i>
+                </div>
+            </div>
+        </section>
+
+    </footer>
     
     </body>
 </html>
