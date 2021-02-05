@@ -113,7 +113,7 @@ main{
     display: flex;
     justify-content: center;
 }
-.precio{
+.precio-carrito{
     font-size: 18px;
     width: 70%;
     display: flex;
@@ -221,14 +221,15 @@ hr {
     justify-content: center;
     width: 100%;
     margin-top: 20px;
-    background-color: #f2e4bb;
+    background-color: #f2efe7
+    ;
 }
 .contenedor-descripcion div{
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.contenedor-descripcion div.precio{
+.contenedor-descripcion div.precio-carrito{
     width: 80%;
 }
 .a2 , .a3 , .a4{
@@ -915,7 +916,7 @@ hr{
     div.modelo{
         width: 42%;
     }
-    div.precio{
+    div.precio-carrito{
         width:10%;
         font-size:14px;
         align-self: center;
