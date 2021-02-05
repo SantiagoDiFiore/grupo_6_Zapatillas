@@ -404,6 +404,20 @@ div.medios-pago{
     flex-wrap: wrap;
   
 }
+.submit-button{
+    margin-top: 10px;
+    width: 30%;
+    background-color: #222021;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
+}
+.new-account{
+    margin-top: 15px;
+}
 
 .register-formulario label{
     margin-bottom: 5px;
@@ -420,7 +434,7 @@ div.medios-pago{
     font-size: 16px;
     color: #ffffff;
     padding: 5px 10px;
-    border-radius: 100px;
+    border-radius: 5px;
     width: 100%;
     margin-bottom: 20px;
     font-weight: bold;
@@ -446,6 +460,9 @@ div.medios-pago{
     font-family: "Roboto";
     text-decoration: underline;
     text-align: center;
+}
+.re-size{
+    font-size: 12px;
 }
 
 @media(min-width: 478px){
@@ -614,6 +631,27 @@ div.medios-pago{
         margin-left: 75px;
         margin-right: 75px;
     }  
+    .new-account{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .login-bar{
+        text-align: center;
+        border: solid 1px #222021;
+        margin: 25px;
+    }
+    .titulo-registro{
+        border-bottom: solid 1px #222021;
+    }
+    .obligatorio{
+        text-align: justify;
+        padding-left: 33%;
+    }
+    .boton-login{
+        max-width: 400px;
+    }
+    .submit-button{
+        max-width: 300px;
     }
 
 @media (min-width: 1200px){
@@ -640,4 +678,10 @@ div.medios-pago{
     .imagen-pago,.imagen-pago2{
         width: 13%;
     } 
+    .obligatorio{
+        padding-left: 38%;
+    }
+    
+
+}
 }
