@@ -307,7 +307,9 @@ div.italic {
     border-radius: 2px;
     padding: 7px;
 }
-
+.control-formulario{
+    margin-bottom: 15px;
+}
 .control{
     width: 100%;
     padding: 8px;
@@ -385,67 +387,6 @@ div.images.padding{
 }
 div.medios-pago{
     background-color: #ffffff;
-}
-.control-formulario{
-    margin-bottom: 15px;
-}
-
-.control-formulario label{
-    padding-top: 20px;
-    margin-bottom: 5px;
-    display: block;
-}
-.register-formulario{
-    margin-bottom: 15px;
-    padding: 10px 10px 0 10px;
-}
-.d-flex{
-    display: flex !important;
-    flex-wrap: wrap;
-  
-}
-
-.register-formulario label{
-    margin-bottom: 5px;
-    font-style: italic;
-    display: block;
-}
-.control{
-    width: 100%;
-    padding: 8px;
-}
-.boton-login{
-    background-color: #222021;
-    border: none;
-    font-size: 16px;
-    color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 100px;
-    width: 100%;
-    margin-bottom: 20px;
-    font-weight: bold;
-    
-}
-.titulo-registro{
-    font-family: 'Roboto';
-    font-weight: bold;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #000000;
-    margin-bottom: 15px;
-}
-.obligatorio{
-    padding-top: 10px;
-    padding-left: 5px;
-    font-style: italic;
-    font-size: 14px;
-}
-.re-password{
-    color: #000000;
-    font-size: 17px;
-    padding: 7px 20px;
-    font-family: "Roboto";
-    text-decoration: underline;
-    text-align: center;
 }
 
 @media(min-width: 478px){
