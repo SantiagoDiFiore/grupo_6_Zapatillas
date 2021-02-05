@@ -7,7 +7,7 @@ app.use(express.static(publicPath));
 
 
 app.listen(3000, ()=>{
-    console.log("servidor corriendo en puerto 3000");
+    console.log("Servidor corriendo en puerto 3000");
 });
 
 
