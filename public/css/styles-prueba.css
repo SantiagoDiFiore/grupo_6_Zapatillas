@@ -399,6 +399,7 @@ div.medios-pago{
 .nav-site li a{
     text-decoration: none;
     font-weight: bold;
+    color:  #000000;
 }
 
 ol{
@@ -410,12 +411,19 @@ img{
 }
 
 .main-article-product{
-    margin: 10px 5px;
+    margin: 0px 50px;
     background-color: #f2f2f2;  
+    border: solid 0.5px #000000;
 }
 
 .main-title{
     font-weight: bolder;
+    color: #ffffff;
+}
+
+.data-principal{
+    background-color: #222021;
+    text-align: center;
 }
 
 .precio{
@@ -427,7 +435,20 @@ img{
 
 .Cantidad{
     display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+.talle{
+    color: #ffffff;
+}
+
+.cantidad-titulo{
+    color: #ffffff;
+}
+
+.cfont-talles{
+    color: #ffffff;
 }
 
 .tallesdisponibles{
@@ -453,19 +474,18 @@ img{
     padding: 5px;
     border-radius: 20px;
     color: #ffffff;
-    background-color: #fdb400;
+    background-color: #d97f11;
     text-decoration: none;
 }
 
 .enviosgratis{
-    max-width: 250px;
+    margin: 0px 10px;
 }
 
 .Envios{
-    background-color: #2d5955;
-    color: #ffffff;
+    background-color: #f2e4bb;
     padding: 5px;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-left: 5px;
 }
 
@@ -513,6 +533,8 @@ img{
     font-weight: bold;
     color: #8c2e2e;
 }
+
+
 
 /* Medias */
 
@@ -583,23 +605,41 @@ img{
         font-size: 200%;
     }
 
+    .data-principal{
+        background-color: #222021;
+    }
+
     .precio{
         font-size: 50px;
         font-weight: bold;
         color: #8c2e2e;
-        margin: 10px;
+        margin: 10px 10px;
+        text-align: center;
     }
 
     .talle{
         font-size: 25px;
+        color: #ffffff;
+        text-align: center;
+        margin: 10px;
     }
 
     .Talle{
         font-size: 25px;
+        text-align: center;
     }
 
     .Cantidad{
         font-size: 25px;
+    }
+
+    .cantidad-titulo{
+        color: #ffffff;
+        margin: 10px;
+    }
+
+    .BotondeCompra{
+        margin: 10px;
     }
 
     .descripcion{
