@@ -8,32 +8,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles-santi.css">   
+    <link rel="stylesheet" href="/css/styles-prueba.css">   
 </head>
 <body>
-    <header>
-    <div class="main-nav">   
-        <div class="main-logo">
-            <img src="/images/kicks.png" alt="logo kicks" class="logo">
+    <header class="main-header">
+        <div class="arriba">
+            <h3>¡3 , 6 y 12 CUOTAS SIN INTERES!</h3>
         </div>
-        <div class="search-bar">
-            <form action="/busqueda">
-                <input type="text" name="busqueda de productos" id="busqueda de productos" placeholder="Buscar...">
+        <div class="header-top-bar">
+
+            <div class="contenedor-menu">
+                <i class="fas fa-bars menu-desplegable"></i>
+            </div>
+            <a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo"></a>
+            <div class="icons-section">
+                <a href="/login"><i class="fas fa-user"></i></a>
+                <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/"><i class="fas fa-share-alt-square"></i></a>
+            </div>
+            <form action="/productDetail" method="GET" class="search-form">
+                <input type="text" name="search" placeholder="¿Qué estás buscando?" class="campo-busqueda">
+                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
             </form>
         </div>
-        <ul class="items">
-            <li class="header-item"><a href=#><i class="fas fa-sign-in-alt"></a></i></li>
-            <li class="header-item"><a href=#><i class="fas fa-user-circle"></a></i></li>
-            <li class="header-item"><a href=#><i class="fab fa-shopify"></a></i></li>
-        </ul>
-    </div>
 
-    <ul class="nav-categorias">
-        <li><a href=#>Hombres</a></li>
-        <li><a href=#>Mujeres</a</li>
-        <li><a href=#>Marcas</a></li>
-        <li><a href=#>Sale</a></li>
-    </ul>
+        <nav class="header-bottom-bar">
+            <ul>
+                <li><a href="#" class="linknav">HOMBRE</a></li>
+                <li><a href="#" class="linknav">MUJER</a></li>
+                <li><a href="#" class="linknav">NIÑO</a></li>
+                <li><a href="#" class="linknav">DEPORTES</a></li>
+                <li><a href="#" class="linknav">MARCAS</a></li>
+            </ul>
+
+        </nav>
+
+        <br>
 
     </header>
     <main>
@@ -47,7 +57,7 @@
         </ol>
         </div>
         
-        <section class="main-article">
+        <section class="main-article-product">
             <div class="imagen-principal">
                 <img src="/images/adidas1.png" alt="Adidas Ozweego Orange" class="main-product-image">
             </div>
@@ -109,28 +119,28 @@
         <div class="opciones-recomendadas">
         <article class="otrasopciones">
             <a href=# title="Adidas Ultra Boost 4.0 Running White">
-                <img src="/images/adidas3.png" alt="Adidas Ultra Boost 4.0 Running White">
+                <img src="/images/adidas3.png" alt="Adidas Ultra Boost 4.0 Running White" class="recomendados-img">
             </a>
             <p class="product-name">Adidas Ultra Boost 4.0 Running White</p>
             <p class="product-price">$15.000</p>
         </article>
         <article class="otrasopciones">
             <a href=# title="Adidas Deerupt Solar Red Bluebird">
-                <img src="/images/adidas5.png" alt="Adidas Deerupt Solar Red Bluebird">
+                <img src="/images/adidas5.png" alt="Adidas Deerupt Solar Red Bluebird" class="recomendados-img">
             </a>
             <p class="product-name">Adidas Deerupt Solar Red Bluebird</p>
             <p class="product-price">$13.500</p>
         </article>
         <article class="otrasopciones">
             <a href=# title="Adidas Nite Jogger 3M Navy">
-                <img src="/images/adidas2.png" alt="Adidas Nite Jogger 3M Navy">
+                <img src="/images/adidas2.png" alt="Adidas Nite Jogger 3M Navy" class="recomendados-img">
             </a>
             <p class="product-name">Adidas Nite Jogger 3M Navy</p>
             <p class="product-price">$11.000</p>
         </article>
         <article class="otrasopciones">
             <a href=# title="adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron">
-                <img src="/images/adidas4.png" alt="adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron">
+                <img src="/images/adidas4.png" alt="adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron" class="recomendados-img">
             </a>
             <p class="product-name">adidas EQT Support Mid ADV Primeknit Dragon Ball Z Super Shenron</p>
             <p class="product-price">$18.000</p>
@@ -139,32 +149,57 @@
     </section>
     </main>
     <footer>
-        <div class="infofooter">
-            <div class="contacto">
-                <b>CONTACTANOS</b>
-                <p>Lunes a viernes de 9 a 18 hs. <br>Sabados de 9 a 14 hs. <br> 0800-111-1234</p>
-            </div>
-            
-            <div class="clientes">
-                <b>CLIENTES</b>
-                <ul>
-                    <li><a href=#>Promociones Bancarias</a></li>
-                    <li><a href=#>Como Comprar</a></li>
-                    <li><a href=#>FAQ</a></li>
-                </ul>
-            </div>
-            <div class="inst">
-                <b>INSTITUCIONAL</b>
-                <ul>
-                    <li><a href=#>Sobre nosotros</a></li>
-                    <li><a href=#>Locales</a></li>
-                    <li><a href=#>Terminos y Condiciones</a></li>
-                </ul>
 
-            
+        <section>
+
+            <div class="main-footer">
+                <article class="footer-article">
+                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none2"></i></h4>
+                    <div class="italic center gris-oscuro padding">
+                        <ul class="footer">
+                            <li><a href="#" class="linkfooter">Quienes somos</a></li>
+                            <li><a href="#" class="linkfooter">Politicas de privacidad</a></li>
+                            <li><a href="#" class="linkfooter">Terminos y condiciones</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="footer-article">
+                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none2"></i></h4>
+                    <div class="italic center gris-oscuro padding">
+                        <ul class="footer">
+                            <li><a href="#" class="linkfooter">Preguntas frecuentes</a></li>
+                            <li><a href="#" class="linkfooter">Sucursales</a></li>
+                            <li><a href="#" class="linkfooter">Pagos</a></li>
+                            <li><a href="#" class="linkfooter">Entregas</a></li>
+                            <li><a href="#" class="linkfooter">Cambios</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="footer-article">
+                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none2"></i></h4>
+                    <div class="italic">
+                        <ul class="footer">
+                            <li><a href="" class="linkfooter">0800-888-8888</a></li>
+                            <li><a href="" class="linkfooter">Lunes a Sábado de 9 a 18 hs</a></li>
+                            <li><a href="#" class="linkfooter"><i class="far fa-envelope "></i>Envianos un mensaje</a>
+                            </li>
+                        </ul>
+                    </div>
+                </article>
             </div>
-        </div>
-        <img src="/images/kicks.png" alt="logo kicks" class="logofooter">
+
+            <br />
+
+            <div>
+                <p class="gris-oscuro font-size center1 ">Copyright © 2020 KICKS S.R.L.</p>
+                <div class="redes">
+                    <i class="fab fa-facebook-square"></i>
+                    <i class="fab fa-instagram-square"></i>
+                    <i class="fab fa-whatsapp-square"></i>
+                </div>
+            </div>
+        </section>
+
     </footer>
 </body>
 </html>

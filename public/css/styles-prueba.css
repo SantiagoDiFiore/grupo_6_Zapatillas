@@ -8,13 +8,16 @@
 /* Estilos Main Register*/
 .titulo-registro{
     text-align: center;
-    padding:10px 10px 0px 10px;
+    padding:10px;
+    border:solid 1px #222021;
+
 }
 
 .ingreso{
   width: 90%;
   font: roboto;
-  margin: 0px 0px 10px 0px;  
+  margin: 0px 0px 10px 0px;
+  padding: 5px;  
 }
 .register-container label{
    
@@ -33,6 +36,7 @@ width: 80%;
 }
 .register-form{
     padding:10px;
+    border: solid 1px #222021;
 }
 .register-form hr{
     width:90%;
@@ -56,6 +60,13 @@ width: 80%;
 .submit-button{
     margin-top: 10px;
     width: 30%;
+    background-color: #222021;
+    border: none;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px;
     margin:auto;
 }
 /*---------------------fin estilos main register--------*/
@@ -610,6 +621,133 @@ div.medios-pago{
     background-color: #ffffff;
 }
 
+/* Data Product Detail */
+
+.nav-site{
+    display:flex;
+}
+
+
+.nav-site li a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ol{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+.main-article-product{
+    margin: 10px 5px;
+    background-color: #f2f2f2;  
+}
+
+.main-title{
+    font-weight: bolder;
+}
+
+.precio{
+    font-size: 35px;
+    font-weight: bold;
+    color: #8c2e2e;
+    margin: 10px;
+}
+
+.Cantidad{
+    display: flex;
+    align-items: center;
+}
+
+.tallesdisponibles{
+    margin: 5px;
+}
+
+.boton-talle{
+    border-radius: 30px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.cantidaditem{
+    margin: 5px;
+}
+
+.realizar-compra{
+    margin: 10px 5px;
+}
+
+.BotondeCompra{
+    font-size: 45px;
+    padding: 5px;
+    border-radius: 20px;
+    color: #ffffff;
+    background-color: #fdb400;
+    text-decoration: none;
+}
+
+.enviosgratis{
+    max-width: 250px;
+}
+
+.Envios{
+    background-color: #2d5955;
+    color: #ffffff;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.descripcion{
+    margin: 10px;
+    background-color: #ffffff;
+}
+
+.header-details{
+    padding: 5px 5px;
+}
+
+.DetallesLista1 li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px 5px ;
+}
+
+.DetallesLista2 li{
+    list-style: none;
+    margin: 10px;
+    padding: 5px 5px ;
+}
+
+.opciones{
+    padding: 5px 5px;
+}
+
+.recomendados-img{
+    width: 100%;
+}
+
+.otrasopciones{
+    margin: 3px 0;
+    border: dotted 0.5px #D97F11;
+    background-color: #f2efe7;  
+}
+
+.product-name{
+    font-weight: bold;
+}
+
+.product-price{
+    font-size: 20px;
+    font-weight: bold;
+    color: #8c2e2e;
+}
+
+/* Medias */
+
 @media(min-width: 478px){
       /*media querys carrito*/
 .producto , .finalizar-compra , .medios{
@@ -692,9 +830,52 @@ hr{
     }
     section.banner img{
     width: 50%;
+    }
+    
+    /* Data Product Detail */
+
+    .main-title{
+        font-weight: bolder;
+        font-size: 200%;
+    }
+
+    .precio{
+        font-size: 50px;
+        font-weight: bold;
+        color: #8c2e2e;
+        margin: 10px;
+    }
+
+    .talle{
+        font-size: 25px;
+    }
+
+    .Talle{
+        font-size: 25px;
+    }
+
+    .Cantidad{
+        font-size: 25px;
+    }
+
+    .descripcion{
+        display: flex;
+    }
+
+    .opciones-recomendadas{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .otrasopciones{
+        width: 45%;
+    }
 
 }
-}
+
 
 @media (min-width:768px){
     /*media query register*/
@@ -702,6 +883,7 @@ hr{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding-bottom:20px;
     }
     .register-container{
         width: 45%;
@@ -861,7 +1043,28 @@ hr{
     .recomendados{
         margin-left: 75px;
         margin-right: 75px;
-    }  
+    }
+    
+    .main-article-product{
+        display: flex;
+    }
+
+    .imagen-principal{
+        width: 60%;
+    }
+
+    .data-principal{
+        width: 40%;
+    }
+
+    .main-product-image{
+        height: 100%;
+    }
+
+    .otrasopciones{
+        width: 20%;
+    }
+    
     }
 
 @media (min-width: 1200px){
