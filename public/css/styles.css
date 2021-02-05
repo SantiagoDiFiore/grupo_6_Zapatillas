@@ -454,6 +454,7 @@ div.medios-pago{
     text-decoration: none;
     font-weight: bold;
     color:  #000000;
+    padding: 7px;
 }
 .main-article-product{
     margin: 0px 50px;
@@ -727,10 +728,9 @@ div.italic {
     }
     .main-title{
         font-weight: bolder;
-        font-size: 30px;
     }
     .talle{
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
         margin: 10px;
     }
@@ -902,10 +902,10 @@ div.italic {
         display: flex;
     }
     .imagen-principal{
-        width: 100%;
+        width: 75%;
     }
     .data-principal{
-        width: 40%;
+        width: 50%;
     }
     .register-form{
         display: flex;
@@ -926,7 +926,7 @@ div.italic {
      max-width: 700px;
     }
     .precio-pd{
-        font-size: 35px;
+        font-size: 30px;
         text-align: center;
     }
 }
