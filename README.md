@@ -23,3 +23,9 @@ https://trello.com/b/lSxkTdql/grupo6zapatillas
 
 ### **- Sprint N°1/Notas**
 Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del logo, los cuales continuaremos desarrollando y puliendo.
+
+### **- Sprint N°2/Notas**
+-Actualizamos (en la carpeta Design), la paleta de colores y relizamos un nuevo logo. 
+-Generamos el estilo visual de las secciones solicitadas, algunas funcionalidades estan limitadas momentaneamente.(JS)
+-El acceso al register.html se realiza a traves del botón del login"Crear nueva Cuenta".
+-El acceso al productDetail.html está vinculado al producto "Adidas ozweego orange" del home.html(destacados).
