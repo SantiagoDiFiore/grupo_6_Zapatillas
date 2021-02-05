@@ -15,14 +15,12 @@ body{
 }
 
 .header-top-bar{
-    background-color: #222021  ;
-    padding-top: 10px;
-}
-.header-top-bar{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
+    background-color: #222021  ;
+    padding-top: 10px;
 }
 
 .home{
@@ -58,7 +56,7 @@ body{
     text-align: center;
     font-size: 12px;
     border: none;
-    font-family: roboto;
+    font-family: "Roboto";
     padding:8px;
     width: 85%;
     border-bottom: solid 3px #222021 ;
@@ -222,7 +220,6 @@ article.none1{
     justify-content: space-between;
     width: 100%;
     margin-top: 20px;
-
 }
 .envios{
     display: flex;
@@ -282,7 +279,6 @@ div.italic {
     width: 100%;
     border-top: solid 1px #000000;
     border-bottom: solid 1px #000000;
-    
 }
 .titulo-medios{
     width: 100%;
@@ -329,12 +325,11 @@ div.italic {
     width:100%;
     margin-right:20px;
     padding-bottom: 10px;
-   
 }
 .center{
     text-align: center;
 }
-.centrado{
+.center-dot{
     align-self: center;
 }
 .recomendado-article{
@@ -371,7 +366,7 @@ div.italic {
 .center1{
     text-align: center;
 }
-.none3{
+.none2{
     display: none;
 }
 article.recomendado-article{
@@ -518,7 +513,7 @@ div.medios-pago{
     .dots1{
         display: none;
     }
-    .none3{
+    .none2{
         display: block;
     }
     section.banner img{
@@ -571,7 +566,6 @@ div.medios-pago{
         display: flex;
         flex-wrap: wrap;
         margin-left: 13px;
-        
     }
     .control-formulario{
         display: flex;
@@ -584,13 +578,11 @@ div.medios-pago{
     }
     .control{
         width: 35%;
-    
     }
     .newsletter{
         display: block;
         justify-content: space-between;
         flex-wrap: wrap
-    
     }
     .newsletter-title{
         width: 100%;
