@@ -98,7 +98,6 @@ main{
     border-top: solid 2px black;
     margin-top: 10px;
     padding: 5px;
-    
 }
 .miniatura{
     width: 30%;
@@ -123,14 +122,12 @@ main{
     display: flex;
     width: 90%;
     justify-content: flex-end;
-    
 }
 .boton-eliminar{
     display: flex;
     width: 25px;
     justify-content: center;
     font-size: 18px;
-       
 }
 .finalizar-compra{
     display: flex;
@@ -153,14 +150,14 @@ main{
     font-weight: bold;
 }
 .boton-compra{
-font-family: roboto;
-background-color:#d97f11;
-padding:0px 10px;
-border:none;
-border-radius: 5px;
-width: 140px;
-height: 40px;
-color: white;
+    font-family: roboto;
+    background-color:#d97f11;
+    padding:0px 10px;
+    border:none;
+    border-radius: 5px;
+    width: 140px;
+    height: 40px;
+    color: white;
 }
 .envios{
     display: flex;
@@ -635,7 +632,6 @@ div.medios-pago{
     display:flex;
 }
 
-
 .nav-site li a{
     text-decoration: none;
     font-weight: bold;
@@ -673,7 +669,7 @@ img{
     margin: 10px;
 }
 
-.Cantidad{
+.cantidad1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -709,7 +705,7 @@ img{
     margin: 10px 5px;
 }
 
-.BotondeCompra{
+.boton-de-compra{
     font-size: 45px;
     padding: 5px;
     border-radius: 20px;
@@ -722,7 +718,7 @@ img{
     margin: 0px 10px;
 }
 
-.Envios{
+.envios1{
     background-color: #f2e4bb;
     padding: 5px;
     margin-top: 25px;
@@ -888,7 +884,7 @@ hr{
         margin: 10px;
     }
 
-    .Talle{
+    .talle1{
         font-size: 25px;
         text-align: center;
     }
@@ -952,7 +948,6 @@ hr{
         justify-content: space-around;
         margin-top:15px;
         margin-left:20px;
-        
     }
     .miniatura{
         width: 15%;
@@ -983,10 +978,6 @@ hr{
         width: 22%;
         
     }
-
-
-
-
 
     /*----fin media query carrito*/
     .main-header{
