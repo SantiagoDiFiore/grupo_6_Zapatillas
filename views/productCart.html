@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles-prueba.css">   
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
     <header class="main-header">
         <div class="arriba">
@@ -59,11 +61,11 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    </form>
-                    <div class="precio-carrito">TOTAL $15.799</div>
-                    <div class="eliminar">
-                        <i class="far fa-times-circle boton-eliminar"></i> 
-                    </div>
+                </form>
+                <div class="precio-carrito">TOTAL $15.799</div>
+                <div class="eliminar">
+                    <i class="far fa-times-circle boton-eliminar"></i>
+                </div>
             </article>
             <article class="producto">
                 <img src="/images/vans1.png" alt="vans old skool" class="miniatura">
@@ -77,11 +79,11 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                     </select>
-                    </form>
-                    <div class="precio-carrito">TOTAL $11.200</div>
-                    <div class="eliminar">
-                        <i class="far fa-times-circle boton-eliminar"></i> 
-                    </div>
+                </form>
+                <div class="precio-carrito">TOTAL $11.200</div>
+                <div class="eliminar">
+                    <i class="far fa-times-circle boton-eliminar"></i>
+                </div>
             </article>
             <article class="finalizar-compra">
                 <form action="productCart" method="GET" class="finalizar-form">
@@ -91,7 +93,7 @@
             </article>
             <article class="medios">
                 <div class="envios"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!</div>
-                
+
                 <div class="medios-pago">
                     <div class="titulo-medios">MEDIOS DE PAGO</div>
                     <img src="images/medios-pago-varios.png" alt="pagoelectronico" class="imagen-pago">
@@ -99,59 +101,66 @@
                 </div>
             </article>
         </section>
-        <div class="titular-recomendados">
-            <hr>
-            <h2>RECOMENDADOS</h2>
-            <hr>
+        <div class="title">
+            <h2 class="linea"><span>DESTACADOS</span></h2>
         </div>
+
         <section class="recomendados">
-            
             <article class="recomendado-article a1">
-                <img src="/images/puma3.png" alt="PUMA FUTURE RIDER NES">
+                <a href="/productDetail"><img src="/images/adidas1.png" alt="ADIDAS OZWEEGO ORANGE (YOUTH)"></a>
                 <div class="contenedor-descripcion">
-                    <div >PUMA FUTURE RIDER NES (2020)</div>
+                    <div>ADIDAS OZWEEGO ORANGE (YOUTH)</div>
                     <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito" >$ 22.000</div>
+                    <div class="precio-carrito">$ 21.700</div>
                     <i class="fas fa-arrow-circle-right derarrow"></i>
                 </div>
             </article>
             <article class="recomendado-article a2">
-                <img src="/images/adidas1.png" alt="ADIDAS OZWEEGO ORANGE (YOUTH)">
+                <img src="/images/puma3.png" alt="PUMA FUTURE RIDER NES">
                 <div class="contenedor-descripcion">
-                    <div >ADIDAS OZWEEGO ORANGE (YOUTH)</div>
+                    <div>PUMA FUTURE RIDER NES (2020)</div>
                     <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito" >$ 21.700</div>
+                    <div class="precio-carrito">$ 22.000</div>
                     <i class="fas fa-arrow-circle-right derarrow"></i>
                 </div>
             </article>
             <article class="recomendado-article a3">
                 <img src="/images/nike3.png" alt="NIKE AIR MAX 90 INFRARED (2020)">
                 <div class="contenedor-descripcion">
-                    <div >NIKE AIR MAX 90 INFRARED (2020)</div>
+                    <div>NIKE AIR MAX 90 INFRARED (2020)</div>
                     <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito" >$ 21.700</div>
+                    <div class="precio-carrito">$ 21.700</div>
                     <i class="fas fa-arrow-circle-right derarrow"></i>
                 </div>
             </article>
             <article class="recomendado-article a4">
-                <img src="/images/new-balance4.png" alt="NIKE AIR MAX 90 INFRARED (2020)">
+                <img src="/images/new-balance4.png" alt="NEW BALANCE 1300 LEVI'S (2020)">
                 <div class="contenedor-descripcion">
-                    <div >NIKE AIR MAX 90 INFRARED (2020)</div>
+                    <div>NEW BALANCE 1300 LEVI'S (2020)</div>
                     <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito" >$ 21.700</div>
+                    <div class="precio-carrito">$ 22.000</div>
                     <i class="fas fa-arrow-circle-right derarrow"></i>
                 </div>
             </article>
         </section>
+
+        <div class="newsletter">
+            <form action="/" method="POST" class="newsletter">
+                <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
+                <div class="control-formulario">
+                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
+                    <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
-
         <section>
 
             <div class="main-footer">
                 <article class="footer-article">
-                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none2"></i></h4>
-                    <div class="italic center gris-oscuro padding">
+                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none3"></i></h4>
+                    <div class="italic center padding">
                         <ul class="footer">
                             <li><a href="#" class="linkfooter">Quienes somos</a></li>
                             <li><a href="#" class="linkfooter">Politicas de privacidad</a></li>
@@ -160,8 +169,8 @@
                     </div>
                 </article>
                 <article class="footer-article">
-                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none2"></i></h4>
-                    <div class="italic center gris-oscuro padding">
+                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none3"></i></h4>
+                    <div class="italic center padding">
                         <ul class="footer">
                             <li><a href="#" class="linkfooter">Preguntas frecuentes</a></li>
                             <li><a href="#" class="linkfooter">Sucursales</a></li>
@@ -172,7 +181,7 @@
                     </div>
                 </article>
                 <article class="footer-article">
-                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none2"></i></h4>
+                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none3"></i></h4>
                     <div class="italic">
                         <ul class="footer">
                             <li><a href="" class="linkfooter">0800-888-8888</a></li>
@@ -187,7 +196,7 @@
             <br />
 
             <div>
-                <p class="gris-oscuro font-size center1 ">Copyright © 2020 KICKS S.R.L.</p>
+                <p class="center1">Copyright © 2020 KICKS S.R.L.</p>
                 <div class="redes">
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-instagram-square"></i>
@@ -197,6 +206,7 @@
         </section>
 
     </footer>
-    
-    </body>
+
+</body>
+
 </html>

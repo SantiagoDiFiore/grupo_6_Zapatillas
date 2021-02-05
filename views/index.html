@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/normalize.css">
     <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles-rama.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
@@ -50,58 +50,55 @@
 
     <section class="banner">
         <img src="/images/banner-nike.jpg" alt="Banner de ofertas">
-        <img src="/images/banner-adidas-classic.jpg" alt="Banner de ofertas" class="none3">
+        <img src="/images/banner-adidas-classic.jpg" alt="Banner de ofertas" class="none">
     </section>
     <div class="dots">
-        <i class="fas fa-ellipsis-h centrado"></i>
+        <i class="fas fa-ellipsis-h center-dot"></i>
     </div>
 
-
-
     <main>
-
-        <section class="zapatillas">
-            <div class="title">
-                <h2 class="linea"><span>DESTACADOS</span></h2>
-            </div>
-            <div class="recomendados padding">
-                <article class="recomendado-article a1">
-                    <img src="images/nike1.png" alt="Nike1" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">Nike Air Max 95 OG Neon (2020)</h4>
-                        <p class="price">$25.499</p>
-                    </div>
-
-                </article>
-                <article class="recomendado-article a2 none">
-                    <img src="images/adidas1.png" alt="Adidas1" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">Adidas Ozweego Orange (Youth)</h4>
-                        <p class="price">$11.700</p>
-
-                    </div>
-                </article>
-                <article class="recomendado-article a3 none1">
-                    <img src="images/puma1.png" alt="Puma1" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">Puma RS-X Toys Bonnie Blue (W)</h4>
-                        <p class="price">$12.499</p>
-
-                    </div>
-                </article>
-                <article class="recomendado-article a4 none1">
-                    <img src="images/new-balance1.png" alt="Newbalance1" class="product_img">
-                    <div class="main-article">
-                        <h4 class="description">New Balance 992 Grey (2020)</h4>
-                        <p class="price">$17.000</p>
-                    </div>
-                </article>
+        <div class="title">
+            <h2 class="linea"><span>DESTACADOS</span></h2>
+        </div>
+        <section class="destacados">
+            <article class="recomendado-article a1">
+                <a href="/productDetail"><img src="/images/adidas1.png" alt="ADIDAS OZWEEGO ORANGE (YOUTH)"></a>
+                <div class="contenedor-descripcion">
+                    <div>ADIDAS OZWEEGO ORANGE (YOUTH)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio-carrito">$ 22.000</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+            <article class="recomendado-article a2">
+                <img src="/images/puma3.png" alt="PUMA FUTURE RIDER NES">
+                <div class="contenedor-descripcion">
+                    <div>PUMA FUTURE RIDER NES (2020)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio">$ 22.000</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+            <article class="recomendado-article a3">
+                <img src="/images/nike3.png" alt="NIKE AIR MAX 90 INFRARED (2020)">
+                <div class="contenedor-descripcion">
+                    <div>NIKE AIR MAX 90 INFRARED (2020)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio">$ 21.700</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+            <article class="recomendado-article a4">
+                <img src="/images/new-balance4.png" alt="NIKE AIR MAX 90 INFRARED (2020)">
+                <div class="contenedor-descripcion">
+                    <div>NIKE AIR MAX 90 INFRARED (2020)</div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio">$ 21.700</div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
         </section>
 
-        <div class="dots1">
-            <i class="fas fa-ellipsis-h centrado"></i>
-        </div>
-        
         <section class="marcas">
             <div class="title">
                 <h2 class="linea"><span>COMPRÁ POR MARCA</span></h2>
@@ -111,9 +108,9 @@
                 <img src="images/marca-nike.png" alt="Nike" class="marca_img">
                 <img src="images/marca-adidas.png" alt="Adidas" class="marca_img">
                 <img src="images/marca-puma.png" alt="Puma" class="marca_img">
-                <img src="images/marca-converse.png" alt="Converse" class="marca_img none">
-                <img src="images/marca-vans.png" alt="Vans" class="marca_img none1">
-                <img src="images/marca-newbalance.png" alt="Newbalance" class="marca_img none1">
+                <img src="images/marca-converse.png" alt="Converse" class="marca_img none1">
+                <img src="images/marca-vans.png" alt="Vans" class="marca_img none2">
+                <img src="images/marca-newbalance.png" alt="Newbalance" class="marca_img none2">
                 <i class="fas fa-chevron-right next icons-marca"></i>
             </div>
 
@@ -131,16 +128,16 @@
             <i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!
         </div>
 
-        </div class="newsletter">
+        <div class="newsletter">
 
-        <form action="/" method="POST" class="newsletter">
+            <form action="/" method="POST" class="newsletter">
 
-            <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
-            <div class="control-formulario">
-                <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
-                <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
-            </div>
-        </form>
+                <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
+                <div class="control-formulario">
+                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
+                    <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
+                </div>
+            </form>
 
         </div>
     </main>
@@ -151,8 +148,8 @@
 
             <div class="main-footer">
                 <article class="footer-article">
-                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none2"></i></h4>
-                    <div class="italic center gris-oscuro padding">
+                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none3"></i></h4>
+                    <div class="italic center padding">
                         <ul class="footer">
                             <li><a href="#" class="linkfooter">Quienes somos</a></li>
                             <li><a href="#" class="linkfooter">Politicas de privacidad</a></li>
@@ -161,8 +158,8 @@
                     </div>
                 </article>
                 <article class="footer-article">
-                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none2"></i></h4>
-                    <div class="italic center gris-oscuro padding">
+                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none3"></i></h4>
+                    <div class="italic center padding">
                         <ul class="footer">
                             <li><a href="#" class="linkfooter">Preguntas frecuentes</a></li>
                             <li><a href="#" class="linkfooter">Sucursales</a></li>
@@ -173,7 +170,7 @@
                     </div>
                 </article>
                 <article class="footer-article">
-                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none2"></i></h4>
+                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none3"></i></h4>
                     <div class="italic">
                         <ul class="footer">
                             <li><a href="" class="linkfooter">0800-888-8888</a></li>
@@ -188,7 +185,7 @@
             <br />
 
             <div>
-                <p class="gris-oscuro font-size center1 ">Copyright © 2020 KICKS S.R.L.</p>
+                <p class="center1">Copyright © 2020 KICKS S.R.L.</p>
                 <div class="redes">
                     <i class="fab fa-facebook-square"></i>
                     <i class="fab fa-instagram-square"></i>
