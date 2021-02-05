@@ -435,7 +435,7 @@ div.medios-pago{
     font-weight: bold;
 }
 .boton-compra{
-    font-family: roboto;
+    font-family: "Roboto";
     background-color:#d97f11;
     padding:0px 10px;
     border:none;
@@ -450,7 +450,6 @@ div.medios-pago{
 .nav-site{
     display:flex;
 }
-
 .nav-site li a{
     text-decoration: none;
     font-weight: bold;
@@ -459,28 +458,20 @@ div.medios-pago{
 .main-article-product{
     margin: 0px 50px;
     background-color: #f2f2f2;  
-    border: solid 0.5px #000000;
 }
 .data-principal{
-    background-color: #222021;
     text-align: center;
 }
 .main-title{
     font-weight: bolder;
-    color: #ffffff;
 }
 .precio-pd{
-    font-size: 35px;
+    font-size: 25px;
     font-weight: bold;
     color: #8c2e2e;
     margin: 10px;
 }
-.talle{
-    color: #ffffff;
-}
-.cfont-talles{
-    color: #ffffff;
-}
+
 .tallesdisponibles{
     margin: 5px;
 }
@@ -494,9 +485,6 @@ div.medios-pago{
     justify-content: center;
     align-items: center;
 }
-.cantidad-titulo{
-    color: #ffffff;
-}
 .cantidaditem{
     margin: 5px;
 }
@@ -504,12 +492,14 @@ div.medios-pago{
     margin: 10px 5px;
 }
 .boton-de-compra{
-    font-size: 45px;
-    padding: 5px;
-    border-radius: 20px;
-    color: #ffffff;
+    font-family: "Roboto";
     background-color: #d97f11;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #ffffff;
     text-decoration: none;
+    width: 140px;
+    height: 40px;
 }
 .enviosgratis{
     margin: 0px 10px;
@@ -522,6 +512,7 @@ div.medios-pago{
 }
 .header-details{
     padding: 5px 5px;
+    margin-top: 10px;
 }
 .descripcion{
     margin: 10px;
@@ -542,6 +533,15 @@ div.medios-pago{
 }
 ol{
     list-style: none;
+}
+img.main-product-image{
+    border: solid 1px black;
+    margin-top: 10px;
+    padding-top: 20px;
+    background-color: white;
+}
+.margin-products{
+    margin-top: 10px;
 }
 
 /*MAIN REGISTER */
@@ -727,12 +727,7 @@ div.italic {
     }
     .main-title{
         font-weight: bolder;
-        font-size: 200%;
-    }
-    .precio-pd{
-        font-size: 50px;
-        font-weight: bold;
-        text-align: center;
+        font-size: 30px;
     }
     .talle{
         font-size: 25px;
@@ -909,9 +904,6 @@ div.italic {
     .imagen-principal{
         width: 100%;
     }
-    .main-product-image{
-        height: 100%;
-    }
     .data-principal{
         width: 40%;
     }
@@ -930,8 +922,13 @@ div.italic {
     .register-container-end{
         width:50%;
     }
-    
-
+    img.main-product-image{
+     max-width: 700px;
+    }
+    .precio-pd{
+        font-size: 35px;
+        text-align: center;
+    }
 }
 @media (min-width:1200px){
     .logo{
