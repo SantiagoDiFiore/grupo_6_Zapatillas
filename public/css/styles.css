@@ -280,6 +280,8 @@ div.medios-pago{
 .control{
     width: 100%;
     padding: 8px;
+    border: none;
+    border-radius: 5px;
 }
 .boton-suscribe{
     background-color: #222021;
@@ -583,9 +585,12 @@ margin: 15px 0px 10px 0px;
 }
 .ingreso{
     width: 90%;
-    font: roboto;
+    font: "Roboto";
     margin: 0px 0px 10px 0px;
-    padding: 5px;  
+    padding: 5px;
+    border: none;   
+    border-radius: 5px;
+
 }
 .genero{
     display: flex;
