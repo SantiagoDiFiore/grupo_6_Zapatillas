@@ -366,6 +366,7 @@ div.medios-pago{
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-top: 20px;
+    margin-left: 10px;
 }
 .encabezado-carrito a{
     font-size: 10px;
