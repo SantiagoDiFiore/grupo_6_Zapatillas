@@ -1,5 +1,6 @@
 const express= require("express");
 const app= express();
+const path=require("path");
 
 
 app.use(express.static("../public"))
@@ -22,6 +23,10 @@ app.use("/users" , rutasUsers);
 
 const rutasMarcas= require("./routes/marcas");
 app.use("/marcas" , rutasMarcas);
+
+//definiendo el moto de plantillas
+
+app.set("view engine" , "ejs");
 
 
 
