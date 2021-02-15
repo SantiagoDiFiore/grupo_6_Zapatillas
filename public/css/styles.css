@@ -758,9 +758,6 @@ div.italic {
 }
 
 @media (min-width:768px){
-    .main-header{
-        padding:10px
-    }
     .header-top-bar{
         justify-content: space-around;
     }
@@ -959,4 +956,11 @@ div.italic {
         margin-left: 100px;
         margin-right: 100px;
     }  
+    .modelo{
+        font-size: 16px;
+    }
+    .miniatura{
+        margin-left: 15px;
+        margin-right: 10px;
+    }
 }
