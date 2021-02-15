@@ -1,41 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Finalizar la compra</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <script src="https://kit.fontawesome.com/e8df24fbbe.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/styles.css">
-</head>
+<%- include("../partials/head")%>
 
 <body>
-    <header class="main-header">
-        <div class="arriba">
-            <h3>¡3 , 6 y 12 CUOTAS SIN INTERES!</h3>
-        </div>
-        <div class="header-top-bar">
-
-            <div class="contenedor-menu">
-                <i class="fas fa-bars menu-desplegable"></i>
-            </div>
-            <a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo"></a>
-            <div class="icons-section">
-                <a href="/users/login"><i class="fas fa-user"></i></a>
-                <a href="/productos/productCart"><i class="fas fa-shopping-cart"></i></a>
-                <a href="/"><i class="fas fa-share-alt-square"></i></a>
-            </div>
-            <form action="/productos/productDetail" method="GET" class="search-form">
-                <input type="text" name="search" placeholder="¿Qué estás buscando?" class="campo-busqueda">
-                <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-
-
-    </header>
+<%- include("../partials/header")%>
 
     <main>
         <div class="encabezado-carrito">
@@ -154,58 +123,7 @@
             </form>
         </div>
     </main>
-    <footer>
-        <section>
-
-            <div class="main-footer">
-                <article class="footer-article">
-                    <h4 class="titulo">INSTITUCIONAL<i class="fas fa-chevron-down none3"></i></h4>
-                    <div class="italic center padding">
-                        <ul class="footer">
-                            <li><a href="#" class="linkfooter">Quienes somos</a></li>
-                            <li><a href="#" class="linkfooter">Politicas de privacidad</a></li>
-                            <li><a href="#" class="linkfooter">Terminos y condiciones</a></li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="footer-article">
-                    <h4 class="titulo">AYUDA<i class="fas fa-chevron-down none3"></i></h4>
-                    <div class="italic center padding">
-                        <ul class="footer">
-                            <li><a href="#" class="linkfooter">Preguntas frecuentes</a></li>
-                            <li><a href="#" class="linkfooter">Sucursales</a></li>
-                            <li><a href="#" class="linkfooter">Pagos</a></li>
-                            <li><a href="#" class="linkfooter">Entregas</a></li>
-                            <li><a href="#" class="linkfooter">Cambios</a></li>
-                        </ul>
-                    </div>
-                </article>
-                <article class="footer-article">
-                    <h4 class="titulo">CONTACTO<i class="fas fa-chevron-down icon-title none3"></i></h4>
-                    <div class="italic">
-                        <ul class="footer">
-                            <li><a href="" class="linkfooter">0800-888-8888</a></li>
-                            <li><a href="" class="linkfooter">Lunes a Sábado de 9 a 18 hs</a></li>
-                            <li><a href="#" class="linkfooter"><i class="far fa-envelope "></i>Envianos un mensaje</a>
-                            </li>
-                        </ul>
-                    </div>
-                </article>
-            </div>
-
-            <br />
-
-            <div>
-                <p class="center1">Copyright © 2020 KICKS S.R.L.</p>
-                <div class="redes">
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-instagram-square"></i>
-                    <i class="fab fa-whatsapp-square"></i>
-                </div>
-            </div>
-        </section>
-
-    </footer>
+<%- include("../partials/footer")%>
 
 </body>
 
