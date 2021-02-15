@@ -2,25 +2,14 @@ const express= require("express");
 const router= express.Router();
 const path= require("path");
 
-
-router.get("/login" , (req,res)=>{
-    res.sendFile(path.resolve("./views/login.html"))
-});
-router.get("/register" , (req,res)=>{
-    res.sendFile(path.resolve("./views/register.html"))
-});
+const usersController = require("../controllers/usersController")
 
 
-router.post("/register" , (req,res)=>{
-    res.sendFile(path.resolve("./views/register.html"))
-});
+router.get("/login", usersController.login);
 
+router.get("/register", usersController.register);
 
-
-
-
-
-
+router.post("/register", usersController.register);
 
 
 module.exports=router;
