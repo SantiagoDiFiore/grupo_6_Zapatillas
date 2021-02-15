@@ -11,6 +11,19 @@
 ## Dejar de hacer
 > Por ahora nada.
 
+### **RETROSPECTIVA SPRINT 2** 
+
+## Comenzar a hacer
+>Deberiamos administrar un poco mejor el tiempo, para no llegar tan justos al cierre del sprint.
+## Hacer más
+>Realizar con más frecuencia las reuniones daily o weekly.
+## Continuar haciendo
+>Tenemos que continuar haciendo revisiones periodicas de la página para ir actualizando tanto su estetica como su funcionalidad. Y seguir trabajando de manera organizada, como lo venimos haciendo.
+## Hacer menos
+> No encontramos un punto el cual deberiamos hacer con menor frecuencia.
+## Dejar de hacer
+> Tendriamos que dejar de perder los primeros dias de trabajo apenas se lanza el sprint. 
+
 
 
 
