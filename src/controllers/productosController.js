@@ -1,5 +1,3 @@
-
-
 const productosController = {
     productCart: (req, res) => {
         res.render("./products/productCart")

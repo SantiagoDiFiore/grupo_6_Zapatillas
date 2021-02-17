@@ -26,7 +26,7 @@ app.use("/marcas" , rutasMarcas);
 
 //definiendo el moto de plantillas
 
-app.set("view engine" , "ejs");
+app.set("view engine", "ejs");
 
 
 

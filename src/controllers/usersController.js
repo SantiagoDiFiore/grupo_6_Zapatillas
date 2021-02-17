@@ -1,5 +1,3 @@
-
-
 const usersController = {
     login: (req,res)=>{
         res.render("./users/login")
