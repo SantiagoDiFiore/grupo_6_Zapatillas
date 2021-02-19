@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head")%>
+
+<body>
+<%- include("../partials/header")%>
+
+    <main>
+        <div class="encabezado-carrito">
+            <h3>PRODUCTOS</h3>
+            
+        </div>
+        <section class="elementos-carrito">
+            <% for( let i = 0; i < lista.length; i++ ) { %>
+                <article class="producto">
+                    <img src= <%="/images/"+lista[i].img  %>  alt=<%= lista[i].modelo %>  class="miniatura">
+                    <div class="modelo"><%= lista[i].modelo %></div>
+                    <div class="precio-carrito"><%= lista[i].precio %></div>
+                    
+                </article>
+            
+            <% } %>
+            
+            
+            
+        
+        
+    </main>
+<%- include("../partials/footer")%>
+
+</body>
+
+</html>

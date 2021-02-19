@@ -5,9 +5,8 @@ const path= require("path");
 const productosController = require("../controllers/productosController")
 
 
-router.get('/', (req, res) => {
-    //ruta a todos los productos
-});
+router.get('/', productosController.index);
+
 router.get('/productCart', productosController.productCart);
 
 router.get("/productDetail", productosController.productDetail);
