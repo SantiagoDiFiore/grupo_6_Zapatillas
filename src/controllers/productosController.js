@@ -16,6 +16,26 @@ modelo:"PUMA FUTURE RIDER NES (2020)",
 precio:"$ 22.000",
 img:"puma3.png",
 },
+{
+id:3,
+modelo:"ADIDAS OZWEEGO ORANGE (YOUTH)",
+precio:"$ 22.000",
+img:"adidas1.png",
+},
+{
+id:4,
+modelo:"NIKE AIR MAX 90 INFRARED (2020)",
+precio:"$ 21.700",
+img:"nike3.png",
+},
+
+{
+id:5,
+modelo:"NEW BALANCE 1300 LEVI´S",
+precio:"$ 21.700",
+img:"new-balance4.png",
+},
+
 
 ]
 
@@ -28,8 +48,10 @@ const productosController = {
         res.render("./products/productCart" ,{titulo:"Carrito"})
     },
     productDetail: (req,res)=>{
-        res.render("./products/productDetail",{titulo:"Detalle"})
+        let parametro=req.params.id;
+        res.render("./products/productDetail",{titulo:"Detalle" ,lista:lista , parametro:parametro})
     },
+    
    
 }  
 
