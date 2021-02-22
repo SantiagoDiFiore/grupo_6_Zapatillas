@@ -18,13 +18,24 @@
         </div>
 
         <section class="main-article-product">
-            <div class="imagen-principal">
-                <img src="/images/adidas1.png" width="100%" alt="Adidas Ozweego Orange" class="main-product-image">
-            </div>
-            <div class="data-principal">
-                <div class="product-body">
-                    <h2 class="main-title">Adidas Ozweego Orange (Youth)</h2>
-                    <p class="precio-pd">$13.999</p>
+            
+                <% for( let i = 0; i < lista.length; i++ ) { %>
+                <% if(parametro==lista[i].id){ %>
+                    <div class="imagen-principal">
+                    <img src=<%="/images/"+lista[i].img%> width="100%" alt=<%=lista[i].modelo%> class="main-product-image">
+                    </div>
+
+                    <div class="data-principal">
+                        <div class="product-body">
+                            <h2 class="main-title"><%=lista[i].modelo%></h2>
+                            <p class="precio-pd"><%=lista[i].precio%></p>
+                    <% } %> 
+
+                       
+                
+                <% } %>
+                
+            
                     <h3 class="talle">Elegi tu talle</h3>
                     <div class="talle1">
                         <p class="guia-talles"><a href=# class="cfont-talles"><i
