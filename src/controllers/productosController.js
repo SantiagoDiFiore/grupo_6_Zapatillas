@@ -5,6 +5,10 @@ const productosController = {
     productDetail: (req,res)=>{
         res.render("./products/productDetail")
     },
+    newproduct: (req,res)=>{
+        res.render("./users/newproduct")
+    },
+
    
 }  
 

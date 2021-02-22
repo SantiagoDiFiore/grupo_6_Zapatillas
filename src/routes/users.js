@@ -11,5 +11,4 @@ router.get("/register", usersController.register);
 
 router.post("/register", usersController.register);
 
-
 module.exports=router;
