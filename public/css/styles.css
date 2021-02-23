@@ -10,7 +10,7 @@ html,body {
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: #f2f2f2;
+    background-color: rgb(235,235,235);
     font-size: 16px;
 }
 
@@ -152,7 +152,7 @@ h2.linea:before {
     z-index: -1;
 }
 h2.linea span {  
-    background: #f2f2f2;
+    background: rgb(235,235,235);
     padding: 0 15px;
 }
 .recomendado-article{
@@ -175,7 +175,7 @@ article.recomendado-article{
     justify-content: center;
     width: 100%;
     margin-top: 20px;
-    background-color: #f2efe7;
+    background-color: rgb(235,235,235);
 }
 .contenedor-descripcion div{
     width: 100%;
@@ -202,7 +202,7 @@ article.recomendado-article{
 }
 div.images.padding{
     background-color: #ffffff;
-    border: solid 25px #f2f2f2 ;
+    border: solid 25px rgb(235,235,235);
     border-radius: 60px;
 }
 .icons-marca{
@@ -298,26 +298,26 @@ div.medios-pago{
 }
 
 /*MAIN LOGIN */
-.titulo-registro{
-    font-family: 'Roboto';
-    font-weight: bold;
-    padding-bottom: 10px;
-    border-bottom: solid 1px #000000;
-    margin-bottom: 15px;
-}
+.title{
+    font-weight: 700;
+    margin: 30px auto 12px;
+    width: 100%;
+    font-size: 24px;
+    font-family: "Roboto";
+    }
 .obligatorio{
     padding-top: 10px;
     padding-left: 5px;
-    font-style: italic;
-    font-size: 14px;
+    font-size: 15px;
+    font-family: "Roboto";
 }
 .register-formulario{
     margin-bottom: 15px;
     padding: 10px 10px 0 10px;
+    font-weight: bold;
 }
 .register-formulario label{
     margin-bottom: 5px;
-    font-style: italic;
     display: block;
 }
 .re-password{
@@ -343,6 +343,7 @@ div.medios-pago{
     margin-top: 15px;
     padding-bottom: 10px;
     border-bottom: solid 1px black;
+    border-top: solid 1px black;
 }
 .re-size{
     font-size: 12px;
@@ -358,6 +359,7 @@ div.medios-pago{
     border-radius: 5px;
     padding: 5px;
 }
+
 
 /*MAIN PRODUCTCART */
 
@@ -461,7 +463,7 @@ div.medios-pago{
 }
 .main-article-product{
     margin: 0px 50px;
-    background-color: #f2f2f2;  
+    background-color: rgb(235,235,235); 
 }
 .data-principal{
     text-align: center;
@@ -515,12 +517,13 @@ div.medios-pago{
     margin-left: 5px;
 }
 .header-details{
-    padding: 5px 5px;
+    padding: 7px;
     margin-top: 10px;
 }
 .descripcion{
     margin: 10px;
     background-color: #ffffff;
+    border-radius: 5px;
 }
 .detallesLista1 li{
     list-style: none;
@@ -545,13 +548,18 @@ img.main-product-image{
     background-color: white;
 }
 .margin-products{
+    padding: 7px;
     margin-top: 10px;
+}
+ol.nav-site{
+    padding: 7px;
 }
 
 /*MAIN NEW PRODUCT*/
 
 .main-nuevo-producto{
     text-align: -webkit-center;
+    font-family: "Roboto";
 }
 
 .formulario-nuevoproducto{
@@ -595,11 +603,6 @@ img.main-product-image{
 
 /*MAIN REGISTER */
 
-.titulo-registro1{
-    text-align: center;
-    padding:10px;
-    
-}
 .register-form{
     padding:10px;
     border-top: solid 1px #222021;
@@ -683,6 +686,9 @@ div.italic {
 }
 .padding{
     padding: 10px;
+}
+.padding-top{
+    padding-top: 10px;
 }
 .footer{
     display: flex;
@@ -889,15 +895,10 @@ div.italic {
     }
     .login-bar{
         text-align: center;
-        border: solid 1px #222021;
         margin: 25px;
     }
     .login-bar1{
-        border: solid 1px #222021;
         margin: 25px;
-    }
-    .titulo-registro{
-        border-bottom: solid 1px #222021;
     }
     .obligatorio{
         text-align: justify;
@@ -1009,11 +1010,43 @@ div.italic {
         margin-left: 15px;
         margin-right: 10px;
     }
-
     .delete-button:hover{
-        transition: 1000ms;
         background-color: #d97f11;
         color: #ffffff;
-        border: none;
+        border: solid 0.5px #d97f11;
     }
+    .delete-button{
+        transition: all 1000ms;
+    }
+    .boton-login:hover{
+        background-color: #d97f11;
+    }
+    .boton-login{
+        transition: background-color 1000ms;
+    }
+    .submit-button:hover{
+        background-color: #d97f11;
+    }
+    .submit-button{
+        transition: background-color 1000ms;
+    }
+    .submit-button1:hover{
+        background-color: #d97f11;
+    }
+    .submit-button1{
+        transition: background-color 1000ms;
+    }
+    .boton-compra:hover{
+        background-color: #ad650d;
+    }
+    .boton-compra{
+        transition: background-color 1000ms;
+    }
+    .boton-de-compra:hover{
+        background-color: #ad650d;
+    }
+    .boton-de-compra{
+        transition: background-color 1000ms;
+    }
+
 }
