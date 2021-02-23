@@ -35,6 +35,32 @@ modelo:"NEW BALANCE 1300 LEVI´S",
 precio:"$ 21.700",
 img:"new-balance4.png",
 },
+{
+id:6,
+modelo:"ADIDAS NITE JOGGER 3M NAVY",
+precio:"$ 14.000",
+img:"adidas2.png",
+},
+{
+id:7,
+modelo:"PUMA RS-X TOYS BONNIE BLUE ",
+precio:"$ 20.000",
+img:"puma1.png",
+},
+{
+id:8,
+modelo:"NIKE AIR MAX 95 OG NEON (2020)",
+precio:"$ 26.000",
+img:"nike1.png",
+},
+{
+id:9,
+modelo:"NEW BALANCE 327 CASABLANCA GREEN LOGO",
+precio:"$ 21.700",
+img:"new-balance5.png",
+},
+    
+
 
 
 ]
@@ -53,6 +79,9 @@ const productosController = {
     },
     newproduct: (req,res)=>{
         res.render("./products/productAdd",{titulo:"Nuevo Producto"})
+    },
+    changeProduct: (req,res)=>{
+        res.render("./products/productEdit",{titulo:"Modificar Producto"})
     },
 
     

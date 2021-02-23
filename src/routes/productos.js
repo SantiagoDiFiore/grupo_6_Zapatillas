@@ -17,5 +17,9 @@ router.get("/productAdd",productosController.newproduct);
 
 router.post("/productAdd",productosController.newproduct);
 
+router.get("/productEdit",productosController.changeProduct);
+
+router.post("/productEdit",productosController.changeProduct);
+
 
 module.exports=router;

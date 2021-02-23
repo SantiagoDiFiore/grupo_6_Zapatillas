@@ -6,7 +6,7 @@
 -2/2:Definimos los breakpoints y adaptamos el diseño.
 -4/2:Reunión larga de cierre de sprint, vinculamos y unificamos hojas de estilo, ultimamos algunos detalles.
 
-### **- Weekly (Sprint N°2) -**
+### **- Weekly (Sprint N°3) -**
 -11/2: Nos organizamos y dividimos las tareas, ademas actualizamos el tablero y definimos las prioridades.
 -12/2: Comenzamos con el ruteo de los archivos, encontramos un impedimento ya que se habian duplicado algunos archivos(app.js y views)
 -15/2: Implementamos los controladores y las vistas parciales. Ademas, reacomodamos la carpeta views en subcarpetas. 

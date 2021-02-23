@@ -29,3 +29,11 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 -Generamos el estilo visual de las secciones solicitadas, algunas funcionalidades estan limitadas momentaneamente.(JS)
 -El acceso al register.html se realiza a traves del botón del login"Crear nueva Cuenta".
 -El acceso al productDetail.html está vinculado al producto "Adidas ozweego orange" del home.html(destacados).
+
+### **- Sprint N°3/Notas**
+-Generamos vistas dinamicas para los productos recomendados/destacados.
+-Los titulos de las pestañas de cada seccion tambien se muestran de forma dinámica.
+-Al reorganizar la estructura del sitio el entry point se movió dentro del directorio SRC.
+-Continuamos puliendo el css y agregamos algunas transiciones.
+-El acceso a los formularios de carga y edicion de productos es a traves de las rutas:(http://localhost:3000/productos/productAdd) y
+(http://localhost:3000/productos/productEdit).
