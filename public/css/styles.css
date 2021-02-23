@@ -161,7 +161,8 @@ h2.linea span {
     justify-content: space-between;
     width: 100%;
     margin-top: 20px;
-    border: dotted 0.5px #d97f11;
+    /*border: dotted 0.5px #d97f11;*/
+    box-shadow:1px 1px 2px 2px rgb(217 127 17 / 80%) ;
 }
 .recomendado-article img{
     width: 100%;
@@ -365,7 +366,7 @@ div.medios-pago{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 10px;
 }
 .encabezado-carrito a{
@@ -386,6 +387,7 @@ div.medios-pago{
 }
 .miniatura{
     width: 30%;
+    margin-right: 10px;
 }
 .modelo{
     font-size: 12px;
@@ -446,8 +448,9 @@ div.medios-pago{
     width: 140px;
     height: 40px;
     color: white;
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%) 
+    
 }
-
 /*MAIN PRODUCTDETAIL */
 
 .nav-site{
@@ -880,9 +883,10 @@ div.italic {
     }
     .miniatura{
         width: 15%;
+        margin-right: 10px;
     }
     div.modelo{
-        width: 42%;
+        width: 40%;
     }
     div.precio-carrito{
         width:10%;
@@ -963,5 +967,12 @@ div.italic {
     .miniatura{
         margin-left: 15px;
         margin-right: 10px;
+    }
+    .boton-compra:hover{
+     box-shadow:1px 1px 3px 3px rgb(0 0 0 / 50%);
+     
+    }
+    .recomendado-article:hover {
+        box-shadow:1px 1px 8px 4px rgb(217 127 17 / 90%);
     }
 }
