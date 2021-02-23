@@ -1,71 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
-    <main class="main-nuevo-producto">
-        <form action="/login" method="POST" class="formulario-nuevoproducto">
-            <h3>AGREGUE/EDITE SU NUEVO PRODUCTO</h3>
-            <div>
-                <label for="ProductName">Nombre del Producto</label>
-                <input id="ProductName" type="text" name="ProductName" class="controlnewproduct">
+    <main class="auto">
+        <h2 class="title">Agregue/Edite su nuevo producto</h2>
+        <form action="#" method="POST" class="form">
+            <div class="control-formulario1">
+                <label for="name">Nombre del producto:</label>
+                <input type="text" name="nombre" id="name" placeholder="Nombre del producto" class="control1" required
+                    minlength="4" />
             </div>
-
-            <div>
-                <label for="precio">Precio</label>
-                <input id="precio" type="text" name="precio" class="controlnewproduct">
+            <div class="control-formulario1">
+                <label for="detail">Detalle del producto:</label>
+                <input type="text" name="detail" id="detail" placeholder="Detalle del producto" class="control1" required />
             </div>
-
-            <div>
-                <label for="Genero">Genero</label>
-                <label>
-                    <input type="radio" name="masculino" value="masculino" class="controlnewproduct">Masculino
-                </label>
-                <label>
-                    <input type="radio" name="femenino" value="femenino" class="controlnewproduct">Femenino
-                </label>
-                <label>
-                    <input type="radio" name="unisex" value="unisex" class="controlnewproduct">Otros
-                </label>
+            <div class="control-formulario1">
+                <label for="image">Imagen del producto</label>
+                <input type="file" name="image" accept=".jpg" />
             </div>
-
             <div>
-                <label for="tallesdisponibles">Talles Disponibles:</label>
-                <input id="tallesdisponibles" type="checkbox" name="talle36" value="talle36" class="controlnewproduct-talle">36</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle37" value="talle37" class="controlnewproduct-talle">37</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle38" value="talle38" class="controlnewproduct-talle">38</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle39" value="talle39" class="controlnewproduct-talle">39</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle40" value="talle40" class="controlnewproduct-talle">40</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle41" value="talle41" class="controlnewproduct-talle">41</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle42" value="talle42" class="controlnewproduct-talle">42</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle43" value="talle43" class="controlnewproduct-talle">43</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle44" value="talle44" class="controlnewproduct-talle">44</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle45" value="talle45" class="controlnewproduct-talle">45</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle46" value="talle46" class="controlnewproduct-talle">46</input>
-                <input id="tallesdisponibles" type="checkbox" name="talle47" value="talle47" class="controlnewproduct-talle">47</input>
+                <label for="gender" class="negrita">Genero</label>
+                <br />
+                <input type="radio" name="gender" id="gender" />Masculino
+                <input type="radio" name="gender" id="gender" />Femenino
+                <input type="radio" name="gender" id="gender" />Otros
             </div>
-
+            <br />
             <div>
-                <label for="fotodeproducto">Foto del producto</label>
-                <input id="fotodeproducto" type="file" name="fotodeproducto" value="fotodeproducto" class="controlnewproduct"></input>
+                <label for="category" class="negrita">Talles:</label>
+                <br>
+                <input type="checkbox" name="category" id="category" value="t37" />37
+                <input type="checkbox" name="category" id="category" value="t38" />38
+                <input type="checkbox" name="category" id="category" value="t39" />39
+                <input type="checkbox" name="category" id="category" value="t40" />40
+                <input type="checkbox" name="category" id="category" value="t41" />41
+                <input type="checkbox" name="category" id="category" value="t42" />42
+                <input type="checkbox" name="category" id="category" value="t43" />43
+                <input type="checkbox" name="category" id="category" value="t44" />44
+                <input type="checkbox" name="category" id="category" value="t45" />45
+                <input type="checkbox" name="category" id="category" value="t46" />46
             </div>
-
-            <div>
-                <label for="detallesproducto">Detalle de producto</label>
-                <input id="detallesproducto" type="text" name="detallesproducto" class="detallesproducto"></input>
+            <div class="control-formulario1">
+                <label for="price">Precio</label>
+                <input type="text" name="price" id="price" placeholder="$9.999" class="control1" required
+                    minlength="4" />
             </div>
-
+            <br />
             <div class="register-buttons">
                 <button type="submit" value="Confirmar" class="confirm-button">Confirmar</button>
                 <button type="reset" value="Borrar" class="delete-button">Borrar</button>
             </div>
+            <br />
         </form>
     </main>
 
-<%- include("../partials/footer")%>  
+    <%- include("../partials/footer")%>
 </body>
 
 </html>
