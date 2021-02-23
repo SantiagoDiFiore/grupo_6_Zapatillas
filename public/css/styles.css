@@ -560,34 +560,33 @@ ol.nav-site{
 
 /*MAIN NEW PRODUCT*/
 
-.main-nuevo-producto{
-    text-align: -webkit-center;
-    font-family: "Roboto";
+.control-formulario1{
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
-.formulario-nuevoproducto{
-    background: #ffffff;
-    display: inline-block;
-    border-radius: 20px;
-    padding: 15px 15px;
-    margin: 15px;
-    text-align: initial;
-	font-size: x-large;
+.control-formulario1 label{
+    padding-top: 10px;
+    margin-bottom: 5px;
+    display: block;
 }
-
-.controlnewproduct{
-    margin-top: 10px ;
+.control1{
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
 }
-
-.controlnewproduct-talle{
-    margin: revert;
+.negrita{
+    font-weight: bold;
 }
-
+main.auto{
+    width: 90%;
+    margin: 0 auto;
+}
 .register-buttons{
     text-align: center;
     margin-top: 10px;
 }
-
 .confirm-button{
     background-color: #222021;
     border: none;
@@ -602,6 +601,12 @@ ol.nav-site{
     font-size: 20px;
     color: #222021;
     padding: 5px 10px;
+}
+.form{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    border: solid 20px #f2f2f2;
+    margin-bottom: 10px;
 }
 
 /*MAIN REGISTER */
@@ -754,6 +759,10 @@ div.italic {
         display: block;
     }
     .control-formulario{
+        padding-top: 7px;
+        padding-right:7px ;
+    }
+    .control-formulario1{
         padding-top: 7px;
         padding-right:7px ;
     }
@@ -982,6 +991,14 @@ div.italic {
         font-size: 30px;
         text-align: center;
     }
+    main.auto{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .form{
+        width: 55%;
+    }
 }
 @media (min-width:1200px){
     .logo{
@@ -1014,10 +1031,6 @@ div.italic {
         margin-left: 15px;
         margin-right: 10px;
     }
-    .boton-compra:hover{
-     box-shadow:1px 1px 3px 3px rgb(0 0 0 / 50%);
-     
-    }
     .recomendado-article:hover {
         box-shadow:1px 1px 8px 4px rgb(217 127 17 / 90%);
     }
@@ -1049,6 +1062,7 @@ div.italic {
     }
     .boton-compra:hover{
         background-color: #ad650d;
+        box-shadow:1px 1px 3px 3px rgb(0 0 0 / 50%);
     }
     .boton-compra{
         transition: background-color 1000ms;
@@ -1059,5 +1073,4 @@ div.italic {
     .boton-de-compra{
         transition: background-color 1000ms;
     }
-
 }
