@@ -52,7 +52,7 @@ const productosController = {
         res.render("./products/productDetail",{titulo:"Detalle" ,lista:lista , parametro:parametro})
     },
     newproduct: (req,res)=>{
-        res.render("./products/newproduct",{titulo:"Nuevo Producto"})
+        res.render("./products/productAdd",{titulo:"Nuevo Producto"})
     },
 
     

@@ -8,16 +8,14 @@
 
     <main>
         <div class="login-bar">
-            <h2 class="titulo-registro">Iniciar Sesión</h2>
+            <h2 class="title">Iniciar Sesión</h2>
             <form action="/" method="POST">
-                <p class="obligatorio ">* Email</p>
                 <div class="register-formulario">
-                    <label for="user"></label>
+                    <label for="user" class="obligatorio">* Email</label>
                     <input type="email" name="email" id="user" placeholder="Email..." required class="control" />
                 </div>
-                <p class="obligatorio">* Contraseña</p>
                 <div class="register-formulario">
-                    <label for="password"></label>
+                    <label for="password"class="obligatorio">* Contraseña</label>
                     <input type="password" name="password" id="password" placeholder="Contraseña..." required
                         class="control" />
                 </div>
@@ -35,7 +33,7 @@
         </div>
 
         <div class="new-account">
-            <p class="italic center re-size">¿Todavía no tienes cuenta?</p>
+            <p class="italic center re-size padding-top">¿Todavía no tienes cuenta?</p>
             <a href="/users/register">
                 <div class="center">
                     <button type="submit" class="submit-button">Crear nueva cuenta</button>
