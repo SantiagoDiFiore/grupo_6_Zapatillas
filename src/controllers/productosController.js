@@ -51,6 +51,10 @@ const productosController = {
         let parametro=req.params.id;
         res.render("./products/productDetail",{titulo:"Detalle" ,lista:lista , parametro:parametro})
     },
+    newproduct: (req,res)=>{
+        res.render("./products/newproduct",{titulo:"Nuevo Producto"})
+    },
+
     
    
 }  

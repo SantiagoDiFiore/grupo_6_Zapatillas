@@ -13,5 +13,9 @@ router.get('/productCart', productosController.productCart);
 
 router.get("/productDetail/:id", productosController.productDetail);
 
+router.get("/newproduct",productosController.newproduct);
+
+router.post("/newproduct",productosController.newproduct);
+
 
 module.exports=router;

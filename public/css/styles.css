@@ -551,6 +551,51 @@ img.main-product-image{
     margin-top: 10px;
 }
 
+/*MAIN NEW PRODUCT*/
+
+.main-nuevo-producto{
+    text-align: -webkit-center;
+}
+
+.formulario-nuevoproducto{
+    background: #ffffff;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 15px 15px;
+    margin: 15px;
+    text-align: initial;
+	font-size: x-large;
+}
+
+.controlnewproduct{
+    margin-top: 10px ;
+}
+
+.controlnewproduct-talle{
+    margin: revert;
+}
+
+.register-buttons{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.confirm-button{
+    background-color: #222021;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+.delete-button{
+    background-color: #ffffff;
+    border: solid 0.5px #222021;
+    font-size: 20px;
+    color: #222021;
+    padding: 5px 10px;
+}
+
 /*MAIN REGISTER */
 
 .titulo-registro1{
@@ -974,5 +1019,11 @@ div.italic {
     }
     .recomendado-article:hover {
         box-shadow:1px 1px 8px 4px rgb(217 127 17 / 90%);
+    }
+    .delete-button:hover{
+        transition: 1000ms;
+        background-color: #d97f11;
+        color: #ffffff;
+        border: none;
     }
 }
