@@ -11,4 +11,5 @@
 -12/2: Comenzamos con el ruteo de los archivos, encontramos un impedimento ya que se habian duplicado algunos archivos(app.js y views)
 -15/2: Implementamos los controladores y las vistas parciales. Ademas, reacomodamos la carpeta views en subcarpetas. 
 -16/2: Comenzamos con la página de creacion de productos.
--19/2: Agregamos titulos dinámicos para cada página.    
+-19/2: Agregamos titulos dinámicos para cada página.   
+-21/2: Subimos la página de creación y edicion de productos. 
