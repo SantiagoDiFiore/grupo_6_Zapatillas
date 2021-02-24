@@ -33,6 +33,7 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 ### **- Sprint N°3/Notas**
 -Generamos vistas dinamicas para los productos recomendados/destacados.
 -Los titulos de las pestañas de cada seccion tambien se muestran de forma dinámica.
+-El listado de todos los productos se encuentra en http://localhost:3000/productos (se generan de forma dinamica, por ahora la info es leida desde un array de objetos que se encuentra en el controlador)
 -Al reorganizar la estructura del sitio el entry point se movió dentro del directorio SRC.
 -Continuamos puliendo el css y agregamos algunas transiciones.
 -El acceso a los formularios de carga y edicion de productos es a traves de las rutas:(http://localhost:3000/productos/productAdd) y

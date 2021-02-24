@@ -391,6 +391,9 @@ div.medios-pago{
     width: 30%;
     margin-right: 10px;
 }
+.miniaturaB{
+    width:100%;
+}
 .modelo{
     font-size: 12px;
     width: 60%;
@@ -939,6 +942,9 @@ div.italic {
     .miniatura{
         width: 15%;
         margin-right: 10px;
+    }
+    .miniaturaB{
+        width:100%;
     }
     div.modelo{
         width: 40%;
