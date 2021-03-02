@@ -4,7 +4,7 @@
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
     <main>
         <div class="navegacion-de-sitios">
@@ -18,24 +18,25 @@
         </div>
 
         <section class="main-article-product">
-            
-                <% for( let i = 0; i < lista.length; i++ ) { %>
-                <% if(parametro==lista[i].id){ %>
-                    <div class="imagen-principal">
-                    <img src=<%="/images/"+lista[i].img%> width="100%" alt=<%=lista[i].modelo%> class="main-product-image">
-                    </div>
 
-                    <div class="data-principal">
-                        <div class="product-body">
-                            <h2 class="main-title"><%=lista[i].modelo%></h2>
-                            <p class="precio-pd"><%=lista[i].precio%></p>
-                    <% } %> 
+            <% for( let i = 0; i < products.length; i++ ) { %>
+            <% if(parametro==products[i].id){ %>
+            <div class="imagen-principal">
+                <img src=<%="/images/"+products[i].image%> width="100%" alt=<%=products[i].name%>
+                    class="main-product-image">
+            </div>
 
-                       
-                
-                <% } %>
-                
-            
+            <div class="data-principal">
+                <div class="product-body">
+                    <h2 class="main-title"><%=products[i].name%></h2>
+                    <p class="precio-pd">$<%=products[i].price%></p>
+                    <% } %>
+
+
+
+                    <% } %>
+
+
                     <h3 class="talle">Elegi tu talle</h3>
                     <div class="talle1">
                         <p class="guia-talles"><a href=# class="cfont-talles"><i
@@ -92,7 +93,8 @@
             <h3 class="margin-products">Otros productos que podrian interesarte...</h3>
             <div class="destacados">
                 <article class="recomendado-article a1">
-                    <a href="/productos/productDetail/6"><img src="/images/adidas2.png" alt="ADIDAS NITE JOGGER 3M NAVY"></a>
+                    <a href="/products/productDetail/6"><img src="/images/adidas2.png"
+                            alt="ADIDAS NITE JOGGER 3M NAVY"></a>
                     <div class="contenedor-descripcion">
                         <div>ADIDAS NITE JOGGER 3M NAVY</div>
                         <i class="fas fa-arrow-circle-left izarrow"></i>
@@ -101,7 +103,8 @@
                     </div>
                 </article>
                 <article class="recomendado-article a2">
-                    <a href="/productos/productDetail/7"><img src="/images/puma1.png" alt="PUMA RS-X TOYS BONNIE BLUE"></a>
+                    <a href="/products/productDetail/7"><img src="/images/puma1.png"
+                            alt="PUMA RS-X TOYS BONNIE BLUE"></a>
                     <div class="contenedor-descripcion">
                         <div>PUMA RS-X TOYS BONNIE BLUE (W)</div>
                         <i class="fas fa-arrow-circle-left izarrow"></i>
@@ -110,7 +113,8 @@
                     </div>
                 </article>
                 <article class="recomendado-article a3">
-                    <a href="/productos/productDetail/8"><img src="/images/nike1.png" alt="NIKE AIR MAX 95 OG NEON (2020)"></a>
+                    <a href="/products/productDetail/8"><img src="/images/nike1.png"
+                            alt="NIKE AIR MAX 95 OG NEON (2020)"></a>
                     <div class="contenedor-descripcion">
                         <div>NIKE AIR MAX 95 OG NEON (2020)</div>
                         <i class="fas fa-arrow-circle-left izarrow"></i>
@@ -119,7 +123,8 @@
                     </div>
                 </article>
                 <article class="recomendado-article a4">
-                    <a href="/productos/productDetail/9"><img src="/images/new-balance5.png" alt="NEW BALANCE 327 CASABLANCA GREEN LOGO"></a>
+                    <a href="/products/productDetail/9"><img src="/images/new-balance5.png"
+                            alt="NEW BALANCE 327 CASABLANCA GREEN LOGO"></a>
                     <div class="contenedor-descripcion">
                         <div>NEW BALANCE 327 CASABLANCA GREEN LOGO</div>
                         <i class="fas fa-arrow-circle-left izarrow"></i>
@@ -139,7 +144,7 @@
             </form>
         </div>
     </main>
-<%- include("../partials/footer")%>
+    <%- include("../partials/footer")%>
 </body>
 
 </html>

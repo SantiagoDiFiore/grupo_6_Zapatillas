@@ -4,30 +4,31 @@
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
     <main>
         <div class="encabezado-carrito">
             <h3>PRODUCTOS</h3>
-            
+
         </div>
         <section class="elementos-carrito">
-            <% for( let i = 0; i < lista.length; i++ ) { %>
-                <article class="producto">
-                   <a class="miniatura" href=<%="/productos/productDetail/"+lista[i].id %>><img src= <%="/images/"+lista[i].img  %>  alt=<%= lista[i].modelo %>  class="miniaturaB"></a>
-                    <div class="modelo"><%= lista[i].modelo %></div>
-                    <div class="precio-carrito"><%= lista[i].precio %></div>
-                    
-                </article>
-            
+            <% for( let i = 0; i < products.length; i++ ) { %>
+            <article class="producto">
+                <a class="miniatura" href=<%="/products/productDetail/"+products[i].id %>><img
+                        src=<%="/images/"+products[i].image  %> alt=<%= products[i].name %> class="miniaturaB"></a>
+                <div class="modelo"><%= products[i].name %></div>
+                <div class="precio-carrito">$<%= products[i].price %></div>
+
+            </article>
+
             <% } %>
-            
-            
-            
-        
-        
+
+
+
+
+
     </main>
-<%- include("../partials/footer")%>
+    <%- include("../partials/footer")%>
 
 </body>
 

@@ -2,6 +2,9 @@ const express= require("express");
 const app= express();
 const path=require("path");
 
+app.use(express.urlencoded({ extended: false}));
+app.use(express.json());
+
 
 app.use(express.static("../public"))
 
@@ -16,7 +19,7 @@ const rutasMain= require("./routes/main");
 app.use("/" , rutasMain);
 
 const rutasProductos= require("./routes/productos");
-app.use("/productos" , rutasProductos);
+app.use("/products" , rutasProductos);
 
 const rutasUsers= require("./routes/users");
 app.use("/users" , rutasUsers);
