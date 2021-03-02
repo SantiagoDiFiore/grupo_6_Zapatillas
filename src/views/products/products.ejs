@@ -12,6 +12,7 @@
 
         </div>
         <section class="elementos-carrito">
+<<<<<<< HEAD
             <% for( let i = 0; i < products.length; i++ ) { %>
             <article class="producto">
                 <a class="miniatura" href=<%="/products/productDetail/"+products[i].id %>><img
@@ -21,6 +22,16 @@
 
             </article>
 
+=======
+            <% for( let i = 0; i < lista.length; i++ ) { %>
+                <article class="producto">
+                   <a class="miniatura" href=<%="/products/productDetail/"+lista[i].id %>><img src= <%="/images/"+lista[i].img  %>  alt=<%= lista[i].modelo %>  class="miniaturaB"></a>
+                    <div class="modelo"><%= lista[i].modelo %></div>
+                    <div class="precio-carrito"><%= lista[i].precio %></div>
+                    
+                </article>
+            
+>>>>>>> fd9d08cfad2d16c0b5e6257f5bd04268c8a951e1
             <% } %>
 
 
