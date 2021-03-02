@@ -18,11 +18,7 @@ app.listen(3000, ()=>{
 const rutasMain= require("./routes/main");
 app.use("/" , rutasMain);
 
-<<<<<<< HEAD
-const rutasProductos= require("./routes/productos");
-=======
 const rutasProductos= require("./routes/products");
->>>>>>> fd9d08cfad2d16c0b5e6257f5bd04268c8a951e1
 app.use("/products" , rutasProductos);
 
 const rutasUsers= require("./routes/users");
