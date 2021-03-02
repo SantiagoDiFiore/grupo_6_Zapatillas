@@ -15,8 +15,8 @@ app.listen(3000, ()=>{
 const rutasMain= require("./routes/main");
 app.use("/" , rutasMain);
 
-const rutasProductos= require("./routes/productos");
-app.use("/productos" , rutasProductos);
+const rutasProductos= require("./routes/products");
+app.use("/products" , rutasProductos);
 
 const rutasUsers= require("./routes/users");
 app.use("/users" , rutasUsers);
@@ -24,7 +24,7 @@ app.use("/users" , rutasUsers);
 const rutasMarcas= require("./routes/marcas");
 app.use("/marcas" , rutasMarcas);
 
-//definiendo el moto de plantillas
+//definiendo el motor de plantillas
 
 app.set("view engine", "ejs");
 

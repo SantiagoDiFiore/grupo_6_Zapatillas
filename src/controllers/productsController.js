@@ -65,27 +65,52 @@ img:"new-balance5.png",
 
 ]
 
-const productosController = {
+const productsController = {
+
+    //muestra todos los productos
     index: (req, res) => {
         res.render("./products/products" ,{titulo:"Productos" , lista:lista})
     },
 
-    productCart: (req, res) => {
-        res.render("./products/productCart" ,{titulo:"Carrito"})
-    },
-    productDetail: (req,res)=>{
+    //muetra detalle de un producto
+    detail: (req,res)=>{
         let parametro=req.params.id;
         res.render("./products/productDetail",{titulo:"Detalle" ,lista:lista , parametro:parametro})
     },
-    newproduct: (req,res)=>{
+
+    //muestra el formulario de creacion de producto
+    create: (req,res)=>{
         res.render("./products/productAdd",{titulo:"Nuevo Producto"})
     },
-    changeProduct: (req,res)=>{
+    //acción de creacion del producto
+    store: (req,res)=>{
+        res.send("producto creado")
+    },
+
+    //muestra el formulario de edicion de un producto
+    edit: (req,res)=>{
         res.render("./products/productEdit",{titulo:"Modificar Producto"})
     },
+    //accion de edición del producto
+    update: (req,res)=>{
+        
+    },
+
+    //accion de borrado de un producto
+    destroy: (req,res)=>{
+        res.send("producto eliminado")
+    },
+
+
+    productCart: (req, res) => {
+        res.render("./products/productCart" ,{titulo:"Carrito"})
+    },
+    
+    
+    
 
     
    
 }  
 
-module.exports = productosController
+module.exports = productsController
