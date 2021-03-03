@@ -1,0 +1,35 @@
+[
+    {
+        "id":0,
+        "name":"santiago",
+        "surname":"di fiore",
+        "birthday": 19091997,
+        "gender":"masculino",
+        "image":"default-image.jpg",
+        "tipo-de-usuario":"admin",
+        "password":"contraseña123",
+        "check-password":"contraseña123"
+    },    
+    {
+        "id":1,
+        "name":"sebastian",
+        "surname":"barciela",
+        "birthday": 19091997,
+        "gender":"masculino",
+        "image":"default-image.jpg",
+        "tipo-de-usuario":"admin",
+        "password":"contraseña123",
+        "check-password":"contraseña123"
+    },   
+    {
+        "id":2,
+        "name":"ramiro",
+        "surname":"tanquias",
+        "birthday": 19091997,
+        "gender":"masculino",
+        "image":"default-image.jpg",
+        "tipo-de-usuario":"admin",
+        "password":"contraseña123",
+        "check-password":"contraseña123"
+    }
+]
