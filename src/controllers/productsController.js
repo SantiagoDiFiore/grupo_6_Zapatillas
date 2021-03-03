@@ -31,7 +31,7 @@ const productsController = {
 
     //muestra el formulario de edicion de un producto
     edit: (req,res)=>{
-        res.render("./products/productEdit",{titulo:"Modificar Producto"})
+        res.render("./products/productEdit",{titulo:"Modificar Producto", products: products})
     },
     //accion de edición del producto
     update: (req,res)=>{

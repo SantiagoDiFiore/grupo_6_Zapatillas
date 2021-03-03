@@ -7,7 +7,7 @@
 
     <main class="auto">
         <h2 class="title">Edite su producto</h2>
-        <form action="/products/:id" method="POST" class="form">
+        <form action="/products" method="POST" class="form">
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
                 <input type="text" name="nombre" id="name" placeholder="Nombre del producto" class="control1" required
@@ -15,7 +15,8 @@
             </div>
             <div class="control-formulario1">
                 <label for="detail">Detalle del producto:</label>
-                <input type="text" name="detail" id="detail" placeholder="Detalle del producto" class="control1" required />
+                <input type="textarea" name="detail" id="detail" placeholder="Detalle del producto" class="control1"
+                    required />
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
@@ -23,12 +24,23 @@
             </div>
             <div>
                 <label for="gender" class="negrita">Genero</label>
-                <br />
-                <input type="radio" name="gender" id="gender" />Masculino
-                <input type="radio" name="gender" id="gender" />Femenino
-                <input type="radio" name="gender" id="gender" />Otros
+                <br>
+                <input type="radio" name="gender" id="gender" value="male" />Masculino
+                <input type="radio" name="gender" id="gender" value="female" />Femenino
+                <input type="radio" name="gender" id="gender" value="kids" />Niños
             </div>
-            <br />
+            <div class="control-formulario1">
+                <label for="mark">Marca</label>
+                <select name="mark" id="mark">
+                    <option value="">Elegí</option>
+                    <option name="mark" value="nike">Nike</option>
+                    <option name="mark" value="adidas">Adidas</option>
+                    <option name="mark" value="puma">Puma</option>
+                    <option name="mark" value="vans">Vans</option>
+                    <option name="mark" value="new-balance">New Balance</option>
+                    <option name="mark" value="converse">Converse</option>
+                </select>
+            </div>
             <div>
                 <label for="category" class="negrita">Talles:</label>
                 <br>
@@ -44,11 +56,25 @@
                 <input type="checkbox" name="category" id="category" value="t46" />46
             </div>
             <div class="control-formulario1">
-                <label for="color" class="negrita">Color del producto: <input type="color" name="color" id="color" /></label>
+                <label for="color" class="negrita">Color del producto: <input type="color" name="color"
+                        id="color" /></label>
             </div>
             <div class="control-formulario1">
-                <label for="price">Precio</label>
+                <label for="category" class="form-label">Categoría:</label>
+                <select name="category" id="category" class="form-input">
+                    <option value="">Elegí</option>
+                    <option value="in-sale">En oferta</option>
+                    <option value="visited">Últimos agregados</option>
+                </select>
+            </div>
+            <div class="control-formulario1">
+                <label for="price">Precio:</label>
                 <input type="text" name="price" id="price" placeholder="$9.999" class="control1" required
+                    minlength="4" />
+            </div>
+            <div class="control-formulario1">
+                <label for="discount">Descuento:</label>
+                <input type="text" name="discount" id="discount" placeholder="15" class="control1" required
                     minlength="4" />
             </div>
             <br />
