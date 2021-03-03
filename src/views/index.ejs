@@ -19,42 +19,24 @@
             <h2 class="linea"><span>DESTACADOS</span></h2>
         </div>
         <section class="destacados">
-            <article class="recomendado-article a1">
-                <a href="/products/3"><img src="/images/adidas1.png" alt="ADIDAS OZWEEGO ORANGE (YOUTH)"></a>
-                <div class="contenedor-descripcion">
-                    <div>ADIDAS OZWEEGO ORANGE (YOUTH)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito">$ 22.000</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
-            <article class="recomendado-article a2">
-                <a href="/products/2"><img src="/images/puma3.png" alt="PUMA FUTURE RIDER NES"></a>
-                <div class="contenedor-descripcion">
-                    <div>PUMA FUTURE RIDER NES (2020)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio">$ 22.000</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
-            <article class="recomendado-article a3">
-                <a href="/products/4"><img src="/images/nike3.png" alt="NIKE AIR MAX 90 INFRARED (2020)"></a>
-                <div class="contenedor-descripcion">
-                    <div>NIKE AIR MAX 90 INFRARED (2020)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio">$ 21.700</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
-            <article class="recomendado-article a4">
-                <a href="/products/5"><img src="/images/new-balance4.png" alt="NEW BALANCE 1300 LEVI´S"></a>
-                <div class="contenedor-descripcion">
-                    <div>NIKE AIR MAX 90 INFRARED (2020)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio">$ 21.700</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
+            <% for( let i = 0; i < products.length; i++ ) { %>
+                
+                <%if (products[i].category =="destacados") { %>
+                    <article class="recomendado-article a1">
+                        <a href="/products/<%= products[i].id %> "><img src="/images/<%= products[i].image %>" alt=<%= products[i].name %>></a>
+                        <div class="contenedor-descripcion">
+                            <div><%= products[i].name %></div>
+                            <i class="fas fa-arrow-circle-left izarrow"></i>
+                            <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
+                            <i class="fas fa-arrow-circle-right derarrow"></i>
+                        </div>
+                    </article>
+                    
+                <% } %>
+
+            <% } %>
+            
+           
         </section>
 
         <section class="marcas">
