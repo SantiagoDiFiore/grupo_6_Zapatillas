@@ -22,14 +22,14 @@
             <% for( let i = 0; i < products.length; i++ ) { %>
             <% if(parametro==products[i].id){ %>
             <div class="imagen-principal">
-                <img src=<%="/images/"+products[i].image%> width="100%" alt=<%=products[i].name%>
+                <img src=<%="/images/products/"+products[i].imagenProducto%> width="100%" alt=<%=products[i].name%>
                     class="main-product-image">
             </div>
 
             <div class="data-principal">
                 <div class="product-body">
                     <h2 class="main-title"><%=products[i].name%></h2>
-                    <p class="precio-pd">$<%=products[i].price%></p>
+                    <p class="precio-pd">$<%=toThousand(products[i].price)%></p>
                     <% } %>
 
 
@@ -63,7 +63,7 @@
                         </form>
                     </div>
                     <div class="realizar-compra">
-                        <a href="productCart" class="boton-de-compra">Compra<i class="fas fa-shopping-bag"></i></a>
+                        <a href="productCart" class="boton-de-compra">Comprar <i class="fas fa-shopping-basket"></i></a>
 
                     </div>
                     <div class="enviosgratis">
@@ -94,7 +94,7 @@
             <% for (product of products){ %>
                 <% if (product.category=="visited") { %>
                     <article class="recomendado-article a1">
-                        <a href="/products/<%= product.id %> "><img src="/images/<%= product.image %>" alt=<%= product.name %>></a>
+                        <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>" alt=<%= product.name %>></a>
                         <div class="contenedor-descripcion">
                             <div><%= product.name %></div>
                             <i class="fas fa-arrow-circle-left izarrow"></i>

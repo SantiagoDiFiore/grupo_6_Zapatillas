@@ -453,6 +453,7 @@ div.medios-pago{
     width: 140px;
     height: 40px;
     color: white;
+    padding:7px;
     box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%) 
     
 }
@@ -510,11 +511,12 @@ div.medios-pago{
     font-family: "Roboto";
     background-color: #d97f11;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     text-decoration: none;
     width: 140px;
     height: 40px;
+    padding: 7px;
 }
 .enviosgratis{
     margin: 0px 10px;

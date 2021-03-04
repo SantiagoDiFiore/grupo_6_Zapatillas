@@ -19,7 +19,7 @@
                 <div>SUBTOTAL</div>
             </div>
             <article class="producto">
-                <img src="/images/new-balance3.png" alt="NEW BALANCE 997" class="miniatura">
+                <img src="/images/products/new-balance3.png" alt="NEW BALANCE 997" class="miniatura">
                 <div class="modelo">NEW BALANCE 997 SPORT CHINESE N.Y / TALLE 36</div>
                 <div class="precio-carrito">PRECIO $15.799</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
@@ -37,7 +37,7 @@
                 </div>
             </article>
             <article class="producto">
-                <img src="/images/vans1.png" alt="vans old skool" class="miniatura">
+                <img src="/images/products/vans1.png" alt="vans old skool" class="miniatura">
                 <div class="modelo">VANS OLD SKOOL BLACK WHITE / TALLE 40</div>
                 <div class="precio-carrito">PRECIO $11.200</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
@@ -79,7 +79,7 @@
             <% for (product of products){ %>
                 <% if (product.category=="destacados") { %>
                     <article class="recomendado-article a1">
-                        <a href="/products/<%= product.id %> "><img src="/images/<%= product.image %>" alt=<%= product.name %>></a>
+                        <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>" alt=<%= product.name %>></a>
                         <div class="contenedor-descripcion">
                             <div><%= product.name %></div>
                             <i class="fas fa-arrow-circle-left izarrow"></i>

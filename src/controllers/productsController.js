@@ -26,7 +26,7 @@ const productsController = {
     },
     //acción de creacion del producto
     store: (req,res)=>{
-        res.send("producto creado")
+        res.send(req.file)
     },
 
     //muestra el formulario de edicion de un producto
