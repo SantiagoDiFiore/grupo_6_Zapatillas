@@ -41,6 +41,7 @@ const productsController = {
     //accion de borrado de un producto
     destroy: (req,res)=>{
         res.send("producto eliminado")
+        // res.redirect("/products")
     },
 
 
