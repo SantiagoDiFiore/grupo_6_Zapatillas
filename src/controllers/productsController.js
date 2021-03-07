@@ -17,7 +17,11 @@ const productsController = {
     detail: (req,res)=>{
         let parametro=req.params.id;
         let titulo= products.find(producto=>producto.id==parametro);
-        res.render("./products/productDetail",{ titulo:titulo.name ,products: products , parametro:parametro , toThousand})
+
+        let producto= products.find(product=> product.id == req.params.id);
+		
+		
+        res.render("./products/productDetail",{ titulo:titulo.name ,producto: producto ,products:products, parametro:parametro, toThousand})
     },
 
     //muestra el formulario de creacion de producto
@@ -31,7 +35,8 @@ const productsController = {
 
     //muestra el formulario de edicion de un producto
     edit: (req,res)=>{
-        res.render("./products/productEdit",{titulo:"Modificar Producto", products: products})
+        let producto= products.find(product=> product.id == req.params.id);
+        res.render("./products/productEdit",{titulo:"Modificar Producto", producto: producto})
     },
     //accion de edición del producto
     update: (req,res)=>{

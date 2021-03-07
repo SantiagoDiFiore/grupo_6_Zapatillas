@@ -19,36 +19,34 @@
 
         <section class="main-article-product">
 
-            <% for( let i = 0; i < products.length; i++ ) { %>
-            <% if(parametro==products[i].id){ %>
+            
             <div class="imagen-principal">
-                <img src=<%="/images/products/"+products[i].imagenProducto%> width="100%" alt=<%=products[i].name%>
+                <img src=<%="/images/products/"+producto.imagenProducto%> width="100%" alt=<%=producto.name%>
                     class="main-product-image">
             </div>
 
             <div class="data-principal">
                 <div class="product-body">
-                    <h2 class="main-title"><%=products[i].name%></h2>
-                    <p class="precio-pd">$<%=toThousand(products[i].price)%></p>
-                    <% } %>
+                    <h2 class="main-title"><%=producto.name%></h2>
+                    <p class="precio-pd">$<%=toThousand(producto.price)%></p>
+                    
 
 
 
-                    <% } %>
+                    
 
 
-                    <h3 class="talle">Elegi tu talle</h3>
+                    <h3 class="talle">Seleccioná tu talle</h3>
                     <div class="talle1">
-                        <p class="guia-talles"><a href=# class="cfont-talles"><i
-                                    class="fas fa-ruler-horizontal"></i>Guia de talles</a></p>
+                        
                         <form action="/talle" class="tallesdisponibles">
-                            <input type="button" name="talle" value="39" class="boton-talle">
-                            <input type="button" name="talle" value="40" class="boton-talle">
-                            <input type="button" name="talle" value="41" class="boton-talle">
-                            <input type="button" name="talle" value="42" class="boton-talle">
-                            <input type="button" name="talle" value="43" class="boton-talle">
-                            <input type="button" name="talle" value="44" class="boton-talle">
+                            <% for(talle of producto.size){ %>
+                                <input type="button" name="talle" value="<%=talle%>" class="boton-talle">
+                                <% } %> 
+                            
                         </form>
+                        <p class="guia-talles"><a href=# class="cfont-talles"><i
+                            class="fas fa-ruler-horizontal"></i> Guía de talles</a></p>
                     </div>
                     <div class="cantidad1">
                         <p class="cantidad-titulo">Cantidad:</p>
@@ -66,6 +64,14 @@
                         <a href="productCart" class="boton-de-compra">Comprar <i class="fas fa-shopping-basket"></i></a>
 
                     </div>
+
+                    <a href="/products/<%= producto.id %>/edit"><button type="button" class="boton-edicion">EDITAR</button></a>
+
+                    
+						<form action="/products?_method=DELETE " method="POST" style="display: inline-flex">
+							<button type="submit" class="boton-edicion">ELIMINAR</button>
+						</form>
+
                     <div class="enviosgratis">
                         <p class="envios1"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAÍS!</p>
                     </div>
@@ -74,6 +80,8 @@
 
         <h3 class="header-details">Detalles</h3>
         <div class="descripcion">
+           <p> <%=producto.description%> </p>
+            <!--  
             <ul class="detallesLista1">
                 <li><i class="fas fa-chevron-circle-right"></i>Forro interno textil. Suela de caucho</li>
                 <li><i class="fas fa-chevron-circle-right"></i>Exterior de malla con revestimientos de gamuza y TPU</li>
@@ -86,6 +94,7 @@
                 <li><i class="fas fa-chevron-circle-right"></i>Amortiguación Adiprene+ en el antepié. Mediasuela de EVA
                     liviana. Amortiguación Adiprene en el talón</li>
             </ul>
+            -->
         </div>
 
         <h3 class="margin-products">Otros productos que podrian interesarte...</h3>
