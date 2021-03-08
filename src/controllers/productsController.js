@@ -30,7 +30,31 @@ const productsController = {
     },
     //acción de creacion del producto
     store: (req,res)=>{
-        res.send(req.file)
+        //filtrar y definir la imagen del prodcuto
+        let image
+        if(!req.file){
+            image="default-image.jpg";
+        }else{
+            image=req.file.filename;
+        };
+
+        //definir el id del producto
+        let ids = products.map(p=>p.id);//guardar en un array todos los ids
+        let id= Math.max(...ids)+1;//filtra el mayor de los ids del array, se le suma 1 para el id del nuevo producto
+		
+        //definir el nuevo producto
+        let newProduct = {
+			id: id,        //el id definido previamente
+			...req.body,   //todo lo que llega del formulario
+			imagenProducto: image   //la imagen definida previamente
+		};
+console.log(req.body);
+console.log("-----------------")
+console.log(newProduct);
+
+        products.push(newProduct);//guardar el producto nuevo en el listado de productos
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))//sobreescribir el Json con los productos actualizados y pasados a formatoJSON. 
+        res.redirect("./products")//redirigir al listado de productos. 
     },
 
     //muestra el formulario de edicion de un producto

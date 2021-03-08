@@ -1,133 +1,234 @@
 [
-  {
-   "id": 0,
-   "name": "NEW BALANCE 997 SPORT CHINESE N.Y",
-   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-   "imagenProducto": "new-balance3.png",
-   "gender":"male",
-   "mark":"new-balance",
-   "size": [37,38,39, 40, 41, 43],
-   "colors": "#B5ABAB",
-   "price": 15799,
-   "discount": 50,
-   "category": "destacados"
-  },
-  {
-    "id": 1,
-    "name": "VANS OLD SKOOL BLACK WHITE",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "vans1.png",
-    "gender":"female",
-    "mark":"vans",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#000000",
-    "price": 11200,
-    "discount": 50,
-    "category": "destacados"
-   },
-   {
-    "id": 2,
-    "name": "PUMA FUTURE RIDER NES (2020)",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "puma3.png",
-    "gender":"male",
-    "mark":"puma",
-    "size": [37, 40, 41, 43],
-    "colors": "#B5ABAB",
-    "price": 22000,
-    "discount": 50,
-    "category": "visited"
-   },
-   {
-    "id": 3,
-    "name": "ADIDAS OZWEEGO ORANGE (YOUTH)",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "adidas1.png",
-    "gender":"female",
-    "mark":"adidas",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#E78D0D",
-    "price": 22000,
-    "discount": 50,
-    "category": "visited"
-   },
-   {
-    "id": 4,
-    "name": "NIKE AIR MAX 90 INFRARED (2020)",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "nike3.png",
-    "gender":"male",
-    "mark":"nike",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#FFFFFF",
-    "price": 21700,
-    "discount": 50,
-    "category": "destacados"
-   },
-   {
-    "id": 5,
-    "name": "NEW BALANCE 1300 LEVI´S",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "new-balance4.png",
-    "gender":"female",
-    "mark":"new-balance",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#412810",
-    "price": 21700,
-    "discount": 50,
-    "category": ""
-   },
-   {
-    "id": 6,
-    "name": "ADIDAS NITE JOGGER 3M NAVY",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "adidas2.png",
-    "gender":"male",
-    "mark":"adidas",
-    "size": [37,38,39, 40, 41, 43 , 44],
-    "colors": "#3329C2",
-    "price": 14000,
-    "discount": 50,
-    "category": "destacados"
-   },
-   {
-    "id": 7,
-    "name": "PUMA RS-X TOYS BONNIE BLUE",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "puma1.png",
-    "gender":"female",
-    "mark":"puma",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#3329C2",
-    "price": 20000,
-    "discount": 50,
-    "category": ""
-   },
-   {
-    "id": 8,
-    "name": "NIKE AIR MAX 95 OG NEON (2020)",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "nike1.png",
-    "gender":"male",
-    "mark":"nike",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#B5ABAB",
-    "price": 26000,
-    "discount": 50,
-    "category": "visited"
-   },
-   {
-    "id": 9,
-    "name": "NEW BALANCE 327 CASABLANCA GREEN LOGO",
-    "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-    "imagenProducto": "new-balance5.png",
-    "gender":"female",
-    "mark":"new-balance",
-    "size": [37,38,39, 40, 41, 43],
-    "colors": "#B5ABAB",
-    "price": 21700,
-    "discount": 50,
-    "category": "visited"
-   }
-  
- ]
+ {
+  "id": 0,
+  "name": "NEW BALANCE 997 SPORT CHINESE N.Y",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "new-balance3.png",
+  "gender": "male",
+  "mark": "new-balance",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#B5ABAB",
+  "price": 15799,
+  "discount": 50,
+  "category": "destacados"
+ },
+ {
+  "id": 1,
+  "name": "VANS OLD SKOOL BLACK WHITE",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "vans1.png",
+  "gender": "female",
+  "mark": "vans",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#000000",
+  "price": 11200,
+  "discount": 50,
+  "category": "destacados"
+ },
+ {
+  "id": 2,
+  "name": "PUMA FUTURE RIDER NES (2020)",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "puma3.png",
+  "gender": "male",
+  "mark": "puma",
+  "size": [
+   37,
+   40,
+   41,
+   43
+  ],
+  "colors": "#B5ABAB",
+  "price": 22000,
+  "discount": 50,
+  "category": "visited"
+ },
+ {
+  "id": 3,
+  "name": "ADIDAS OZWEEGO ORANGE (YOUTH)",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "adidas1.png",
+  "gender": "female",
+  "mark": "adidas",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#E78D0D",
+  "price": 22000,
+  "discount": 50,
+  "category": "visited"
+ },
+ {
+  "id": 4,
+  "name": "NIKE AIR MAX 90 INFRARED (2020)",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "nike3.png",
+  "gender": "male",
+  "mark": "nike",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#FFFFFF",
+  "price": 21700,
+  "discount": 50,
+  "category": "destacados"
+ },
+ {
+  "id": 5,
+  "name": "NEW BALANCE 1300 LEVI´S",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "new-balance4.png",
+  "gender": "female",
+  "mark": "new-balance",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#412810",
+  "price": 21700,
+  "discount": 50,
+  "category": ""
+ },
+ {
+  "id": 6,
+  "name": "ADIDAS NITE JOGGER 3M NAVY",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "adidas2.png",
+  "gender": "male",
+  "mark": "adidas",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43,
+   44
+  ],
+  "colors": "#3329C2",
+  "price": 14000,
+  "discount": 50,
+  "category": "destacados"
+ },
+ {
+  "id": 7,
+  "name": "PUMA RS-X TOYS BONNIE BLUE",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "puma1.png",
+  "gender": "female",
+  "mark": "puma",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#3329C2",
+  "price": 20000,
+  "discount": 50,
+  "category": ""
+ },
+ {
+  "id": 8,
+  "name": "NIKE AIR MAX 95 OG NEON (2020)",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "nike1.png",
+  "gender": "male",
+  "mark": "nike",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#B5ABAB",
+  "price": 26000,
+  "discount": 50,
+  "category": "visited"
+ },
+ {
+  "id": 9,
+  "name": "NEW BALANCE 327 CASABLANCA GREEN LOGO",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "new-balance5.png",
+  "gender": "female",
+  "mark": "new-balance",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#B5ABAB",
+  "price": 21700,
+  "discount": 50,
+  "category": "visited"
+ },
+ {
+  "id": 10,
+  "name": "probando",
+  "description": "sadasd",
+  "gender": "male",
+  "mark": "adidas",
+  "size": [
+   "38",
+   "44"
+  ],
+  "colors": "#000000",
+  "category": "in-sale",
+  "price": "3333",
+  "discount": "10",
+  "imagenProducto": "default-image.jpg"
+ },
+ {
+  "id": 11,
+  "name": "test",
+  "description": "lasdlaskdlasflaflslfsal",
+  "gender": "kids",
+  "mark": "adidas",
+  "size": [
+   "38",
+   "42",
+   "44"
+  ],
+  "colors": "#603939",
+  "category": "in-sale",
+  "price": "100000000000",
+  "discount": "10",
+  "imagenProducto": "imagenProducto-1615215501401.jpg"
+ }
+]
