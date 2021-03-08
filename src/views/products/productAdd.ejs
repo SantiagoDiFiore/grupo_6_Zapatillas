@@ -5,7 +5,7 @@
 <body>
     <%- include("../partials/header")%>
 
-    <main class="auto">
+    <main>
         <h2 class="title">Agregue un nuevo producto</h2>
         <form action="/products" method="POST" enctype="multipart/form-data" class="form">
             <div class="control-formulario1">
@@ -20,7 +20,7 @@
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
-                <input type="file" name="imagenProducto"  />
+                <input type="file" name="imagenProducto" />
             </div>
             <div>
                 <label for="gender" class="negrita">Genero</label>
@@ -75,7 +75,7 @@
             </div>
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
-                <input type="text" name="discount" id="discount" placeholder="15" class="control1" required
+                <input type="number" name="discount" id="discount" placeholder="15" class="control1" required
                     minlength="4" />
             </div>
             <br />

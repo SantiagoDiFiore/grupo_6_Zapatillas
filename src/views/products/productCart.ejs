@@ -4,7 +4,7 @@
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
     <main>
         <div class="encabezado-carrito">
@@ -77,23 +77,24 @@
         <section class="recomendados">
 
             <% for (product of products){ %>
-                <% if (product.category=="destacados") { %>
-                    <article class="recomendado-article a1">
-                        <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>" alt=<%= product.name %>></a>
-                        <div class="contenedor-descripcion">
-                            <div><%= product.name %></div>
-                            <i class="fas fa-arrow-circle-left izarrow"></i>
-                            <div class="precio-carrito">$ <%= toThousand(product.price) %></div>
-                            <i class="fas fa-arrow-circle-right derarrow"></i>
-                        </div>
-                    </article>
-                   
-                 
-                <% } %>
-                
-                <% } %> 
+            <% if (product.category=="destacados") { %>
+            <article class="recomendado-article a1">
+                <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>"
+                        alt=<%= product.name %>></a>
+                <div class="contenedor-descripcion">
+                    <div><%= product.name %></div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio-carrito">$ <%= toThousand(product.price) %></div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
 
-           
+
+            <% } %>
+
+            <% } %>
+
+
         </section>
 
         <div class="newsletter">
@@ -106,7 +107,7 @@
             </form>
         </div>
     </main>
-<%- include("../partials/footer")%>
+    <%- include("../partials/footer")%>
 
 </body>
 
