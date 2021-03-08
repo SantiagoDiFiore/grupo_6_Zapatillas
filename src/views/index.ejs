@@ -4,7 +4,7 @@
 <%- include("./partials/head")%>
 
 <body>
-<%- include("./partials/header")%>
+    <%- include("./partials/header")%>
 
     <section class="banner">
         <img src="/images/banner-nike.jpg" alt="Banner de ofertas">
@@ -20,23 +20,24 @@
         </div>
         <section class="destacados">
             <% for( let i = 0; i < products.length; i++ ) { %>
-                
-                <%if (products[i].category =="destacados") { %>
-                    <article class="recomendado-article a1">
-                        <a href="/products/<%= products[i].id %> "><img src="/images/<%= products[i].image %>" alt=<%= products[i].name %>></a>
-                        <div class="contenedor-descripcion">
-                            <div><%= products[i].name %></div>
-                            <i class="fas fa-arrow-circle-left izarrow"></i>
-                            <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
-                            <i class="fas fa-arrow-circle-right derarrow"></i>
-                        </div>
-                    </article>
-                    
-                <% } %>
+
+            <%if (products[i].category =="destacados") { %>
+            <article class="recomendado-article a1">
+                <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].imagenProducto %>"
+                        alt=<%= products[i].name %>></a>
+                <div class="contenedor-descripcion">
+                    <div><%= products[i].name %></div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
 
             <% } %>
-            
-           
+
+            <% } %>
+
+
         </section>
 
         <section class="marcas">
@@ -82,7 +83,7 @@
         </div>
     </main>
 
-<%- include("./partials/footer")%>    
+    <%- include("./partials/footer")%>
 </body>
 
 </html>

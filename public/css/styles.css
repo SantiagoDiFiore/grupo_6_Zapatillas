@@ -459,13 +459,36 @@ div.medios-pago{
     width: 140px;
     height: 40px;
     color: white;
-    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%) 
+    padding:7px;
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
+     
     
 }
 .izarrow , .derarrow{
     display: none;
 }
 /*MAIN PRODUCTDETAIL */
+.boton-edicion{
+    font-family: "Roboto";
+    background-color:#d97f11;
+    padding:0px 10px;
+    border:none;
+    border-radius: 5px;
+    width: 140px;
+    height: 40px;
+    color: white;
+    padding:7px;
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px; 
+    
+}
+.cfont-talles{
+    text-decoration: none;
+    font-size: 20px;
+    font-family: roboto;
+}
 
 .nav-site{
     display:flex;
@@ -511,16 +534,20 @@ div.medios-pago{
 }
 .realizar-compra{
     margin: 10px 5px;
+    margin-bottom: 20px;
 }
 .boton-de-compra{
     font-family: "Roboto";
     background-color: #d97f11;
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     text-decoration: none;
     width: 140px;
     height: 40px;
+    padding: 7px;
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
+    
 }
 .enviosgratis{
     margin: 0px 10px;
@@ -539,6 +566,7 @@ div.medios-pago{
     margin: 10px;
     background-color: #ffffff;
     border-radius: 5px;
+    padding: 10px;
 }
 .detallesLista1 li{
     list-style: none;
@@ -1102,6 +1130,15 @@ div.italic {
     .boton-compra{
         transition: background-color 1000ms;
     }
+
+    .boton-edicion:hover{
+        background-color: #ad650d;
+        box-shadow:1px 1px 3px 3px rgb(0 0 0 / 50%);
+    }
+    .boton-edicion{
+        transition: background-color 1000ms;
+    }
+
     .boton-de-compra:hover{
         background-color: #ad650d;
     }

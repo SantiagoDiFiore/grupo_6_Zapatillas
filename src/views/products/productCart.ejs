@@ -4,7 +4,7 @@
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
     <main>
         <div class="encabezado-carrito">
@@ -19,7 +19,7 @@
                 <div>SUBTOTAL</div>
             </div>
             <article class="producto">
-                <img src="/images/new-balance3.png" alt="NEW BALANCE 997" class="miniatura">
+                <img src="/images/products/new-balance3.png" alt="NEW BALANCE 997" class="miniatura">
                 <div class="modelo">NEW BALANCE 997 SPORT CHINESE N.Y / TALLE 36</div>
                 <div class="precio-carrito">PRECIO $15.799</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
@@ -37,7 +37,7 @@
                 </div>
             </article>
             <article class="producto">
-                <img src="/images/vans1.png" alt="vans old skool" class="miniatura">
+                <img src="/images/products/vans1.png" alt="vans old skool" class="miniatura">
                 <div class="modelo">VANS OLD SKOOL BLACK WHITE / TALLE 40</div>
                 <div class="precio-carrito">PRECIO $11.200</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
@@ -75,42 +75,26 @@
         </div>
 
         <section class="recomendados">
+
+            <% for (product of products){ %>
+            <% if (product.category=="destacados") { %>
             <article class="recomendado-article a1">
-                <a href="/products/3"><img src="/images/adidas1.png" alt="ADIDAS OZWEEGO ORANGE (YOUTH)"></a>
+                <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>"
+                        alt=<%= product.name %>></a>
                 <div class="contenedor-descripcion">
-                    <div>ADIDAS OZWEEGO ORANGE (YOUTH)</div>
+                    <div><%= product.name %></div>
                     <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito">$ 21.700</div>
+                    <div class="precio-carrito">$ <%= toThousand(product.price) %></div>
                     <i class="fas fa-arrow-circle-right derarrow"></i>
                 </div>
             </article>
-            <article class="recomendado-article a2">
-                <a href="/products/2"><img src="/images/puma3.png" alt="PUMA FUTURE RIDER NES"></a>
-                <div class="contenedor-descripcion">
-                    <div>PUMA FUTURE RIDER NES (2020)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito">$ 22.000</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
-            <article class="recomendado-article a3">
-                <a href="/products/4"><img src="/images/nike3.png" alt="NIKE AIR MAX 90 INFRARED (2020)"></a>
-                <div class="contenedor-descripcion">
-                    <div>NIKE AIR MAX 90 INFRARED (2020)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito">$ 21.700</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
-            <article class="recomendado-article a4">
-                <a href="/products//5"><img src="/images/new-balance4.png" alt="NEW BALANCE 1300 LEVI'S (2020)"></a>
-                <div class="contenedor-descripcion">
-                    <div>NEW BALANCE 1300 LEVI'S (2020)</div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito">$ 22.000</div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
-                </div>
-            </article>
+
+
+            <% } %>
+
+            <% } %>
+
+
         </section>
 
         <div class="newsletter">
@@ -123,7 +107,7 @@
             </form>
         </div>
     </main>
-<%- include("../partials/footer")%>
+    <%- include("../partials/footer")%>
 
 </body>
 
