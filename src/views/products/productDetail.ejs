@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <%- include("../partials/head")%>
 
 <body>
@@ -29,7 +29,7 @@
             <div class="data-principal">
                 <div class="product-body">
                     <h2 class="main-title"><%=products[i].name%></h2>
-                    <p class="precio-pd">$<%=products[i].price%></p>
+                    <p class="precio-pd">$ <%= toThousand(products[i].price) %></p>
                     <% } %>
 
 
@@ -120,7 +120,8 @@
                     </div>
                 </article>
                 <article class="recomendado-article a4">
-                    <a href="/products/9"><img src="/images/new-balance5.png" alt="NEW BALANCE 327 CASABLANCA GREEN LOGO"></a>
+                    <a href="/products/9"><img src="/images/new-balance5.png"
+                            alt="NEW BALANCE 327 CASABLANCA GREEN LOGO"></a>
                     <div class="contenedor-descripcion">
                         <div>NEW BALANCE 327 CASABLANCA GREEN LOGO</div>
                         <i class="fas fa-arrow-circle-left izarrow"></i>

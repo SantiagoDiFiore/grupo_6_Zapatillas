@@ -17,7 +17,7 @@ const productsController = {
     detail: (req,res)=>{
         let parametro=req.params.id;
         let titulo= products.find(producto=>producto.id==parametro);
-        res.render("./products/productDetail",{ titulo:titulo.name ,products: products , parametro:parametro})
+        res.render("./products/productDetail",{ titulo:titulo.name ,products: products , parametro:parametro, toThousand})
     },
 
     //muestra el formulario de creacion de producto
