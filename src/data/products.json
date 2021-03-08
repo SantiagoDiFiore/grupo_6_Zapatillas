@@ -1,24 +1,17 @@
-[
- {
+[   
+{
   "id": 0,
   "name": "NEW BALANCE 997 SPORT CHINESE N.Y",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
   "imagenProducto": "new-balance3.png",
   "gender": "male",
   "mark": "new-balance",
-  "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
-  ],
+  "size": [37, 38, 39, 40, 41, 43],
   "colors": "#B5ABAB",
   "price": 15799,
   "discount": 50,
   "category": "destacados"
- },
+},
  {
   "id": 1,
   "name": "VANS OLD SKOOL BLACK WHITE",
