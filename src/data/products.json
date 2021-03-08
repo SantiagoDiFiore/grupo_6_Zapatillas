@@ -1,17 +1,24 @@
-[   
-{
+[
+ {
   "id": 0,
   "name": "NEW BALANCE 997 SPORT CHINESE N.Y",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
   "imagenProducto": "new-balance3.png",
   "gender": "male",
   "mark": "new-balance",
-  "size": [37, 38, 39, 40, 41, 43],
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
   "colors": "#B5ABAB",
   "price": 15799,
   "discount": 50,
   "category": "destacados"
-},
+ },
  {
   "id": 1,
   "name": "VANS OLD SKOOL BLACK WHITE",
@@ -170,5 +177,58 @@
   "price": 26000,
   "discount": 50,
   "category": "visited"
+ },
+ {
+  "id": 9,
+  "name": "NEW BALANCE 327 CASABLANCA GREEN LOGO",
+  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
+  "imagenProducto": "new-balance5.png",
+  "gender": "female",
+  "mark": "new-balance",
+  "size": [
+   37,
+   38,
+   39,
+   40,
+   41,
+   43
+  ],
+  "colors": "#B5ABAB",
+  "price": 21700,
+  "discount": 50,
+  "category": "visited"
+ },
+ {
+  "id": 10,
+  "name": "probando",
+  "description": "sadasd",
+  "gender": "male",
+  "mark": "adidas",
+  "size": [
+   "38",
+   "44"
+  ],
+  "colors": "#000000",
+  "category": "in-sale",
+  "price": "3333",
+  "discount": "10",
+  "imagenProducto": "default-image.jpg"
+ },
+ {
+  "id": 11,
+  "name": "test",
+  "description": "lasdlaskdlasflaflslfsal",
+  "gender": "kids",
+  "mark": "adidas",
+  "size": [
+   "38",
+   "42",
+   "44"
+  ],
+  "colors": "#603939",
+  "category": "in-sale",
+  "price": "100000000000",
+  "discount": "10",
+  "imagenProducto": "imagenProducto-1615215501401.jpg"
  }
 ]
