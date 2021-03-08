@@ -7,7 +7,7 @@
 
     <main class="auto">
         <h2 class="title">Agregue un nuevo producto</h2>
-        <form action="/products" method="POST" class="form">
+        <form action="/products" method="POST" enctype="multipart/form-data" class="form">
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
                 <input type="text" name="nombre" id="name" placeholder="Nombre del producto" class="control1" required
@@ -20,7 +20,7 @@
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
-                <input type="file" name="image" accept=".jpg" />
+                <input type="file" name="imagenProducto"  />
             </div>
             <div>
                 <label for="gender" class="negrita">Genero</label>
@@ -65,6 +65,7 @@
                     <option value="">Elegí</option>
                     <option value="in-sale">En oferta</option>
                     <option value="visited">Últimos agregados</option>
+                    <option value="destacados">Destacados</option>
                 </select>
             </div>
             <div class="control-formulario1">

@@ -23,7 +23,7 @@
                 
                 <%if (products[i].category =="destacados") { %>
                     <article class="recomendado-article a1">
-                        <a href="/products/<%= products[i].id %> "><img src="/images/<%= products[i].image %>" alt=<%= products[i].name %>></a>
+                        <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].imagenProducto %>" alt=<%= products[i].name %>></a>
                         <div class="contenedor-descripcion">
                             <div><%= products[i].name %></div>
                             <i class="fas fa-arrow-circle-left izarrow"></i>
