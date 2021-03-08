@@ -329,6 +329,12 @@ div.medios-pago{
     text-decoration: underline;
     text-align: center;
 }
+.control-login{
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
 .boton-login{
     background-color: #222021;
     border: none;
@@ -641,9 +647,21 @@ main.auto{
     border-radius: 20px;
     border: solid 20px #f2f2f2;
     margin-bottom: 10px;
+    margin: auto;
 }
 
 /*MAIN REGISTER */
+.title-register{
+    color:black;
+    font-size: 20px;
+    border-bottom: solid 1px black;
+}
+.title-register1{
+    color:black;
+    font-size: 20px;
+    border-bottom: solid 1px black;
+    margin-top: 20px;
+}
 
 .register-form{
     padding:10px;
@@ -674,8 +692,13 @@ margin: 15px 0px 10px 0px;
     align-self: center;
     margin-top:10px;
 }
+.bottom-register{
+    text-align: center;
+    font-size: 17px;
+    margin-top: 9px;
+}
 .ingreso{
-    width: 90%;
+    width: 100%;
     font: "Roboto";
     margin: 0px 0px 10px 0px;
     padding: 5px;
@@ -691,7 +714,7 @@ margin: 15px 0px 10px 0px;
 }
 .submit-button1{
     margin-top: 10px;
-    width: 30%;
+    width: 33%;
     background-color: #222021;
     border: none;
     font-size: 16px;
@@ -700,6 +723,13 @@ margin: 15px 0px 10px 0px;
     border-radius: 5px;
     padding: 5px;
     margin:auto;
+}
+.control2{
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    justify-content: center;
 }
 
 
@@ -948,7 +978,6 @@ div.italic {
     }
     .obligatorio{
         text-align: justify;
-        padding-left: 33%;
     }
     .boton-login{
         max-width: 400px;
@@ -1053,9 +1082,6 @@ div.italic {
     }   
     .boton-suscribe{
         width: 25%;
-    }
-    .obligatorio{
-        padding-left: 38%;
     }
     .recomendados{
         margin-left: 100px;

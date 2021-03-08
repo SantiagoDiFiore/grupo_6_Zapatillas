@@ -4,20 +4,20 @@
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
     <main>
-        <div class="login-bar">
+        <div class="login-bar auto">
             <h2 class="title">Iniciar Sesión</h2>
-            <form action="/" method="POST">
+            <form action="/" method="POST" class="form">
                 <div class="register-formulario">
                     <label for="user" class="obligatorio">* Email</label>
-                    <input type="email" name="email" id="user" placeholder="Email..." required class="control" />
+                    <input type="email" name="email" id="user" placeholder="Email..." required class="control-login" />
                 </div>
                 <div class="register-formulario">
-                    <label for="password"class="obligatorio">* Contraseña</label>
+                    <label for="password" class="obligatorio">* Contraseña</label>
                     <input type="password" name="password" id="password" placeholder="Contraseña..." required
-                        class="control" />
+                        class="control-login" />
                 </div>
                 <div class="register-formulario center">
                     <label for="record"></label>
@@ -52,7 +52,7 @@
         </div>
     </main>
 
-<%- include("../partials/footer")%>  
+    <%- include("../partials/footer")%>
 </body>
 
 </html>

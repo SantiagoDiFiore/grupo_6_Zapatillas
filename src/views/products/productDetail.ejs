@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
- 
+
 <%- include("../partials/head")%>
 
 <body>
@@ -19,7 +19,7 @@
 
         <section class="main-article-product">
 
-            
+
             <div class="imagen-principal">
                 <img src=<%="/images/products/"+producto.imagenProducto%> width="100%" alt=<%=producto.name%>
                     class="main-product-image">
@@ -29,24 +29,18 @@
                 <div class="product-body">
                     <h2 class="main-title"><%=producto.name%></h2>
                     <p class="precio-pd">$<%=toThousand(producto.price)%></p>
-                    
-
-
-
-                    
-
 
                     <h3 class="talle">Seleccioná tu talle</h3>
                     <div class="talle1">
-                        
+
                         <form action="/talle" class="tallesdisponibles">
                             <% for(talle of producto.size){ %>
-                                <input type="button" name="talle" value="<%=talle%>" class="boton-talle">
-                                <% } %> 
-                            
+                            <input type="button" name="talle" value="<%=talle%>" class="boton-talle">
+                            <% } %>
+
                         </form>
-                        <p class="guia-talles"><a href=# class="cfont-talles"><i
-                            class="fas fa-ruler-horizontal"></i> Guía de talles</a></p>
+                        <p class="guia-talles"><a href=# class="cfont-talles"><i class="fas fa-ruler-horizontal"></i>
+                                Guía de talles</a></p>
                     </div>
                     <div class="cantidad1">
                         <p class="cantidad-titulo">Cantidad:</p>
@@ -65,12 +59,13 @@
 
                     </div>
 
-                    <a href="/products/<%= producto.id %>/edit"><button type="button" class="boton-edicion">EDITAR</button></a>
+                    <a href="/products/<%= producto.id %>/edit"><button type="button"
+                            class="boton-edicion">EDITAR</button></a>
 
-                    
-						<form action="/products?_method=DELETE " method="POST" style="display: inline-flex">
-							<button type="submit" class="boton-edicion">ELIMINAR</button>
-						</form>
+
+                    <form action="/products?_method=DELETE " method="POST" style="display: inline-flex">
+                        <button type="submit" class="boton-edicion">ELIMINAR</button>
+                    </form>
 
                     <div class="enviosgratis">
                         <p class="envios1"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAÍS!</p>
@@ -80,7 +75,7 @@
 
         <h3 class="header-details">Detalles</h3>
         <div class="descripcion">
-           <p> <%=producto.description%> </p>
+            <p> <%=producto.description%> </p>
             <!--  
             <ul class="detallesLista1">
                 <li><i class="fas fa-chevron-circle-right"></i>Forro interno textil. Suela de caucho</li>
@@ -99,28 +94,25 @@
 
         <h3 class="margin-products">Otros productos que podrian interesarte...</h3>
         <section class="destacados">
-           
-            <% for (product of products){ %>
-                <% if (product.category=="visited") { %>
-                    <article class="recomendado-article a1">
-                        <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>" alt=<%= product.name %>></a>
-                        <div class="contenedor-descripcion">
-                            <div><%= product.name %></div>
-                            <i class="fas fa-arrow-circle-left izarrow"></i>
-                            <div class="precio-carrito">$ <%= toThousand(product.price) %></div>
-                            <i class="fas fa-arrow-circle-right derarrow"></i>
-                        </div>
-                    </article>
-                   
-                 
-                <% } %>
-                
-                <% } %> 
 
-            
-                
-                 
-            
+            <% for (product of products){ %>
+            <% if (product.category=="visited") { %>
+            <article class="recomendado-article a1">
+                <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>"
+                        alt=<%= product.name %>></a>
+                <div class="contenedor-descripcion">
+                    <div><%= product.name %></div>
+                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <div class="precio-carrito">$ <%= toThousand(product.price) %></div>
+                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                </div>
+            </article>
+
+
+            <% } %>
+
+            <% } %>
+
         </section>
 
         <div class="newsletter">
