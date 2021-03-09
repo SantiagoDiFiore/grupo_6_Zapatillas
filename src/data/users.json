@@ -1,34 +1,37 @@
 [
     {
         "id":0,
-        "name":"santiago",
-        "surname":"di fiore",
+        "firstName":"santiago",
+        "lastName":"di fiore",
         "birthday": 19091997,
         "gender":"masculino",
         "image":"default-image.jpg",
         "tipo-de-usuario":"admin",
+        "email":"un@email.com",
         "password":"contraseña123",
         "check-password":"contraseña123"
     },    
     {
         "id":1,
-        "name":"sebastian",
-        "surname":"barciela",
+        "firstName":"sebastian",
+        "lastName":"barciela",
         "birthday": 19091997,
         "gender":"masculino",
         "image":"default-image.jpg",
         "tipo-de-usuario":"admin",
+        "email":"un@email.com",
         "password":"contraseña123",
         "check-password":"contraseña123"
     },   
     {
         "id":2,
-        "name":"ramiro",
-        "surname":"tanquias",
+        "firstName":"ramiro",
+        "lastName":"tanquias",
         "birthday": 19091997,
         "gender":"masculino",
         "image":"default-image.jpg",
         "tipo-de-usuario":"admin",
+        "email":"un@email.com",
         "password":"contraseña123",
         "check-password":"contraseña123"
     }

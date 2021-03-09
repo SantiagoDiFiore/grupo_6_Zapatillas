@@ -47,14 +47,10 @@ const productsController = {
         let newProduct = {
 			id: id,        //el id definido previamente
 			...req.body,   //todo lo que llega del formulario
-			imagenProducto: image   //la imagen definida previamente
+			image: image   //la imagen definida previamente
 		};
-        console.log(req.body);
-        console.log("-----------------")
-        console.log(newProduct);
-
         products.push(newProduct);//guardar el producto nuevo en el listado de productos
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))//sobreescribir el Json con los productos actualizados y pasados a formatoJSON. 
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))//sobreescribir el Json con el nuevo producto y pasados a formatoJSON. 
         res.redirect("./products")//redirigir al listado de productos. 
     },
 
@@ -69,14 +65,14 @@ const productsController = {
         let productToEdit = products.find(product => product.id == id);
         let image
         if(req.file !=undefined){
-			image = req.file.filename
+			image = req.file.filename //sobreescribe la imagen del producto con la que subio el usuario
 		} else {
-			image = productToEdit.image
+			image = productToEdit.image //se vuelve a guardar la misma imagen
 		}
         productToEdit = {
-            id: productToEdit.id,
-            ...req.body,
-            imagenProducto: image,
+            id: productToEdit.id, //el id definido previamente
+            ...req.body, //todo lo que llega del formulario
+            image: image //la imagen definida previamente
         };
 
         let newProducts = products.map(product => {
@@ -86,8 +82,8 @@ const productsController = {
             return product;
         })
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
-		res.redirect('/products');
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' ')); //sobreescribir el Json con los productos actualizados y pasados a formatoJSON. 
+		res.redirect('/products'); //redirigir al listado de productos. 
     },
 
     //accion de borrado de un producto

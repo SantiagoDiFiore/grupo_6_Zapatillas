@@ -468,9 +468,9 @@ div.medios-pago{
     display: none;
 }
 /*MAIN PRODUCTDETAIL */
-.boton-edicion{
+.button-edit{
     font-family: "Roboto";
-    background-color:#d97f11;
+    background-color:#2f615e;
     padding:0px 10px;
     border:none;
     border-radius: 5px;
@@ -482,7 +482,9 @@ div.medios-pago{
     font-size: 16px;
     text-decoration: none;
     margin-bottom: 10px; 
-    
+}
+.button-delete{
+    background-color: #8c2e2e
 }
 .cfont-talles{
     text-decoration: none;
@@ -1131,11 +1133,15 @@ div.italic {
         transition: background-color 1000ms;
     }
 
-    .boton-edicion:hover{
-        background-color: #ad650d;
+    .button-edit:hover{
+        background-color: #264e4b;
         box-shadow:1px 1px 3px 3px rgb(0 0 0 / 50%);
     }
-    .boton-edicion{
+    .button-delete:hover{
+        background-color: #800000;
+        box-shadow:1px 1px 3px 3px rgb(0 0 0 / 50%);
+    }
+    .button-edit{
         transition: background-color 1000ms;
     }
 

@@ -21,7 +21,7 @@
 
 
             <div class="imagen-principal">
-                <img src=<%="/images/products/"+producto.imagenProducto%> width="100%" alt=<%=producto.name%>
+                <img src=<%="/images/products/"+producto.image %> width="100%" alt=<%=producto.name%>
                     class="main-product-image">
             </div>
 
@@ -60,12 +60,13 @@
                     </div>
 
                     <a href="/products/<%= producto.id %>/edit"><button type="button"
-                            class="boton-edicion">EDITAR</button></a>
+                            class="button-edit">EDITAR</button></a>
 
-                    
-						<form action="/products/<%=producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-							<button type="submit" class="boton-edicion">ELIMINAR</button>
-						</form>
+
+                    <form action="/products/<%=producto.id %>?_method=DELETE" method="POST"
+                        style="display: inline-flex">
+                        <button type="submit" class="button-edit button-delete">ELIMINAR</button>
+                    </form>
 
                     <div class="enviosgratis">
                         <p class="envios1"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAÍS!</p>
@@ -98,7 +99,7 @@
             <% for (product of products){ %>
             <% if (product.category=="visited") { %>
             <article class="recomendado-article a1">
-                <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.imagenProducto %>"
+                <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.image %>"
                         alt=<%= product.name %>></a>
                 <div class="contenedor-descripcion">
                     <div><%= product.name %></div>
