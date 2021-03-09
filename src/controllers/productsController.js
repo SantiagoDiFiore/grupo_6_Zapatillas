@@ -49,9 +49,9 @@ const productsController = {
 			...req.body,   //todo lo que llega del formulario
 			imagenProducto: image   //la imagen definida previamente
 		};
-console.log(req.body);
-console.log("-----------------")
-console.log(newProduct);
+        console.log(req.body);
+        console.log("-----------------")
+        console.log(newProduct);
 
         products.push(newProduct);//guardar el producto nuevo en el listado de productos
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))//sobreescribir el Json con los productos actualizados y pasados a formatoJSON. 
@@ -65,7 +65,29 @@ console.log(newProduct);
     },
     //accion de edición del producto
     update: (req,res)=>{
-        
+        let id = req.params.id;
+        let productToEdit = products.find(product => product.id == id);
+        let image
+        if(req.file !=undefined){
+			image = req.file.filename
+		} else {
+			image = productToEdit.image
+		}
+        productToEdit = {
+            id: productToEdit.id,
+            ...req.body,
+            imagenProducto: image,
+        };
+
+        let newProducts = products.map(product => {
+            if (product.id == productToEdit.id){
+                return product = {...productToEdit};
+            }
+            return product;
+        })
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' '));
+		res.redirect('/products');
     },
 
     //accion de borrado de un producto

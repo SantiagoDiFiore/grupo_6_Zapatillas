@@ -7,7 +7,8 @@
 
     <main class="auto">
         <h2 class="title">EDITANDO: <%= producto.name %> </h2>
-        <form action="/products" method="POST" enctype="multipart/form-data" class="form">
+        <form action="/products/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"
+            class="form">
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
                 <input type="text" name="name" id="name" value="<%=producto.name%>" placeholder="Nombre del producto"
@@ -15,54 +16,64 @@
             </div>
             <div class="control-formulario1">
                 <label for="description">Detalle del producto:</label>
-                <input type="textarea" name="description" id="description" value="<%=producto.description%>" placeholder="Detalle del producto" class="control1"
-                    required />
+                <input type="textarea" name="description" id="description" value="<%=producto.description%>"
+                    placeholder="Detalle del producto" class="control1" required />
             </div>
             <div class="control-formulario1">
                 <label for="imagen">Imagen del producto:</label>
-                <input type="file" name="imagenProducto"  />
+                <input type="file" name="imagenProducto" />
             </div>
             <div>
                 <label for="gender" class="negrita">Genero</label>
                 <br>
                 <input type="radio" name="gender" id="gender" value="male"
-                    <%=producto.gender==="male"?"checked":null%> />Masculino
+                    <%= producto.gender==="male" ? "checked":null %> />Masculino
                 <input type="radio" name="gender" id="gender" value="female"
-                    <%=producto.gender==="female"?"checked":null%> />Femenino
+                    <%= producto.gender==="female" ? "checked":null %> />Femenino
                 <input type="radio" name="gender" id="gender" value="kids"
-                    <%=producto.gender==="kids"?"checked":null%> />Niños
+                    <%= producto.gender==="kids" ? "checked":null %> />Niños
             </div>
             <div class="control-formulario1">
                 <label for="mark">Marca</label>
                 <select name="mark" id="mark">
                     <option value="">Elegí</option>
-                    <option name="mark" value="nike" <%=producto.mark==="nike"?"selected":null%>>Nike</option>
-                    <option name="mark" value="adidas" <%=producto.mark==="adidas"?"selected":null%>>Adidas</option>
-                    <option name="mark" value="puma" <%=producto.mark==="puma"?"selected":null%>>Puma</option>
-                    <option name="mark" value="vans" <%=producto.mark==="vans"?"selected":null%>>Vans</option>
-                    <option name="mark" value="new-balance" <%=producto.mark==="new-balance"?"selected":null%>>New
+                    <option name="mark" value="nike" <%= producto.mark=="nike" ? "selected" : null%>>Nike</option>
+                    <option name="mark" value="adidas" <%= producto.mark==="adidas"? "selected":null %>>Adidas</option>
+                    <option name="mark" value="puma" <%= producto.mark==="puma" ? "selected":null %>>Puma</option>
+                    <option name="mark" value="vans" <%= producto.mark==="vans" ? "selected":null %>>Vans</option>
+                    <option name="mark" value="new-balance" <%= producto.mark==="new-balance" ? "selected":null %>>New
                         Balance</option>
-                    <option name="mark" value="converse" <%=producto.mark==="converse"?"selected":null%>>Converse
+                    <option name="mark" value="converse" <%= producto.mark==="converse" ? "selected":null %>>Converse
                     </option>
                 </select>
             </div>
             <div>
                 <label for="size" class="negrita">Talles:</label>
                 <br>
-                <input type="checkbox" name="size" id="size" value="37" <%=producto.size.includes(37)?"checked":null%>/>37
-                <input type="checkbox" name="size" id="size" value="38" <%=producto.size.includes(38)?"checked":null%> />38
-                <input type="checkbox" name="size" id="size" value="39" <%=producto.size.includes(39)?"checked":null%> />39
-                <input type="checkbox" name="size" id="size" value="40" <%=producto.size.includes(40)?"checked":null%> />40
-                <input type="checkbox" name="size" id="size" value="41" <%=producto.size.includes(41)?"checked":null%> />41
-                <input type="checkbox" name="size" id="size" value="42" <%=producto.size.includes(42)?"checked":null%> />42
-                <input type="checkbox" name="size" id="size" value="43" <%=producto.size.includes(43)?"checked":null%> />43
-                <input type="checkbox" name="size" id="size" value="44" <%=producto.size.includes(44)?"checked":null%> />44
-                <input type="checkbox" name="size" id="size" value="45" <%=producto.size.includes(45)?"checked":null%> />45
-                <input type="checkbox" name="size" id="size" value="46" <%=producto.size.includes(46)?"checked":null%> />46
+                <input type="checkbox" name="size" id="size" value="37"
+                    <%= producto.size.includes("37") ? "checked": " " %> />37
+                <input type="checkbox" name="size" id="size" value="38"
+                    <%= producto.size.includes ("38") ? "checked":" " %> />38
+                <input type="checkbox" name="size" id="size" value="39"
+                    <%= producto.size.includes ("39") ? "checked":" " %> />39
+                <input type="checkbox" name="size" id="size" value="40"
+                    <%= producto.size.includes ("40") ? "checked":" " %> />40
+                <input type="checkbox" name="size" id="size" value="41"
+                    <%= producto.size.includes("41") ? "checked":" " %> />41
+                <input type="checkbox" name="size" id="size" value="42"
+                    <%= producto.size.includes("42") ? "checked":" " %> />42
+                <input type="checkbox" name="size" id="size" value="43"
+                    <%= producto.size.includes("43") ? "checked":" " %> />43
+                <input type="checkbox" name="size" id="size" value="44"
+                    <%= producto.size.includes("44") ? "checked":" " %> />44
+                <input type="checkbox" name="size" id="size" value="45"
+                    <%= producto.size.includes("45") ? "checked":" " %> />45
+                <input type="checkbox" name="size" id="size" value="46"
+                    <%= producto.size.includes("46") ? "checked":" " %> />46
             </div>
             <div class="control-formulario1">
-                <label for="colors" class="negrita">Color del producto: <input type="color" value="<%=producto.colors%>" name="colors"
-                        id="colors" /></label>
+                <label for="colors" class="negrita">Color del producto: <input type="color" value="<%=producto.colors%>"
+                        name="colors" id="colors" /></label>
             </div>
             <div class="control-formulario1">
                 <label for="category" class="form-label">Categoría:</label>
@@ -76,13 +87,13 @@
             </div>
             <div class="control-formulario1">
                 <label for="price">Precio:</label>
-                <input type="number" name="price" value="<%=producto.price%>" id="price" placeholder="$9999" class="control1" required
-                     />
+                <input type="number" name="price" value="<%=producto.price%>" id="price" placeholder="$9999"
+                    class="control1" required />
             </div>
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
-                <input type="number" name="discount" value="<%=producto.discount%>" id="discount" placeholder="15" class="control1" required
-                     />
+                <input type="number" name="discount" value="<%=producto.discount%>" id="discount" placeholder="15"
+                    class="control1" required />
             </div>
             <br />
             <div class="register-buttons">

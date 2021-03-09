@@ -7,17 +7,17 @@
   "gender": "male",
   "mark": "new-balance",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
-  "colors": "#B5ABAB",
-  "price": 15799,
-  "discount": 50,
-  "category": "destacados"
+  "colors": "#b5abab",
+  "category": "destacados",
+  "price": "18799",
+  "discount": "50"
  },
  {
   "id": 1,
@@ -27,12 +27,12 @@
   "gender": "female",
   "mark": "vans",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#000000",
   "price": 11200,
@@ -47,10 +47,12 @@
   "gender": "male",
   "mark": "puma",
   "size": [
-   37,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#B5ABAB",
   "price": 22000,
@@ -65,12 +67,12 @@
   "gender": "female",
   "mark": "adidas",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#E78D0D",
   "price": 22000,
@@ -85,12 +87,12 @@
   "gender": "male",
   "mark": "nike",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#FFFFFF",
   "price": 21700,
@@ -105,12 +107,12 @@
   "gender": "female",
   "mark": "new-balance",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#412810",
   "price": 21700,
@@ -125,13 +127,12 @@
   "gender": "male",
   "mark": "adidas",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43,
-   44
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#3329C2",
   "price": 14000,
@@ -146,12 +147,12 @@
   "gender": "female",
   "mark": "puma",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#3329C2",
   "price": 20000,
@@ -166,12 +167,12 @@
   "gender": "male",
   "mark": "nike",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#B5ABAB",
   "price": 26000,
@@ -186,49 +187,16 @@
   "gender": "female",
   "mark": "new-balance",
   "size": [
-   37,
-   38,
-   39,
-   40,
-   41,
-   43
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "43"
   ],
   "colors": "#B5ABAB",
   "price": 21700,
   "discount": 50,
   "category": "visited"
- },
- {
-  "id": 10,
-  "name": "probando",
-  "description": "sadasd",
-  "gender": "male",
-  "mark": "adidas",
-  "size": [
-   "38",
-   "44"
-  ],
-  "colors": "#000000",
-  "category": "in-sale",
-  "price": "3333",
-  "discount": "10",
-  "imagenProducto": "default-image.jpg"
- },
- {
-  "id": 11,
-  "name": "test",
-  "description": "lasdlaskdlasflaflslfsal",
-  "gender": "kids",
-  "mark": "adidas",
-  "size": [
-   "38",
-   "42",
-   "44"
-  ],
-  "colors": "#603939",
-  "category": "in-sale",
-  "price": "100000000000",
-  "discount": "10",
-  "imagenProducto": "imagenProducto-1615215501401.jpg"
  }
 ]
