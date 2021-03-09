@@ -197,38 +197,5 @@
   "price": 21700,
   "discount": 50,
   "category": "visited"
- },
- {
-  "id": 10,
-  "name": "probando",
-  "description": "sadasd",
-  "gender": "male",
-  "mark": "adidas",
-  "size": [
-   "38",
-   "44"
-  ],
-  "colors": "#000000",
-  "category": "in-sale",
-  "price": "3333",
-  "discount": "10",
-  "imagenProducto": "default-image.jpg"
- },
- {
-  "id": 11,
-  "name": "test",
-  "description": "lasdlaskdlasflaflslfsal",
-  "gender": "kids",
-  "mark": "adidas",
-  "size": [
-   "38",
-   "42",
-   "44"
-  ],
-  "colors": "#603939",
-  "category": "in-sale",
-  "price": "100000000000",
-  "discount": "10",
-  "imagenProducto": "imagenProducto-1615215501401.jpg"
  }
 ]
