@@ -24,6 +24,19 @@
 ## Dejar de hacer
 > Tendriamos que dejar de perder los primeros dias de trabajo apenas se lanza el sprint. 
 
+### **RETROSPECTIVA SPRINT 3** 
+
+## Comenzar a hacer
+> Deberiamos comenzar a investigar más en fuentes externas a Digital para buscar diversas soluciones a los problemas que se presentan.
+## Hacer más
+> Incrementar las reuniones daily/weekly.
+## Continuar haciendo
+> Seguir organizandonos como lo venimos haciendo, y continuar optimizando la pagina para que sea sencilla para el usuario.
+## Hacer menos
+> No encontramos un punto el cual deberiamos hacer con menor frecuencia.
+## Dejar de hacer
+> No aplica para este sprint.
+
 
 
 

@@ -15,7 +15,7 @@
             <% for( producto of products ) { %>
             <article class="producto">
                 <a class="miniatura" href=<%="/products/"+producto.id %>><img
-                        src=<%="/images/products/"+producto.imagenProducto  %> alt=<%= producto.name %>
+                        src=<%="/images/products/"+producto.image %> alt=<%= producto.name %>
                         class="miniaturaB"></a>
                 <div class="modelo"><%= producto.name %></div>
                 <div class="precio-carrito">$<%= toThousand(producto.price) %></div>
