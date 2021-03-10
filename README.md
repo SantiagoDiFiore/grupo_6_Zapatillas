@@ -38,3 +38,9 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 -Continuamos puliendo el css y agregamos algunas transiciones.
 -El acceso a los formularios de carga y edicion de productos es a traves de las rutas:(http://localhost:3000/productos/productAdd) y
 (http://localhost:3000/productos/productEdit).
+
+### **- Sprint N°4/Notas**
+-Incorporamos los botones de edicion y eliminacion en el detalle del producto.
+-renombramos las rutas y los controladores con los nombres sugeridos en el pdf del sprint.
+-agregamos la funcionalidad del search en el header.
+-agregamos la vista de error 404(debemos estilarla un poco más).
