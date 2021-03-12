@@ -4,7 +4,8 @@
   "description": ">El sitio de zapatillas que estamos diseñando está orientado a todo tipo de consumidores, ya sea que necesiten un calzado deportivo o algo con un estilo urbano/casual.\r Buscamos desarrollar un site que sea funcional para los usuarios, con un diseño agradable y buena usabilidad.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app -i json"
   },
   "repository": {
     "type": "git",

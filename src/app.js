@@ -7,13 +7,15 @@ const methodOverride=require("method-override");
 const app = express();
 
 // ************ Middlewares - (don't touch) ************
-app.use(express.static("../public"))
+app.use(express.static(path.join(__dirname, '../public')));
+console.log(path.join(__dirname, '../public'))
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
 // ************ Template Engine - (don't touch) ************
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 // ************ WRITE YOUR CODE FROM HERE ************
 app.listen(3000, ()=>{
