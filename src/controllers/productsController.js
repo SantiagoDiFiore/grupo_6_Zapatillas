@@ -98,9 +98,6 @@ const productsController = {
     productCart: (req, res) => {
         res.render("./products/productCart" ,{titulo:"Carrito", products:products , toThousand})
     },
-    
-    
-    
 
 }  
 
