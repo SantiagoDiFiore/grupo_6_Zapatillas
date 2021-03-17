@@ -3,7 +3,7 @@
   "id": 0,
   "name": "New Balance 997 Sport Chinese New Year (2020)",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-  "gender": "male",
+  "gender": "kids",
   "mark": "new-balance",
   "size": [
    "37",
@@ -83,7 +83,7 @@
   "id": 4,
   "name": "Nike Air Max 90 Infrared (2020)",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-  "gender": "male",
+  "gender": "female",
   "mark": "nike",
   "size": [
    "37",
@@ -103,7 +103,7 @@
   "id": 5,
   "name": "New Balance 1300 Levi's",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-  "gender": "female",
+  "gender": "male",
   "mark": "new-balance",
   "size": [
    "37",
@@ -245,7 +245,7 @@
   "id": 12,
   "name": "Converse Chuck Taylor All-Star 70s Ox Comme des Garcons PLAY White",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-  "gender": "male",
+  "gender": "kids",
   "mark": "converse",
   "size": [
    "37",

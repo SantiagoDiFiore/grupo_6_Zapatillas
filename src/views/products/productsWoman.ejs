@@ -8,12 +8,12 @@
 
     <main>
         <div class="encabezado-carrito">
-            <h3>CALZADO > HOMBRE</h3>
+            <h3>CALZADO > MUJER</h3>
 
         </div>
         <section class="elementos-carrito">
             <% for( let i = 0; i < products.length; i++ ) { %>
-            <%if (products[i].gender =="male") { %>
+            <%if (products[i].gender =="female") { %>
             <article class="producto">
                 <a class="miniatura" href=<%="/products/"+products[i].id %>><img
                         src=<%="/images/products/"+products[i].image  %> alt=<%= products[i].name %>
