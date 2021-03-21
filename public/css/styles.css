@@ -1029,11 +1029,12 @@ div.italic {
         margin-right: 75px;
     }
     .main-article-product{
-        display: flex;
+        align-items: center;
+        text-align: -webkit-center;
     }
-    .imagen-principal{
+    /* .imagen-principal{
         width: 75%;
-    }
+    } */
     .data-principal{
         width: 50%;
     }
@@ -1053,7 +1054,7 @@ div.italic {
         width:50%;
     }
     img.main-product-image{
-     max-width: 700px;
+     max-width: 800px;
     }
     .precio-pd{
         font-size: 30px;
@@ -1068,6 +1069,14 @@ div.italic {
         width: 55%;
     }
 }
+
+@media (min-width:950px){
+    .main-article-product{
+        display: flex;
+        /* align-items: center; */
+    }
+}
+
 @media (min-width:1200px){
     .logo{
         width: 65%;
