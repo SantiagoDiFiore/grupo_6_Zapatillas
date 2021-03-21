@@ -93,14 +93,35 @@ const productsController = {
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
 		res.redirect('/');
     },
-
-
+    //muestra el carrito de compra
     productCart: (req, res) => {
         res.render("./products/productCart" ,{titulo:"Carrito", products:products , toThousand})
     },
-    
-    
-    
+
+    //muestra todos los productos para hombres
+    productsMan: (req,res) =>{
+        res.render("./products/productsMan" , {titulo:"Carrito", products:products , toThousand})
+    },
+
+    //muestra todos los productos para mujeres
+    productsWoman: (req,res) =>{
+        res.render("./products/productsWoman" , {titulo:"Carrito", products:products , toThousand})
+    },
+
+    //muestra todos los productos para niños
+    productsKids: (req,res) =>{
+        res.render("./products/productsKids" , {titulo:"Carrito", products:products , toThousand})
+    },
+
+    //muestra todos los productos de deportes
+    productsSport: (req,res) =>{
+        res.render("./products/productsSport" , {titulo:"Carrito", products:products , toThousand})
+    },
+
+    //muestra todos los productos por marcas
+    productsMarks: (req,res) =>{
+        res.render("./products/productsMarks" , {titulo:"Carrito", products:products , toThousand})
+    },
 
 }  
 

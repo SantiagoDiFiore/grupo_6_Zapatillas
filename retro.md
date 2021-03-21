@@ -37,6 +37,19 @@
 ## Dejar de hacer
 > No aplica para este sprint.
 
+### **RETROSPECTIVA SPRINT 4** 
+
+## Comenzar a hacer
+> Adelantar con las tareas del playground, para llegar mejor con los contenidos del sprint.
+## Hacer más
+> Seguir mejorando el diseño y el estilo de la página, y ademas sus funcionalidades.
+## Continuar haciendo
+> Mantener el esquema de organizacion que tenemos. 
+## Hacer menos
+> No encontramos un punto el cual deberiamos hacer con menos frecuencia.
+## Dejar de hacer
+> Tenemos que dejar de perder los primeros días desde que se lanza el sprint, en este caso fue por la complejidad que tenian las tareas, ya que no sabiamos como organizarnos.
+
 
 
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head")%>
+
+<body>
+    <%- include("../partials/header")%>
+
+    <main>
+        <div class="encabezado-carrito">
+            <h3>CALZADO > NIÑOS</h3>
+
+        </div>
+        <section class="elementos-carrito">
+            <% for( let i = 0; i < products.length; i++ ) { %>
+            <%if (products[i].gender =="kids") { %>
+            <article class="producto">
+                <a class="miniatura" href=<%="/products/"+products[i].id %>><img
+                        src=<%="/images/products/"+products[i].image  %> alt=<%= products[i].name %>
+                        class="miniaturaB"></a>
+                <div class="modelo"><%= products[i].name %></div>
+                <div class="precio-carrito">$<%= toThousand(products[i].price) %></div>
+
+            </article>
+
+            <% } %>
+
+            <% } %>
+
+
+
+    </main>
+    <%- include("../partials/footer")%>
+
+</body>
+
+</html>

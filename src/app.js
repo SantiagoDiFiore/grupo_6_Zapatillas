@@ -8,7 +8,6 @@ const app = express();
 
 // ************ Middlewares - (don't touch) ************
 app.use(express.static(path.join(__dirname, '../public')));
-console.log(path.join(__dirname, '../public'))
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
@@ -48,7 +47,7 @@ app.use((err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error',{titulo:"error 404"});
+  res.render('error',{titulo:"¡OOPS! Página no encontrada"});
 });
 
 // ************ exports app - dont'touch ************
