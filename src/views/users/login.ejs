@@ -9,10 +9,14 @@
     <main>
         <div class="login-bar auto">
             <h2 class="title">Iniciar Sesión</h2>
-            <form action="/" method="POST" class="form">
+            <form action="/users/login" method="POST" class="form">
                 <div class="register-formulario">
                     <label for="user" class="obligatorio">* Email</label>
                     <input type="email" name="email" id="user" placeholder="Email..." required class="control-login" />
+                    <% if (locals.errors && errors.email) { %>
+                      <p class="alert"><%=errors.email.msg%></p> 
+                     
+                    <% } %>
                 </div>
                 <div class="register-formulario">
                     <label for="password" class="obligatorio">* Contraseña</label>

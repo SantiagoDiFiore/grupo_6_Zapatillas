@@ -1,38 +1,62 @@
 [
-    {
-        "id":0,
-        "firstName":"santiago",
-        "lastName":"di fiore",
-        "birthday": 19091997,
-        "gender":"masculino",
-        "image":"default-image.jpg",
-        "tipo-de-usuario":"admin",
-        "email":"un@email.com",
-        "password":"contraseña123",
-        "check-password":"contraseña123"
-    },    
-    {
-        "id":1,
-        "firstName":"sebastian",
-        "lastName":"barciela",
-        "birthday": 19091997,
-        "gender":"masculino",
-        "image":"default-image.jpg",
-        "tipo-de-usuario":"admin",
-        "email":"un@email.com",
-        "password":"contraseña123",
-        "check-password":"contraseña123"
-    },   
-    {
-        "id":2,
-        "firstName":"ramiro",
-        "lastName":"tanquias",
-        "birthday": 19091997,
-        "gender":"masculino",
-        "image":"default-image.jpg",
-        "tipo-de-usuario":"admin",
-        "email":"un@email.com",
-        "password":"contraseña123",
-        "check-password":"contraseña123"
-    }
+ {
+  "id": 0,
+  "firstName": "sebastian",
+  "lastName": "barciela",
+  "birthday": "2021-03-18",
+  "gender": "male",
+  "email": "seba@1234.com",
+  "password": "$2a$10$n2fXO5h4dTRPCutk5dC90.bGmfNIm8XC3QUQA9jLt.2LWER.4SmK2",
+  "checkPassword": "$2a$10$ewGU4Ek/87vNVNMbsc4UTOJk//1QZcVnHwtGD6zIv2Qv8I49Hgifu",
+  "terminos": "terminos",
+  "imagen": "image-1616442013063.jpg"
+ },
+ {
+  "id": 1,
+  "firstName": "sebastian",
+  "lastName": "barciela",
+  "birthday": "2021-03-18",
+  "gender": "male",
+  "email": "barcielasebastian@gmail.com",
+  "password": "$2a$10$hxF7JXdrxsW8AqamkUUhtOg1KVfphtUrV17nVnzOBA7UD6FcrQv.u",
+  "checkPassword": "$2a$10$aR48v2LUzyPVgMl0CmRk5OkmkZnPQ9j3ohN4bMCfp/zEoLxmrfqAS",
+  "terminos": "terminos",
+  "image": "image-1616514770237.jpg"
+ },
+ {
+  "id": 2,
+  "firstName": "sebastian",
+  "lastName": "barc",
+  "birthday": "2021-03-18",
+  "gender": "male",
+  "email": "sebarock07@hotmail.com",
+  "password": "$2a$10$aYflafgWI273A9jV2wZ5ie2L9GU173I4L6ncAJBWrnqTnSHUHIkSS",
+  "checkPassword": "$2a$10$QNQKnPmK.cy0FDJzjJ3wdOMlzE/TD7vIrRB0O.K.p0zOgeeRolqA2",
+  "terminos": "terminos",
+  "image": "image-1616543046201.jpg"
+ },
+ {
+  "id": 3,
+  "firstName": "sdfsdf",
+  "lastName": "barciela",
+  "birthday": "2021-03-19",
+  "gender": "male",
+  "email": "elroverde07@gmail.com",
+  "password": "$2a$10$Mm94mLbJKzVh2qu/c6mZKOXuGIBzH4XIU2IFY6qz5zZhh7j30MTfK",
+  "checkPassword": "$2a$10$GzXMfsVwsSqQI.652ktWPeFmBl3Nv99ouHXPDd9RiF0fv3UspaMFq",
+  "terminos": "terminos",
+  "image": "image-1616543714753.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "rami",
+  "lastName": "tanquias",
+  "birthday": "2021-03-26",
+  "gender": "male",
+  "email": "rami@rami.com",
+  "password": "$2a$10$wvtd0FDvpCxQWQxLcCYfqe3DmD16A4YuSvvRFWU7LY.li0J4xk5Ja",
+  "checkPassword": "$2a$10$67bS5JtLAO9RASLn6/30Qu9ABb85R9ARCRepklIYh6UzXNNqWxqxe",
+  "terminos": "terminos",
+  "image": "image-1616624425140.jpg"
+ }
 ]

@@ -8,11 +8,27 @@
                 <i class="fas fa-bars menu-desplegable"></i>
             </div>
             <a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo"></a>
-            <div class="icons-section">
-                <a href="/users/login"><i class="fas fa-user"></i></a>
-                <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
-                <a href="/"><i class="fas fa-share-alt-square"></i></a>
-            </div>
+
+            <% if (locals.isLogged) { %>
+                <div class="icons-section">
+                    
+                    <a href="/users/profile"><img src="/images/users/<%=locals.userLogged.image%>" alt="" class="imagen-perfil-miniatura"></a>
+                    
+                    <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
+                   
+                </div>
+            <% }else{%>
+                <div class="icons-section">
+                    <a href="/users/login"><i class="fas fa-user"></i></a>
+                    <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="/"><i class="fas fa-share-alt-square"></i></a>
+                </div>
+
+                <%}%> 
+
+
+
+            
             <form action="/search" method="GET" class="search-form">
                 <input type="text" name="search" placeholder="¿Qué estás buscando?" class="campo-busqueda">
                 <button type="submit" class="search-button"><i class="fas fa-search"></i></button>

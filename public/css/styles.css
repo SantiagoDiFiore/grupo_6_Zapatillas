@@ -66,6 +66,10 @@ body{
     padding: 0px 5px;
     color:#ffffff;
     font-size: 18px;
+    
+}
+.icons-section a{
+    align-self: center;
 }
 .search-form{
     display: flex;
@@ -365,6 +369,50 @@ div.medios-pago{
     font-weight: bold;
     border-radius: 5px;
     padding: 5px;
+}
+.alert{
+    color:tomato;
+    margin-top: 5px;
+    font-weight: bold;
+
+}
+.alert2{
+    color:tomato;
+    font-family: roboto;
+    font-weight: bold;
+}
+.is-invalid{
+    
+    box-shadow:1px 1px 2px 2px rgb(235 99 71 );
+    
+}
+.imagen-perfil{
+    width: 60%;
+    margin: 10px;
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
+    
+}
+
+
+.imagen-perfil-miniatura{
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        margin: 5px;
+        
+    
+}
+    
+.profile-container{
+        margin:10px 20px auto;
+        text-align:center;
+        box-shadow:1px 1px 2px 2px rgb(217 127 17 / 80%) ;
+        background-color: #f2f2f2;
+        border-radius: 20px;
+        border: solid 20px #f2f2f2;
+        
+        
+        
 }
 
 
@@ -1144,6 +1192,11 @@ div.italic {
     }
     .error-message_container h1{
         font-size: 60px;
+    }
+    .profile-container{
+        max-width: 70%;
+        margin-bottom: 10px;
+        margin:0 auto;
     }
 }
 @media (min-width:1200px){

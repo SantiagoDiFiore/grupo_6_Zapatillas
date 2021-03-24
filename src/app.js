@@ -2,6 +2,10 @@
 const express= require("express");
 const path=require("path");
 const methodOverride=require("method-override");
+const session=require("express-session");
+const cookie=require("cookie-parser");
+const userLoggedMiddleware=require("./middlewares/userLoggedMiddleware");
+
 
 // ************ express() - (don't touch) ************
 const app = express();
@@ -11,6 +15,15 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({ extended: false}));
 app.use(express.json());
 app.use(methodOverride("_method")); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(session({
+  secret:"secreto",
+  resave:false,
+  saveUninitialized:true
+}));
+app.use(cookie());//middleware de aplicacion global para las cookies
+app.use(userLoggedMiddleware);//se debe ejecutar despues de inicializar session,(si hay cookie pasa al usuario a sesion muestra o no contenido, dependiendo si el usario esta logueado)
+
+
 
 // ************ Template Engine - (don't touch) ************
 app.set("view engine", "ejs");
@@ -36,6 +49,7 @@ app.use("/marcas" , rutasMarcas);
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************
+
 app.use((req, res, next) => next(createError(404)));
 
 // ************ error handler ************
@@ -51,6 +65,7 @@ app.use((err, req, res, next) => {
 });
 
 // ************ exports app - dont'touch ************
+
 module.exports = app;
 
 
