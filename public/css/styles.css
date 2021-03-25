@@ -166,7 +166,7 @@ h2.linea span {
     width: 100%;
     margin-top: 20px;
     /*border: dotted 0.5px #d97f11;*/
-    box-shadow:1px 1px 2px 2px rgb(217 127 17 / 80%) ;
+    box-shadow:1px 1px 2px 2px #808080 ;
 }
 .recomendado-article img{
     width: 100%;
@@ -1237,7 +1237,7 @@ div.italic {
         margin-right: 10px;
     }
     .recomendado-article:hover {
-        box-shadow:1px 1px 8px 4px rgb(217 127 17 / 90%);
+        box-shadow:1px 1px 8px 4px #666666;
     }
     .delete-button:hover{
         background-color: #d97f11;

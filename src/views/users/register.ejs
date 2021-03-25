@@ -12,87 +12,90 @@
             <h3 class="title-register">Datos personales</h3>
             <div class="control-formulario1">
                 <label for="firstName">Nombre completo:</label>
-                <input type="text" name="firstName" id="firstName" placeholder="Nombre..."  
-                    minlength="4" 
+                <input type="text" name="firstName" id="firstName" placeholder="Nombre..."
                     class="control2 <%= locals.errors && errors.firstName? "is-invalid":null  %>"
-                    value=<%= locals.old && old.firstName? old.firstName:null  %> >
+                    value=<%= locals.old && old.firstName? old.firstName:null  %>>
 
-                    <% if (locals.errors && errors.firstName) { %>
-                        <p class="alert"><%=errors.firstName.msg%></p> 
-                      
-                     <% } %>
+                <% if (locals.errors && errors.firstName) { %>
+                <p class="alert"><%=errors.firstName.msg%></p>
+
+                <% } %>
             </div>
-           
+
             <div class="control-formulario1">
-                <input type="text" name="lastName" id="lastName" placeholder="Apellido..."  
-                class="control2 <%= locals.errors && errors.lastName? "is-invalid":null  %>" 
-                value=<%= locals.old && old.lastName? old.lastName:null  %>>
+                <input type="text" name="lastName" id="lastName" placeholder="Apellido..."
+                    class="control2 <%= locals.errors && errors.lastName? "is-invalid":null  %>"
+                    value=<%= locals.old && old.lastName? old.lastName:null  %>>
 
                 <% if (locals.errors && errors.lastName) { %>
-                    <p class="alert"><%=errors.lastName.msg%></p> 
-                  
-                 <% } %>
+                <p class="alert"><%=errors.lastName.msg%></p>
+
+                <% } %>
             </div>
             <div class="control-formulario1">
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
-                <input type="date" name="birthday" id="birthday"  
-                class="ingreso <%= locals.errors && errors.birthday? "is-invalid":null  %>"
-                value=<%= locals.old && old.birthday? old.birthday:null  %> >
+                <input type="date" name="birthday" id="birthday"
+                    class="ingreso <%= locals.errors && errors.birthday? "is-invalid":null  %>"
+                    value=<%= locals.old && old.birthday? old.birthday:null  %>>
 
                 <% if (locals.errors && errors.birthday) { %>
-                    <p class="alert2"><%=errors.birthday.msg%></p> 
+                <p class="alert2"><%=errors.birthday.msg%></p>
                 <% } %>
             </div>
             <div>
                 <label for="gender" class="negrita">Genero</label>
-                <br> 
-                <input type="radio" name="gender" id="gender" value= "male" <%= locals.old && old.gender=="male"? "checked":null  %> />Masculino
-                <input type="radio" name="gender" id="gender" value="female" <%= locals.old && old.gender=="female"? "checked":null  %> />Femenino
-                <input type="radio" name="gender" id="gender" value="kids" <%= locals.old && old.gender=="kids"? "checked":null  %> />Otros
+                <br>
+                <input type="radio" name="gender" id="gender" value="male"
+                    <%= locals.old && old.gender=="male"? "checked":null  %> />Masculino
+                <input type="radio" name="gender" id="gender" value="female"
+                    <%= locals.old && old.gender=="female"? "checked":null  %> />Femenino
+                <input type="radio" name="gender" id="gender" value="kids"
+                    <%= locals.old && old.gender=="kids"? "checked":null  %> />Otros
                 <% if (locals.errors && errors.gender) { %>
-                    <p class="alert"><%=errors.gender.msg%></p> 
+                <p class="alert"><%=errors.gender.msg%></p>
                 <% } %>
-                
+
             </div>
             <h3 class="title-register1">Sobre tu cuenta</h3>
             <div class="control-formulario1">
                 <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="Email..."  
-                class="control2 <%= locals.errors && errors.email? "is-invalid":null  %>" 
-                value=<%= locals.old && old.email? old.email:null  %>>
-                
+                <input type="text" name="email" id="email" placeholder="Email..."
+                    class="control2 <%= locals.errors && errors.email? "is-invalid":null  %>"
+                    value=<%= locals.old && old.email? old.email:null  %>>
+
                 <% if (locals.errors && errors.email) { %>
-                    <p class="alert"><%=errors.email.msg%></p> 
+                <p class="alert"><%=errors.email.msg%></p>
                 <% } %>
             </div>
             <div class="control-formulario1">
                 <label for="password">Contraseña:</label>
-                <input type="password" name="password" id="password" placeholder="Contraseña..." 
-                     class="control2 <%= locals.errors && errors.password? "is-invalid":null  %>" />
-                    <% if (locals.errors && errors.password) { %>
-                        <p class="alert"><%=errors.password.msg%></p> 
-                    <% } %>
+                <input type="password" name="password" id="password" placeholder="Contraseña..."
+                    class="control2 <%= locals.errors && errors.password? "is-invalid":null  %>" />
+                <% if (locals.errors && errors.password) { %>
+                <p class="alert"><%=errors.password.msg%></p>
+                <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
             </div>
             <div class="control-formulario1">
                 <input type="password" name="checkPassword" id="checkPassword" placeholder="Confirmar contraseña..."
-                      class="control2 <%= locals.errors && errors.checkPassword? "is-invalid":null  %>" />
-                    <% if (locals.errors && errors.checkPassword) { %>
-                        <p class="alert"><%=errors.checkPassword.msg%></p> 
-                    <% } %>
+                    class="control2 <%= locals.errors && errors.checkPassword? "is-invalid":null  %>" />
+                <% if (locals.errors && errors.checkPassword) { %>
+                <p class="alert"><%=errors.checkPassword.msg%></p>
+                <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del usuario:</label>
-                <input type="file" name="image" accept=".jpg" >
+                <input type="file" name="image">
 
                 <% if (locals.errors && errors.image) { %>
-                    <p class="alert"><%=errors.image.msg%></p> 
+                <p class="alert"><%=errors.image.msg%></p>
                 <% } %>
             </div>
             <hr>
             <div class="bottom-register">
-                <input type="checkbox" name="terminos" value="terminos" id="terminos" required>Acepto las politicas de privacidad
+                <input type="checkbox" name="terminos" value="terminos" id="terminos">Acepto las politicas de
+                privacidad
                 y los terminos y condiciones
             </div>
             <div class="bottom-register">

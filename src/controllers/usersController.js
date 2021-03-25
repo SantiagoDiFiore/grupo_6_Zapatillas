@@ -3,8 +3,6 @@ const User=require("../models/User");//requerimos el modelo con todos sus metodo
 const{validationResult} =require("express-validator");
 const bcrypt=require("bcryptjs");
 
-
-
 const usersController = {
     login: (req,res)=>{
         res.render("./users/login",{titulo:"Ingresá"})
@@ -31,27 +29,22 @@ const usersController = {
             //redirigimos al perfil de usuario           
             res.redirect("/users/profile")
          }else{//si no coincide la contraseña se renderiza la vista de login con error
-            res.render("./users/login",{titulo:"Ingresá" , errors:{
+            res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
                 email:{
-                    msg:"las credenciales son invalidas"
+                    msg:"Las credenciales son invalidas"
                 }
             }  
         })}
-
-         
-        
         
         }else{//si no se encuentra el mail, volvemos a renderizar la vista de login con mensaje de error
             res.render("./users/login",{titulo:"Ingresá" , errors:{
                 email:{
-                    msg:"el email no se encuentra en la base de datos"
+                    msg:"El usuario no se encuentra en la base de datos"
                 }
             }  
         })
         }
         
-        
-
     },
 
     register: (req,res)=>{
@@ -62,7 +55,7 @@ const usersController = {
        const errors=validationResult(req);
         
        if (!errors.isEmpty()){
-           res.render("./users/register" ,{titulo:"Registrate" , errors:errors.mapped() , old:req.body})
+           res.render("./users/register" ,{titulo:"¡Hubo un error en la registracion!" , errors:errors.mapped() , old:req.body})
        }
        //si pasa las validaciones primarias debe checkearse que el usuario NO exista en la db,chequeando por mail
        //si existe se debe mostrar un error, si no existe se puede continuar con el registro.
@@ -75,7 +68,7 @@ const usersController = {
         res.render("./users/register" ,{titulo:"Registrate" ,
             errors:{
                 email:{
-                    msg:"el usuario se encuentra registrado"
+                    msg:"El usuario se encuentra registrado"
                 }
             }, 
             old:req.body})
@@ -99,17 +92,12 @@ const usersController = {
       let userCreated= User.create(newUser)//usamos el metodo create del modelo para agregar un usuario a la db., lo guardamos en una variable para luego usarlo.
        res.redirect("/users/login")//una vez registrado redireccionamos a login
 
-      
-
        }
-
-
-       
     },
 
     profile:(req,res)=>{
         
-        res.render("./users/profile" , {titulo:"tu perfil" , user:req.session.userLogged});//pasamos la informacion de usuario logueado a la vista para mostrar info
+        res.render("./users/profile" , {titulo:"Tú perfil" , user:req.session.userLogged});//pasamos la informacion de usuario logueado a la vista para mostrar info
     },
 
     //metodo para desloguear usuario
@@ -118,13 +106,6 @@ const usersController = {
         res.clearCookie("userEmail")
         res.redirect("/")
     }
-
-
-
-   
 }  
-
-
-
 
 module.exports = usersController

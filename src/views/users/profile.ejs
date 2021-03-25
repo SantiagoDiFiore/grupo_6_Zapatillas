@@ -4,30 +4,30 @@
 <%- include("../partials/head")%>
 
 <body>
-<%- include("../partials/header")%>
+    <%- include("../partials/header")%>
 
     <main>
         <div class="title">
             <h2 class="linea"><span>PERFIL DE USUARIO</span></h2>
         </div>
-        
+
         <div class="login-bar auto">
-        <div class="profile-container">
-            <div>
-                <h3>Bienvenid@ <%= user.firstName +" "+user.lastName %> </h3>
-                <h4><%= user.email%> </h4>
-                <img src="/images/users/<%=user.image%>" alt="<%=user.firstName%> " class="imagen-perfil">
+            <div class="profile-container">
+                <div>
+                    <h3>¡Hola <%= user.firstName +" "+user.lastName %>! </h3>
+                    <h4><%= user.email%> </h4>
+                    <img src="/images/users/<%=user.image%>" alt="<%=user.firstName%> " class="imagen-perfil">
+                </div>
+                <div>
+                    <a href="/users/logout"><button type="button" class="boton-login">CERRAR SESION</button></a>
+                </div>
+
             </div>
-            <div>
-               <a href="/users/logout"><button type="button" class="boton-login">CERRAR SESION</button></a>
-            </div>
-            
         </div>
-        </div>
-        
+
     </main>
 
-<%- include("../partials/footer")%>  
+    <%- include("../partials/footer")%>
 </body>
 
 </html>

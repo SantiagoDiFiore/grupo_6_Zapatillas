@@ -20,3 +20,10 @@
 -4/3: Instalamos el multer y lo definimos en la ruta.
 -7/3: Comenzamos con el CRUD, realizamos el metodo create y el destroy.
 -9/3: Reunion larga para el cierre del sprint. Finalizamos con el CRUD, realizando el metodo edit.
+
+### **- Weekly (Sprint N°5) -**
+-14/3: Realizamos una reunion para organizar el tablero, y definimos las prioridades. Tambien, dividimos las tareas.
+-16/3: Actualizamos la estructura de carpetas y archivos de la entidad de usuarios.
+-17/3: Implementamos las validaciones y la persistencia de datos en el registro. 
+-20/3: Implementamos el login de usuarios, con sus respectivas funciones. Y tambien la ruta de huéspedes y usuarios.
+-24/3: Reunion larga para el cierre del sprint, donde intercambiamos nuestro codigo para unificar las tareas realizadas.
