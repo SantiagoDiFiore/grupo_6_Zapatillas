@@ -44,3 +44,10 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 -renombramos las rutas y los controladores con los nombres sugeridos en el pdf del sprint.
 -agregamos la funcionalidad del search en el header.
 -agregamos la vista de error 404(debemos estilarla un poco más).
+
+### **- Sprint N°5/Notas**
+-Incorporamos validaciones para el register y el login, con persistencia de datos para los casos que correspondia.
+-Creamos el directorio middlewares y ubicamos alli las validaciones y los middlewares para usuarios logueados y visitantes.
+-creamos una vista básica para el perfil de usuario.(tambien se muestra la imagen de perfil en el header)
+-continuamos estilando algunos detalles del sitio. 
+-mejoramos las rutas de algunos links (ej:hombre, mujer , etc)

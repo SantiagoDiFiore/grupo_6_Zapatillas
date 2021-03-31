@@ -6,7 +6,7 @@ const path= require("path");
 const validations=[
     body("firstName").notEmpty().withMessage("Tienes que escribir un nombre").bail().isLength({min: 3}).withMessage("Tienes que usar 3 caracteres o más"),
     body("lastName").notEmpty().withMessage("Tienes que escribir un apellido").bail().isLength({min: 3}).withMessage("Tienes que usar 3 caracteres o más"),
-    body("birthday").notEmpty().withMessage("Tienes que completar con tú fecha de nacimiento"),
+    body("birthday").notEmpty().withMessage("Tienes que completar tú fecha de nacimiento"),
     body("gender").notEmpty().withMessage("Tienes que seleccionar un género"),
     body("email").notEmpty().withMessage("Tienes que escribir un correo electronico").bail().isEmail().withMessage("Tienes que usar el formato usuario@correo.com"),
     body("password").notEmpty().withMessage("Tienes que escribir una contraseña"),
