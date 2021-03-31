@@ -301,6 +301,18 @@ div.medios-pago{
     margin-left: 20px;
     margin-right: 20px;
 }
+.descuento{
+    color: red;
+    font-size: 13px;
+    padding-left: 5px
+}
+.small {
+    font-size: 16px;
+    color: gray;
+    text-decoration: line-through;
+    padding-right: 7px
+}
+
 
 /*MAIN LOGIN */
 .title{
@@ -384,23 +396,17 @@ div.medios-pago{
 .is-invalid{
     
     box-shadow:1px 1px 2px 2px rgb(235 99 71 );
-    
 }
 .imagen-perfil{
     width: 60%;
     margin: 10px;
     box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
-    
 }
-
-
 .imagen-perfil-miniatura{
         width:40px;
         height:40px;
         border-radius:50%;
         margin: 5px;
-        
-    
 }
     
 .profile-container{
@@ -410,9 +416,6 @@ div.medios-pago{
         background-color: #f2f2f2;
         border-radius: 20px;
         border: solid 20px #f2f2f2;
-        
-        
-        
 }
 
 
@@ -537,7 +540,6 @@ div.medios-pago{
     font-size: 20px;
     font-family: roboto;
 }
-
 .nav-site{
     display:flex;
 }
@@ -559,11 +561,9 @@ div.medios-pago{
 }
 .precio-pd{
     font-size: 25px;
-    font-weight: bold;
     color: #8c2e2e;
     margin: 10px;
 }
-
 .tallesdisponibles{
     margin: 5px;
 }
@@ -594,8 +594,7 @@ div.medios-pago{
     width: 140px;
     height: 40px;
     padding: 7px;
-    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
-    
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%); 
 }
 .enviosgratis{
     margin: 0px 10px;
@@ -645,7 +644,35 @@ img.main-product-image{
 ol.nav-site{
     padding: 7px;
 }
-
+.small-detail {
+    font-size: 13px;
+    color: gray
+}
+.small-detail span {
+    text-decoration: line-through;
+}
+.products-block{
+    display: block;
+}
+.products-none{
+    display: none;
+}
+.centrado{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.boton-products{
+    font-family: "Roboto";
+    background-color: #d97f11;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    width: 300px;
+    text-align: center;
+    box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%); 
+}
 /*MAIN NEW PRODUCT*/
 
 .control-formulario1{
@@ -1183,6 +1210,9 @@ div.italic {
         font-size: 30px;
         text-align: center;
     }
+    .small-detail{
+        font-size: 17px;
+    }
     main.auto{
         display: flex;
         justify-content: center;
@@ -1198,6 +1228,12 @@ div.italic {
         max-width: 70%;
         margin-bottom: 10px;
         margin:0 auto;
+    }
+    .products-block{
+        display: none;
+    }
+    .products-none{
+        display: block;
     }
 }
 
@@ -1290,11 +1326,23 @@ div.italic {
     .button-edit{
         transition: background-color 1000ms;
     }
-
     .boton-de-compra:hover{
         background-color: #ad650d;
     }
     .boton-de-compra{
         transition: background-color 1000ms;
     }
+    .boton-products:hover{
+        background-color: #ad650d;
+    }
+    .boton-products{
+        transition: background-color 1000ms;
+    }
+    .linknav:hover{
+        color: #d97f11;
+    }
+    .linknav{
+        transition: color 500ms;
+    }
+    
 }

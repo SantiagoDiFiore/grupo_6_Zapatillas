@@ -10,21 +10,22 @@
             <a href="/" class="home"><img src="/images/kicks.png" alt="logo kicks" class="logo"></a>
 
             <% if (locals.isLogged) { %>
-                <div class="icons-section">
-                    
-                    <a href="/users/profile"><img src="/images/users/<%=locals.userLogged.image%>" alt="" class="imagen-perfil-miniatura"></a>
-                    
-                    <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
-                   
-                </div>
-            <% }else{%>
-                <div class="icons-section">
-                    <a href="/users/login"><i class="fas fa-user"></i></a>
-                    <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
-                    <a href="/"><i class="fas fa-share-alt-square"></i></a>
-                </div>
+            <div class="icons-section">
 
-                <%}%> 
+                <a href="/users/profile"><img src="/images/users/<%=locals.userLogged.image%>" alt=""
+                        class="imagen-perfil-miniatura"></a>
+
+                <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
+
+            </div>
+            <% }else{%>
+            <div class="icons-section">
+                <a href="/users/login"><i class="fas fa-user"></i></a>
+                <a href="/products/productCart"><i class="fas fa-shopping-cart"></i></a>
+                <a href="/"><i class="fas fa-share-alt-square"></i></a>
+            </div>
+
+            <%}%> 
 
 
 
@@ -37,10 +38,10 @@
 
         <nav class="header-bottom-bar">
             <ul>
+                <li><a href="/products" class="linknav">PRODUCTOS</a></li>
                 <li><a href="/products/productsMan" class="linknav">HOMBRE</a></li>
                 <li><a href="/products/productsWoman" class="linknav">MUJER</a></li>
                 <li><a href="/products/productsKids" class="linknav">NIÑOS</a></li>
-                <li><a href="/products/productsSport" class="linknav">DEPORTES</a></li>
                 <li><a href="/products/productsMarks" class="linknav">MARCAS</a></li>
             </ul>
 

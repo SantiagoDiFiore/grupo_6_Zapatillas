@@ -31,9 +31,6 @@ router.get("/productsWoman", productsController.productsWoman);
 //ruta a listado de productos para niños
 router.get("/productsKids", productsController.productsKids);
 
-//ruta a listado de productos para deportes
-router.get("/productsSport", productsController. productsSport);
-
 //ruta a listado de productos para marcas
 router.get("/productsMarks", productsController.productsMarks);
 

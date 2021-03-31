@@ -11,7 +11,7 @@ const productsController = {
 
     //muestra todos los productos
     index: (req, res) => {
-        res.render("./products/products" ,{titulo:"Productos" , products: products, toThousand})
+        res.render("./products/products" ,{titulo:"Kicks - Productos" , products: products, toThousand})
     },
 
     //muetra detalle de un producto
@@ -46,7 +46,7 @@ const productsController = {
         //definir el nuevo producto
         let newProduct = {
 			id: id,        //el id definido previamente
-			...req.body,   //todo lo que llega del formulario
+			...req.body,   //lo que llega del formulario
 			image: image   //la imagen definida previamente
 		};
         products.push(newProduct);//guardar el producto nuevo en el listado de productos
@@ -71,7 +71,7 @@ const productsController = {
 		}
         productToEdit = {
             id: productToEdit.id, //el id definido previamente
-            ...req.body, //todo lo que llega del formulario
+            ...req.body, //lo que llega del formulario
             image: image //la imagen definida previamente
         };
 
@@ -100,27 +100,22 @@ const productsController = {
 
     //muestra todos los productos para hombres
     productsMan: (req,res) =>{
-        res.render("./products/productsMan" , {titulo:"Carrito", products:products , toThousand})
+        res.render("./products/productsMan" , {titulo:"Kicks - Hombre", products:products , toThousand})
     },
 
     //muestra todos los productos para mujeres
     productsWoman: (req,res) =>{
-        res.render("./products/productsWoman" , {titulo:"Carrito", products:products , toThousand})
+        res.render("./products/productsWoman" , {titulo:"Kicks - Mujer", products:products , toThousand})
     },
 
     //muestra todos los productos para niños
     productsKids: (req,res) =>{
-        res.render("./products/productsKids" , {titulo:"Carrito", products:products , toThousand})
-    },
-
-    //muestra todos los productos de deportes
-    productsSport: (req,res) =>{
-        res.render("./products/productsSport" , {titulo:"Carrito", products:products , toThousand})
+        res.render("./products/productsKids" , {titulo:"Kicks - Niños", products:products , toThousand})
     },
 
     //muestra todos los productos por marcas
     productsMarks: (req,res) =>{
-        res.render("./products/productsMarks" , {titulo:"Carrito", products:products , toThousand})
+        res.render("./products/productsMarks" , {titulo:"Kicks - Marcas", products:products , toThousand})
     },
 
 }  

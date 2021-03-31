@@ -19,9 +19,9 @@
                 <div>SUBTOTAL</div>
             </div>
             <article class="producto">
-                <img src="/images/products/new-balance3.png" alt="NEW BALANCE 997" class="miniatura">
-                <div class="modelo">New Balance 997 Sport Chinese New Year (2020) / Talle 36</div>
-                <div class="precio-carrito">PRECIO $15.799</div>
+                <img src="/images/products/image-1617052998273.png" alt="NEW BALANCE 997" class="miniatura">
+                <div class="modelo">New Balance 997 Sport Chinese New Year / Talle 36</div>
+                <div class="precio-carrito">PRECIO $15.500</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
                     <label for="cantidad">u.</label>
                     <select name="cantidad" id="cantidad">
@@ -31,15 +31,15 @@
                         <option value="4">4</option>
                     </select>
                 </form>
-                <div class="precio-carrito">TOTAL $15.799</div>
+                <div class="precio-carrito">TOTAL $15.500</div>
                 <div class="eliminar">
                     <i class="far fa-times-circle boton-eliminar"></i>
                 </div>
             </article>
             <article class="producto">
-                <img src="/images/products/vans1.png" alt="vans old skool" class="miniatura">
+                <img src="/images/products/image-1617051623333.png" alt="vans old skool" class="miniatura">
                 <div class="modelo">Vans Old Skool Black White / Talle 40</div>
-                <div class="precio-carrito">PRECIO $11.200</div>
+                <div class="precio-carrito">PRECIO $9.000</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
                     <label for="cantidad">u.</label>
                     <select name="cantidad" id="cantidad">
@@ -49,14 +49,14 @@
                         <option value="4">4</option>
                     </select>
                 </form>
-                <div class="precio-carrito">TOTAL $11.200</div>
+                <div class="precio-carrito">TOTAL $9.000</div>
                 <div class="eliminar">
                     <i class="far fa-times-circle boton-eliminar"></i>
                 </div>
             </article>
             <article class="finalizar-compra">
                 <form action="productCart" method="GET" class="finalizar-form">
-                    <label for="TOTAL">TOTAL $26.999</label>
+                    <label for="TOTAL">TOTAL $24.500</label>
                     <button type="submit" class="boton-compra">FINALIZAR COMPRA</button>
                 </form>
             </article>
@@ -76,19 +76,25 @@
 
         <section class="recomendados">
 
-            <% for (product of products){ %>
-            <% if (product.category=="destacados") { %>
+            <% for( let i = 0; i < products.length; i++ ) { %>
+
+            <%if (products[i].category =="destacados") { 
+                    let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price;
+            %>
             <article class="recomendado-article a1">
-                <a href="/products/<%= product.id %> "><img src="/images/products/<%= product.image %>"
-                        alt=<%= product.name %>></a>
+                <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
+                        alt=<%= products[i].name %>></a>
                 <div class="contenedor-descripcion">
-                    <div><%= product.name %></div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
-                    <div class="precio-carrito">$ <%= toThousand(product.price) %></div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                    <div><%= products[i].name %></div>
+                    <% if (products[i].discount) { %>
+                    <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
+                    <p class="descuento"><%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
+                    </p>
+                    <% } else { %>
+                    <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
+                    <% } %>
                 </div>
             </article>
-
 
             <% } %>
 

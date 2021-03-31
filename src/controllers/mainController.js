@@ -8,7 +8,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const mainController = {
     index:(req, res) => {
-        res.render("index" ,{titulo:"Home" ,products: products, toThousand});
+        res.render("index" ,{titulo:"Kicks - Inicio" ,products: products, toThousand});
     },
     search:(req,res)=>{
         const search=req.query.search; //variable para guardar la info del campo de busqueda(name del input de busqueda)

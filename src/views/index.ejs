@@ -21,15 +21,21 @@
         <section class="destacados">
             <% for( let i = 0; i < products.length; i++ ) { %>
 
-            <%if (products[i].category =="destacados") { %>
+            <%if (products[i].category =="destacados") { 
+                let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price; %>
+            %>
             <article class="recomendado-article a1">
                 <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
                         alt=<%= products[i].name %>></a>
                 <div class="contenedor-descripcion">
                     <div><%= products[i].name %></div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <% if (products[i].discount) { %>
+                    <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
+                    <p class="descuento"><%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
+                    </p>
+                    <% } else { %>
                     <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                    <% } %>
                 </div>
             </article>
 
@@ -37,21 +43,28 @@
 
             <% } %>
         </section>
+
         <div class="title">
             <h2 class="linea"><span>OFERTAS</span></h2>
         </div>
         <section class="destacados">
             <% for( let i = 0; i < products.length; i++ ) { %>
 
-            <%if (products[i].category =="in-sale") { %>
+            <%if (products[i].category =="in-sale") { 
+                let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price; %>
+            %>
             <article class="recomendado-article a1">
                 <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
                         alt=<%= products[i].name %>></a>
                 <div class="contenedor-descripcion">
                     <div><%= products[i].name %></div>
-                    <i class="fas fa-arrow-circle-left izarrow"></i>
+                    <% if (products[i].discount) { %>
+                    <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
+                    <p class="descuento"><%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
+                    </p>
+                    <% } else { %>
                     <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
-                    <i class="fas fa-arrow-circle-right derarrow"></i>
+                    <% } %>
                 </div>
             </article>
 

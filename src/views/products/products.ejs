@@ -7,22 +7,58 @@
     <%- include("../partials/header")%>
 
     <main>
-        <div class="encabezado-carrito">
-            <h3>PRODUCTOS</h3>
+        <div class="products-block">
+            <div class="encabezado-carrito">
+                <h3>PRODUCTOS <a href="/products/create" class="boton-de-compra">CREAR PRODUCTO</a></h3>
+            </div>
+            <br>
+            <section class="elementos-carrito">
+                <% for( let i = 0; i < products.length; i++ ) { 
+                let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount /
+                100 ).toFixed(0) : products[i].price;%>
+                <article class="producto">
+                    <a class="miniatura" href=<%="/products/"+products[i].id %>><img
+                            src=<%="/images/products/"+products[i].image  %> alt=<%= products[i].name %>
+                            class="miniaturaB"></a>
+                    <div class="modelo"><%= products[i].name %></div>
+                    <div class="precio-carrito">$<%= toThousand(products[i].price) %></div>
 
+                </article>
+
+                <% } %>
         </div>
-        <section class="elementos-carrito">
-            <% for( let i = 0; i < products.length; i++ ) { %>
-            <article class="producto">
-                <a class="miniatura" href=<%="/products/"+products[i].id %>><img
-                        src=<%="/images/products/"+products[i].image  %> alt=<%= products[i].name %>
-                        class="miniaturaB"></a>
-                <div class="modelo"><%= products[i].name %></div>
-                <div class="precio-carrito">$<%= toThousand(products[i].price) %></div>
+        <div class="products-none">
+            <div class="title">
+                <h2 class="linea"><span>PRODUCTOS</span></h2>
+            </div>
+            <div class="centrado">
+                <a href="/products/create" class="boton-products">CREAR PRODUCTO</a>
+            </div>
+            <section class="destacados">
+                <% for( let i = 0; i < products.length; i++ ) { 
+                      let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount /
+                100 ).toFixed(0) : products[i].price;  %>
 
-            </article>
+                <article class="recomendado-article a1">
+                    <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
+                            alt=<%= products[i].name %>></a>
+                    <div class="contenedor-descripcion">
+                        <div><%= products[i].name %></div>
+                        <% if (products[i].discount) { %>
+                        <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
+                        <p class="descuento">
+                            <%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
+                        </p>
+                        <% } else { %>
+                        <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
+                        <% } %>
+                    </div>
+                </article>
 
-            <% } %>
+                <% } %>
+            </section>
+            <br>
+        </div>
 
     </main>
     <%- include("../partials/footer")%>
