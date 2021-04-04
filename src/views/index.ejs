@@ -56,12 +56,20 @@
             <article class="recomendado-article a1">
                 <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
                         alt=<%= products[i].name %>></a>
+
+                    <% if (products[i].discount) { %>
+                    <span class="discountTag">
+                    <i class="fas fa-tags"></i>
+                    </span>
+                   <% } %>
+
                 <div class="contenedor-descripcion">
                     <div><%= products[i].name %></div>
                     <% if (products[i].discount) { %>
                     <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
                     <p class="descuento"><%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
                     </p>
+                    
                     <% } else { %>
                     <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
                     <% } %>

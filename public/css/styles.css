@@ -167,6 +167,7 @@ h2.linea span {
     margin-top: 20px;
     /*border: dotted 0.5px #d97f11;*/
     box-shadow:1px 1px 2px 2px #808080 ;
+    position: relative;
 }
 .recomendado-article img{
     width: 100%;
@@ -181,6 +182,7 @@ article.recomendado-article{
     width: 100%;
     margin-top: 20px;
     background-color: rgb(235,235,235);
+    
 }
 .contenedor-descripcion div{
     width: 100%;
@@ -312,7 +314,20 @@ div.medios-pago{
     text-decoration: line-through;
     padding-right: 7px
 }
-
+.discountTag{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color:white;
+    font-size: 16px;
+    font-weight:500;
+    opacity: 80%;
+    box-shadow: -2px 4px 3px 2px rgb(0 0 0 / 20%);
+    background-color:red;
+    padding: 7px;
+    
+    
+}
 
 /*MAIN LOGIN */
 .title{
