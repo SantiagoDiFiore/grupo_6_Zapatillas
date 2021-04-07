@@ -118,6 +118,7 @@ body{
 }
 section.banner img{
     width: 100%;
+    max-height: 240px;
 }
 .none{
     display: none;
@@ -222,7 +223,8 @@ div.images.padding{
     font-size: 2px;
 }
 .marca_img{
-    width: 15%;
+    max-width: 70px;
+    max-height: 70px;
 }
 .none1{
     display: none;
@@ -254,9 +256,11 @@ div.medios-pago{
 .imagen-pago{
     width:25%;
     align-self: center;
+    max-height: 70px;
 }
 .imagen-pago2{
     width:23%;
+    max-height: 55px;
 }
 .envios{
     display: flex;
@@ -462,6 +466,7 @@ div.medios-pago{
 .miniatura{
     width: 30%;
     margin-right: 10px;
+    max-height: 100px;
 }
 .miniaturaB{
     width:100%;
@@ -1050,6 +1055,9 @@ div.italic {
     .error-button{
         width:100%;
     }
+    .miniatura{
+        max-height: 100%;
+    }
 }
 
 @media (min-width:768px){
@@ -1069,10 +1077,6 @@ div.italic {
     }
     .header-bottom-bar{
         display: block;
-    }
-    section.banner img{
-        padding-left: 5px;
-        padding-right: 5px;
     }
     .titulo{
         text-align: center;
@@ -1250,6 +1254,17 @@ div.italic {
     .products-none{
         display: block;
     }
+    section.banner img{
+        max-height: 100%;
+    }
+    .marca_img{
+        width: 15%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .imagen-pago,.imagen-pago2{
+        max-height: 100%;
+    } 
 }
 
 @media (min-width:950px){
