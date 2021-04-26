@@ -1,6 +1,8 @@
 const { json } = require('express');
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const Products = db.Product;
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -12,6 +14,13 @@ const productsController = {
     //muestra todos los productos
     index: (req, res) => {
         res.render("./products/products" ,{titulo:"Kicks - Productos" , products: products, toThousand})
+    },
+    //muestra todos los productos
+    prueba: (req, res) => {
+        Products.findAll()
+            .then(product => {
+                res.send(product)
+            })
     },
 
     //muetra detalle de un producto

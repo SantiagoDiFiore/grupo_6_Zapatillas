@@ -50,6 +50,19 @@
 ## Dejar de hacer
 > Tenemos que dejar de perder los primeros días desde que se lanza el sprint, en este caso fue por la complejidad que tenian las tareas, ya que no sabiamos como organizarnos.
 
+### **RETROSPECTIVA SPRINT 5** 
+
+## Comenzar a hacer
+> Evacuar con anterioridad las dudas del sprint, en clase o por slack, para avanzar más rapido con el mismo.
+## Hacer más
+> Incrementar las reuniones daily/weekly.       
+## Continuar haciendo
+> Mantener el esquema de organizacion que tenemos y seguir mejorando las funcionalidades del sitio.
+## Hacer menos
+> No encontramos un punto el cual deberiamos hacer con menor frecuencia.
+## Dejar de hacer
+> Por como venimos trabajando ultimamente no hay nada que consideremos que habria que dejar de hacer.
+
 
 
 
