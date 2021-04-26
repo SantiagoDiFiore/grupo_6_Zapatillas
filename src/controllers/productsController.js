@@ -15,7 +15,7 @@ const productsController = {
     index: (req, res) => {
         res.render("./products/products" ,{titulo:"Kicks - Productos" , products: products, toThousand})
     },
-    //muestra todos los productos
+    //muestra todos los productos prueba
     prueba: (req, res) => {
         Products.findAll()
             .then(product => {
