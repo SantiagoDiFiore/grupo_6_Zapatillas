@@ -21,22 +21,19 @@
  },
  {
   "id": 1,
-  "name": "Vans Old Skool Black White",
+  "name": "Nike Air Force 1 Low White '07",
   "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-  "gender": "female",
-  "mark": "vans",
+  "mark": "",
   "size": [
    "37",
    "38",
    "39",
-   "40",
-   "41",
-   "43"
+   "40"
   ],
   "colors": "#000000",
-  "category": "in-sale",
-  "price": "9000",
-  "discount": "5",
+  "category": "",
+  "price": "11499",
+  "discount": "0",
   "image": "image-1617051623333.png"
  },
  {
@@ -254,25 +251,6 @@
   "price": "15000",
   "discount": "5",
   "image": "image-1615338990106.png"
- },
- {
-  "id": 13,
-  "name": "Jordan 4 Retro Off-White Sail (W)",
-  "description": "Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón",
-  "gender": "female",
-  "mark": "nike",
-  "size": [
-   "37",
-   "38",
-   "39",
-   "40",
-   "41"
-  ],
-  "colors": "#dce4c9",
-  "category": "",
-  "price": "35000",
-  "discount": "",
-  "image": "image-1617051220657.png"
  },
  {
   "id": 14,

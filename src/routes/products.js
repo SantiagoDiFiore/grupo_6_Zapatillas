@@ -20,7 +20,7 @@ const productsController = require("../controllers/productsController")
 router.get('/productCart', productsController.productCart);
 
 //ruta a listado de productos
-router.get('/', productsController.index);
+router.get('/', productsController.list);
 
 //ruta a listado de productos para hombres
 router.get("/productsMan", productsController.productsMan);

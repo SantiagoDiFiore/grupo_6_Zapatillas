@@ -23,6 +23,7 @@ body{
     align-content: center;
     background-color: #222021  ;
     padding-top: 10px;
+    border-bottom: solid 10px #222020;
 }
 .arriba{
     background-color: #f2e4bb;

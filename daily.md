@@ -27,3 +27,11 @@
 -17/3: Implementamos las validaciones y la persistencia de datos en el registro. 
 -20/3: Implementamos el login de usuarios, con sus respectivas funciones. Y tambien la ruta de huéspedes y usuarios.
 -24/3: Reunion larga para el cierre del sprint, donde intercambiamos nuestro codigo para unificar las tareas realizadas.
+
+### **- Weekly (Sprint N°6) -**
+-14/4: Realizamos una reunion en donde completamos la retro, organizamos el tablero y dividimos las tareas. Ademas, comenzamos con el DER.
+-15/4: Reunion larga para avanzar con el DER. Aun no esta terminado.
+-19/4: Realizamos otra reunion para seguir con el DER. Comenzamos a estructurar la base de datos.
+-22/4: Otra reunion larga, para la finalizacion del DER.
+-25/4: Reunion para configurar el sequelize, y la creacion de los modelos junto a sus asociaciones. 
+

@@ -1,6 +1,8 @@
 const { json } = require('express');
 const fs = require('fs');
 const path = require('path');
+const db = require('../database/models');
+const Products = db.Product;
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -10,28 +12,36 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const productsController = {
 
     //muestra todos los productos
-    index: (req, res) => {
-        res.render("./products/products" ,{titulo:"Kicks - Productos" , products: products, toThousand})
+    list: (req, res) => {
+        Products.findAll()
+        .then(response =>{
+            res.render("./products/products",{titulo:"Kicks - Productos", products: response, toThousand})
+        })
     },
 
     //muetra detalle de un producto
-    detail: (req,res)=>{
-        let parametro=req.params.id;
-        let titulo= products.find(producto=>producto.id==parametro);
-
-        let producto= products.find(product=> product.id == req.params.id);
-		
-		
-        res.render("./products/productDetail",{ titulo:titulo.name ,producto: producto ,products:products, parametro:parametro, toThousand})
+    detail: async function(req,res){
+        const producto = await Products.findByPk(req.params.id)
+        const products = await Products.findAll()
+        let titulo = producto.name
+        let size = JSON.parse(producto.size, 'utf-8')
+        
+        res.render("./products/productDetail",{titulo, producto, products, size, toThousand})
+        
     },
 
     //muestra el formulario de creacion de producto
-    create: (req,res)=>{
-        res.render("./products/productAdd",{titulo:"Nuevo Producto"})
+    create: async function(req,res){
+        const brands = await db.Brand.findAll()
+        const categories = await db.Category.findAll()
+        const colors = await db.Color.findAll()
+        const genres = await db.Genre.findAll()
+        res.render("./products/productAdd",{titulo:"Nuevo Producto", brands, categories, colors, genres})
     },
+
     //acción de creacion del producto
-    store: (req,res)=>{
-        //filtrar y definir la imagen del prodcuto
+    store: async function(req,res){
+        // filtrar y definir la imagen del prodcuto
         let image
         if(!req.file){
             image="default-image.jpg";
@@ -39,58 +49,63 @@ const productsController = {
             image=req.file.filename;
         };
 
-        //definir el id del producto
-        let ids = products.map(p=>p.id);//guardar en un array todos los ids
-        let id= Math.max(...ids)+1;//filtra el mayor de los ids del array, se le suma 1 para el id del nuevo producto
-		
-        //definir el nuevo producto
-        let newProduct = {
-			id: id,        //el id definido previamente
-			...req.body,   //lo que llega del formulario
-			image: image   //la imagen definida previamente
-		};
-        products.push(newProduct);//guardar el producto nuevo en el listado de productos
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '))//sobreescribir el Json con el nuevo producto y pasados a formatoJSON. 
-        res.redirect("./products")//redirigir al listado de productos. 
+        await Products.create({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            image: image,
+            size: req.body.size,
+            genre_id: req.body.genre,
+            brands_id: req.body.brand,
+            colors_id: req.body.colors,
+            category_id: req.body.category
+        })
+        res.redirect("/products") 
     },
 
     //muestra el formulario de edicion de un producto
-    edit: (req,res)=>{
-        let producto= products.find(product=> product.id == req.params.id);
-        res.render("./products/productEdit",{titulo:"Modificar Producto", producto: producto})
+    edit: async function(req,res){
+        let Product = await Products.findByPk(req.params.id)
+        const brands = await db.Brand.findAll()
+        const categories = await db.Category.findAll()
+        const colors = await db.Color.findAll()
+        const genres = await db.Genre.findAll()
+        res.render("./products/productEdit",{titulo:"Modificar Producto", producto: Product, brands, categories, colors, genres})
     },
     //accion de edición del producto
-    update: (req,res)=>{
-        let id = req.params.id;
-        let productToEdit = products.find(product => product.id == id);
+    update: async function(req,res){
+        let productToEdit = await Products.findByPk(req.params.id)
         let image
         if(req.file !=undefined){
 			image = req.file.filename //sobreescribe la imagen del producto con la que subio el usuario
 		} else {
 			image = productToEdit.image //se vuelve a guardar la misma imagen
 		}
-        productToEdit = {
-            id: productToEdit.id, //el id definido previamente
-            ...req.body, //lo que llega del formulario
-            image: image //la imagen definida previamente
-        };
-
-        let newProducts = products.map(product => {
-            if (product.id == productToEdit.id){
-                return product = {...productToEdit};
+        await Products.update({
+            name: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            discount: req.body.discount,
+            image: image,
+            size: req.body.size,
+            genre_id: req.body.genre,
+            brands_id: req.body.brand,
+            colors_id: req.body.colors,
+            category_id: req.body.category
+        },
+        {
+            where: {
+                id: req.params.id
             }
-            return product;
         })
-
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProducts, null, ' ')); //sobreescribir el Json con los productos actualizados y pasados a formatoJSON. 
-		res.redirect('/products'); //redirigir al listado de productos. 
+        res.redirect("/products")
     },
 
     //accion de borrado de un producto
-    destroy: (req,res)=>{
-		let id = req.params.id;
-		let finalProducts = products.filter(product => product.id != id);
-		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+    destroy: async function(req,res){
+        let Product = await Products.findByPk(req.params.id)
+        await Product.destroy();
 		res.redirect('/');
     },
     //muestra el carrito de compra
