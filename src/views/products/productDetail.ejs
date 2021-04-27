@@ -45,12 +45,10 @@
 
                     <h3 class="talle">Seleccioná tu talle</h3>
                     <div class="talle1">
-
                         <form action="/talle" class="tallesdisponibles">
-                            <% for(talle of producto.size){ %>
-                            <input type="button" name="talle" value="<%=talle%>" class="boton-talle">
+                            <% for( let i = 0; i < size.length; i++ ) { %>
+                            <input type="button" name="talle" value="<%=size[i]%>" class="boton-talle">
                             <% } %>
-
                         </form>
                         <p class="guia-talles"><a href=# class="cfont-talles"><i class="fas fa-ruler-horizontal"></i>
                                 Guía de talles</a></p>
@@ -110,17 +108,17 @@
 
             <% for( let i = 0; i < products.length; i++ ) { %>
 
-            <%if (products[i].category =="visited") { 
+            <%if (products[i].category_id == 3) { 
                         let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price; %>
             %>
             <article class="recomendado-article a1">
                 <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
                         alt=<%= products[i].name %>></a>
-                    <% if (products[i].discount) { %>
-                    <span class="discountTag">
+                <% if (products[i].discount) { %>
+                <span class="discountTag">
                     <i class="fas fa-tags"></i>
-                    </span>
-                   <% } %>
+                </span>
+                <% } %>
                 <div class="contenedor-descripcion">
                     <div><%= products[i].name %></div>
                     <% if (products[i].discount) { %>

@@ -13,34 +13,35 @@
                 <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1" required
                     minlength="4" />
             </div>
+
             <div class="control-formulario1">
                 <label for="description">Detalle del producto:</label>
-                <input type="textarea" name="description" id="description" placeholder="Detalle del producto" class="control1"
-                    required />
+                <input type="textarea" name="description" id="description" placeholder="Detalle del producto"
+                    class="control1" required />
             </div>
+
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
-                <input type="file" name="image"  />
+                <input type="file" name="image" />
             </div>
+
             <div>
-                <label for="gender" class="negrita">Genero</label>
+                <label for="genre" class="negrita">Genero</label>
                 <br>
-                <input type="radio" name="gender" id="gender" value="male" />Masculino
-                <input type="radio" name="gender" id="gender" value="female" />Femenino
-                <input type="radio" name="gender" id="gender" value="kids" />Niños
+                <% genres.forEach(genre => { %>
+                <input type="radio" name="genre" id="genre" value="<%= genre.id %>"><%= genre.name %>
+                <% }) %>
             </div>
+
             <div class="control-formulario1">
-                <label for="mark">Marca</label>
-                <select name="mark" id="mark">
-                    <option value="">Elegí</option>
-                    <option name="mark" value="nike">Nike</option>
-                    <option name="mark" value="adidas">Adidas</option>
-                    <option name="mark" value="puma">Puma</option>
-                    <option name="mark" value="vans">Vans</option>
-                    <option name="mark" value="new-balance">New Balance</option>
-                    <option name="mark" value="converse">Converse</option>
+                <label for="brand">Marca</label>
+                <select name="brand" id="brand">
+                    <% brands.forEach(brand => { %>
+                    <option value="<%= brand.id %>"><%= brand.name %> </option>
+                    <% }) %>
                 </select>
             </div>
+
             <div>
                 <label for="size" class="negrita">Talles:</label>
                 <br>
@@ -55,30 +56,37 @@
                 <input type="checkbox" name="size" id="size" value="45" />45
                 <input type="checkbox" name="size" id="size" value="46" />46
             </div>
+
             <div class="control-formulario1">
-                <label for="colors" class="negrita">Color del producto: <input type="color" name="colors"
-                        id="colors" /></label>
+                <label for="colors" class="form-label">Color del producto:</label>
+                <select name="colors" id="colors" class="form-input">
+                    <% colors.forEach(color => { %>
+                    <option value="<%= color.id %>"><%= color.name %> </option>
+                    <% }) %>
+                </select>
             </div>
+
             <div class="control-formulario1">
                 <label for="category" class="form-label">Categoría:</label>
                 <select name="category" id="category" class="form-input">
-                    <option value="">Elegí</option>
-                    <option value="in-sale">En oferta</option>
-                    <option value="visited">Últimos agregados</option>
-                    <option value="destacados">Destacados</option>
+                    <% categories.forEach(category => { %>
+                    <option value="<%= category.id %>"><%= category.name %> </option>
+                    <% }) %>
                 </select>
             </div>
+
             <div class="control-formulario1">
                 <label for="price">Precio:</label>
-                <input type="number" name="price" id="price" placeholder="9999" class="control1" required
-                     />
+                <input type="number" name="price" id="price" placeholder="9999" class="control1" required />
             </div>
+
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
-                <input type="number" name="discount" id="discount" placeholder="15" class="control1" required
-                     />
+                <input type="number" name="discount" id="discount" placeholder="15" class="control1" />
             </div>
+
             <br />
+
             <div class="register-buttons">
                 <button type="submit" value="Confirmar" class="confirm-button">Confirmar</button>
                 <button type="reset" value="Borrar" class="delete-button">Borrar</button>

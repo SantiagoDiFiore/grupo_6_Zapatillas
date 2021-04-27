@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100)
         },
         size: {
-            type: DataTypes.TEXT
+            type: DataTypes.JSON
         },
         genre_id: {
             type: DataTypes.INTEGER  
