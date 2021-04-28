@@ -116,9 +116,25 @@ const usersController = {
         const errors = validationResult(req);
         const genders = await db.Gender.findAll() 
         if (!errors.isEmpty()){
-            res.render("./users/userEdit" ,{titulo:"¡Hubo un error en la edicion!" , errors:errors.mapped() , old:req.body, genders})
-        }else{
-        //registrando al nuevo usuario (si su mail no esta registrado en db)
+            res.render("./users/userEdit" ,{titulo:"¡Hubo un error en la edicion!" , errors:errors.mapped() ,user:req.session.userLogged, old:req.body, genders,})
+        }
+        
+        //buscamos el mail que se esta ingresando en el form
+        let userInDb = await Users.findOne({where:{
+            email: {[Op.like] : req.body.email}
+       }})
+        
+       //si el mail existe y no es el del usuario logueado(el que se está editando, vuelve al registro y muestra error)
+        if (userInDb&&userInDb.email!=req.session.userLogged.email){
+            res.render("./users/userEdit" ,{titulo:"¡Hubo un error en la edicion!" , errors:errors.mapped() ,user:req.session.userLogged, old:req.body, genders,errors:{
+                email:{
+                    msg:"Este Email ya se encuentra registrado "
+                }
+            }})
+            
+             }
+             else{
+        //editando al usuario existente
         let password= req.body.password;
         let passCryted= bcrypt.hashSync(password , 10);//hasheando password que llega
  
@@ -153,7 +169,15 @@ const usersController = {
         req.session.destroy() //destruye la sesion abierta
         res.clearCookie("userEmail")
         res.redirect("/")
-    }
+    },
+    //accion de borrado de un usuario
+    destroy: async function(req,res){
+        let usuarioParaeliminar = await Users.findByPk(req.params.id)
+        req.session.destroy() //destruye la sesion abierta
+        res.clearCookie("userEmail")
+        await usuarioParaeliminar.destroy();
+		res.redirect('/');
+    },
 }  
 
 module.exports = usersController

@@ -37,10 +37,10 @@ router.get("/profile",authMiddleware, usersController.profile);
 router.get("/logout" , usersController.logout);
 
 //RUTAS DE EDICION DE USUARIO
-router.get("/edit",usersController.edit);
+router.get("/edit",authMiddleware,usersController.edit);
 router.put("/edit", upload.single("image"),validations, usersController.update);
 
 //RUTA DE BORRADO DE USUARIO
-// router.delete("/:id",usersController.destroy);
+router.delete("/delete/:id",usersController.destroy);
 
 module.exports=router;

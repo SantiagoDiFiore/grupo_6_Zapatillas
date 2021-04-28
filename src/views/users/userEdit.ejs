@@ -48,7 +48,7 @@
                 <br>
                 <% genders.forEach(gender => { %>
                 <input type="radio" name="gender" id="gender" value="<%= gender.id %>"
-                    <%= locals.old && old.gender== gender.id? "checked":null  %>><%= gender.name %>
+                    <%= user.gender_id==gender.id? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
                 <p class="alert"><%=errors.gender.msg%></p>
