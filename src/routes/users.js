@@ -38,7 +38,7 @@ router.get("/logout" , usersController.logout);
 
 //RUTAS DE EDICION DE USUARIO
 router.get("/edit",usersController.edit);
-router.patch("/", upload.single("image"),validations, usersController.update);
+router.put("/edit", upload.single("image"),validations, usersController.update);
 
 //RUTA DE BORRADO DE USUARIO
 // router.delete("/:id",usersController.destroy);

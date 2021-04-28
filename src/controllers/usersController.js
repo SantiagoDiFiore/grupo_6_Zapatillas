@@ -117,24 +117,6 @@ const usersController = {
         const genders = await db.Gender.findAll() 
         if (!errors.isEmpty()){
             res.render("./users/userEdit" ,{titulo:"¡Hubo un error en la edicion!" , errors:errors.mapped() , old:req.body, genders})
-        }
-        //si pasa las validaciones primarias debe checkearse que el usuario NO exista en la db,chequeando por mail
-        //si existe se debe mostrar un error, si no existe se puede continuar con el registro.
-        let userInDb = await Users.findOne({where:{
-             email: {[Op.like] : req.body.email}
-        }})
-        // recibe como parametros el campo a chequear en db y el campo que completa el usuario en form.
-        
-        //si el usuario existe volvemos a renderizar la vista del formulario y personalizamos un error para el campo mail
-        if(userInDb){
-         res.render("./users/userEdit" ,{titulo:"Editar" ,
-             errors:{
-                 email:{
-                     msg:"El usuario se encuentra registrado"
-                 }
-             }, 
-             old:req.body, genders})
- 
         }else{
         //registrando al nuevo usuario (si su mail no esta registrado en db)
         let password= req.body.password;
@@ -152,8 +134,8 @@ const usersController = {
             email: req.body.email,
             password: passCryted,
             checkPassword: checkCrypted,
-            terms: req.body.terms,
-            offers: req.body.offers,
+            terms: "acepto",
+            offers: "acepto",
             gender_id: req.body.gender
         },
         {
@@ -162,7 +144,7 @@ const usersController = {
             }
          })
          //una vez registrado redireccionamos a login
-         res.redirect("./users/profile")
+         res.redirect("/users/logout")
  
         }      
     },

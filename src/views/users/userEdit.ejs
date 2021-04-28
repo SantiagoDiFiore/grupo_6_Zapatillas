@@ -8,7 +8,7 @@
 
     <main>
         <h2 class="title">Editar usuario</h2>
-        <form action="/users?_method=PATCH" method="POST" enctype="multipart/form-data" class="form">
+        <form action="/users/edit?_method=PUT" method="POST" enctype="multipart/form-data" class="form">
             <h3 class="title-register">Datos personales</h3>
             <div class="control-formulario1">
                 <label for="firstName">Nombre completo:</label>
@@ -48,7 +48,7 @@
                 <br>
                 <% genders.forEach(gender => { %>
                 <input type="radio" name="gender" id="gender" value="<%= gender.id %>"
-                    <%= locals.old && old.gender== gender.id  ? "checked":user.gender_id  %>><%= gender.name %>
+                    <%= locals.old && old.gender== gender.id? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
                 <p class="alert"><%=errors.gender.msg%></p>
