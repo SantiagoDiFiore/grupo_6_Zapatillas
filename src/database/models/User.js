@@ -28,10 +28,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING(100)
         },
         terms: {
-            type: DataTypes.STRING(100)
+            type: DataTypes.BOOLEAN
         },
         offers: {
-            type: DataTypes.STRING(100),
+            type: DataTypes.BOOLEAN,
             allowNull: true
         },
         gender_id: {

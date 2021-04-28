@@ -418,7 +418,7 @@ div.medios-pago{
     box-shadow:1px 1px 2px 2px rgb(235 99 71 );
 }
 .imagen-perfil{
-    width: 60%;
+    width: 50%;
     margin: 10px;
     box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%);
 }
@@ -1265,7 +1265,9 @@ div.italic {
     }
     .imagen-pago,.imagen-pago2{
         max-height: 100%;
-    } 
+    }.imagen-perfil{
+        width: 70%;
+    }
 }
 
 @media (min-width:950px){
@@ -1374,6 +1376,9 @@ div.italic {
     }
     .linknav{
         transition: color 500ms;
+    }
+    .imagen-perfil{
+        width: 35%;
     }
     
 }

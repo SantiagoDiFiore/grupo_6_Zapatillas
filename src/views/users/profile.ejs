@@ -22,6 +22,13 @@
                     <a href="/users/logout"><button type="button" class="boton-login">CERRAR SESION</button></a>
                 </div>
 
+                <a href="/users/edit"><button type="button"
+                        class="button-edit">EDITAR</button></a>
+
+                <form action="/users/<%=user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="button-edit button-delete">ELIMINAR</button>
+                </form>
+
             </div>
         </div>
 
