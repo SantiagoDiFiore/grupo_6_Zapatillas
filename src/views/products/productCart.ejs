@@ -19,7 +19,7 @@
                 <div>SUBTOTAL</div>
             </div>
             <article class="producto">
-                <img src="/images/products/image-1617052998273.png" alt="NEW BALANCE 997" class="miniatura">
+                <img src="/images/products/image-1619540247296.png" alt="NEW BALANCE 997" class="miniatura">
                 <div class="modelo">New Balance 997 Sport Chinese New Year / Talle 36</div>
                 <div class="precio-carrito">PRECIO $15.500</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
@@ -37,7 +37,7 @@
                 </div>
             </article>
             <article class="producto">
-                <img src="/images/products/image-1617051623333.png" alt="vans old skool" class="miniatura">
+                <img src="/images/products/image-1619540109977.png" alt="vans old skool" class="miniatura">
                 <div class="modelo">Vans Old Skool Black White / Talle 40</div>
                 <div class="precio-carrito">PRECIO $9.000</div>
                 <form action="/productCart" method="GET" class="form-cantidad">
@@ -78,7 +78,7 @@
 
             <% for( let i = 0; i < products.length; i++ ) { %>
 
-            <%if (products[i].category =="destacados") { 
+            <%if (products[i].category_id == 4) { 
                     let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price;
             %>
             <article class="recomendado-article a1">

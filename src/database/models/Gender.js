@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
         }
     };
     let options = {
-        tableName: 'genderusers',
+        tableName: 'gendersusers',
         timestamps: false
     }
     const Gender = sequelize.define(alias,cols,options);

@@ -19,10 +19,7 @@ const storage = multer.diskStorage({
    
   const upload = multer({ storage: storage })
 
-
-
-
-
+  
 //MUESTRA EL LOGIN
 router.get("/login",guestMiddleware, usersController.login);
 //PROCESA EL LOGIN
@@ -38,5 +35,12 @@ router.get("/profile",authMiddleware, usersController.profile);
 
 //PROCESA EL LOGOUT
 router.get("/logout" , usersController.logout);
+
+//RUTAS DE EDICION DE USUARIO
+router.get("/edit",usersController.edit);
+router.patch("/", upload.single("image"),validations, usersController.update);
+
+//RUTA DE BORRADO DE USUARIO
+// router.delete("/:id",usersController.destroy);
 
 module.exports=router;

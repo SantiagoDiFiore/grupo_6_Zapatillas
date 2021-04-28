@@ -7,9 +7,6 @@ const fs=require("fs");
 const path = require('path');
 
 
-
-
-
 const User={
     filename: path.join(__dirname, '../data/users.json'),
     //ubicacion del archivo de usuarios base de datos.

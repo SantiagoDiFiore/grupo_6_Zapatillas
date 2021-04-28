@@ -21,7 +21,7 @@
         <section class="destacados">
             <% for( let i = 0; i < products.length; i++ ) { %>
 
-            <%if (products[i].category =="destacados") { 
+            <%if (products[i].category_id == 4 ) { 
                 let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price; %>
             %>
             <article class="recomendado-article a1">
@@ -50,7 +50,7 @@
         <section class="destacados">
             <% for( let i = 0; i < products.length; i++ ) { %>
 
-            <%if (products[i].category =="in-sale") { 
+            <%if (products[i].category_id == 2) { 
                 let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price; %>
             %>
             <article class="recomendado-article a1">

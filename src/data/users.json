@@ -11,29 +11,5 @@
   "terminos": "terminos",
   "ofertas": "ofertas",
   "image": "image-1616647437728.jpg"
- },
- {
-  "id": 1,
-  "firstName": "Sebastian",
-  "lastName": "Barciela",
-  "birthday": "2021-03-18",
-  "gender": "male",
-  "email": "barcielasebastian@gmail.com",
-  "password": "$2a$10$hxF7JXdrxsW8AqamkUUhtOg1KVfphtUrV17nVnzOBA7UD6FcrQv.u",
-  "checkPassword": "$2a$10$aR48v2LUzyPVgMl0CmRk5OkmkZnPQ9j3ohN4bMCfp/zEoLxmrfqAS",
-  "terminos": "terminos",
-  "image": "image-1616514770237.jpg"
- },
- {
-  "id": 2,
-  "firstName": "Santiago",
-  "lastName": "Di Fiore",
-  "birthday": "1998-07-08",
-  "gender": "male",
-  "email": "santidifiore@gmail.com",
-  "password": "$2a$10$0fSS61ajiBcUJmnMuWMR9eyEePKw4aLOgw390k3mbJSgs9K07Q5qu",
-  "checkPassword": "$2a$10$VorLKi2IvRDo3zIbqr/7eO8cN.Wv2RlTRUBs5ueCGR3C.SaTsS0Ma",
-  "terminos": "terminos",
-  "image": "image-1616647697957.jpg"
  }
 ]

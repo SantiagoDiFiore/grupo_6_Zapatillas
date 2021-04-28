@@ -7,14 +7,14 @@
     <%- include("../partials/header")%>
 
     <main>
-        <h2 class="title">Registrarme</h2>
-        <form action="/users/register" method="POST" enctype="multipart/form-data" class="form">
+        <h2 class="title">Editar usuario</h2>
+        <form action="/users?_method=PATCH" method="POST" enctype="multipart/form-data" class="form">
             <h3 class="title-register">Datos personales</h3>
             <div class="control-formulario1">
                 <label for="firstName">Nombre completo:</label>
                 <input type="text" name="firstName" id="firstName" placeholder="Nombre..."
                     class="control2 <%= locals.errors && errors.firstName? "is-invalid":null  %>"
-                    value=<%= locals.old && old.firstName? old.firstName:null  %>>
+                    value=<%= locals.old && old.firstName? old.firstName: user.firstName %>>
 
                 <% if (locals.errors && errors.firstName) { %>
                 <p class="alert"><%=errors.firstName.msg%></p>
@@ -25,7 +25,7 @@
             <div class="control-formulario1">
                 <input type="text" name="lastName" id="lastName" placeholder="Apellido..."
                     class="control2 <%= locals.errors && errors.lastName? "is-invalid":null  %>"
-                    value=<%= locals.old && old.lastName? old.lastName:null  %>>
+                    value=<%= locals.old && old.lastName? old.lastName: user.lastName %>>
 
                 <% if (locals.errors && errors.lastName) { %>
                 <p class="alert"><%=errors.lastName.msg%></p>
@@ -36,7 +36,7 @@
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
                 <input type="date" name="birthday" id="birthday"
                     class="ingreso <%= locals.errors && errors.birthday? "is-invalid":null  %>"
-                    value=<%= locals.old && old.birthday? old.birthday:null  %>>
+                    value=<%= locals.old && old.birthday? old.birthday:user.birthday  %>>
 
                 <% if (locals.errors && errors.birthday) { %>
                 <p class="alert2"><%=errors.birthday.msg%></p>
@@ -48,7 +48,7 @@
                 <br>
                 <% genders.forEach(gender => { %>
                 <input type="radio" name="gender" id="gender" value="<%= gender.id %>"
-                    <%= locals.old && old.gender== gender.id  ? "checked":null  %>><%= gender.name %>
+                    <%= locals.old && old.gender== gender.id  ? "checked":user.gender_id  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
                 <p class="alert"><%=errors.gender.msg%></p>
@@ -61,7 +61,7 @@
                 <label for="email">Email:</label>
                 <input type="text" name="email" id="email" placeholder="Email..."
                     class="control2 <%= locals.errors && errors.email? "is-invalid":null  %>"
-                    value=<%= locals.old && old.email? old.email:null  %>>
+                    value=<%= locals.old && old.email? old.email:user.email  %>>
 
                 <% if (locals.errors && errors.email) { %>
                 <p class="alert"><%=errors.email.msg%></p>
@@ -93,17 +93,17 @@
                 <% } %>
             </div>
             <hr>
-            <div class="bottom-register">
+            <!-- <div class="bottom-register">
                 <input type="checkbox" name="terms" value="terms" id="terms" required>Acepto las politicas de
                 privacidad
                 y los terminos y condiciones
             </div>
             <div class="bottom-register">
                 <input type="checkbox" name="offers" value="offers" id="offers">Deseo recibir ofertas por email
-            </div>
+            </div> -->
 
             <div class="register-buttons">
-                <button type="submit" class="submit-button1">Crear cuenta</button>
+                <button type="submit" class="submit-button1">Editar cuenta</button>
             </div>
             <br />
         </form>

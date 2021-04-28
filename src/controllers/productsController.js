@@ -1,11 +1,9 @@
-const { json } = require('express');
+const { json, response } = require('express');
 const fs = require('fs');
 const path = require('path');
 const db = require('../database/models');
 const Products = db.Product;
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -108,24 +106,37 @@ const productsController = {
         await Product.destroy();
 		res.redirect('/');
     },
+
     //muestra el carrito de compra
     productCart: (req, res) => {
-        res.render("./products/productCart" ,{titulo:"Carrito", products:products , toThousand})
+        Products.findAll()
+        .then(response=>{
+            res.render("./products/productCart" ,{titulo:"Carrito", products:response , toThousand})
+        })
     },
 
     //muestra todos los productos para hombres
     productsMan: (req,res) =>{
-        res.render("./products/productsMan" , {titulo:"Kicks - Hombre", products:products , toThousand})
+        Products.findAll()
+        .then(response=>{
+            res.render("./products/productsMan",{titulo:"Kicks - Hombre", products:response, toThousand})
+        })
     },
 
     //muestra todos los productos para mujeres
     productsWoman: (req,res) =>{
-        res.render("./products/productsWoman" , {titulo:"Kicks - Mujer", products:products , toThousand})
+        Products.findAll()
+        .then(response=>{
+            res.render("./products/productsWoman", {titulo:"Kicks - Mujer", products: response , toThousand})
+        })
     },
 
     //muestra todos los productos para niños
     productsKids: (req,res) =>{
-        res.render("./products/productsKids" , {titulo:"Kicks - Niños", products:products , toThousand})
+        Products.findAll()
+        .then(response=>{
+            res.render("./products/productsKids" , {titulo:"Kicks - Niños", products:response , toThousand})
+        })
     },
 
     //muestra todos los productos por marcas
