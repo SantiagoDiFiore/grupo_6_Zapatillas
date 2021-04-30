@@ -108,11 +108,15 @@ const productsController = {
     },
 
     //muestra el carrito de compra
-    productCart: (req, res) => {
-        Products.findAll()
-        .then(response=>{
-            res.render("./products/productCart" ,{titulo:"Carrito", products:response , toThousand})
+    productCart: async function(req, res){
+        let Product = await Products.findAll()
+        let userLogged = req.session.userLogged
+        let ProductCart = await db.ProductCart.findAll({include: ["user", "products"]},{
+            where:{
+                user_id: req.session.userLogged
+            }
         })
+        res.render("./products/productCart" ,{titulo:"Carrito", products:Product , listado: ProductCart, userLogged, toThousand})
     },
 
     //muestra todos los productos para hombres

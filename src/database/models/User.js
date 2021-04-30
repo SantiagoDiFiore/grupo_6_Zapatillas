@@ -51,6 +51,13 @@ module.exports = (sequelize, DataTypes) => {
             as:"gender",
             foreignKey:"gender_id"
         });
+        User.belongsToMany(models.Product,{
+            as:"products",
+            through:"product_cart",
+            foreignKey:"user_id",
+            otherKey:"product_id",
+            timestamps:false
+        })
     }
 
     return User

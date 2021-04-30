@@ -537,6 +537,19 @@ div.medios-pago{
 .izarrow , .derarrow{
     display: none;
 }
+.cart-button{
+    background-color: #222021;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+  
+}
+.cart-button:hover{
+    background-color: #d97f11;
+    transition: all 500ms;
+}
+
 /*MAIN PRODUCTDETAIL */
 .button-edit{
     font-family: "Roboto";

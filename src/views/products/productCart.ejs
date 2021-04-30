@@ -7,8 +7,8 @@
     <%- include("../partials/header")%>
 
     <main>
-        <div class="encabezado-carrito">
-            <h3>MI CARRITO</h3>
+        <% let totalPrice = 0 %> <% if(userLogged){   %> <div class="encabezado-carrito">
+            <h3> MI CARRITO</h3>
             <a href="/">ELEGIR MÁS PRODUCTOS</a>
         </div>
         <section class="elementos-carrito">
@@ -18,48 +18,45 @@
                 <div>CANTIDAD</div>
                 <div>SUBTOTAL</div>
             </div>
+
+            <% for( let i = 0; i < listado.length; i++ ) { 
+                let subtotalPrice = listado[i].price * listado[i].amount
+                %>
+            <%if (listado[i].user_id == userLogged.id) {
+                totalPrice += subtotalPrice %>
+
             <article class="producto">
-                <img src="/images/products/image-1619540247296.png" alt="NEW BALANCE 997" class="miniatura">
-                <div class="modelo">New Balance 997 Sport Chinese New Year / Talle 36</div>
-                <div class="precio-carrito">PRECIO $15.500</div>
-                <form action="/productCart" method="GET" class="form-cantidad">
-                    <label for="cantidad">u.</label>
-                    <select name="cantidad" id="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </form>
-                <div class="precio-carrito">TOTAL $15.500</div>
+                <img src="/images/products/<%= listado[i].products.image %>" alt="" class="miniatura">
+                <div class="modelo"> <%= listado[i].products.name %> / Talle <%= listado[i].size %> </div>
+                <div class="precio-carrito"> $<%= toThousand(listado[i].price) %> </div>
+                <div class="form-cantidad"><%= listado[i].amount %> </div>
+                <div class="precio-carrito">TOTAL <%= toThousand(subtotalPrice)  %> </div>
                 <div class="eliminar">
                     <i class="far fa-times-circle boton-eliminar"></i>
                 </div>
             </article>
-            <article class="producto">
-                <img src="/images/products/image-1619540109977.png" alt="vans old skool" class="miniatura">
-                <div class="modelo">Vans Old Skool Black White / Talle 40</div>
-                <div class="precio-carrito">PRECIO $9.000</div>
-                <form action="/productCart" method="GET" class="form-cantidad">
-                    <label for="cantidad">u.</label>
-                    <select name="cantidad" id="cantidad">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </form>
-                <div class="precio-carrito">TOTAL $9.000</div>
-                <div class="eliminar">
-                    <i class="far fa-times-circle boton-eliminar"></i>
-                </div>
-            </article>
+
+            <% } %>
+
+            <% } %>
             <article class="finalizar-compra">
                 <form action="productCart" method="GET" class="finalizar-form">
-                    <label for="TOTAL">TOTAL $24.500</label>
+                    <label for="TOTAL">TOTAL $<%= toThousand(totalPrice) %></label>
                     <button type="submit" class="boton-compra">FINALIZAR COMPRA</button>
                 </form>
             </article>
+
+            <% }else{  %>
+            <h2>Para poder acceder al carrito:</h2>
+
+            <div class="register-buttons">
+               <a href="../users/login"> <button value="Confirmar" class="cart-button">Inicia sesion</button></a>
+               <a href="../users/register"><button value="Borrar" class="cart-button">Registrate</button></a>
+            </div>
+            <% } %>
+
+
+
             <article class="medios">
                 <div class="envios"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!</div>
 
@@ -88,7 +85,8 @@
                     <div><%= products[i].name %></div>
                     <% if (products[i].discount) { %>
                     <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
-                    <p class="descuento"><%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
+                    <p class="descuento">
+                        <%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
                     </p>
                     <% } else { %>
                     <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
