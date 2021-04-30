@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
 const productsController = require("../controllers/productsController")
 //ruta al carrito 
 router.get('/productCart', productsController.productCart);
+router.post("/productCart", productsController.cartStore)
 
 //ruta a listado de productos
 router.get('/', productsController.list);

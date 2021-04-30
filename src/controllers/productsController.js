@@ -118,6 +118,16 @@ const productsController = {
         })
         res.render("./products/productCart" ,{titulo:"Carrito", products:Product , listado: ProductCart, userLogged, toThousand})
     },
+    cartStore: async function(req,res){
+       await db.ProductCart.create({
+        size: req.body.size,
+        amount: 1,
+        price: 1,
+        user_id: 14,
+        product_id:1,
+       })
+       res.redirect("/products/productCart")
+    },
 
     //muestra todos los productos para hombres
     productsMan: (req,res) =>{
