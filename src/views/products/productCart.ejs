@@ -32,10 +32,10 @@
                 <div class="form-cantidad"><%= listado[i].amount %> </div>
                 <div class="precio-carrito">TOTAL <%= toThousand(subtotalPrice)  %> </div>
                 <div class="eliminar">
-                    <i class="far fa-times-circle boton-eliminar"></i>
+                    <a href="/products/productCart/delete/<%=listado[i].id%>"><i class="far fa-times-circle boton-eliminar"></i></a>
                 </div>
             </article>
-
+            
             <% } %>
 
             <% } %>

@@ -135,6 +135,18 @@ const productsController = {
         }else{
             res.redirect("/products/productCart")
         }
+         
+    },
+    //elimina un producto del carrito
+    destroyProduct:async function(req,res){
+        let idParaEliminar=await req.params.id;
+
+        let productoParaEliminar=await db.ProductCart.findByPk(idParaEliminar)
+        productoParaEliminar.destroy();
+
+       
+
+        res.redirect("/products/productCart")
       
        
     },
