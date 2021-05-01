@@ -144,11 +144,28 @@ const productsController = {
         let productoParaEliminar=await db.ProductCart.findByPk(idParaEliminar)
         productoParaEliminar.destroy();
 
-       
-
         res.redirect("/products/productCart")
-      
+             
+    },
+    
+    //finaliza la compra y vacia carrito
+    checkout:async function(req,res){
+        let user=await req.session.userLogged;
+
+        let idParaEliminar=await req.session.userLogged.id;
+        
+        let todosLosProductos=await db.ProductCart.findAll({include: ["products"]},{where:{
+            user_id:idParaEliminar
+        }});
+        
+
+        await db.ProductCart.destroy({where:{
+            user_id:idParaEliminar
+        }});
        
+        
+        res.render("./products/productOrder",{titulo:"Tu orden",user,products:todosLosProductos,toThousand})
+             
     },
 
     //muestra todos los productos para hombres

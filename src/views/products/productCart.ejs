@@ -40,10 +40,10 @@
 
             <% } %>
             <article class="finalizar-compra">
-                <form action="productCart" method="GET" class="finalizar-form">
+                <div class="finalizar-form">
                     <label for="TOTAL">TOTAL $<%= toThousand(totalPrice) %></label>
-                    <button type="submit" class="boton-compra">FINALIZAR COMPRA</button>
-                </form>
+                    <a href="/products/productCart/checkout"><button type="text" class="boton-compra">FINALIZAR COMPRA</button></a>
+                </div>
             </article>
 
             <% }else{  %>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head")%>
+
+<body>
+    <%- include("../partials/header")%>
+
+    <main>
+        <h2>¡Gracias por tu compra <%=user.firstName%> !</h2>
+        <br>
+        <h3>Resumen</h3>
+        <br>
+        <% for( let i = 0; i < products.length; i++ ) { %>
+            <ul>
+                <li>Producto: <%=products[i].products.name%></li>
+                <li>Talle: <%=products[i].size%></li>
+                <li>Cantidad: <%=products[i].amount%></li>
+                <li>Precio: <%=toThousand(products[i].price) %></li>
+                <li>SUBTOTAL: <%=products[i].price*products[i].amount%></li>
+            </ul>
+        <br>
+        
+        <% } %>
+    </main>
+    <%- include("../partials/footer")%>
+
+</body>
+
+</html>
