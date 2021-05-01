@@ -9,7 +9,7 @@
     <main>
         <% let totalPrice = 0 %> <% if(userLogged){   %> <div class="encabezado-carrito">
             <h3> MI CARRITO</h3>
-            <a href="/">ELEGIR MÁS PRODUCTOS</a>
+            <a href="/products">ELEGIR MÁS PRODUCTOS</a>
         </div>
         <section class="elementos-carrito">
             <div class="titulos">
@@ -47,7 +47,7 @@
             </article>
 
             <% }else{  %>
-            <h2>Para poder acceder al carrito:</h2>
+            <h2>Para acceder al carrito</h2>
 
             <div class="register-buttons">
                <a href="../users/login"> <button value="Confirmar" class="cart-button">Inicia sesion</button></a>

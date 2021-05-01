@@ -9,9 +9,6 @@ module.exports = (sequelize, DataTypes) => {
         size: {
             type: DataTypes.TEXT
         },
-        amount: {
-            type: DataTypes.INTEGER
-        },
         price: {
             type: DataTypes.INTEGER
         },
@@ -22,6 +19,9 @@ module.exports = (sequelize, DataTypes) => {
         product_id: {
             type: DataTypes.INTEGER,
             references: {model: "Product", key:"id"}
+        },
+        amount: {
+            type: DataTypes.INTEGER
         }
     };
     let config = {

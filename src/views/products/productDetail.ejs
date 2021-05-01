@@ -42,30 +42,38 @@
                             $<%= toThousand(producto.price) %>
                         </p>
                         <% } %>
+                        <% if(producto.discount){ %>
+                            <input type="number" name="price" class="oculto" value="<%=producto.price - (producto.price*producto.discount/100)%>"></input>
+                        <% } else{%>
+                            <input type="number" name="price" class="oculto" value="<%=producto.price%>"></input>
+                        <% } %>  
+                            <input type="number" name="product_id" class="oculto" value="<%=producto.id%>"></input>
+                      
 
                         <h3 class="talle">Seleccioná tu talle</h3>
                         <div class="talle1">
-                            <form action="/talle" class="tallesdisponibles">
+                            <div class="tallesdisponibles">
                                 <% for( let i = 0; i < size.length; i++ ) { %>
-                                <%= size[i] %> <input type="radio" name="size" value="<%=size[i]%>"
+                                <%= size[i] %> <input type="radio" name="size" required value="<%=size[i]%>"
                                     class="boton-talle">
                                 <% } %>
-                            </form>
+                                </div>
                             <p class="guia-talles"><a href=# class="cfont-talles"><i
                                         class="fas fa-ruler-horizontal"></i>
                                     Guía de talles</a></p>
                         </div>
                         <div class="cantidad1">
                             <p class="cantidad-titulo">Cantidad:</p>
-                            <form action="/cantidad" class="cantidaditem">
+                                <div class="cantidad-item">
                                 <select name="amount">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value=1>1</option>
+                                    <option value=2>2</option>
+                                    <option value=3>3</option>
+                                    <option value=4>4</option>
+                                    <option value=5>5</option>
                                 </select>
-                            </form>
+                                </div>
+                            
                         </div>
                         <div class="realizar-compra">
                             <button type="submit" value="Comprar" class="boton-de-compra">Comprar <i

@@ -707,6 +707,10 @@ ol.nav-site{
     text-align: center;
     box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%); 
 }
+.oculto{
+    display: none;
+}
+
 /*MAIN NEW PRODUCT*/
 
 .control-formulario1{
