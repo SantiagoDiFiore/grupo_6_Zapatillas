@@ -11,20 +11,26 @@
         <br>
         <h3>Resumen</h3>
         <br>
+                
         <% for( let i = 0; i < products.length; i++ ) { %>
-            <ul>
-                <li>Producto: <%=products[i].products.name%></li>
+            <ul> 
+                <% var idDelProducto=products[i].product_id %> 
                 <li>Talle: <%=products[i].size%></li>
                 <li>Cantidad: <%=products[i].amount%></li>
                 <li>Precio: <%=toThousand(products[i].price) %></li>
                 <li>SUBTOTAL: <%=products[i].price*products[i].amount%></li>
-            </ul>
-        <br>
-        
+            </ul> 
         <% } %>
+
+        <% for( let i = 0; i < listado.length; i++ ) { %>
+        <% if(listado[i].id==idDelProducto){%>
+            <%= listado[i].name %> 
+        <% } %>  
+        <% } %>
+
     </main>
     <%- include("../partials/footer")%>
-
+    
 </body>
 
 </html>

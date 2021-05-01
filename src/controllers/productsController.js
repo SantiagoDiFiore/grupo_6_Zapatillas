@@ -154,9 +154,11 @@ const productsController = {
 
         let idParaEliminar=await req.session.userLogged.id;
         
-        let todosLosProductos=await db.ProductCart.findAll({include: ["products"]},{where:{
+        let todosLosProductos=await db.ProductCart.findAll({where:{
             user_id:idParaEliminar
         }});
+        let listado=await Products.findAll();
+
         
 
         await db.ProductCart.destroy({where:{
@@ -164,7 +166,7 @@ const productsController = {
         }});
        
         
-        res.render("./products/productOrder",{titulo:"Tu orden",user,products:todosLosProductos,toThousand})
+        res.render("./products/productOrder",{titulo:"Tu orden",user,products:todosLosProductos,listado,toThousand})
              
     },
 
