@@ -34,4 +34,9 @@
 -19/4: Realizamos otra reunion para seguir con el DER. Comenzamos a estructurar la base de datos.
 -22/4: Otra reunion larga, para la finalizacion del DER.
 -25/4: Reunion para configurar el sequelize, y la creacion de los modelos junto a sus asociaciones. 
+-26/4: Realizamos dos reuniones durante el dia, en donde pudimos finalizar el CRUD de Productos.
+-27/4: Reunion para realizar el CRUD de Usuarios, quedaron detalles para finalizarlo.
+-28/4: Finalizacion del CRUD de Usuarios. Empezamos a planificar el CRUD del Carrito.
+-30/4: Finalizamos con el CRUD del Carrito. Quedan detalles que ultimar.
+-4/5:  Reunion para la finalizacion del sprint. Pulimos detalles.
 

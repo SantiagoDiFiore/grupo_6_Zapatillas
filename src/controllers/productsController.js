@@ -127,6 +127,7 @@ const productsController = {
             await db.ProductCart.create({
                 size: req.body.size,
                 price: req.body.price,
+                name: req.body.name,
                 user_id:usuariologueado.id,
                 product_id:req.body.product_id,
                 amount: req.body.amount        
@@ -157,16 +158,13 @@ const productsController = {
         let todosLosProductos=await db.ProductCart.findAll({where:{
             user_id:idParaEliminar
         }});
-        let listado=await Products.findAll();
-
         
-
         await db.ProductCart.destroy({where:{
             user_id:idParaEliminar
         }});
        
         
-        res.render("./products/productOrder",{titulo:"Tu orden",user,products:todosLosProductos,listado,toThousand})
+        res.render("./products/productOrder",{titulo:"Tu orden",user,products:todosLosProductos,toThousand})
              
     },
 

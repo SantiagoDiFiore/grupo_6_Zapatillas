@@ -12,6 +12,9 @@ module.exports = (sequelize, DataTypes) => {
         price: {
             type: DataTypes.INTEGER
         },
+        name: {
+            type: DataTypes.STRING(100)
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {model: "User", key:"id"}

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 22-04-2021 a las 21:42:24
+-- Tiempo de generación: 02-05-2021 a las 16:16:06
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -24,15 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `carts`
+-- Estructura de tabla para la tabla `brands`
 --
 
-CREATE TABLE `carts` (
+CREATE TABLE `brands` (
   `id` int(11) NOT NULL,
-  `totalProducts` int(11) NOT NULL,
-  `totalPrice` int(11) NOT NULL,
-  `cartProducts` varchar(100) NOT NULL,
-  `user_id` int(11) NOT NULL
+  `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,17 +79,6 @@ CREATE TABLE `genresproducts` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `marks`
---
-
-CREATE TABLE `marks` (
-  `id` int(11) NOT NULL,
-  `name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `products`
 --
 
@@ -105,9 +91,25 @@ CREATE TABLE `products` (
   `image` varchar(100) NOT NULL,
   `size` text NOT NULL,
   `genre_id` int(11) NOT NULL,
-  `marks_id` int(11) NOT NULL,
+  `brands_id` int(11) NOT NULL,
   `colors_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `product_cart`
+--
+
+CREATE TABLE `product_cart` (
+  `id` int(11) NOT NULL,
+  `size` text NOT NULL,
+  `price` int(11) NOT NULL,
+  `amount` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -135,9 +137,9 @@ CREATE TABLE `users` (
 --
 
 --
--- Indices de la tabla `carts`
+-- Indices de la tabla `brands`
 --
-ALTER TABLE `carts`
+ALTER TABLE `brands`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -165,26 +167,29 @@ ALTER TABLE `genresproducts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `marks`
---
-ALTER TABLE `marks`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `category_id` (`category_id`),
-  ADD KEY `marks_id` (`marks_id`),
   ADD KEY `colors_id` (`colors_id`),
-  ADD KEY `genres_id` (`genre_id`);
+  ADD KEY `genres_id` (`genre_id`),
+  ADD KEY `brands_id` (`brands_id`);
+
+--
+-- Indices de la tabla `product_cart`
+--
+ALTER TABLE `product_cart`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`),
   ADD KEY `gender_id` (`gender_id`);
 
 --
@@ -192,9 +197,9 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `carts`
+-- AUTO_INCREMENT de la tabla `brands`
 --
-ALTER TABLE `carts`
+ALTER TABLE `brands`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -222,15 +227,15 @@ ALTER TABLE `genresproducts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `marks`
---
-ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `product_cart`
+--
+ALTER TABLE `product_cart`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -247,10 +252,17 @@ ALTER TABLE `users`
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
+  ADD CONSTRAINT `brands_id` FOREIGN KEY (`brands_id`) REFERENCES `brands` (`id`),
   ADD CONSTRAINT `category_id` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`),
   ADD CONSTRAINT `colors_id` FOREIGN KEY (`colors_id`) REFERENCES `colors` (`id`),
-  ADD CONSTRAINT `genres_id` FOREIGN KEY (`genre_id`) REFERENCES `genresproducts` (`id`),
-  ADD CONSTRAINT `marks_id` FOREIGN KEY (`marks_id`) REFERENCES `marks` (`id`);
+  ADD CONSTRAINT `genres_id` FOREIGN KEY (`genre_id`) REFERENCES `genresproducts` (`id`);
+
+--
+-- Filtros para la tabla `product_cart`
+--
+ALTER TABLE `product_cart`
+  ADD CONSTRAINT `product_id` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
+  ADD CONSTRAINT `user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Filtros para la tabla `users`

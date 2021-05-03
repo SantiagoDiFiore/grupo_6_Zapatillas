@@ -473,12 +473,13 @@ div.medios-pago{
     width:100%;
 }
 .modelo{
-    font-size: 12px;
+    font-size: 14px;
     width: 60%;
     align-self: center;
+    font-weight: bold;
 }
 .precio-carrito{
-    font-size: 18px;
+    font-size: 15px;
     width: 70%;
     display: flex;
     justify-content: flex-end;
@@ -497,10 +498,10 @@ div.medios-pago{
     justify-content: flex-end;
 }
 .boton-eliminar{
-    display: flex;
     width: 25px;
     justify-content: center;
     font-size: 18px;
+    color: black;
 }
 .finalizar-compra{
     display: flex;
@@ -519,8 +520,9 @@ div.medios-pago{
     align-content: center;
 }
 .finalizar-form label{
-    padding:15px;
+    padding:13px;
     font-weight: bold;
+    font-size: 17px;
 }
 .boton-compra{
     font-family: "Roboto";
@@ -549,6 +551,34 @@ div.medios-pago{
     background-color: #d97f11;
     transition: all 500ms;
 }
+.order{
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    border: solid 20px #f2f2f2;
+    margin-bottom: 10px;
+    margin: auto;
+}
+.order-price{
+    font-family: "Roboto";
+    background-color:#2f615e;
+    padding:0px 10px;
+    border:none;
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+    color: white;
+    padding:7px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 10px; 
+}
+.control-order{
+    margin-bottom: 15px;
+}
+.logo-bn{
+    width: 20%;
+    margin-top: 20px;
+}
 
 /*MAIN PRODUCTDETAIL */
 .button-edit{
@@ -557,7 +587,7 @@ div.medios-pago{
     padding:0px 10px;
     border:none;
     border-radius: 5px;
-    width: 140px;
+    width: 90px;
     height: 40px;
     color: white;
     padding:7px;
@@ -625,8 +655,6 @@ div.medios-pago{
     font-size: 25px;
     color: #ffffff;
     text-decoration: none;
-    width: 140px;
-    height: 40px;
     padding: 7px;
     box-shadow:1px 1px 2px 2px rgb(0 0 0 / 20%); 
 }
@@ -762,6 +790,7 @@ main.auto{
     margin-bottom: 10px;
     margin: auto;
 }
+
 
 /*MAIN REGISTER */
 .title-register{
@@ -1017,6 +1046,10 @@ div.italic {
         padding-top: 7px;
         padding-right:7px ;
     }
+    .control-order{
+        padding-top: 7px;
+        padding-right:7px ;
+    }
     .newsletter{
         display: flex;
         justify-content: space-around;
@@ -1258,6 +1291,9 @@ div.italic {
     .form{
         width: 55%;
     }
+    .order{
+        width: 55%;
+    }
     .error-message_container h1{
         font-size: 60px;
     }
@@ -1282,8 +1318,18 @@ div.italic {
     }
     .imagen-pago,.imagen-pago2{
         max-height: 100%;
-    }.imagen-perfil{
+    }
+    .imagen-perfil{
         width: 70%;
+    }
+    .button-edit{
+        width: 140px;
+    }
+    .order-price{
+        width: 140px;
+    }
+    .logo-bn{
+        width: 20%;
     }
 }
 
@@ -1393,9 +1439,12 @@ div.italic {
     }
     .linknav{
         transition: color 500ms;
+        font-size: 14px;
     }
     .imagen-perfil{
         width: 35%;
     }
-    
+    .order{
+        max-width: 35%;
+    }
 }

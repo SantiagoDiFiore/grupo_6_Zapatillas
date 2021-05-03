@@ -32,30 +32,21 @@
                 <div class="form-cantidad"><%= listado[i].amount %> </div>
                 <div class="precio-carrito">TOTAL <%= toThousand(subtotalPrice)  %> </div>
                 <div class="eliminar">
-                    <a href="/products/productCart/delete/<%=listado[i].id%>"><i class="far fa-times-circle boton-eliminar"></i></a>
+                    <a href="/products/productCart/delete/<%=listado[i].id%>"><i
+                            class="far fa-times-circle boton-eliminar"></i></a>
                 </div>
             </article>
-            
+
             <% } %>
 
             <% } %>
             <article class="finalizar-compra">
                 <div class="finalizar-form">
                     <label for="TOTAL">TOTAL $<%= toThousand(totalPrice) %></label>
-                    <a href="/products/productCart/checkout"><button type="text" class="boton-compra">FINALIZAR COMPRA</button></a>
+                    <a href="/products/productCart/checkout"><button type="text" class="boton-compra">FINALIZAR
+                            COMPRA</button></a>
                 </div>
             </article>
-
-            <% }else{  %>
-            <h2>Para acceder al carrito</h2>
-
-            <div class="register-buttons">
-               <a href="../users/login"> <button value="Confirmar" class="cart-button">Inicia sesion</button></a>
-               <a href="../users/register"><button value="Borrar" class="cart-button">Registrate</button></a>
-            </div>
-            <% } %>
-
-
 
             <article class="medios">
                 <div class="envios"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAIS!</div>
@@ -67,17 +58,17 @@
                 </div>
             </article>
         </section>
+
         <div class="title">
             <h2 class="linea"><span>DESTACADOS</span></h2>
         </div>
-
         <section class="recomendados">
 
             <% for( let i = 0; i < products.length; i++ ) { %>
 
             <%if (products[i].category_id == 4) { 
-                    let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price;
-            %>
+        let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount / 100 ).toFixed(0)  : products[i].price;
+%>
             <article class="recomendado-article a1">
                 <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
                         alt=<%= products[i].name %>></a>
@@ -110,6 +101,24 @@
                 </div>
             </form>
         </div>
+
+        <% }else{  %>
+        <h2>Para acceder al carrito</h2>
+
+        <div class="register-buttons">
+            <a href="../users/login"> <button value="Confirmar" class="cart-button">Inicia sesion</button></a>
+            <a href="../users/register"><button value="Borrar" class="cart-button">Registrate</button></a>
+        </div>
+        <div class="center">
+            <img src="../images/kicks-bn.png" alt="Logo Kicks" class="logo-bn">
+        </div>
+
+        <br>
+        <% } %>
+
+
+
+
     </main>
     <%- include("../partials/footer")%>
 

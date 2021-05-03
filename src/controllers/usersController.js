@@ -150,8 +150,8 @@ const usersController = {
             email: req.body.email,
             password: passCryted,
             checkPassword: checkCrypted,
-            terms: "acepto",
-            offers: "acepto",
+            terms: "terms",
+            offers: "offers",
             gender_id: req.body.gender
         },
         {
