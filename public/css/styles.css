@@ -738,6 +738,9 @@ ol.nav-site{
 .oculto{
     display: none;
 }
+.margin-search{
+    font-size: 20px;
+}
 
 /*MAIN NEW PRODUCT*/
 
@@ -1330,6 +1333,10 @@ div.italic {
     }
     .logo-bn{
         width: 20%;
+    }
+    .margin-search{
+        margin: 100px 0px;
+        font-size: 25px;
     }
 }
 

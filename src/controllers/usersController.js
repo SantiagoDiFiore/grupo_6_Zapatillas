@@ -1,4 +1,3 @@
-const User=require("../models/User");//requerimos el modelo con todos sus metodos para luego usarlos en el controlador
 const{validationResult} =require("express-validator");
 const bcrypt=require("bcryptjs");
 const db = require('../database/models');

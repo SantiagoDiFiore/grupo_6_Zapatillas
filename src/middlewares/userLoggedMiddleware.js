@@ -1,6 +1,5 @@
 //midleware de aplicacion global para mostrar algo en barra de navegacion o no, dependiendo si tengo a alguien en session o no.
 //TAMBIEN LO USAREMOS PARA GUARDAR LAS COOKIES y PASAR AL USUARIO A SESION
-const User=require("../models/User");//requerimiento del modelo
 
 const db = require('../database/models');
 const Users = db.User;
