@@ -110,13 +110,17 @@ const productsController = {
     //muestra el carrito de compra
     productCart: async function(req, res){
         let Product = await Products.findAll()
-        let userLogged = req.session.userLogged
-        let ProductCart = await db.ProductCart.findAll({include: ["user", "products"]},{
-            where:{
-                user_id: req.session.userLogged
-            }
-        })
-        res.render("./products/productCart" ,{titulo:"Carrito", products:Product , listado: ProductCart, userLogged, toThousand})
+        let userLogged = await req.session.userLogged
+        if(userLogged){
+            let ProductCart = await db.ProductCart.findAll({include:"products", where:{
+                user_id: userLogged.id
+            }})
+            res.render("./products/productCart" ,{titulo:"Carrito", products:Product , listado: ProductCart, userLogged, toThousand})
+        }else{
+            res.render("./products/productCartGuest" ,{titulo:"Carrito"})
+            
+        }
+        
     },
     //Guarda un producto en el carrito
     cartStore:async function(req,res){
@@ -134,7 +138,7 @@ const productsController = {
                })
               res.redirect("/products/productCart")
         }else{
-            res.redirect("/products/productCart")
+            res.render("./products/productCartGuest" ,{titulo:"Carrito"})
         }
          
     },
