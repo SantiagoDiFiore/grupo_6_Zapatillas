@@ -41,13 +41,20 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 
 ### **- Sprint N°4/Notas**
 -Incorporamos los botones de edicion y eliminacion en el detalle del producto.
--renombramos las rutas y los controladores con los nombres sugeridos en el pdf del sprint.
--agregamos la funcionalidad del search en el header.
--agregamos la vista de error 404(debemos estilarla un poco más).
+-Renombramos las rutas y los controladores con los nombres sugeridos en el pdf del sprint.
+-Agregamos la funcionalidad del search en el header.
+-Agregamos la vista de error 404(debemos estilarla un poco más).
 
 ### **- Sprint N°5/Notas**
 -Incorporamos validaciones para el register y el login, con persistencia de datos para los casos que correspondia.
 -Creamos el directorio middlewares y ubicamos alli las validaciones y los middlewares para usuarios logueados y visitantes.
--creamos una vista básica para el perfil de usuario.(tambien se muestra la imagen de perfil en el header)
--continuamos estilando algunos detalles del sitio. 
--mejoramos las rutas de algunos links (ej:hombre, mujer , etc)
+-Creamos una vista básica para el perfil de usuario.(tambien se muestra la imagen de perfil en el header)
+-Continuamos estilando algunos detalles del sitio. 
+-Mejoramos las rutas de algunos links (ej:hombre, mujer , etc)
+
+### **- Sprint N°6/Notas**
+-Dentro de la carpeta kicks-db se encuentra el DER, la base de datos (kicks_db.sql), y los archivos data y structure que solicitaban en el sprint.
+-Pudimos implementar el carrito de compras(Si el usuario esta logueado, te permite el acceso, y si no lo esta, te redirecciona al login o register).
+-Si el carrito no tiene productos, incorporamos una vista la cual indica que el carrito esta vacío.
+-Al agregar un producto al carrito, desde el detail, este se almacena en una tabla de la base de datos, llamada product_cart. Luego se muestran los productos en la vista, y al finalizar la compra, se muestra una vista con el resumen.
+-Actualizamos el metodo search, para que busque en la base de datos. Si no se encuentra el producto, la vista va a indicar que no hubo resultados.

@@ -8,15 +8,19 @@
 
     <main>
         <% if (userLogged&& listado.length==0) { %>
-         <h2>Tu carrito está vacio</h2>
-         <div class="register-buttons">
-         <a href="../products"> <button class="cart-button">Ver productos</button></a>
-         </div>
-         <br>
-        
-         <%}else if(userLogged){   %> 
-            <% let totalPrice = 0 %>
-            <div class="encabezado-carrito">
+        <h2>Tu carrito está vacio</h2>
+        <div class="register-buttons">
+            <a href="../products"> <button class="cart-button">Ver productos</button></a>
+        </div>
+        <div class="center">
+            <img src="../images/kicks-bn.png" alt="Logo Kicks" class="logo-bn">
+        </div>
+
+        <br>
+
+        <%}else if(userLogged){   %>
+        <% let totalPrice = 0 %>
+        <div class="encabezado-carrito">
             <h3> MI CARRITO</h3>
             <a href="/products">ELEGIR MÁS PRODUCTOS</a>
         </div>
@@ -111,7 +115,7 @@
             </form>
         </div>
 
-        
+
         <% } %>
 
 

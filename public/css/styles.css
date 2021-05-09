@@ -576,7 +576,7 @@ div.medios-pago{
     margin-bottom: 15px;
 }
 .logo-bn{
-    width: 20%;
+    width: 45%;
     margin-top: 20px;
 }
 
@@ -1332,7 +1332,7 @@ div.italic {
         width: 140px;
     }
     .logo-bn{
-        width: 20%;
+        width: 30%;
     }
     .margin-search{
         margin: 100px 0px;
@@ -1453,5 +1453,8 @@ div.italic {
     }
     .order{
         max-width: 35%;
+    }
+    .logo-bn{
+        width: 20%;
     }
 }
