@@ -54,7 +54,7 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 
 ### **- Sprint N°6/Notas**
 -Dentro de la carpeta kicks-db se encuentra el DER, la base de datos (kicks_db.sql), y los archivos data y structure que solicitaban en el sprint.
--Pudimos implementar el carrito de compras(Si el usuario esta logueado, te permite el acceso, y si no lo esta, te redirecciona al login o register).
--Si el carrito no tiene productos, incorporamos una vista la cual indica que el carrito esta vacío.
+-Pudimos implementar el carrito de compras(Si el usuario está logueado, permite el acceso al carrito, si no lo está, lo redirecciona al login o register).
+-Si el carrito no tiene productos, incorporamos una vista que indica que el carrito está vacío.
 -Al agregar un producto al carrito, desde el detail, este se almacena en una tabla de la base de datos, llamada product_cart. Luego se muestran los productos en la vista, y al finalizar la compra, se muestra una vista con el resumen.
 -Actualizamos el metodo search, para que busque en la base de datos. Si no se encuentra el producto, la vista va a indicar que no hubo resultados.
