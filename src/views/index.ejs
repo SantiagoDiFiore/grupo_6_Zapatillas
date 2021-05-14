@@ -112,19 +112,26 @@
 
         <div class="newsletter">
 
-            <form action="/" method="POST" class="newsletter">
+            <div class="newsletter">
 
                 <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
                 <div class="control-formulario">
-                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
-                    <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
+                    <input type="email" name="email" id="emailSuscripcion" placeholder="Ingresá tu email" class="control" required>
+                    <button type="button" class="boton-suscribe" id="botonSuscribe">SUSCRIBIRME</button>
                 </div>
-            </form>
+
+                <div class="modal-container" id="suscripcion">
+                    <h3>¡Gracias por suscribirte a nuestro Newsletter <span id="suscriptor"></span>!</h3>
+                    <button type="button" class="button-edit" id="cerrarSuscripcion">cerrar</button>
+                
+                </div>
+            </div>
 
         </div>
     </main>
 
     <%- include("./partials/footer")%>
+    <script src="/js/interacciones.js"></script>
 </body>
 
 </html>
