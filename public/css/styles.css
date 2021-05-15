@@ -365,8 +365,16 @@ margin-top: 10%;
     left: 0px;
     width: 70%;
     height: 100%;
-    display:none
+    display:none;
     
+}
+@keyframes aperturaMenu{
+    0%{transform: translateX(-200px)}
+    100%{transform: translateX(0px);}
+}
+@keyframes cierreMenu{
+    0%{transform: translateX(0px)}
+    100%{transform: translateX(-500px);}
 }
 .menu-close{
         font-size: 30px;

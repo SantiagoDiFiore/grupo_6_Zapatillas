@@ -27,10 +27,17 @@ let linkDesplegable=document.querySelector("#link-desplegable");
 let menuClose=document.querySelector("#menu-close");
 
 burguerMenu.addEventListener("click",function(){
-    menuOpen.style.display="block"
+    menuOpen.style.display="block";
+    menuOpen.style.animation="aperturaMenu 1s 1"//agregamos la animacion de css que despliega el menú
+    
 });
 menuClose.addEventListener("click",function(){
-    menuOpen.style.display="none"
+    menuOpen.style.animation="cierreMenu 1s 1"//agregamos la animacio de css que cierra el menu
+    function cierre(){
+        return menuOpen.style.display="none"
+    }
+    setTimeout(cierre,1000)//con set timeout retrasamos el diplay none, ejecuta la funcion luego del tiempo establecido
+    
 })
 linkDesplegable.addEventListener("click",function(){
     menuOpen.style.display="none"
