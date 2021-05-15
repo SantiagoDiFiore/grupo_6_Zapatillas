@@ -43,6 +43,12 @@ linkDesplegable.addEventListener("click",function(){
     menuOpen.style.display="none"
 })
 
+//logo 
+let logo=document.querySelector("#mainLogo")
+
+logo.addEventListener("click",function(){
+    logo.style.animation="jump 0.5s 1"
+})
 
 
 
