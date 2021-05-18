@@ -7,22 +7,21 @@
 
     <main>
         <h2 class="title">Agregue un nuevo producto</h2>
-        <form action="/products" method="POST" enctype="multipart/form-data" class="form">
+        <form action="/products/create" id="formProducts" method="POST" enctype="multipart/form-data" class="form">
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
-                <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1" required
-                    minlength="4" />
+                <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1" />
             </div>
 
             <div class="control-formulario1">
                 <label for="description">Detalle del producto:</label>
                 <input type="textarea" name="description" id="description" placeholder="Detalle del producto"
-                    class="control1" required />
+                    class="control1" />
             </div>
 
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
-                <input type="file" name="image" />
+                <input type="file" name="image" id="image"/>
             </div>
 
             <div>
@@ -77,18 +76,18 @@
 
             <div class="control-formulario1">
                 <label for="price">Precio:</label>
-                <input type="number" name="price" id="price" placeholder="9999" class="control1" required />
+                <input type="number" name="price" id="price" placeholder="9999" class="control1" />
             </div>
 
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
-                <input type="number" name="discount" id="discount" placeholder="15" class="control1" required />
+                <input type="number" name="discount" id="discount" placeholder="15" class="control1" />
             </div>
 
             <br />
 
             <div class="register-buttons">
-                <button type="submit" value="Confirmar" class="confirm-button">Confirmar</button>
+                <button type="submit" value="Confirmar"  id='submitButton' class="confirm-button">Confirmar</button>
                 <button type="reset" value="Borrar" class="delete-button">Borrar</button>
             </div>
             <br />
@@ -96,6 +95,7 @@
     </main>
 
     <%- include("../partials/footer")%>
+    <script src="./js/validationsProducts.js"></script>
 </body>
 
 </html>
