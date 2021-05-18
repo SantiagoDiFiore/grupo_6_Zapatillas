@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<%- include("./partials/head")%>
-
-<body class="body-error">
-    <section class="error-message">
-        <section class="error-message_container">
-            <img src="/images/robot.webp" alt="Banner de ofertas" class="w100">
-            <h1 class="animated"> ¡OOPS! ERROR 404</h1>
-            <h3 class="error-title">Página no encontrada</h3>
-            <p class="error-p">La página que intentas solicitar no fue encontrada o todavia no existe.</p>
-            <p> Estamos trabajando en ello :)</p>
-            <article class="error-button">
-                <a href="/"> <button type="submit" class="boton-error">Volver al inicio</button></a>
-            </article>
-        </section>
-    </section>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Houston - ¡We have an ERROR!</title>
+	<style>
+		html, body {
+			font-size: 10px;
+			font-family: sans-serif;
+			background-color: #dddddd;
+		}
+		h1 {
+			font-size: 3.2em;
+		}
+		h2 {
+			font-size: 2.4em;
+		}
+		pre {
+			color: crimson;
+			border: solid 1px crimson;
+			display: block;
+			padding: 10px;
+			border-radius: 10px;
+			font-size: 1.4em;
+		}
+		pre::first-line {
+			font-weight: bold;
+		}
+		p {
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body>
+	<h1><%= message %></h1>
+	<h2><%= error.status %></h2>
+	<p>Error trying to access to: <b><%= path %></b></p>
+	<pre><i><%= error.stack %></i></pre>
 </body>
-
 </html>

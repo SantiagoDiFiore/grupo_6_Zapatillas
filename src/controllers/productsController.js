@@ -1,3 +1,4 @@
+const{validationResult} = require("express-validator");
 const { json, response } = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -39,6 +40,7 @@ const productsController = {
 
     //acción de creacion del producto
     store: async function(req,res){
+        const errors = validationResult(req)
         // filtrar y definir la imagen del prodcuto
         let image
         if(!req.file){
@@ -46,20 +48,28 @@ const productsController = {
         }else{
             image=req.file.filename;
         };
+        const brands = await db.Brand.findAll()
+        const categories = await db.Category.findAll()
+        const colors = await db.Color.findAll()
+        const genres = await db.Genre.findAll()
 
-        await Products.create({
-            name: req.body.name,
-            description: req.body.description,
-            price: req.body.price,
-            discount: req.body.discount,
-            image: image,
-            size: req.body.size,
-            genre_id: req.body.genre,
-            brands_id: req.body.brand,
-            colors_id: req.body.colors,
-            category_id: req.body.category
-        })
-        res.redirect("/products") 
+        if(!errors.isEmpty()){
+            res.render("./products/productAdd",{titulo:"¡Hubo un error en la creacion del producto!", errors:errors.mapped() , old:req.body, brands, categories, colors, genres})
+        }else{
+            await Products.create({
+                name: req.body.name,
+                description: req.body.description,
+                price: req.body.price,
+                discount: req.body.discount,
+                image: image,
+                size: req.body.size,
+                genre_id: req.body.genre,
+                brands_id: req.body.brand,
+                colors_id: req.body.colors,
+                category_id: req.body.category
+            })
+            res.redirect("/products") 
+        }
     },
 
     //muestra el formulario de edicion de un producto

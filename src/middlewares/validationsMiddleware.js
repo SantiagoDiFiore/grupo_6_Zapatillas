@@ -4,13 +4,13 @@ const path= require("path");
 
 //validaciones
 const validations=[
-    body("firstName").notEmpty().withMessage("Tienes que escribir un nombre").bail().isLength({min: 3}).withMessage("Tienes que usar 3 caracteres o más"),
-    body("lastName").notEmpty().withMessage("Tienes que escribir un apellido").bail().isLength({min: 3}).withMessage("Tienes que usar 3 caracteres o más"),
+    body("firstName").notEmpty().withMessage("Tienes que escribir un nombre").bail().isLength({min: 2}).withMessage("Tienes que usar 2 caracteres o más"),
+    body("lastName").notEmpty().withMessage("Tienes que escribir un apellido").bail().isLength({min: 2}).withMessage("Tienes que usar 2 caracteres o más"),
     body("birthday").notEmpty().withMessage("Tienes que completar tú fecha de nacimiento"),
     body("gender").notEmpty().withMessage("Tienes que seleccionar un género"),
     body("email").notEmpty().withMessage("Tienes que escribir un correo electronico").bail().isEmail().withMessage("Tienes que usar el formato usuario@correo.com"),
-    body("password").notEmpty().withMessage("Tienes que escribir una contraseña"),
-    body("checkPassword").notEmpty().withMessage("Tienes que repetir tu contraseña")
+    body("password").notEmpty().withMessage("Tienes que escribir una contraseña").bail().isLength({min: 8}).withMessage("Tienes que usar 8 caracteres o más"),
+    body("checkPassword").notEmpty().withMessage("Tienes que repetir tu contraseña").bail().isLength({min: 8}).withMessage("Tienes que usar 8 caracteres o más")
     .custom(async (checkPassword, {req}) => { 
       const password = req.body.password 
       // si la contraseña y el check no coinciden, mostrar este error
