@@ -815,7 +815,7 @@ ol.nav-site{
     font-size: 20px;
 }
 
-input[type=radio] {
+/* input[type=radio] {
     display:none; 
     margin:10px;
 }
@@ -833,7 +833,7 @@ input[type=radio] + label {
 input[type=radio]:checked + label { 
     background-image: none;
     background-color:#d0d0d0;
-}
+} */
   
 
 /*MAIN NEW PRODUCT*/

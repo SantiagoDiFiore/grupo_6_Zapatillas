@@ -43,14 +43,14 @@
                 <% if (locals.errors && errors.birthday) { %>
                 <p class="alert2"><%=errors.birthday.msg%></p>
                 <% } %>
-                <div id="birthError"></div>
+                <div id="birthdayError"></div>
             </div>
 
             <div>
                 <label for="gender" class="negrita">Genero</label>
                 <br>
                 <% genders.forEach(gender => { %>
-                <input type="radio" name="gender" id="gender" value="<%= gender.id %>"
+                <input type="radio"  name="gender" id="gender" value="<%= gender.id %>"
                     <%= locals.old && old.gender== gender.id  ? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
@@ -58,7 +58,6 @@
                 <% } %>
                 <div id="genderError"></div>
             </div>
-
 
             <h3 class="title-register1">Sobre tu cuenta</h3>
             <div class="control-formulario1">
@@ -93,12 +92,12 @@
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del usuario:</label>
-                <input type="file" name="image" id="image">
+                <input type="file" name="image" id="imageUser">
 
                 <% if (locals.errors && errors.image) { %>
                 <p class="alert"><%=errors.image.msg%></p>
                 <% } %>
-                <div id="imageError"></div>
+                <div id="imageUserError" class="alert"></div>
             </div>
             <hr>
             <div class="bottom-register">

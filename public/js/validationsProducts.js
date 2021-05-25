@@ -138,7 +138,7 @@ window.onload = function(){
         };
 
         //size
-        if(size.value == 37){
+        if(size.value == "0"){
             errores.size = "Debes seleccionar minimo un talle"
         };
 

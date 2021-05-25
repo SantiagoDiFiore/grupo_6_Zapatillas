@@ -89,8 +89,8 @@ window.onload = function(){
     let genderError = document.querySelector('#genderError');
 
     //image
-    let image = document.querySelector('#image');
-    let imageError = document.querySelector('#imageError');
+    let image = document.querySelector('#imageUser');
+    let imageError = document.querySelector('#imageUserError');
 
 
     button.addEventListener(('click'),function(event){
@@ -163,8 +163,6 @@ window.onload = function(){
             lastNameError.innerText = (errores.lastName) ? errores.lastName : ' ';
 
             emailError.innerText = (errores.email) ? errores.email : ' ';
-
-            discountError.innerText = (errores.discount) ? errores.discount : ' ';
 
             passwordError.innerText = (errores.password) ? errores.password : ' ';
 
