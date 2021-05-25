@@ -227,6 +227,9 @@ div.images.padding{
     max-width: 70px;
     max-height: 70px;
 }
+.marca_int{
+    width:100%
+}
 .none1{
     display: none;
 }
@@ -365,6 +368,7 @@ margin-top: 10%;
     left: 0px;
     width: 70%;
     height: 100%;
+    max-height: 570px;
     display:none;
     
 }
