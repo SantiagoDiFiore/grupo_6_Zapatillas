@@ -10,20 +10,39 @@
         <form action="/products" id="formProducts" method="POST" enctype="multipart/form-data" class="form">
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
-                <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1" />
+                
+                <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1
+                    <%= locals.errors && errors.name ? "is-invalid":null  %>"
+                    value=<%= locals.old && old.name ? old.name:null %>>
+
+                <% if (locals.errors && errors.name) { %>
+                <p class="alert"><%=errors.name.msg%></p>
+
+                <% } %>
                 <div id="nameError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="description">Detalle del producto:</label>
-                <input type="textarea" name="description" id="description" placeholder="Detalle del producto"
-                    class="control1" />
+                <input type="text" name="description" id="description" placeholder="Detalle del producto"
+                    class="control1 <%= locals.errors && errors.description? "is-invalid":null  %>"
+                    value=<%= locals.old && old.description? old.description:null  %>>
+
+                <% if (locals.errors && errors.description) { %>
+                <p class="alert"><%=errors.description.msg%></p>
+
+                <% } %>
                 <div id="descriptionError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
-                <input type="file" name="image" id="image"/>
+
+                <input type="file" name="image" id="image" />
+
+                <% if (locals.errors && errors.image) { %>
+                <p class="alert"><%=errors.image.msg%></p>
+                <% } %>
                 <div id="imageError"></div>
             </div>
 
@@ -31,24 +50,57 @@
                 <label for="genre" class="negrita">Genero</label>
                 <br>
                 <% genres.forEach(genre => { %>
-                <input type="radio" name="genre" id="genre" value="<%= genre.id %>"><%= genre.name %>
+                <input type="radio" name="genre" id="genre" value="<%= genre.id %>"
+                    <%= locals.old && old.genre== genre.id  ? "checked":null  %>><%= genre.name %>
                 <% }) %>
+
+                <% if (locals.errors && errors.genre) { %>
+                <p class="alert"><%=errors.genre.msg%></p>
+                <% } %>
                 <div id="genreError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="brand">Marca</label>
-                <select name="brand" id="brand">
+                <select name="brand" id="brand" class="<%= locals.errors && errors.brand? "is-invalid":null  %>">
                     <% brands.forEach(brand => { %>
-                    <option value="<%= brand.id %>"><%= brand.name %> </option>
+                    <option value="<%= brand.id %>"
+                        <%= locals.old && old.brand== brand.id  ? "selected":null  %>>
+                        <%= brand.name %> </option>
                     <% }) %>
                 </select>
+                
+                <% if (locals.errors && errors.brand) { %>
+                <p class="alert"><%=errors.brand.msg%></p>
+                <% } %>
                 <div id="brandError"></div>
             </div>
 
             <div>
                 <label for="size" class="negrita">Talles:</label>
                 <br>
+                <% if (locals.old && old.size) { %>
+                <input type="checkbox" name="size" id="size" value="37"
+                    <%= locals.old && old.size.includes("37")  ? "checked":null %> />37
+                <input type="checkbox" name="size" id="size" value="38"
+                    <%= locals.old && old.size.includes("38")  ? "checked":null %> />38
+                <input type="checkbox" name="size" id="size" value="39"
+                    <%= locals.old && old.size.includes("39")  ? "checked":null %> />39
+                <input type="checkbox" name="size" id="size" value="40"
+                    <%= locals.old && old.size.includes("40")  ? "checked":null %> />40
+                <input type="checkbox" name="size" id="size" value="41"
+                    <%= locals.old && old.size.includes("41")  ? "checked":null %> />41
+                <input type="checkbox" name="size" id="size" value="42"
+                    <%= locals.old && old.size.includes("42")  ? "checked":null %> />42
+                <input type="checkbox" name="size" id="size" value="43"
+                    <%= locals.old && old.size.includes("43")  ? "checked":null %> />43
+                <input type="checkbox" name="size" id="size" value="44"
+                    <%= locals.old && old.size.includes("44") ? "checked":null %> />44
+                <input type="checkbox" name="size" id="size" value="45"
+                    <%= locals.old && old.size.includes("45") ? "checked":null %> />45
+                <input type="checkbox" name="size" id="size" value="46"
+                    <%= locals.old && old.size.includes("46")  ? "checked":null %> />46
+                <% }else{  %>
                 <input type="checkbox" name="size" id="size" value="37" />37
                 <input type="checkbox" name="size" id="size" value="38" />38
                 <input type="checkbox" name="size" id="size" value="39" />39
@@ -59,45 +111,78 @@
                 <input type="checkbox" name="size" id="size" value="44" />44
                 <input type="checkbox" name="size" id="size" value="45" />45
                 <input type="checkbox" name="size" id="size" value="46" />46
+
+                <% if (locals.errors && errors.size) { %>
+                <p class="alert"><%=errors.size.msg%></p>
+                <% } %>
+                <%  } %>
                 <div id="sizeError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="colors" class="form-label">Color del producto:</label>
-                <select name="colors" id="colors" class="form-input">
+                <select name="colors" id="colors" class="form-input <%= locals.errors && errors.colors? "is-invalid":null  %>">
                     <% colors.forEach(color => { %>
-                    <option value="<%= color.id %>"><%= color.name %> </option>
+                    <option value="<%= color.id %>"
+                        <%= locals.old && old.colors== color.id  ? "selected":null  %>><%= color.name %> </option>
                     <% }) %>
                 </select>
+  
+                <% if (locals.errors && errors.colors) { %>
+                <p class="alert"><%=errors.colors.msg%></p>
+                <% } %>
                 <div id="colorsError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="category" class="form-label">Categoría:</label>
-                <select name="category" id="category" class="form-input">
+                <select name="category" id="category" class="form-input <%= locals.errors && errors.category? "is-invalid":null  %>">
                     <% categories.forEach(category => { %>
-                    <option value="<%= category.id %>"><%= category.name %> </option>
+                    <option value="<%= category.id %>"
+                        <%= locals.old && old.category== category.id  ? "selected":null  %>
+                        ><%= category.name %> </option>
                     <% }) %>
                 </select>
+         
+                <% if (locals.errors && errors.category) { %>
+                <p class="alert"><%=errors.category.msg%></p>
+                <% } %>
                 <div id="categoryError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="price">Precio:</label>
                 <input type="number" name="price" id="price" placeholder="9999" class="control1" />
+            
+                <input type="number" name="price" id="price" placeholder="9999" class="control1
+                    <%= locals.errors && errors.price? "is-invalid":null  %>"
+                    value=<%= locals.old && old.price? old.price:null  %>>
+
+                <% if (locals.errors && errors.price) { %>
+                <p class="alert"><%=errors.price.msg%></p>
+
+                <% } %>
                 <div id="priceError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
-                <input type="number" name="discount" id="discount" placeholder="0" class="control1" />
+    
+                <input type="number" name="discount" id="discount" placeholder="15" class="control1
+                    <%= locals.errors && errors.discount? "is-invalid":null  %>"
+                    value=<%= locals.old && old.discount? old.discount:null  %> />
+
+                <% if (locals.errors && errors.discount) { %>
+                <p class="alert"><%=errors.discount.msg%></p>
+
+                <% } %>
                 <div id="discountError"></div>
             </div>
 
             <br />
 
             <div class="register-buttons">
-                <button type="submit" value="Confirmar"  id='submitButton' class="confirm-button">Confirmar</button>
+                <button type="submit" value="Confirmar" id='submitButton' class="confirm-button">Confirmar</button>
                 <button type="reset" value="Borrar" class="delete-button">Borrar</button>
             </div>
             <br />

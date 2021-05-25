@@ -11,17 +11,27 @@
             class="form">
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
-                <input type="text" name="name" id="name" value="<%=producto.name%>" placeholder="Nombre del producto"
-                    class="control1" required />
+                <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1
+                    <%= locals.errors && errors.name ? "is-invalid":null  %>"
+                    value="<%=producto.name%>">
+                    <% if (locals.errors && errors.name) { %>
+                        <p class="alert"><%=errors.name.msg%></p>
+                    <% } %>
             </div>
             <div class="control-formulario1">
                 <label for="description">Detalle del producto:</label>
                 <input type="textarea" name="description" id="description" value="<%=producto.description%>"
-                    placeholder="Detalle del producto" class="control1" required />
+                    placeholder="Detalle del producto" class="control1 <%= locals.errors && errors.description? "is-invalid":null  %>" />
+                    <% if (locals.errors && errors.description) { %>
+                        <p class="alert"><%=errors.description.msg%></p>
+                    <% } %>
             </div>
             <div class="control-formulario1">
                 <label for="imagen">Imagen del producto:</label>
                 <input type="file" name="image" />
+                <% if (locals.errors && errors.image) { %>
+                    <p class="alert"><%=errors.image.msg%></p>
+                <% } %>
             </div>
             <div>
                 <label for="genre" class="negrita">Genero</label>
@@ -30,16 +40,22 @@
                 <input type="radio" name="genre" id="genre" value="<%= genre.id %>"
                     <%= genre.id === producto.genre_id ? "checked":null %>><%= genre.name %>
                 <% }) %>
+                <% if (locals.errors && errors.genre) { %>
+                    <p class="alert"><%=errors.genre.msg%></p>
+                <% } %>
             </div>
 
             <div class="control-formulario1">
                 <label for="brand">Marca</label>
-                <select name="brand" id="brand">
+                <select name="brand" id="brand" class="<%= locals.errors && errors.brand? "is-invalid":null  %>">
                     <% brands.forEach(brand => { %>
                     <option value="<%= brand.id %>" <%= brand.id==producto.brands_id ? "selected" : null%>>
                         <%= brand.name %> </option>
                     <% }) %>
                 </select>
+                <% if (locals.errors && errors.brand) { %>
+                    <p class="alert"><%=errors.brand.msg%></p>
+                <% } %>
             </div>
 
             <div>
@@ -65,38 +81,55 @@
                     <%= producto.size.includes("45") ? "checked":" " %> />45
                 <input type="checkbox" name="size" id="size" value="46"
                     <%= producto.size.includes("46") ? "checked":" " %> />46
+                    
+                    <% if (locals.errors && errors.size) { %>
+                        <p class="alert"><%=errors.size.msg%></p>
+                    <% } %>
             </div>
 
             <div class="control-formulario1">
                 <label for="colors" class="form-label">Color del producto:</label>
-                <select name="colors" id="colors" class="form-input">
+                <select name="colors" id="colors" class="form-input <%= locals.errors && errors.colors? "is-invalid":null  %>">
                     <% colors.forEach(color => { %>
                     <option value="<%= color.id %>" <%= color.id==producto.colors_id ? "selected" : null%>>
                         <%= color.name %> </option>
                     <% }) %>
                 </select>
+                <% if (locals.errors && errors.colors) { %>
+                    <p class="alert"><%=errors.colors.msg%></p>
+                <% } %>
             </div>
 
             <div class="control-formulario1">
                 <label for="category" class="form-label">Categoría:</label>
-                <select name="category" id="category" class="form-input">
+                <select name="category" id="category"  class="form-input <%= locals.errors && errors.category? "is-invalid":null  %>">
                     <% categories.forEach(category => { %>
                     <option value="<%= category.id %>" <%= category.id==producto.category_id ? "selected" : null%>>
                         <%= category.name %> </option>
                     <% }) %>
                 </select>
+                <% if (locals.errors && errors.category) { %>
+                    <p class="alert"><%=errors.category.msg%></p>
+                <% } %>
             </div>
 
             <div class="control-formulario1">
                 <label for="price">Precio:</label>
                 <input type="number" name="price" value="<%=producto.price%>" id="price" placeholder="$9999"
-                    class="control1" required />
+                    class="control1 <%= locals.errors && errors.price? "is-invalid":null  %>" />
+
+                 <% if (locals.errors && errors.price) { %>
+                   <p class="alert"><%=errors.price.msg%></p>
+                 <% } %>
             </div>
 
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
                 <input type="number" name="discount" value="<%=producto.discount%>" id="discount" placeholder="15"
-                    class="control1" />
+                    class="control1 <%= locals.errors && errors.discount? "is-invalid":null  %>"/>
+                <% if (locals.errors && errors.discount) { %>
+                   <p class="alert"><%=errors.discount.msg%></p>
+                <% } %>
             </div>
 
             <br />

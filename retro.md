@@ -63,6 +63,19 @@
 ## Dejar de hacer
 > Por como venimos trabajando ultimamente no hay nada que consideremos que habria que dejar de hacer.
 
+### **RETROSPECTIVA SPRINT 6** 
+
+## Comenzar a hacer
+> Mostrar más el proyecto a terceros, para testearlo y escuchar opiniones para luego poder hacer mejoras.
+## Hacer más
+> Tratar de hacer una mejor division de las tareas (las que se puedan hacer individualmente).      
+## Continuar haciendo
+> Seguir manteniendo el ritmo de reuniones para avanzar con el proyecto.
+## Hacer menos
+> No aplica para este Sprint.
+## Dejar de hacer
+> Reuniones tan largas (deberiamos realizar reuniones más cortas para priorizar las tareas)
+
 
 
 
