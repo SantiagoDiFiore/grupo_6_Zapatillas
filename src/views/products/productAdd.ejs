@@ -11,17 +11,20 @@
             <div class="control-formulario1">
                 <label for="name">Nombre del producto:</label>
                 <input type="text" name="name" id="name" placeholder="Nombre del producto" class="control1" />
+                <div id="nameError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="description">Detalle del producto:</label>
                 <input type="textarea" name="description" id="description" placeholder="Detalle del producto"
                     class="control1" />
+                <div id="descriptionError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="image">Imagen del producto:</label>
                 <input type="file" name="image" id="image"/>
+                <div id="imageError"></div>
             </div>
 
             <div>
@@ -30,6 +33,7 @@
                 <% genres.forEach(genre => { %>
                 <input type="radio" name="genre" id="genre" value="<%= genre.id %>"><%= genre.name %>
                 <% }) %>
+                <div id="genreError"></div>
             </div>
 
             <div class="control-formulario1">
@@ -39,6 +43,7 @@
                     <option value="<%= brand.id %>"><%= brand.name %> </option>
                     <% }) %>
                 </select>
+                <div id="brandError"></div>
             </div>
 
             <div>
@@ -54,6 +59,7 @@
                 <input type="checkbox" name="size" id="size" value="44" />44
                 <input type="checkbox" name="size" id="size" value="45" />45
                 <input type="checkbox" name="size" id="size" value="46" />46
+                <div id="sizeError"></div>
             </div>
 
             <div class="control-formulario1">
@@ -63,6 +69,7 @@
                     <option value="<%= color.id %>"><%= color.name %> </option>
                     <% }) %>
                 </select>
+                <div id="colorsError"></div>
             </div>
 
             <div class="control-formulario1">
@@ -72,16 +79,19 @@
                     <option value="<%= category.id %>"><%= category.name %> </option>
                     <% }) %>
                 </select>
+                <div id="categoryError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="price">Precio:</label>
                 <input type="number" name="price" id="price" placeholder="9999" class="control1" />
+                <div id="priceError"></div>
             </div>
 
             <div class="control-formulario1">
                 <label for="discount">Descuento:</label>
-                <input type="number" name="discount" id="discount" placeholder="15" class="control1" />
+                <input type="number" name="discount" id="discount" placeholder="0" class="control1" />
+                <div id="discountError"></div>
             </div>
 
             <br />
@@ -95,7 +105,7 @@
     </main>
 
     <%- include("../partials/footer")%>
-    <script src="./js/validationsProducts.js"></script>
+    <script src="/js/validationsProducts.js"></script>
 </body>
 
 </html>
