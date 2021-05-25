@@ -40,3 +40,11 @@
 -30/4: Finalizamos con el CRUD del Carrito. Quedan detalles que ultimar.
 -4/5:  Reunion para la finalizacion del sprint. Pulimos detalles.
 
+### **- Weekly (Sprint N°7) -**
+-13/5: Realizamos una reunion para realizar la retro, organizar el tablero y dividirnos las tareas.
+-17/5: Reunion para aclarar dudas sobre el js para front, y empezamos a planificar las validacions back para la creación de productos.
+-18/5: Comenzamos con las validacions del backend para la creación y edición de productos.
+-23/5: Hicimos una reunion para finalizar con las validaciones del backend, y comenzamos con las validaciones para el frontend.
+-25/5: Reunion para finalizar las validaciones del front, y pulir algunos detalles, para cerrar con el sprint.
+
+

@@ -17,7 +17,7 @@
             </ol>
         </div>
 
-        <form action="/products/productCart " method="POST">
+        <form action="/products/productCart " method="POST" id="formProduct">
             <section class="main-article-product">
 
                 <div class="imagen-principal">
@@ -43,30 +43,33 @@
                         </p>
                         <% } %>
                         <% if(producto.discount){ %>
-                            <input type="number" name="price" class="oculto" value="<%=producto.price - (producto.price*producto.discount/100)%>"></input>
+                        <input type="number" name="price" class="oculto"
+                            value="<%=producto.price - (producto.price*producto.discount/100)%>"></input>
                         <% } else{%>
-                            <input type="number" name="price" class="oculto" value="<%=producto.price%>"></input>
-                        <% } %>  
-                            <input type="number" name="product_id" class="oculto" value="<%=producto.id%>"></input>
-             
-                            <input type="text" name="name" class="oculto" value="<%=producto.name%>"></input>
-                      
+                        <input type="number" name="price" class="oculto" value="<%=producto.price%>"></input>
+                        <% } %>
+                        <input type="number" name="product_id" class="oculto" value="<%=producto.id%>"></input>
+
+                        <input type="text" name="name" class="oculto" value="<%=producto.name%>"></input>
+
 
                         <h3 class="talle">Seleccioná tu talle</h3>
                         <div class="talle1">
                             <div class="tallesdisponibles">
                                 <% for( let i = 0; i < size.length; i++ ) { %>
-                                <%= size[i] %> <input type="radio" name="size" required value="<%=size[i]%>"
+                                <input type="radio" id="<%= size[i] %>" name="size" required value="<%=size[i]%>"
                                     class="boton-talle">
+                                <label for="<%= size[i] %>"><%= size[i] %></label>
                                 <% } %>
-                                </div>
+                            </div>
                             <p class="guia-talles"><a href=# class="cfont-talles"><i
                                         class="fas fa-ruler-horizontal"></i>
                                     Guía de talles</a></p>
                         </div>
+
                         <div class="cantidad1">
                             <p class="cantidad-titulo">Cantidad:</p>
-                                <div class="cantidad-item">
+                            <div class="cantidad-item">
                                 <select name="amount">
                                     <option value=1>1</option>
                                     <option value=2>2</option>
@@ -74,12 +77,12 @@
                                     <option value=4>4</option>
                                     <option value=5>5</option>
                                 </select>
-                                </div>
-                            
+                            </div>
+
                         </div>
                         <div class="realizar-compra">
-                            <button type="submit" value="Comprar" class="boton-de-compra">Comprar <i
-                                class="fas fa-shopping-basket"></i></button>
+                            <button type="submit" value="Comprar" class="boton-de-compra" id="buyButton">Comprar <i
+                                    class="fas fa-shopping-basket"></i></button>
                         </div>
         </form>
 
@@ -160,6 +163,7 @@
         </div>
     </main>
     <%- include("../partials/footer")%>
+    <script src="/js/productCart.js"></script>
 </body>
 
 </html>

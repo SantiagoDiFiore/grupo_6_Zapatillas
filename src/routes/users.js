@@ -3,7 +3,7 @@ const router= express.Router();
 const path= require("path");
 const usersController = require("../controllers/usersController")
 const multer= require("multer");
-const validations=require("../middlewares/validationsMiddleware")//requerimos el middleware con las validaciones de express-validator
+const validations=require("../middlewares/validationsRegister")//requerimos el middleware con las validaciones de express-validator
 const authMiddleware=require("../middlewares/authMiddleware")//middleware que no permite ingresar al perfil si el usuario No está logueado
 const guestMiddleware=require("../middlewares/guestMiddleware")//middleware que no permite ingresar al login ni register si el usuario ESTÁ logueado
 
