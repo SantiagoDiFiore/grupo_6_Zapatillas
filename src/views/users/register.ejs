@@ -8,7 +8,7 @@
 
     <main>
         <h2 class="title">Registrarme</h2>
-        <form action="/users/register" method="POST" enctype="multipart/form-data" class="form">
+        <form action="/users/register"  id='formRegister' method="POST" enctype="multipart/form-data" class="form">
             <h3 class="title-register">Datos personales</h3>
             <div class="control-formulario1">
                 <label for="firstName">Nombre completo:</label>
@@ -20,6 +20,7 @@
                 <p class="alert"><%=errors.firstName.msg%></p>
 
                 <% } %>
+                <div id="firstNameError"></div>
             </div>
 
             <div class="control-formulario1">
@@ -31,6 +32,7 @@
                 <p class="alert"><%=errors.lastName.msg%></p>
 
                 <% } %>
+                <div id="lastNameError"></div>
             </div>
             <div class="control-formulario1">
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
@@ -41,20 +43,21 @@
                 <% if (locals.errors && errors.birthday) { %>
                 <p class="alert2"><%=errors.birthday.msg%></p>
                 <% } %>
+                <div id="birthdayError"></div>
             </div>
 
             <div>
                 <label for="gender" class="negrita">Genero</label>
                 <br>
                 <% genders.forEach(gender => { %>
-                <input type="radio" name="gender" id="gender" value="<%= gender.id %>"
+                <input type="radio"  name="gender" id="gender" value="<%= gender.id %>"
                     <%= locals.old && old.gender== gender.id  ? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
                 <p class="alert"><%=errors.gender.msg%></p>
                 <% } %>
+                <div id="genderError"></div>
             </div>
-
 
             <h3 class="title-register1">Sobre tu cuenta</h3>
             <div class="control-formulario1">
@@ -66,6 +69,7 @@
                 <% if (locals.errors && errors.email) { %>
                 <p class="alert"><%=errors.email.msg%></p>
                 <% } %>
+                <div id="emailError"></div>
             </div>
             <div class="control-formulario1">
                 <label for="password">Contraseña:</label>
@@ -74,6 +78,7 @@
                 <% if (locals.errors && errors.password) { %>
                 <p class="alert"><%=errors.password.msg%></p>
                 <% } %>
+                <div id="passwordError"></div>
                 <!--<i class="fas fa-eye-slash"></i> -->
             </div>
             <div class="control-formulario1">
@@ -83,14 +88,16 @@
                 <p class="alert"><%=errors.checkPassword.msg%></p>
                 <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
+                <div id="checkPasswordError"></div>
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del usuario:</label>
-                <input type="file" name="image">
+                <input type="file" name="image" id="imageUser">
 
                 <% if (locals.errors && errors.image) { %>
                 <p class="alert"><%=errors.image.msg%></p>
                 <% } %>
+                <div id="imageUserError" class="alert"></div>
             </div>
             <hr>
             <div class="bottom-register">
@@ -103,7 +110,7 @@
             </div>
 
             <div class="register-buttons">
-                <button type="submit" class="submit-button1">Crear cuenta</button>
+                <button type="submit" class="submit-button1" id="submitButton">Crear cuenta</button>
             </div>
             <br />
         </form>
@@ -123,7 +130,7 @@
     </main>
 
     <%- include("../partials/footer")%>
-
+    <script src="/js/validationsUserCreate.js"></script>
 
 </body>
 

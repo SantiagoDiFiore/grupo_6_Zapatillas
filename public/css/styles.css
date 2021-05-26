@@ -810,7 +810,7 @@ ol.nav-site{
     font-size: 20px;
 }
 
-.boton-talle {
+.boton-talle{
     display:none; 
     margin:10px;
 }
@@ -827,7 +827,7 @@ ol.nav-site{
 .boton-talle:checked + label { 
     background-image: none;
     background-color:#d0d0d0;
-}
+} */
   
 
 /*MAIN NEW PRODUCT*/
