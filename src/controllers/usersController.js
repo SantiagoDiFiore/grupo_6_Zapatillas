@@ -32,7 +32,7 @@ const usersController = {
          }else{//si no coincide la contraseña se renderiza la vista de login con error
             res.render("./users/login",{titulo:"Ingresá" ,old:req.body, errors:{
                 email:{
-                    msg:"Las credenciales son invalidas"
+                    msg:"Las credenciales no coinciden"
                 }
             }  
         })}

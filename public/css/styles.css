@@ -704,11 +704,6 @@ margin-top: 10%;
 .tallesdisponibles{
     margin: 5px;
 }
-/* .boton-talle{
-    border-radius: 30px;
-    padding: 5px;
-    background-color: #ffffff;
-} */
 .cantidad1{
     display: flex;
     justify-content: center;
@@ -815,11 +810,11 @@ ol.nav-site{
     font-size: 20px;
 }
 
-input[type=radio] {
+.boton-talle {
     display:none; 
     margin:10px;
 }
-input[type=radio] + label {
+.boton-talle + label {
     display:inline-block;
     margin:-2px;
     padding: 4px 12px;
@@ -829,8 +824,7 @@ input[type=radio] + label {
     border-radius: 5px;
     font-size: 20px;
 }
-
-input[type=radio]:checked + label { 
+.boton-talle:checked + label { 
     background-image: none;
     background-color:#d0d0d0;
 }

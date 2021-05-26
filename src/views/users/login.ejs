@@ -14,9 +14,7 @@
                     <label for="user" class="obligatorio">* Email</label>
                     <input type="text" name="email" id="user" placeholder="Email..." class="control-login"
                         value=<%= locals.old && old.email? old.email:null  %>>
-                    <div>
-                        <small class="alert erName"></small>
-                    </div>
+                    <div class="alert erName"></div>
                     <% if (locals.errors && errors.email) { %>
                     <p class="alert"><%=errors.email.msg%></p>
 
@@ -26,11 +24,9 @@
                     <label for="password" class="obligatorio">* Contraseña</label>
                     <input type="password" name="password" id="password" placeholder="Contraseña..."
                         class="control-login" />
-                    <div>
-                        <small class="alert erName"></small>
-                    </div>
+                    <div class="alert erPassword"></div>
                 </div>
-                <ul class="errores"></ul>
+
                 <div class="register-formulario center">
                     <label for="record"></label>
                     <input type="checkbox" name="record" id="record" /> Recuérdame
