@@ -128,7 +128,7 @@ window.onload = function(){
         };
 
         //birthday
-        if(birthday.value == ' '){
+        if(birthday.value.length < 1){
             errores.birthday = "Debes indicar una fecha de nacimiento"
         };
 

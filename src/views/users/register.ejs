@@ -20,7 +20,7 @@
                 <p class="alert"><%=errors.firstName.msg%></p>
 
                 <% } %>
-                <div id="firstNameError"></div>
+                <div id="firstNameError" class="alert"></div>
             </div>
 
             <div class="control-formulario1">
@@ -32,7 +32,7 @@
                 <p class="alert"><%=errors.lastName.msg%></p>
 
                 <% } %>
-                <div id="lastNameError"></div>
+                <div id="lastNameError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
@@ -43,7 +43,7 @@
                 <% if (locals.errors && errors.birthday) { %>
                 <p class="alert2"><%=errors.birthday.msg%></p>
                 <% } %>
-                <div id="birthdayError"></div>
+                <div id="birthdayError" class="alert"></div>
             </div>
 
             <div>
@@ -56,7 +56,7 @@
                 <% if (locals.errors && errors.gender) { %>
                 <p class="alert"><%=errors.gender.msg%></p>
                 <% } %>
-                <div id="genderError"></div>
+                <div id="genderError" class="alert"></div>
             </div>
 
             <h3 class="title-register1">Sobre tu cuenta</h3>
@@ -69,7 +69,7 @@
                 <% if (locals.errors && errors.email) { %>
                 <p class="alert"><%=errors.email.msg%></p>
                 <% } %>
-                <div id="emailError"></div>
+                <div id="emailError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <label for="password">Contraseña:</label>
@@ -78,7 +78,7 @@
                 <% if (locals.errors && errors.password) { %>
                 <p class="alert"><%=errors.password.msg%></p>
                 <% } %>
-                <div id="passwordError"></div>
+                <div id="passwordError" class="alert"></div>
                 <!--<i class="fas fa-eye-slash"></i> -->
             </div>
             <div class="control-formulario1">
@@ -88,7 +88,7 @@
                 <p class="alert"><%=errors.checkPassword.msg%></p>
                 <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
-                <div id="checkPasswordError"></div>
+                <div id="checkPasswordError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del usuario:</label>
