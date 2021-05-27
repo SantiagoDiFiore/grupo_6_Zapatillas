@@ -704,11 +704,6 @@ margin-top: 10%;
 .tallesdisponibles{
     margin: 5px;
 }
-.boton-talle{
-    border-radius: 30px;
-    padding: 5px;
-    background-color: #ffffff;
-}
 .cantidad1{
     display: flex;
     justify-content: center;
@@ -814,6 +809,26 @@ ol.nav-site{
 .margin-search{
     font-size: 20px;
 }
+
+.boton-talle{
+    display:none; 
+    margin:10px;
+}
+.boton-talle + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.boton-talle:checked + label { 
+    background-image: none;
+    background-color:#d0d0d0;
+} */
+  
 
 /*MAIN NEW PRODUCT*/
 
