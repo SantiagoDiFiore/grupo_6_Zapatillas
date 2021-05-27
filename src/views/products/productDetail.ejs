@@ -17,7 +17,7 @@
             </ol>
         </div>
 
-        <form action="/products/productCart " method="POST">
+        <form action="/products/productCart " method="POST" id="formComprar">
             <section class="main-article-product">
 
                 <div class="imagen-principal">
@@ -78,7 +78,7 @@
                             
                         </div>
                         <div class="realizar-compra">
-                            <button type="submit" value="Comprar" class="boton-de-compra">Comprar <i
+                            <button type="submit" value="Comprar" class="boton-de-compra" id="botonCompra">Comprar <i
                                 class="fas fa-shopping-basket"></i></button>
                         </div>
         </form>
@@ -89,6 +89,11 @@
         <form action="/products/<%=producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
             <button type="submit" class="button-edit button-delete">ELIMINAR</button>
         </form>
+        <div class="modal-container" id="suscripcion">
+            <h3>Producto agregado al carrito</h3>
+            <a href="/products/productCart"><button type="button" class="button-edit botonVerCarrito">ver carrito</button></a>
+            <a href="/products"><button type="button" class="button-edit botonSeguirComprando" >seguir comprando</button></a>
+        </div>
 
         <div class="enviosgratis">
             <p class="envios1"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAÍS!</p>
@@ -160,6 +165,7 @@
         </div>
     </main>
     <%- include("../partials/footer")%>
+    <script src="/js/interacciones.js"></script>
 </body>
 
 </html>

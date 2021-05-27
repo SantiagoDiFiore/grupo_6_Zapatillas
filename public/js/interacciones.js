@@ -50,6 +50,24 @@ logo.addEventListener("click",function(){
     logo.style.animation="jump 0.5s 1"
 })
 
+//modal agregar al carrito
+let formAgregarAlCarrito=document.querySelector("#formComprar");
+let botonDeCompra=document.querySelector("#botonCompra");
+let botonSeguirComprando=document.querySelector(".botonSeguirComprando")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
