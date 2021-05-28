@@ -17,7 +17,7 @@
                     value=<%= locals.old && old.firstName? old.firstName:null  %>>
 
                 <% if (locals.errors && errors.firstName) { %>
-                <p class="alert"><%=errors.firstName.msg%></p>
+                <p class="alert2"><%=errors.firstName.msg%></p>
 
                 <% } %>
                 <div id="firstNameError" class="alert"></div>
@@ -29,7 +29,7 @@
                     value=<%= locals.old && old.lastName? old.lastName:null  %>>
 
                 <% if (locals.errors && errors.lastName) { %>
-                <p class="alert"><%=errors.lastName.msg%></p>
+                <p class="alert2"><%=errors.lastName.msg%></p>
 
                 <% } %>
                 <div id="lastNameError" class="alert"></div>
@@ -54,7 +54,7 @@
                     <%= locals.old && old.gender== gender.id  ? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
-                <p class="alert"><%=errors.gender.msg%></p>
+                <p class="alert2"><%=errors.gender.msg%></p>
                 <% } %>
                 <div id="genderError" class="alert"></div>
             </div>
@@ -67,7 +67,7 @@
                     value=<%= locals.old && old.email? old.email:null  %>>
 
                 <% if (locals.errors && errors.email) { %>
-                <p class="alert"><%=errors.email.msg%></p>
+                <p class="alert2"><%=errors.email.msg%></p>
                 <% } %>
                 <div id="emailError" class="alert"></div>
             </div>
@@ -76,7 +76,7 @@
                 <input type="password" name="password" id="password" placeholder="Contraseña..."
                     class="control2 <%= locals.errors && errors.password? "is-invalid":null  %>" />
                 <% if (locals.errors && errors.password) { %>
-                <p class="alert"><%=errors.password.msg%></p>
+                <p class="alert2"><%=errors.password.msg%></p>
                 <% } %>
                 <div id="passwordError" class="alert"></div>
                 <!--<i class="fas fa-eye-slash"></i> -->
@@ -85,7 +85,7 @@
                 <input type="password" name="checkPassword" id="checkPassword" placeholder="Confirmar contraseña..."
                     class="control2 <%= locals.errors && errors.checkPassword? "is-invalid":null  %>" />
                 <% if (locals.errors && errors.checkPassword) { %>
-                <p class="alert"><%=errors.checkPassword.msg%></p>
+                <p class="alert2"><%=errors.checkPassword.msg%></p>
                 <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
                 <div id="checkPasswordError" class="alert"></div>
@@ -95,7 +95,7 @@
                 <input type="file" name="image" id="image">
 
                 <% if (locals.errors && errors.image) { %>
-                <p class="alert"><%=errors.image.msg%></p>
+                <p class="alert2"><%=errors.image.msg%></p>
                 <% } %>
                 <div id="imageUserError" class="alert"></div>
             </div>

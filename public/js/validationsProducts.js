@@ -142,11 +142,11 @@ window.onload = function(){
             discountError.innerText = ""
         }
     })
-
+    
     button.addEventListener(('click'),function(event){
         event.preventDefault()
         let errores = {}
-
+        
         //name
         if(name.value == ""){
             errores.name = "Tienes que ingresar un nombre para el producto"

@@ -482,8 +482,9 @@ margin-top: 10%;
 }
 .alert2{
     color:red;
-    font-family: "Roboto";
+    margin-top: 5px;
     font-weight: bold;
+    font-family: "Roboto";
 }
 .is-invalid{
     box-shadow:1px 1px 2px 2px rgb(255 0 0);
