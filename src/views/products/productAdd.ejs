@@ -16,7 +16,7 @@
                     value=<%= locals.old && old.name ? old.name:null %>>
 
                 <% if (locals.errors && errors.name) { %>
-                <p class="alert"><%=errors.name.msg%></p>
+                <p class="alert2"><%=errors.name.msg%></p>
 
                 <% } %>
                 <div id="nameError" class="alert"></div>
@@ -29,7 +29,7 @@
                     value=<%= locals.old && old.description? old.description:null  %>>
 
                 <% if (locals.errors && errors.description) { %>
-                <p class="alert"><%=errors.description.msg%></p>
+                <p class="alert2"><%=errors.description.msg%></p>
 
                 <% } %>
                 <div id="descriptionError" class="alert"></div>
@@ -41,7 +41,7 @@
                 <input type="file" name="image" id="image" />
 
                 <% if (locals.errors && errors.image) { %>
-                <p class="alert"><%=errors.image.msg%></p>
+                <p class="alert2"><%=errors.image.msg%></p>
                 <% } %>
                 <div id="imageError" class="alert"></div>
             </div>
@@ -55,7 +55,7 @@
                 <% }) %>
 
                 <% if (locals.errors && errors.genre) { %>
-                <p class="alert"><%=errors.genre.msg%></p>
+                <p class="alert2"><%=errors.genre.msg%></p>
                 <% } %>
                 <div id="genreError" class="alert"></div>
             </div>
@@ -70,7 +70,7 @@
                 </select>
 
                 <% if (locals.errors && errors.brand) { %>
-                <p class="alert"><%=errors.brand.msg%></p>
+                <p class="alert2"><%=errors.brand.msg%></p>
                 <% } %>
                 <div id="brandError" class="alert"></div>
             </div>
@@ -113,7 +113,7 @@
                 <input type="checkbox" name="size" id="size" value="46" />46
 
                 <% if (locals.errors && errors.size) { %>
-                <p class="alert"><%=errors.size.msg%></p>
+                <p class="alert2"><%=errors.size.msg%></p>
                 <% } %>
                 <%  } %>
                 <div id="sizeError" class="alert"></div>
@@ -130,7 +130,7 @@
                 </select>
 
                 <% if (locals.errors && errors.colors) { %>
-                <p class="alert"><%=errors.colors.msg%></p>
+                <p class="alert2"><%=errors.colors.msg%></p>
                 <% } %>
                 <div id="colorsError" class="alert"></div>
             </div>
@@ -147,7 +147,7 @@
                 </select>
 
                 <% if (locals.errors && errors.category) { %>
-                <p class="alert"><%=errors.category.msg%></p>
+                <p class="alert2"><%=errors.category.msg%></p>
                 <% } %>
                 <div id="categoryError" class="alert"></div>
             </div>
@@ -161,7 +161,7 @@
                     value=<%= locals.old && old.price? old.price:null  %>>
 
                 <% if (locals.errors && errors.price) { %>
-                <p class="alert"><%=errors.price.msg%></p>
+                <p class="alert2"><%=errors.price.msg%></p>
 
                 <% } %>
                 <div id="priceError" class="alert"></div>
@@ -175,7 +175,7 @@
                     value=<%= locals.old && old.discount? old.discount:null  %> />
 
                 <% if (locals.errors && errors.discount) { %>
-                <p class="alert"><%=errors.discount.msg%></p>
+                <p class="alert2"><%=errors.discount.msg%></p>
 
                 <% } %>
                 <div id="discountError" class="alert"></div>
