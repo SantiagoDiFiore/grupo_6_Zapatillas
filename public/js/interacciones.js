@@ -51,6 +51,7 @@ logo.addEventListener("click",function(){
     logo.style.animation = "jump 0.5s 1"
 })
 
+
 //modal Eliminar Producto
 let formEliminarProducto=document.querySelector("#eliminarProducto");
 let modalEliminar=document.querySelector("#modalEliminar")
@@ -64,9 +65,15 @@ if(formEliminarProducto){
     formEliminarProducto.addEventListener("submit",function(e){
         e.preventDefault()
         modalEliminar.style.display="block"
-        
+        confirmar.addEventListener("click",function(){
+            formEliminarProducto.submit()
+        })
+        denegar.addEventListener("click",function(){
+            modalEliminar.style.display="none"
+        })
         
     })
+    
 }
 
 
