@@ -25,9 +25,14 @@
                 <a href="/users/edit"><button type="button"
                         class="button-edit">EDITAR</button></a>
 
-                <form action="/users/delete/<%=user.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <form action="/users/delete/<%=user.id %>?_method=DELETE" method="POST" style="display: inline-flex" id="eliminarUsuario">
                     <button type="submit" class="button-edit button-delete">ELIMINAR</button>
                 </form>
+                <div class="modal-container" id="modalEliminarUsuario">
+                    <h3>¿Deseas eliminar tu cuenta?</h3>
+                    <button type="submit" class="button-edit botonEliminarUsuario">Si</button>
+                    <button type="button" class="button-edit botonDenegarUsuario">No</button>
+                </div>
 
             </div>
         </div>
@@ -35,6 +40,7 @@
     </main>
 
     <%- include("../partials/footer")%>
+    <script src="/js/interacciones.js"></script>
 </body>
 
 </html>
