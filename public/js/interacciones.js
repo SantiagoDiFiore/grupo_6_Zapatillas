@@ -51,10 +51,26 @@ logo.addEventListener("click",function(){
     logo.style.animation = "jump 0.5s 1"
 })
 
-//modal agregar al carrito
-let formAgregarAlCarrito=document.querySelector("#formComprar");
-let botonDeCompra=document.querySelector("#botonCompra");
-let botonSeguirComprando=document.querySelector(".botonSeguirComprando")
+//modal Eliminar Producto
+let formEliminarProducto=document.querySelector("#eliminarProducto");
+let modalEliminar=document.querySelector("#modalEliminar")
+let confirmar=document.querySelector(".botonEliminarProducto");
+let denegar=document.querySelector(".botonDenegar");
+
+
+
+
+if(formEliminarProducto){
+    formEliminarProducto.addEventListener("submit",function(e){
+        e.preventDefault()
+        modalEliminar.style.display="block"
+        
+        
+    })
+}
+
+
+
 
 
 
