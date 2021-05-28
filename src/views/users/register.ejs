@@ -8,7 +8,7 @@
 
     <main>
         <h2 class="title">Registrarme</h2>
-        <form action="/users/register"  id='formRegister' method="POST" enctype="multipart/form-data" class="form">
+        <form action="/users/register" id='formRegister' method="POST" enctype="multipart/form-data" class="form">
             <h3 class="title-register">Datos personales</h3>
             <div class="control-formulario1">
                 <label for="firstName">Nombre completo:</label>
@@ -50,7 +50,7 @@
                 <label for="gender" class="negrita">Genero</label>
                 <br>
                 <% genders.forEach(gender => { %>
-                <input type="radio"  name="gender" id="gender" value="<%= gender.id %>"
+                <input type="radio" name="gender" id="gender" value="<%= gender.id %>"
                     <%= locals.old && old.gender== gender.id  ? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
@@ -92,7 +92,7 @@
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del usuario:</label>
-                <input type="file" name="image" id="imageUser">
+                <input type="file" name="image" id="image">
 
                 <% if (locals.errors && errors.image) { %>
                 <p class="alert"><%=errors.image.msg%></p>
@@ -114,6 +114,11 @@
             </div>
             <br />
         </form>
+
+        <div class="modal-container" id="suscripcion">
+            <h3>¡Debes aceptar los terminos y condiciones!</h3>
+            <button type="button" class="button-edit" id="cerrarSuscripcion">Cerrar</button>
+        </div>
 
         <div class="newsletter">
 

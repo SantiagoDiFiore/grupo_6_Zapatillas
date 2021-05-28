@@ -479,16 +479,20 @@ margin-top: 10%;
     color:tomato;
     margin-top: 5px;
     font-weight: bold;
-
 }
 .alert2{
-    color:tomato;
-    font-family: roboto;
+    color:red;
+    font-family: "Roboto";
     font-weight: bold;
 }
 .is-invalid{
-    
+    box-shadow:1px 1px 2px 2px rgb(255 0 0);
+}
+.is-invalid-front{
     box-shadow:1px 1px 2px 2px rgb(235 99 71);
+}
+.bold{
+    font-weight: bold;
 }
 .imagen-perfil{
     width: 50%;
