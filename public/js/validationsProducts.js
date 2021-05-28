@@ -2,7 +2,7 @@ window.onload = function(){
     let form = document.querySelector("#formProducts")
     let button = document.querySelector('#submitButton')
 
-    //Capturar los inputs de texto del productAdd y validar en tiempo real los mismos
+    //Capturar los inputs de texto del productAdd
 
     //name
     let name = document.querySelector("#name")
@@ -20,59 +20,14 @@ window.onload = function(){
     let discount = document.querySelector('#discount');
     let discountError = document.querySelector('#discountError');
 
-    form.name.focus();
-
-    name.addEventListener('blur',function(e){
-        if(name.value.length < 5 ){
-            name.classList.add('is-invalid');   
-            nameError.innerText = "Debes ingresar un nombre con un minimo de 5 caracteres"
-        } else {
-            name.classList.remove('is-invalid');
-            nameError.innerText = ""
-            form.description.focus();
-        }
-    })
-
-    description.addEventListener('blur',function(e){
-        if(description.value.length < 20 ){
-            description.classList.add('is-invalid');   
-            descriptionError.innerText = "Debes ingresar una descripcion con un minimo de 20 caracteres"
-        } else {
-            description.classList.remove('is-invalid');
-            descriptionError.innerText = ""
-            form.price.focus();
-        }
-    })
-
-    price.addEventListener('blur',function(e){
-        if(price.value <= 0 ){
-            price.classList.add('is-invalid');   
-            priceError.innerText = "Debes ingresar un precio valido para el producto"
-        } else {
-            price.classList.remove('is-invalid');
-            priceError.innerText = ""
-            form.discount.focus();
-        }
-    })
-
-    discount.addEventListener('blur',function(e){
-        if(discount.value < 0 ){
-            discount.classList.add('is-invalid');   
-            discountError.innerText = "Debes ingresar un descuento para el producto"
-        } else {
-            discount.classList.remove('is-invalid');
-            discountError.innerText = ""
-        }
-    })
-
-    //capturar los campos que sean selects,radios,etc... y devolver las validaciones una vez que se intente submitir el formulario
-
+    //capturar los campos que sean selects,radios,etc... 
+    
     //image
-    let image = document.querySelector('#image');
+    let image = document.getElementById("image")
     let imageError = document.querySelector('#imageError');
 
     //genre
-    let genre = document.querySelector('#genre');
+    let genre = document.getElementsByName('genre');
     let genreError = document.querySelector('#genreError');
 
     //brand
@@ -91,68 +46,168 @@ window.onload = function(){
     let categories = document.querySelector('#category');
     let categoriesError = document.querySelector('#categoryError');
 
+    name.addEventListener('blur',function(e){
+        if(name.value == "" ){
+            name.classList.add('is-invalid-front');   
+            nameError.innerText = "Tienes que ingresar un nombre para el producto"
+        }else if(name.value.length < 5){
+            name.classList.add('is-invalid-front');   
+            nameError.innerText = "Debes usar 5 caracteres o más"
+        } else {
+            name.classList.remove('is-invalid-front');
+            nameError.innerText = ""
+        }
+    })
+
+    description.addEventListener('blur',function(e){
+        if(description.value == "" ){
+            description.classList.add('is-invalid-front');   
+            descriptionError.innerText = "Tienes que ingresar una descripcion para el producto"
+        }else if(description.value.length < 20){
+            description.classList.add('is-invalid-front');   
+            descriptionError.innerText = "Debes usar 20 caracteres o más"
+        } else {
+            description.classList.remove('is-invalid-front');
+            descriptionError.innerText = ""
+        }
+    })
+
+    image.addEventListener("change", validateFile)
+    function validateFile(){
+        const acceptedExtensions =  ['jpg','jpeg','png','gif'];
+                
+        const { name:fileName } = this.files[0];
+        
+        const fileExtension = fileName.split(".").pop();
+    
+        if(!acceptedExtensions.includes(fileExtension)){
+            image.classList.add('is-invalid-front');   
+            imageError.innerText = "Las extensiones aceptadas son "+ acceptedExtensions.join(", ");
+        
+            this.value = null;
+    }}
+
+    brand.addEventListener('blur',function(e){
+        if(brand.value == 1 ){
+            brand.classList.add('is-invalid-front');   
+            brandError.innerText = "Tienes que seleccionar una marca"
+        } else {
+            brand.classList.remove('is-invalid-front');
+            brandError.innerText = ""
+        }
+    })
+
+    color.addEventListener('blur',function(e){
+        if(color.value == 1 ){
+            color.classList.add('is-invalid-front');   
+            colorError.innerText = "Tienes que seleccionar un color"
+        } else {
+            color.classList.remove('is-invalid-front');
+            colorError.innerText = ""
+        }
+    })
+
+    categories.addEventListener('blur',function(e){
+        if(categories.value == 1 ){
+            categories.classList.add('is-invalid-front');   
+            categoriesError.innerText = "Tienes que seleccionar una categoría"
+        } else {
+            categories.classList.remove('is-invalid-front');
+            categoriesError.innerText = ""
+        }
+    })
+
+    price.addEventListener('blur',function(e){
+        if(price.value == "" ){
+            price.classList.add('is-invalid-front');   
+            priceError.innerText = "Debes ingresar un precio para el producto" 
+        }else if(price.value <= 0){
+            price.classList.add('is-invalid-front');   
+            priceError.innerText = "Debes ingresar un precio valido para el producto"
+        }else {
+            price.classList.remove('is-invalid-front');
+            priceError.innerText = ""
+        }
+    })
+
+    discount.addEventListener('blur',function(e){
+        if(discount.value == "" ){
+            discount.classList.add('is-invalid-front');   
+            discountError.innerText = "Debes ingresar un descuento para el producto"
+        }else if(discount.value < 0){
+            discount.classList.add('is-invalid-front');   
+            discountError.innerText = "Debes ingresar un descuento valido para el producto"
+        }else{
+            discount.classList.remove('is-invalid-front');
+            discountError.innerText = ""
+        }
+    })
+
     button.addEventListener(('click'),function(event){
         event.preventDefault()
         let errores = {}
 
         //name
-        if(name.value.length < 5){
-            errores.name = "Debes completar un nombre con un minimo de 5 caracteres"
+        if(name.value == ""){
+            errores.name = "Tienes que ingresar un nombre para el producto"
+            name.classList.add('is-invalid-front');  
+        }else if(name.value.length <5){  
+            errores.name = "Debes usar 5 caracteres o más"
         };
 
         //description
-        if(description.value.length < 20){
-            errores.description = "Debes completar una descripcion con un minimo de 20 caracteres"
-        };
-
-        //price
-        if(price.value.length <= 0){
-            errores.price = "Debes completar un precio valido para el producto"
-        } ;
-        
-        //discount
-        if(discount.value.length < 0){
-            errores.discount = "Debes ingresar un descuento para el producto"
+        if(description.value == ""){
+            errores.description = "Tienes que ingresar una descripcion para el producto"
+            description.classList.add('is-invalid-front');  
+        }else if(description.value.length < 20){   
+            errores.description = "Debes usar 20 caracteres o más"
         };
 
         //image
-        let filePath = image.value;
-        let acceptedExtensions=[".jpg", ".png" , ".gif"];
-        let fileExtension = filePath.split('.').pop();
+        const filePath = image.value;
         if(filePath == ''){
-            errores.image = "Debes ingresar una imagen para el producto"
-        } else {
-            if(!acceptedExtensions.includes(fileExtension)){
-                errores.image = "Las extensiones aceptadas son "+ acceptedExtensions.join(",");
-              }
+            errores.image = "Tienes que subir una imagen"
+            image.classList.add('is-invalid-front');  
         };
 
         //genre
-        if(genre.value == 1){
-            errores.genre = "Debes seleccionar un genero"
-        };
+        if (!(genre[0].checked || genre[1].checked  || genre[2].checked)) {
+            errores.genre = "Debes seleccionar un genero";
+        }
 
         //brand
         if(brand.value == 1){
-            errores.brand = "Debes seleccionar una marca"
-        };
-
-        //size
-        if(size.value == "0"){
-            errores.size = "Debes seleccionar minimo un talle"
+            errores.brand = "Tienes que seleccionar una marca"
+            brand.classList.add('is-invalid-front');  
         };
 
         //color
         if(color.value == 1){
-            errores.color = "Debes seleccionar un color"
+            errores.color = "Tienes que seleccionar un color"
+            color.classList.add('is-invalid-front');  
         };
 
         //categories
         if(categories.value == 1){
-            errores.categories = "Debes seleccionar una categoria"
+            errores.categories = "Tienes que seleccionar una categoría"
+            categories.classList.add('is-invalid-front');  
         };
 
-        console.log(image.value)
+        //price
+        if(price.value == ""){
+            price.classList.add('is-invalid-front'); 
+            errores.price = "Debes ingresar un precio para el producto"
+        }else if(price.value <= 0){
+            errores.price = "Debes ingresar un precio valido para el producto"
+        };
+        
+        //discount
+        if(discount.value == ""){
+            discount.classList.add('is-invalid-front');   
+            errores.discount = "Debes ingresar un descuento para el producto"
+        }else if(discount.value < 0){
+            errores.discount = "Debes ingresar un descuento valido para el producto"
+        };
 
         //chequea los errores
         if(Object.keys(errores).length >= 1){
