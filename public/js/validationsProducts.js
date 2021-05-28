@@ -142,7 +142,6 @@ window.onload = function(){
             discountError.innerText = ""
         }
     })
-    console.log(name.value)
     
     button.addEventListener(('click'),function(event){
         event.preventDefault()
