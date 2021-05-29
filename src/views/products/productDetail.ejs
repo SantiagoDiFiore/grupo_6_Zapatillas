@@ -92,7 +92,7 @@
         <form action="/products/<%=producto.id %>?_method=DELETE" method="POST" id="eliminarProducto" style="display: inline-flex">
             <button type="submit" class="button-edit button-delete">ELIMINAR</button>
         </form>
-        <div class="modal-container" id="modalEliminarUsuario">
+        <div class="modal-container" id="modalEliminar">
             <h3>¿Eliminar producto?</h3>
             <button type="submit" class="button-edit botonEliminarProducto">Si</button>
             <button type="button" class="button-edit botonDenegar">No</button>
@@ -178,7 +178,7 @@
         
     </main>
     <%- include("../partials/footer")%>
-    <script src="/js/interacciones.js"></script>
+    
 </body>
 
 </html>
