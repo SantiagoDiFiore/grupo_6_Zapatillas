@@ -45,6 +45,7 @@
 -17/5: Reunion para aclarar dudas sobre el js para front, y empezamos a planificar las validacions back para la creación de productos.
 -18/5: Comenzamos con las validacions del backend para la creación y edición de productos.
 -23/5: Hicimos una reunion para finalizar con las validaciones del backend, y comenzamos con las validaciones para el frontend.
--25/5: Reunion para finalizar las validaciones del front, y pulir algunos detalles, para cerrar con el sprint.
+-25/5: Reunion para avanzar con las validaciones del front, y pulir algunos detalles.
+-27/5: Reunion para finalizar las validaciones del front y para cerrar con el sprint.
 
 

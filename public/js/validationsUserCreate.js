@@ -35,7 +35,7 @@ window.onload = function(){
     let image = document.getElementById("image")
     let imageError = document.querySelector('#imageUserError');
 
-    //gender
+    //terms
     let terms = document.getElementsByName('terms');
     
     
@@ -109,7 +109,7 @@ window.onload = function(){
         if(checkPassword.value == "" ){
             checkPassword.classList.add('is-invalid-front');   
             checkPasswordError.innerText = "Tienes que repetir tu contraseña"
-        }else if(password.value.length < 8){
+        }else if(checkPassword.value.length < 8){
             checkPassword.classList.add('is-invalid-front');   
             checkPasswordError.innerText = "Debes usar 8 caracteres o más"
         }else if(!checkPassword.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){

@@ -492,6 +492,9 @@ margin-top: 10%;
 .is-invalid-front{
     box-shadow:1px 1px 2px 2px rgb(235 99 71);
 }
+.is-valid-front{
+    box-shadow:1px 1px 2px 2px rgb(9 148 65);
+}
 .bold{
     font-weight: bold;
 }
