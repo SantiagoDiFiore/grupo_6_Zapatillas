@@ -55,12 +55,11 @@ window.addEventListener("load",function(){
     })
     
     //logo 
-    let logo=document.querySelector("#mainLogo")
+    // let logo=document.querySelector("#mainLogo")
     
-    logo.addEventListener("click",function(){
-        logo.style.animation = "jump 0.5s 1"
-    })
-    
+    // logo.addEventListener("click",function(){
+    //     logo.style.animation = "jump 0.5s 1"
+    // })
     
     //modal Eliminar Producto
     let formEliminarProducto=document.querySelector("#eliminarProducto");
@@ -102,52 +101,52 @@ window.addEventListener("load",function(){
         })
         }
 
-//Desplegables footer
-let footerArticle1=document.querySelector("#footerArticle1")
-let footerArticle2=document.querySelector("#footerArticle2")
-let footerArticle3=document.querySelector("#footerArticle3")
-let upArrow1=document.querySelector(".upArrow1")
-let upArrow2=document.querySelector(".upArrow2")
-let upArrow3=document.querySelector(".upArrow3")
-let downArrow1=document.querySelector(".downArrow1")
-let downArrow2=document.querySelector(".downArrow2")
-let downArrow3=document.querySelector(".downArrow3")
+    //Desplegables footer
+    let footerArticle1 = document.querySelector("#footerArticle1")
+    let footerArticle2 = document.querySelector("#footerArticle2")
+    let footerArticle3 = document.querySelector("#footerArticle3")
+    let upArrow1 = document.querySelector(".upArrow1")
+    let upArrow2 = document.querySelector(".upArrow2")
+    let upArrow3 = document.querySelector(".upArrow3")
+    let downArrow1 = document.querySelector(".downArrow1")
+    let downArrow2 = document.querySelector(".downArrow2")
+    let downArrow3 = document.querySelector(".downArrow3")
 
-upArrow1.addEventListener("click",function(){
-    footerArticle1.style.display="block"
-    footerArticle1.style.marginTop=0
-    downArrow1.style.display="inline-block"
-    upArrow1.style.display="none"  
-})
-downArrow1.addEventListener("click",function(){
-    footerArticle1.style.display="none"
-    downArrow1.style.display="none"
-    upArrow1.style.display="inline-block"  
-})
+    upArrow1.addEventListener("click",function(){
+        footerArticle1.style.display="block"
+        footerArticle1.style.marginTop=0
+        downArrow1.style.display="inline-block"
+        upArrow1.style.display="none"  
+    })
+    downArrow1.addEventListener("click",function(){
+        footerArticle1.style.display="none"
+        downArrow1.style.display="none"
+        upArrow1.style.display="inline-block"  
+    })
 
-upArrow2.addEventListener("click",function(){
-    footerArticle2.style.display="block"
-    footerArticle2.style.marginTop=0
-    downArrow2.style.display="inline-block"
-    upArrow2.style.display="none"  
-})
-downArrow2.addEventListener("click",function(){
-    footerArticle2.style.display="none"
-    downArrow2.style.display="none"
-    upArrow2.style.display="inline-block"  
-})
+    upArrow2.addEventListener("click",function(){
+        footerArticle2.style.display="block"
+        footerArticle2.style.marginTop=0
+        downArrow2.style.display="inline-block"
+        upArrow2.style.display="none"  
+    })
+    downArrow2.addEventListener("click",function(){
+        footerArticle2.style.display="none"
+        downArrow2.style.display="none"
+        upArrow2.style.display="inline-block"  
+    })
 
-upArrow3.addEventListener("click",function(){
-    footerArticle3.style.display="block"
-    footerArticle3.style.marginTop=0
-    downArrow3.style.display="inline-block"
-    upArrow3.style.display="none"  
-})
-downArrow3.addEventListener("click",function(){
-    footerArticle3.style.display="none"
-    downArrow3.style.display="none"
-    upArrow3.style.display="inline-block"  
-})
+    upArrow3.addEventListener("click",function(){
+        footerArticle3.style.display="block"
+        footerArticle3.style.marginTop=0
+        downArrow3.style.display="inline-block"
+        upArrow3.style.display="none"  
+    })
+    downArrow3.addEventListener("click",function(){
+        footerArticle3.style.display="none"
+        downArrow3.style.display="none"
+        upArrow3.style.display="inline-block"  
+    })
 
 
 })
