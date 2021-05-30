@@ -1052,7 +1052,7 @@ footer{
     color: white; 
 }
 .footer-article{
-    display: block;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
@@ -1101,7 +1101,15 @@ div.italic {
     margin-right:20px;
     padding-bottom: 10px;
 }
-
+.downArrow1{
+    display:none
+}
+.downArrow2{
+    display:none
+}
+.downArrow3{
+    display:none
+}
 
 /*MEDIAS QUERYS */
 
