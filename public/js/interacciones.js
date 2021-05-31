@@ -55,12 +55,11 @@ window.addEventListener("load",function(){
     })
     
     //logo 
-    let logo=document.querySelector("#mainLogo")
+    // let logo=document.querySelector("#mainLogo")
     
-    logo.addEventListener("click",function(){
-        logo.style.animation = "jump 0.5s 1"
-    })
-    
+    // logo.addEventListener("click",function(){
+    //     logo.style.animation = "jump 0.5s 1"
+    // })
     
     //modal Eliminar Producto
     let formEliminarProducto=document.querySelector("#eliminarProducto");
