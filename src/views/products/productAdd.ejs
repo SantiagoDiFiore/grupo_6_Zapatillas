@@ -79,44 +79,16 @@
             <div>
                 <label for="size" class="negrita">Talles:</label>
                 <br>
-                <% if (locals.old && old.size) { %>
-                <input type="checkbox" name="size" id="size" value="37"
-                    <%= locals.old && old.size.includes("37")  ? "checked":null %> />37
-                <input type="checkbox" name="size" id="size" value="38"
-                    <%= locals.old && old.size.includes("38")  ? "checked":null %> />38
-                <input type="checkbox" name="size" id="size" value="39"
-                    <%= locals.old && old.size.includes("39")  ? "checked":null %> />39
-                <input type="checkbox" name="size" id="size" value="40"
-                    <%= locals.old && old.size.includes("40")  ? "checked":null %> />40
-                <input type="checkbox" name="size" id="size" value="41"
-                    <%= locals.old && old.size.includes("41")  ? "checked":null %> />41
-                <input type="checkbox" name="size" id="size" value="42"
-                    <%= locals.old && old.size.includes("42")  ? "checked":null %> />42
-                <input type="checkbox" name="size" id="size" value="43"
-                    <%= locals.old && old.size.includes("43")  ? "checked":null %> />43
-                <input type="checkbox" name="size" id="size" value="44"
-                    <%= locals.old && old.size.includes("44") ? "checked":null %> />44
-                <input type="checkbox" name="size" id="size" value="45"
-                    <%= locals.old && old.size.includes("45") ? "checked":null %> />45
-                <input type="checkbox" name="size" id="size" value="46"
-                    <%= locals.old && old.size.includes("46")  ? "checked":null %> />46
-                <% }else{  %>
-                <input type="checkbox" name="size" id="size" value="0" class="none" />
-                <input type="checkbox" name="size" id="size" value="37" />37
-                <input type="checkbox" name="size" id="size" value="38" />38
-                <input type="checkbox" name="size" id="size" value="39" />39
-                <input type="checkbox" name="size" id="size" value="40" />40
-                <input type="checkbox" name="size" id="size" value="41" />41
-                <input type="checkbox" name="size" id="size" value="42" />42
-                <input type="checkbox" name="size" id="size" value="43" />43
-                <input type="checkbox" name="size" id="size" value="44" />44
-                <input type="checkbox" name="size" id="size" value="45" />45
-                <input type="checkbox" name="size" id="size" value="46" />46
-
-                <% if (locals.errors && errors.size) { %>
-                <p class="alert"><%=errors.size.msg%></p>
-                <% } %>
-                <%  } %>
+                <input type="checkbox" name="size[]" id="size" value="37"  <%= locals.old && old.size.includes("37")  ? "checked":null %>/>37
+                <input type="checkbox" name="size[]" id="size" value="38" <%= locals.old && old.size.includes("38")  ? "checked":null %>/>38
+                <input type="checkbox" name="size[]" id="size" value="39" <%= locals.old && old.size.includes("39")  ? "checked":null %>/>39
+                <input type="checkbox" name="size[]" id="size" value="40" <%= locals.old && old.size.includes("40")  ? "checked":null %>/>40
+                <input type="checkbox" name="size[]" id="size" value="41" <%= locals.old && old.size.includes("41")  ? "checked":null %>/>41
+                <input type="checkbox" name="size[]" id="size" value="42" <%= locals.old && old.size.includes("42")  ? "checked":null %>/>42
+                <input type="checkbox" name="size[]" id="size" value="43" <%= locals.old && old.size.includes("43")  ? "checked":null %>/>43
+                <input type="checkbox" name="size[]" id="size" value="44" <%= locals.old && old.size.includes("44")  ? "checked":null %>/>44
+                <input type="checkbox" name="size[]" id="size" value="45" <%= locals.old && old.size.includes("45")  ? "checked":null %>/>45
+                <input type="checkbox" name="size[]" id="size" value="46" <%= locals.old && old.size.includes("46")  ? "checked":null %>/>46
                 <div id="sizeError" class="alert"></div>
             </div>
 

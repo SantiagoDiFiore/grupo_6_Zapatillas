@@ -80,7 +80,9 @@ window.onload = function(){
     let brandError = document.querySelector('#brandError');
 
     //size
-    let size = document.querySelector('#size');
+    let size = document.getElementsByName('size[]');
+    let i;
+    let checked;
     let sizeError = document.querySelector('#sizeError');
 
     //color 
@@ -137,10 +139,14 @@ window.onload = function(){
             errores.brand = "Debes seleccionar una marca"
         };
 
-        //size
-        if(size.value == "0"){
-            errores.size = "Debes seleccionar minimo un talle"
-        };
+      
+        // for (i = 0; i < size.length; i += 1) {
+        //     checked = (size[i].checked||checked===true)?true:false;
+        //   }
+
+        // if (checked == false) {
+        //     errores.size = "Debes seleccionar un color"
+        // }
 
         //color
         if(color.value == 1){
@@ -151,8 +157,6 @@ window.onload = function(){
         if(categories.value == 1){
             errores.categories = "Debes seleccionar una categoria"
         };
-
-        console.log(image.value)
 
         //chequea los errores
         if(Object.keys(errores).length >= 1){
@@ -170,7 +174,7 @@ window.onload = function(){
 
             brandError.innerText = (errores.brand) ? errores.brand : ' ';
 
-            sizeError.innerText = (errores.size) ? errores.size : ' ';
+            // sizeError.innerText = (errores.size) ? errores.size : ' ';
 
             colorError.innerText = (errores.color) ? errores.color : ' ';
             
