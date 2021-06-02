@@ -2,8 +2,6 @@ window.onload = function(){
     let form = document.querySelector("#formRegister");
     let button = document.querySelector('#submitButton');
 
-    form.firstName.focus();
-
     //first name
     let firstName = document.querySelector("#firstName")
     let firstNameError = document.querySelector("#firstNameError");
@@ -15,148 +13,223 @@ window.onload = function(){
     //email
     let email = document.querySelector("#email");
     let emailError = document.querySelector("#emailError");
+    let mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
     //password
     let password = document.querySelector("#password");
     let passwordError = document.querySelector("#passwordError");
-
+    
     //checkPassword
     let checkPassword = document.querySelector("#checkPassword");
     let checkPasswordError = document.querySelector("#checkPasswordError");
-
-
-
-    firstName.addEventListener('blur',function(e){
-        if(firstName.value.length < 2 ){
-            firstName.classList.add('is-invalid');   
-            firstNameError.innerText = "Debes ingresar un nombre con un minimo de 2 caracteres"
-        } else {
-            firstName.classList.remove('is-invalid');
-            firstName.innerText = ""
-            form.lastName.focus();
-        }
-    })
-
-    lastName.addEventListener('blur',function(e){
-        if(lastName.value.length < 2 ){
-            lastName.classList.add('is-invalid');   
-            lastNameError.innerText = "Debes ingresar un apellido con un minimo de 2 caracteres"
-        } else {
-            lastName.classList.remove('is-invalid');
-            lastNameError.innerText = ""
-        }
-    })
-
-    email.addEventListener('blur',function(e){
-        if(email.value.length < 1 ){
-            email.classList.add('is-invalid');   
-            emailError.innerText = "Debes ingresar un correo electronico"
-        } else {
-            email.classList.remove('is-invalid');
-            emailError.innerText = ""
-            
-        }
-    })
-
-    password.addEventListener('blur',function(e){
-        if(password.value.length < 1 ){
-            password.classList.add('is-invalid');   
-            passwordError.innerText = "Debes ingresar una contraseña"
-        } else {
-            password.classList.remove('is-invalid');
-            passwordError.innerText = ""
-            
-        }
-    })
-
-    checkPassword.addEventListener('blur',function(e){
-        if(checkPassword.value.length < 1 ){
-            checkPassword.classList.add('is-invalid');   
-            checkPasswordError.innerText = "Debes confirmar la contraseña"
-        } else {
-            checkPassword.classList.remove('is-invalid');
-            checkPasswordError.innerText = ""
-            
-        }
-    })
-
+    
     //birthday
     let birthday = document.querySelector('#birthday');
     let birthdayError = document.querySelector('#birthdayError');
 
     //gender
-    let gender = document.querySelector('#gender');
+    let gender = document.getElementsByName('gender');
     let genderError = document.querySelector('#genderError');
-
+ 
     //image
-    let image = document.querySelector('#imageUser');
+    let image = document.getElementById("image")
     let imageError = document.querySelector('#imageUserError');
 
+    //terms
+    let terms = document.getElementsByName('terms');
+    
+    
+    firstName.addEventListener('blur',function(e){
+        if(firstName.value == "" ){
+            firstName.classList.add('is-invalid-front');   
+            firstName.classList.remove('is-valid-front');   
+            firstNameError.innerText = "Tienes que escribir un nombre"
+        }else if(firstName.value.length < 2){
+            firstName.classList.add('is-invalid-front');  
+            firstName.classList.remove('is-valid-front');   
+            firstNameError.innerText = "Debes usar 2 caracteres o más"
+        } else {
+            firstName.classList.remove('is-invalid-front');
+            firstName.classList.add('is-valid-front');  
+            firstNameError.innerText = ""
+            form.lastName.focus();
+        }
+    })
+
+    lastName.addEventListener('blur',function(e){
+        if(lastName.value == "" ){
+            lastName.classList.add('is-invalid-front');   
+            lastName.classList.remove('is-valid-front');  
+            lastNameError.innerText = "Tienes que escribir un apellido"
+        }else if(lastName.value.length < 2){
+            lastName.classList.add('is-invalid-front');   
+            lastName.classList.remove('is-valid-front');  
+            lastNameError.innerText = "Debes usar 2 caracteres o más"
+        } else {
+            lastName.classList.remove('is-invalid-front');
+            lastName.classList.add('is-valid-front');  
+            lastNameError.innerText = ""
+        }
+    })
+
+    birthday.addEventListener('blur',function(e){
+        if(birthday.value == "" ){
+            birthday.classList.add('is-invalid-front');   
+            birthday.classList.remove('is-valid-front');  
+            birthdayError.innerText = "Tienes que completar tú fecha de nacimiento"
+        } else {
+            birthday.classList.remove('is-invalid-front');
+            birthday.classList.add('is-valid-front');  
+            birthdayError.innerText = ""
+        }
+    })
+
+    email.addEventListener('blur',function(e){
+        if(email.value == "" ){
+            email.classList.add('is-invalid-front');
+            email.classList.remove('is-valid-front');     
+            emailError.innerText = "Tienes que ingresar un correo electronico"
+        } else if(!email.value.match(mailFormat)){
+            emailError.innerText = "Debes ingresar un formato de correo valido"
+            email.classList.add('is-invalid-front');  
+            email.classList.remove('is-valid-front');  
+        } else {
+            email.classList.remove('is-invalid-front');
+            email.classList.add('is-valid-front');  
+            emailError.innerText = ""
+        }
+    })
+    
+    password.addEventListener('blur',function(e){
+        if(password.value == "" ){
+            password.classList.add('is-invalid-front');
+            password.classList.remove('is-valid-front');     
+            passwordError.innerText = "Tienes que escribir una contraseña"
+        }else if(password.value.length < 8){
+            password.classList.add('is-invalid-front');   
+            password.classList.remove('is-valid-front');   
+            passwordError.innerText = "Debes usar 8 caracteres o más"
+        }else if(!password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){
+            password.classList.add('is-invalid-front');   
+            password.classList.remove('is-valid-front');   
+            passwordError.innerText = "Debe incluir letras mayúsculas, minúsculas, al menos un número y un carácter especial"
+        } else {
+            password.classList.remove('is-invalid-front');
+            password.classList.add('is-valid-front');   
+            passwordError.innerText = ""
+        }
+    })
+
+    checkPassword.addEventListener('blur',function(e){
+        if(checkPassword.value == "" ){
+            checkPassword.classList.add('is-invalid-front'); 
+            checkPassword.classList.remove('is-valid-front');    
+            checkPasswordError.innerText = "Tienes que repetir tu contraseña"
+        }else if(checkPassword.value.length < 8){
+            checkPassword.classList.add('is-invalid-front');   
+            checkPassword.classList.remove('is-valid-front');  
+            checkPasswordError.innerText = "Debes usar 8 caracteres o más"
+        }else if(!checkPassword.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){
+            checkPassword.classList.add('is-invalid-front');  
+            checkPassword.classList.remove('is-valid-front');   
+            checkPasswordError.innerText = "Debe incluir letras mayúsculas, minúsculas, al menos un número y un carácter especial"
+        } else {
+            checkPassword.classList.remove('is-invalid-front');
+            checkPassword.classList.add('is-valid-front');  
+            checkPasswordError.innerText = ""
+        }
+    })
+
+    image.addEventListener("change", validateFile)
+        function validateFile(){
+            const acceptedExtensions =  ['jpg','jpeg','png','gif'];
+                    
+            const { name:fileName } = this.files[0];
+            
+            const fileExtension = fileName.split(".").pop();
+        
+            if(!acceptedExtensions.includes(fileExtension)){
+                image.classList.add('is-invalid-front');
+                image.classList.remove('is-valid-front');     
+                imageError.innerText = "Las extensiones aceptadas son "+ acceptedExtensions.join(", ");
+            
+                this.value = null;
+            }else{
+                image.classList.remove('is-invalid-front');
+                image.classList.add('is-valid-front'); 
+                imageError.innerText = ""
+      }
+    }
 
     button.addEventListener(('click'),function(event){
         event.preventDefault()
         let errores = {};
 
         //first name
-        if(firstName.value.length < 1){
-            errores.firstName = "Debes ingresar un nombre con un minimo de 2 caracteres"
+        if(firstName.value == ""){
+            errores.firstName = "Tienes que escribir un nombre"
+            firstName.classList.add('is-invalid-front');  
+        }else if(firstName.value.length < 2){  
+            errores.firstName = "Debes usar 2 caracteres o más"
         };
 
         //last name
-        if(lastName.value.length < 1){
-            errores.lastName = "Debes ingresar un apellido con un minimo de 2 caracteres"
+        if(lastName.value == ""){
+            errores.lastName = "Tienes que escribir un apellido"
+            lastName.classList.add('is-invalid-front');  
+        }else if(lastName.value.length < 2){  
+            errores.lastName = "Debes usar 2 caracteres o más"
         };
-
+        
+        //birthday
+        if(birthday.value == ""){
+            errores.birthday = "Tienes que completar tú fecha de nacimiento"
+            birthday.classList.add('is-invalid-front');  
+        };
+        
+        //gender
+        if (!(gender[0].checked || gender[1].checked  || gender[2].checked)) {
+            errores.gender = "Debes seleccionar un genero";
+        }
+        
         //email
-        let mailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-        if(email.value.length < 1){
-            errores.email = "Debes ingresar un correo electronico"
-        } else {
-            if(!email.value.match(mailFormat)){
-                errores.email = "Debes ingresar un formato de correo valido"
-            }
+        if(email.value == ""){
+            errores.email = "Tienes que ingresar un correo electronico"
+            email.classList.add('is-invalid-front');  
+        } else if(!email.value.match(mailFormat)){
+            errores.email = "Debes ingresar un formato de correo valido"
         };
 
         //password
-        if(password.value.length == 0){
-            errores.password = "Debes ingresar una contraseña"
+        if(password.value == ""){
+            errores.password = "Tienes que escribir una contraseña"
+            password.classList.add('is-invalid-front');  
+        }else if(password.value.length < 8){
+            errores.password = "Debes usar 8 caracteres o más"
+        }else if(!password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){
+            errores.password = "Debe incluir letras mayúsculas, minúsculas, al menos un número y un carácter especial"
         };
 
         //check password
-        if(checkPassword.value.length == 0){
-           errores.checkPassword = "Debes confirmar contraseña"
-        };
-
-        //birthday
-        if(birthday.value.length < 1){
-            errores.birthday = "Debes indicar una fecha de nacimiento"
-        };
-
-        //gender
-        if(gender.value == 1){
-            errores.gender = "Debes seleccionar un genero"
+        if(checkPassword.value == ""){
+            errores.checkPassword = "Tienes que repetir tu contraseña"
+            checkPassword.classList.add('is-invalid-front');  
+        }else if(checkPassword.value.length < 8){
+            errores.checkPassword = "Debes usar 8 caracteres o más"
+        }else if(!checkPassword.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){
+            errores.checkPassword = "Debe incluir letras mayúsculas, minúsculas, al menos un número y un carácter especial"
         };
 
         //image
-        let filePath = image.value;
-        let acceptedExtensions=[".jpg", ".png" , ".gif"];
-        let fileExtension = filePath.split('.').pop();
+        const filePath = image.value;
         if(filePath == ''){
-            errores.image = "Debes ingresar una imagen para el producto"
-        } else {
-            if(!acceptedExtensions.includes(fileExtension)){
-                errores.image = "Las extensiones aceptadas son "+ acceptedExtensions.join(",");
-              }
+            errores.image = "Tienes que subir una imagen"
+            image.classList.add('is-invalid-front');  
         };
-
-
-        console.log(password.value)
-        console.log(checkPassword.value)
-        console.log(birthday.value)
-        console.log(gender.value)
-        console.log(image.value)
         
-
+        let modalSuscripcion = document.querySelector("#suscripcion");
+        let botonCerrarSuscripcion = document.querySelector("#cerrarSuscripcion");
+        
         if(Object.keys(errores).length >= 1){
             firstNameError.innerText = (errores.firstName) ? errores.firstName : ' ';
 
@@ -175,12 +248,16 @@ window.onload = function(){
             imageError.innerText = (errores.image) ? errores.image : ' ';
             
         } else {
+            if (!(terms[0].checked)) {
+                    modalSuscripcion.style.display = "block";
+                botonCerrarSuscripcion.addEventListener("click",function(){
+                    modalSuscripcion.style.display = "none"
+                });
+            }
+
             form.submit();
         }
 
-
     })
-
-
 
 }

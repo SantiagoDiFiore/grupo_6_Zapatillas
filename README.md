@@ -58,3 +58,8 @@ Incluimos (en la carpeta Design), tipografía, paleta de colores y boceto del lo
 -Si el carrito no tiene productos, incorporamos una vista que indica que el carrito está vacío.
 -Al agregar un producto al carrito, desde el detail, este se almacena en una tabla de la base de datos, llamada product_cart. Luego se muestran los productos en la vista, y al finalizar la compra, se muestra una vista con el resumen.
 -Actualizamos el metodo search, para que busque en la base de datos. Si no se encuentra el producto, la vista va a indicar que no hubo resultados.
+
+### **- Sprint N°7/Notas**
+-Agregamos las validaciones backend que nos faltaban(creación de productos y edición).
+-Implementamos validaciones frontend de todos los formularios del sitio(onBlur y onSubmit).
+-Aplicamos interacciones con Js en las vistas (carrusel, burguer menu, boton de suscripcion al newsletter y botones de eliminacion de productos y usuarios).

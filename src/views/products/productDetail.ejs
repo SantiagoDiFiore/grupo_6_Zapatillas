@@ -89,9 +89,15 @@
         <a href="/products/<%= producto.id %>/edit"><button type="button" class="button-edit">EDITAR</button></a>
 
 
-        <form action="/products/<%=producto.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+        <form action="/products/<%=producto.id %>?_method=DELETE" method="POST" id="eliminarProducto"
+            style="display: inline-flex">
             <button type="submit" class="button-edit button-delete">ELIMINAR</button>
         </form>
+        <div class="modal-container" id="modalEliminar">
+            <h3>¿Eliminar producto?</h3>
+            <button type="submit" class="button-edit botonEliminarProducto">Si</button>
+            <button type="button" class="button-edit botonDenegar">No</button>
+        </div>
 
         <div class="enviosgratis">
             <p class="envios1"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAÍS!</p>
@@ -152,15 +158,31 @@
 
         </section>
 
-        <div class="newsletter">
-            <form action="/" method="POST" class="newsletter">
-                <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
-                <div class="control-formulario">
-                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
-                    <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
-                </div>
-            </form>
+        <div class="modal-container" id="suscripcion">
+            <h3>Debes seleccionar un talle</h3>
+            <button type="button" class="button-edit" id="cerrarSuscripcion">Cerrar</button>
         </div>
+
+        <div class="newsletter">
+
+            <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
+            <div class="control-formulario">
+                <input type="email" name="email" id="emailSuscripcion" placeholder="Ingresá tu email" class="control"
+                    required>
+                <button type="button" class="boton-suscribe" id="botonSuscribe">SUSCRIBIRME</button>
+            </div>
+
+            <div class="modal-container" id="suscripcion">
+                <h3>¡Gracias por suscribirte a nuestro Newsletter <span id="suscriptor"></span>!</h3>
+                <button type="button" class="button-edit" id="cerrarSuscripcion">Cerrar</button>
+            </div>
+            <div class="modal-container" id="ingresaEmail">
+                <h3>Ingresá un Email para Suscribirte</h3>
+                <button type="button" class="button-edit" id="cerrarEmail">Cerrar</button>
+            </div>
+        </div>
+
+
     </main>
     <%- include("../partials/footer")%>
     <script src="/js/productCart.js"></script>

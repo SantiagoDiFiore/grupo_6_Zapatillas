@@ -1,39 +1,36 @@
 window.onload = function(){
     let buyButton = document.querySelector("#buyButton")
-    let formProduct = document.querySelector("#formProduct")
-    let tallesdisponibles = document.querySelectorAll(".boton-talle")
-    let talles = ["37","38","39","40","41","42","43","44","45","46"]
+    let tallesDisponibles = document.querySelectorAll(".boton-talle")
+    let size = document.getElementsByName('size');
+    let modalSuscripcion = document.querySelector("#suscripcion");
+    let botonCerrarSuscripcion = document.querySelector("#cerrarSuscripcion");
 
-    console.log(tallesdisponibles);
-    buyButton.addEventListener("click",function(event){
-       if(tallesdisponibles.includes(talles)){
+    buyButton.addEventListener("click",function(e){
+        let talles = Array.from(size)//convierte nodelist a array
 
-       }else{
-           alert("Hola")
-       }
+        //el metodo every evalua que todos los objetos del array cumplan con con condicion
+        let tallesVacios = talles.every(unTalle=>!unTalle.checked)//codicion:no debe estar checked
+        //si no hay talles chequeados
+        if(tallesVacios===true){
+                modalSuscripcion.style.display = "block";
+                botonCerrarSuscripcion.addEventListener("click",function(){
+                modalSuscripcion.style.display = "none"
+                })
+            }else{
+                form.submit()
+                }
     })
+
 }
 
-    // buyButton.addEventListener("click",function(event){
-   
-       
-    //     const errors = {};
-
-    //     if(tallesdisponibles.value == ""){
-    //         alert("Tienes que seleccionar un talle")
-    //     }
-    //     if(Object.keys(errors).length >= 1){
-           
-    //          alert("Tienes que seleccionar un talle")
-    //          console.log(errors);
-    //     } else{
-    //         console.log(errors);
-    //     }
-    // })
-
-    // tallesdisponibles.forEach(talle=>{
-    //     if(talle.value == "" ){
-    //     }else{
-    //         alert("Hola")
-    //     }
-    // })
+/*buyButton.addEventListener("click",function(event){
+        function timeOut(){
+         for( let i = 0; i < size.length; i++ ) {
+            if (!(size[i].checked)) {
+                modalSuscripcion.style.display = "block";
+                botonCerrarSuscripcion.addEventListener("click",function(){
+                modalSuscripcion.style.display = "none"
+            });
+        }}}
+        setTimeout(timeOut, 100)
+    })*/

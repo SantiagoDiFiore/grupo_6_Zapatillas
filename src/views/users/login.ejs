@@ -16,7 +16,7 @@
                         value=<%= locals.old && old.email? old.email:null  %>>
                     <div class="alert erName"></div>
                     <% if (locals.errors && errors.email) { %>
-                    <p class="alert"><%=errors.email.msg%></p>
+                    <p class="alert2"><%=errors.email.msg%></p>
 
                     <% } %>
                 </div>
@@ -50,18 +50,29 @@
         </div>
 
         <div class="newsletter">
-            <form action="/" method="POST" class="newsletter">
-                <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
-                <div class="control-formulario">
-                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
-                    <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
-                </div>
-            </form>
+
+            <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
+            <div class="control-formulario">
+                <input type="email" name="email" id="emailSuscripcion" placeholder="Ingresá tu email" class="control"
+                    required>
+                <button type="button" class="boton-suscribe" id="botonSuscribe">SUSCRIBIRME</button>
+            </div>
+
+            <div class="modal-container" id="suscripcion">
+                <h3>¡Gracias por suscribirte a nuestro Newsletter <span id="suscriptor"></span>!</h3>
+                <button type="button" class="button-edit" id="cerrarSuscripcion">Cerrar</button>
+            </div>
+            <div class="modal-container" id="ingresaEmail">
+                <h3>Ingresá un Email para Suscribirte</h3>
+                <button type="button" class="button-edit" id="cerrarEmail">Cerrar</button>
+            </div>
         </div>
     </main>
 
     <%- include("../partials/footer")%>
+
     <script src="/js/validationsLogin.js"></script>
+
 </body>
 
 </html>

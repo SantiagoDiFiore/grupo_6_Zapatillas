@@ -161,7 +161,9 @@ const productsController = {
                 product_id:req.body.product_id,
                 amount: req.body.amount        
                })
-              res.redirect("/products/productCart")
+               
+             
+               res.redirect("/products/productCart")
         }else{
             res.render("./products/productCartGuest" ,{titulo:"Carrito"})
         }

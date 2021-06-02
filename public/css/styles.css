@@ -110,7 +110,7 @@ body{
 .linknav{
     color: black;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
 }
 .banner{
     display: flex;
@@ -212,7 +212,6 @@ article.recomendado-article{
 div.images.padding{
     background-color: #ffffff;
     border: solid 25px rgb(235,235,235);
-    border-radius: 60px;
 }
 .icons-marca{
     align-self: center;
@@ -406,6 +405,82 @@ margin-top: 10%;
     
 }
 
+/* Carousel */
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: auto;
+  }
+  .mySlides {
+    display: none;
+  }
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
 
 /*MAIN LOGIN */
 .title{
@@ -479,16 +554,24 @@ margin-top: 10%;
     color:tomato;
     margin-top: 5px;
     font-weight: bold;
-
 }
 .alert2{
-    color:tomato;
-    font-family: roboto;
+    color:red;
+    margin-top: 5px;
     font-weight: bold;
+    font-family: "Roboto";
 }
 .is-invalid{
-    
+    box-shadow:1px 1px 2px 2px rgb(255 0 0);
+}
+.is-invalid-front{
     box-shadow:1px 1px 2px 2px rgb(235 99 71);
+}
+.is-valid-front{
+    box-shadow:1px 1px 2px 2px rgb(9 148 65);
+}
+.bold{
+    font-weight: bold;
 }
 .imagen-perfil{
     width: 50%;
@@ -1047,7 +1130,7 @@ footer{
     color: white; 
 }
 .footer-article{
-    display: block;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
@@ -1096,7 +1179,15 @@ div.italic {
     margin-right:20px;
     padding-bottom: 10px;
 }
-
+.downArrow1{
+    display:none
+}
+.downArrow2{
+    display:none
+}
+.downArrow3{
+    display:none
+}
 
 /*MEDIAS QUERYS */
 
@@ -1232,7 +1323,8 @@ div.italic {
     .main-footer{
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .footer{
         border: none;
@@ -1241,6 +1333,25 @@ div.italic {
     .linkfooter{
         justify-content: center;
     }
+    .footer-article{
+        display: block;
+        order:2;
+        width: 30%;
+        margin: 0px;
+    }
+    .footer-title{
+        width: 30%;
+        order:1;
+        padding:15px 15px 0px 15px;
+        color:white
+    }
+    .upArrow1{
+        display:none
+    }
+    .downArrow1{
+        display:none
+    }
+    
     .center1{
         border-top: solid 1px #ffffff;
         padding-top: 7px ;
@@ -1253,7 +1364,7 @@ div.italic {
         font-size:14px;
         align-self: center;
     }
-    .previous, .next{
+    .previous, .post{
         display: none;
     }
     .none2{
@@ -1548,7 +1659,7 @@ div.italic {
     }
     .linknav{
         transition: color 500ms;
-        font-size: 14px;
+        font-size: 16px;
     }
     .imagen-perfil{
         width: 35%;
@@ -1559,9 +1670,10 @@ div.italic {
     .logo-bn{
         width: 20%;
     }
+    .header-bottom-bar{
+        padding: 12px;
+    }
 }
-
-
 
 /*Keyframes*/
 @keyframes aperturaMenu{

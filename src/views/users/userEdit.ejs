@@ -17,9 +17,9 @@
                     value=<%= locals.old && old.firstName? old.firstName: user.firstName %>>
 
                 <% if (locals.errors && errors.firstName) { %>
-                <p class="alert"><%=errors.firstName.msg%></p>
-
+                <p class="alert2"><%=errors.firstName.msg%></p>
                 <% } %>
+                <div id="firstNameError" class="alert"></div>
             </div>
 
             <div class="control-formulario1">
@@ -28,9 +28,9 @@
                     value=<%= locals.old && old.lastName? old.lastName: user.lastName %>>
 
                 <% if (locals.errors && errors.lastName) { %>
-                <p class="alert"><%=errors.lastName.msg%></p>
-
+                <p class="alert2"><%=errors.lastName.msg%></p>
                 <% } %>
+                <div id="lastNameError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <label for="fecha-nacimiento">Fecha de nacimiento:</label>
@@ -41,6 +41,7 @@
                 <% if (locals.errors && errors.birthday) { %>
                 <p class="alert2"><%=errors.birthday.msg%></p>
                 <% } %>
+                <div id="birthdayError" class="alert"></div>
             </div>
 
             <div>
@@ -51,8 +52,9 @@
                     <%= user.gender_id==gender.id? "checked":null  %>><%= gender.name %>
                 <% }) %>
                 <% if (locals.errors && errors.gender) { %>
-                <p class="alert"><%=errors.gender.msg%></p>
+                <p class="alert2"><%=errors.gender.msg%></p>
                 <% } %>
+                <div id="genderError" class="alert"></div>
             </div>
 
 
@@ -64,33 +66,37 @@
                     value=<%= locals.old && old.email? old.email:user.email  %>>
 
                 <% if (locals.errors && errors.email) { %>
-                <p class="alert"><%=errors.email.msg%></p>
+                <p class="alert2"><%=errors.email.msg%></p>
                 <% } %>
+                <div id="emailError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <label for="password">Contraseña:</label>
                 <input type="password" name="password" id="password" placeholder="Contraseña..."
                     class="control2 <%= locals.errors && errors.password? "is-invalid":null  %>" />
                 <% if (locals.errors && errors.password) { %>
-                <p class="alert"><%=errors.password.msg%></p>
+                <p class="alert2"><%=errors.password.msg%></p>
                 <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
+                <div id="passwordError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <input type="password" name="checkPassword" id="checkPassword" placeholder="Confirmar contraseña..."
                     class="control2 <%= locals.errors && errors.checkPassword? "is-invalid":null  %>" />
                 <% if (locals.errors && errors.checkPassword) { %>
-                <p class="alert"><%=errors.checkPassword.msg%></p>
+                <p class="alert2"><%=errors.checkPassword.msg%></p>
                 <% } %>
                 <!--<i class="fas fa-eye-slash"></i> -->
+                <div id="checkPasswordError" class="alert"></div>
             </div>
             <div class="control-formulario1">
                 <label for="image">Imagen del usuario:</label>
-                <input type="file" name="image">
+                <input type="file" name="image" id="image">
 
                 <% if (locals.errors && errors.image) { %>
-                <p class="alert"><%=errors.image.msg%></p>
+                <p class="alert2"><%=errors.image.msg%></p>
                 <% } %>
+                <div id="imageUserError" class="alert"></div>
             </div>
             <hr>
             <!-- <div class="bottom-register">
@@ -110,20 +116,26 @@
 
         <div class="newsletter">
 
-            <form action="/" method="POST" class="newsletter">
+            <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
+            <div class="control-formulario">
+                <input type="email" name="email" id="emailSuscripcion" placeholder="Ingresá tu email" class="control"
+                    required>
+                <button type="button" class="boton-suscribe" id="botonSuscribe">SUSCRIBIRME</button>
+            </div>
 
-                <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
-                <div class="control-formulario">
-                    <input type="email" name="email" id="email" placeholder="Ingresá tu email" class="control">
-                    <button type="submit" class="boton-suscribe">SUSCRIBIRME</button>
-                </div>
-            </form>
-
+            <div class="modal-container" id="suscripcion">
+                <h3>¡Gracias por suscribirte a nuestro Newsletter <span id="suscriptor"></span>!</h3>
+                <button type="button" class="button-edit" id="cerrarSuscripcion">Cerrar</button>
+            </div>
+            <div class="modal-container" id="ingresaEmail">
+                <h3>Ingresá un Email para Suscribirte</h3>
+                <button type="button" class="button-edit" id="cerrarEmail">Cerrar</button>
+            </div>
         </div>
     </main>
 
     <%- include("../partials/footer")%>
-
+    <script src="/js/validationsUserCreate.js"></script>
 
 </body>
 

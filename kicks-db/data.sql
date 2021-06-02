@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 02-05-2021 a las 16:16:12
+-- Tiempo de generación: 28-05-2021 a las 17:00:10
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -42,7 +42,8 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (1, 'Elegí'),
 (2, 'En oferta'),
 (3, 'Últimos agregados'),
-(4, 'Destacados');
+(4, 'Destacados'),
+(5, 'Otros');
 
 --
 -- Volcado de datos para la tabla `colors`
@@ -86,17 +87,17 @@ INSERT INTO `genresproducts` (`id`, `name`) VALUES
 INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image`, `size`, `genre_id`, `brands_id`, `colors_id`, `category_id`) VALUES
 (1, 'Nike Air Force 1 Low White', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 11499, 0, 'image-1619540092754.png', '[\"37\",\"38\",\"39\",\"40\",\"41\",\"42\",\"43\"]', 1, 3, 2, 4),
 (2, 'Vans Old Skool Black White', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 12000, 5, 'image-1619540109977.png', '[\"37\",\"38\",\"39\",\"40\",\"41\",\"42\"]', 2, 6, 3, 2),
-(3, 'Puma Future Rider NES', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 22000, 15, 'image-1619540120867.png', '[\"39\",\"40\",\"41\",\"42\",\"43\"]', 3, 4, 11, 1),
-(4, 'adidas Ozweego Orange (Youth)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 22000, 0, 'image-1619540126919.png', '[\"37\",\"38\",\"39\",\"40\"]', 3, 2, 7, 1),
-(5, 'Nike Air Max 90 Infrared (2020)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 21700, 30, 'image-1619540190661.png', '[\"38\",\"39\",\"40\",\"42\",\"44\"]', 2, 3, 2, 1),
+(3, 'Puma Future Rider NES', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 22000, 15, 'image-1619540120867.png', '[\"39\",\"40\",\"41\",\"42\",\"43\"]', 3, 4, 11, 5),
+(4, 'adidas Ozweego Orange (Youth)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 22000, 0, 'image-1619540126919.png', '[\"37\",\"38\",\"39\",\"40\"]', 3, 2, 7, 5),
+(5, 'Nike Air Max 90 Infrared (2020)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 21700, 30, 'image-1619540190661.png', '[\"38\",\"39\",\"40\",\"42\",\"44\"]', 2, 3, 2, 5),
 (6, 'New Balance 1300 Levi\'s', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 21700, 20, 'image-1619540241232.png', '[\"37\",\"38\",\"39\",\"40\"]', 2, 5, 8, 2),
 (7, 'adidas Nite Jogger 3M Navy', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 14000, 0, 'image-1619540100565.png', '[\"37\",\"38\",\"39\",\"40\"]', 1, 2, 5, 4),
-(8, 'Puma RS-X Toys Bonnie Blue (W)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 20000, 0, 'image-1619540201574.png', '[\"37\",\"38\",\"39\"]', 2, 4, 9, 1),
-(9, 'Nike Air Max 95 OG Neon (2020)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 26000, 0, 'image-1619540233034.png', '[\"37\",\"38\",\"39\",\"40\",\"41\",\"42\",\"43\"]', 1, 3, 11, 1),
-(10, 'New Balance 327 Casablanca Green Logo', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 21700, 20, 'image-1619540210391.png', '[\"37\",\"38\",\"39\",\"40\"]', 2, 5, 2, 1),
+(8, 'Puma RS-X Toys Bonnie Blue (W)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 20000, 0, 'image-1619540201574.png', '[\"37\",\"38\",\"39\"]', 2, 4, 9, 5),
+(9, 'Nike Air Max 95 OG Neon (2020)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 26000, 0, 'image-1619540233034.png', '[\"37\",\"38\",\"39\",\"40\",\"41\",\"42\",\"43\"]', 1, 3, 11, 5),
+(10, 'New Balance 327 Casablanca Green Logo', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 21700, 20, 'image-1619540210391.png', '[\"37\",\"38\",\"39\",\"40\"]', 2, 5, 2, 5),
 (11, 'New Balance 997 Sport Chinese New Year', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 15500, 10, 'image-1619540247296.png', '[\"37\",\"39\",\"40\",\"42\",\"43\"]', 3, 5, 11, 3),
-(12, 'Adidas Deerupt Solar Red Bluebird', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 11200, 5, 'image-1619540254662.png', '[\"37\",\"38\",\"39\",\"40\"]', 3, 2, 4, 1),
-(13, 'Converse Chuck Taylor All-Star 70s', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 15000, 5, 'image-1619540223798.png', '[\"37\",\"38\",\"39\"]', 3, 7, 2, 1),
+(12, 'Adidas Deerupt Solar Red Bluebird', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 11200, 5, 'image-1619540254662.png', '[\"37\",\"38\",\"39\",\"40\"]', 3, 2, 4, 5),
+(13, 'Converse Chuck Taylor All-Star 70s', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 15000, 5, 'image-1619540223798.png', '[\"37\",\"38\",\"39\"]', 3, 7, 2, 5),
 (14, 'adidas Yeezy Boost 350 V2 Zebra', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 25000, 10, 'image-1619540157515.png', '[\"38\",\"39\",\"40\",\"41\",\"42\"]', 1, 2, 2, 2),
 (15, 'Vans Old Skool Checkerboard Racing Red', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 10500, 0, 'image-1619540173015.png', '[\"37\",\"38\",\"39\",\"40\"]', 3, 6, 4, 4),
 (16, 'Nike Air Max 720 Black Mesh', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 19000, 10, 'image-1619540217115.png', '[\"37\",\"39\",\"41\",\"43\",\"45\"]', 1, 3, 3, 2),
@@ -104,7 +105,7 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `discount`, `image
 (18, 'New Balance 992 Grey', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 24000, 0, 'image-1619544973432.png', '[\"37\",\"38\",\"39\",\"40\",\"41\",\"42\"]', 1, 5, 11, 4),
 (19, 'Vans Sk8-Hi True White Leather', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 12000, 0, 'image-1619546267043.png', '[\"37\",\"38\",\"39\",\"40\"]', 2, 6, 2, 3),
 (20, 'Converse Chuck Taylor All-Star 70s', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 15000, 5, 'image-1619546327683.png', '[\"37\",\"38\",\"39\",\"40\"]', 2, 7, 3, 3),
-(21, 'Jordan 4 Retro Off-White Sail (W)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 35000, 0, 'image-1619546442206.png', '[\"37\",\"38\",\"39\",\"40\",\"41\"]', 2, 3, 10, 1);
+(21, 'Jordan 4 Retro Off-White Sail (W)', 'Forro interno textil. Suela de caucho. Exterior de malla con revestimientos de gamuza y TPU. Amortiguación Adiprene+ en el antepié. Mediasuela de EVA liviana. Amortiguación Adiprene en el talón', 35000, 0, 'image-1619546442206.png', '[\"37\",\"38\",\"39\",\"40\",\"41\"]', 2, 3, 10, 5);
 
 --
 -- Volcado de datos para la tabla `product_cart`
