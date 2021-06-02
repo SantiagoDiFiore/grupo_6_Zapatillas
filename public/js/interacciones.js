@@ -29,8 +29,7 @@ window.addEventListener("load",function(){
             ingresaEmail.style.display = "none"
         });
     }
-    
-    
+
     //menu desplegable mobile
     let burguerMenu = document.querySelector("#contenedor-menu");
     let menuOpen = document.querySelector("#menu-open");
@@ -53,14 +52,7 @@ window.addEventListener("load",function(){
     linkDesplegable.addEventListener("click",function(){
         menuOpen.style.display = "none"
     })
-    
-    //logo 
-    // let logo=document.querySelector("#mainLogo")
-    
-    // logo.addEventListener("click",function(){
-    //     logo.style.animation = "jump 0.5s 1"
-    // })
-    
+      
     //modal Eliminar Producto
     let formEliminarProducto=document.querySelector("#eliminarProducto");
     let modalEliminar=document.querySelector("#modalEliminar")
@@ -148,7 +140,61 @@ window.addEventListener("load",function(){
         upArrow3.style.display="inline-block"  
     })
 
-
+  
+    const prevBtn = document.querySelector(".prev");
+    const nextBtn = document.querySelector(".next");
+    const dot1 = document.querySelector("#dot1");
+    const dot2 = document.querySelector("#dot2");
+    const dot3 = document.querySelector("#dot3");
+    
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+        
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    prevBtn.addEventListener("click",function(){
+        plusSlides(-1)
+    })
+    
+    nextBtn.addEventListener("click",function(){
+        plusSlides(1)
+    })
+    
+    dot1.addEventListener("click",function(){
+        currentSlide(1)
+    })
+    
+    dot2.addEventListener("click",function(){
+        currentSlide(2)
+    })
+    
+    dot3.addEventListener("click",function(){
+        currentSlide(3)
+    })
+        
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        
+    } 
+        
 })
 
 
