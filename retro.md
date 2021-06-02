@@ -76,6 +76,19 @@
 ## Dejar de hacer
 > Reuniones tan largas (deberiamos realizar reuniones más cortas para priorizar las tareas)
 
+### **RETROSPECTIVA SPRINT 7** 
+
+## Comenzar a hacer
+> Un listado de tareas pendientes o dudas generales, para resolverlas antes de la finalización del curso.
+## Hacer más
+> Evaluar mejor la dificultad de las tareas.
+## Continuar haciendo
+> Consultar fuentes externas para resolver problemas.
+## Hacer menos
+> No aplica para este sprint.
+## Dejar de hacer
+> Dejar de perder los primeros dias del sprint, para no llegar tan justos al cierre.
+
 
 
 
