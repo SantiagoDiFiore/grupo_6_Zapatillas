@@ -10,28 +10,23 @@ window.onload = function(){
 
     email.addEventListener('blur',function(e){
         if(email.value == "" ){
-            email.classList.add('is-invalid-front');
-            email.classList.remove('is-valid-front');     
+            email.classList.add('is-invalid-front'); 
             erName.innerText = "Tienes que ingresar un correo electronico"
         } else if(!email.value.match(mailFormat)){
             erName.innerText = "Debes ingresar un formato de correo valido"
-            email.classList.add('is-invalid-front');
-            email.classList.remove('is-valid-front');     
+            email.classList.add('is-invalid-front');   
         } else {
             email.classList.remove('is-invalid-front');
-            email.classList.add('is-valid-front');  
             erName.innerText = ""
         }
     })
 
     password.addEventListener('blur',function(e){
         if(password.value == "" ){
-            password.classList.add('is-invalid-front');   
-            password.classList.remove('is-valid-front');     
+            password.classList.add('is-invalid-front');     
             erPassword.innerText = "Tienes que ingresar una contraseña"
         } else {
             password.classList.remove('is-invalid-front');
-            password.classList.add('is-valid-front');     
             erPassword.innerText = ""
         }
     })

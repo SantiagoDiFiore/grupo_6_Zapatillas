@@ -48,4 +48,8 @@
 -25/5: Reunion para avanzar con las validaciones del front, y pulir algunos detalles.
 -27/5: Reunion para finalizar las validaciones del front y para cerrar con el sprint.
 
+### **- Weekly (Sprint N°8) -**
+-2/6: Realizamos una reunion para realizar la retro, organizar el tablero y dividirnos las tareas.
+
+
 
