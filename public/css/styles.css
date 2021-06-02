@@ -1323,7 +1323,8 @@ div.italic {
     .main-footer{
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     .footer{
         border: none;
@@ -1332,6 +1333,25 @@ div.italic {
     .linkfooter{
         justify-content: center;
     }
+    .footer-article{
+        display: block;
+        order:2;
+        width: 30%;
+        margin: 0px;
+    }
+    .footer-title{
+        width: 30%;
+        order:1;
+        padding:15px 15px 0px 15px;
+        color:white
+    }
+    .upArrow1{
+        display:none
+    }
+    .downArrow1{
+        display:none
+    }
+    
     .center1{
         border-top: solid 1px #ffffff;
         padding-top: 7px ;
@@ -1651,8 +1671,6 @@ div.italic {
         width: 20%;
     }
 }
-
-
 
 /*Keyframes*/
 @keyframes aperturaMenu{

@@ -94,53 +94,97 @@ window.addEventListener("load",function(){
         }
 
     //Desplegables footer
-    let footerArticle1 = document.querySelector("#footerArticle1")
-    let footerArticle2 = document.querySelector("#footerArticle2")
-    let footerArticle3 = document.querySelector("#footerArticle3")
-    let upArrow1 = document.querySelector(".upArrow1")
-    let upArrow2 = document.querySelector(".upArrow2")
-    let upArrow3 = document.querySelector(".upArrow3")
-    let downArrow1 = document.querySelector(".downArrow1")
-    let downArrow2 = document.querySelector(".downArrow2")
-    let downArrow3 = document.querySelector(".downArrow3")
+    let footerArticle1=document.querySelector("#footerArticle1")
+    let footerArticle2=document.querySelector("#footerArticle2")
+    let footerArticle3=document.querySelector("#footerArticle3")
+    let upArrow1=document.querySelector(".upArrow1")
+    let upArrow2=document.querySelector(".upArrow2")
+    let upArrow3=document.querySelector(".upArrow3")
+    let downArrow1=document.querySelector(".downArrow1")
+    let downArrow2=document.querySelector(".downArrow2")
+    let downArrow3=document.querySelector(".downArrow3")
+    let title1=document.querySelector(".ft1")
+    let title2=document.querySelector(".ft2")
+    let title3=document.querySelector(".ft3")
 
-    upArrow1.addEventListener("click",function(){
-        footerArticle1.style.display="block"
-        footerArticle1.style.marginTop=0
-        downArrow1.style.display="inline-block"
-        upArrow1.style.display="none"  
-    })
-    downArrow1.addEventListener("click",function(){
-        footerArticle1.style.display="none"
+
+upArrow1.addEventListener("click",function(){
+    footerArticle1.style.display="block"
+    footerArticle1.style.marginTop=0
+    downArrow1.style.display="inline-block"
+    upArrow1.style.display="none"
+    title1.style.color="grey"  
+})
+downArrow1.addEventListener("click",function(){
+    footerArticle1.style.display="none"
+    downArrow1.style.display="none"
+    upArrow1.style.display="inline-block"
+    title1.style.color="white"  
+})
+
+upArrow2.addEventListener("click",function(){
+    footerArticle2.style.display="block"
+    footerArticle2.style.marginTop=0
+    downArrow2.style.display="inline-block"
+    upArrow2.style.display="none" 
+    title2.style.color="grey" 
+})
+downArrow2.addEventListener("click",function(){
+    footerArticle2.style.display="none"
+    downArrow2.style.display="none"
+    upArrow2.style.display="inline-block"
+    title2.style.color="white"  
+})
+
+upArrow3.addEventListener("click",function(){
+    footerArticle3.style.display="block"
+    footerArticle3.style.marginTop=0
+    downArrow3.style.display="inline-block"
+    upArrow3.style.display="none"
+    title3.style.color="grey"  
+})
+downArrow3.addEventListener("click",function(){
+    footerArticle3.style.display="none"
+    downArrow3.style.display="none"
+    upArrow3.style.display="inline-block"
+    title3.style.color="white"  
+})
+
+const mq = window.matchMedia("(min-width:768px)");//evalua si existe la media query
+
+
+
+mq.addEventListener("change", () => {
+    //si la media query matchea con los parametros definidos previamente
+    if(mq.matches){
+        title1.style.color="white"
+        upArrow1.style.display="none"
         downArrow1.style.display="none"
-        upArrow1.style.display="inline-block"  
-    })
+        footerArticle1.style.display="block"
 
-    upArrow2.addEventListener("click",function(){
-        footerArticle2.style.display="block"
-        footerArticle2.style.marginTop=0
-        downArrow2.style.display="inline-block"
-        upArrow2.style.display="none"  
-    })
-    downArrow2.addEventListener("click",function(){
-        footerArticle2.style.display="none"
+        title2.style.color="white"
+        upArrow2.style.display="none"
         downArrow2.style.display="none"
-        upArrow2.style.display="inline-block"  
-    })
+        footerArticle2.style.display="block"
 
-    upArrow3.addEventListener("click",function(){
-        footerArticle3.style.display="block"
-        footerArticle3.style.marginTop=0
-        downArrow3.style.display="inline-block"
-        upArrow3.style.display="none"  
-    })
-    downArrow3.addEventListener("click",function(){
-        footerArticle3.style.display="none"
+        title3.style.color="white"
+        upArrow3.style.display="none"
         downArrow3.style.display="none"
-        upArrow3.style.display="inline-block"  
-    })
+        footerArticle3.style.display="block"
+    }else{
+        upArrow1.style.display="inline-block"
+        footerArticle1.style.display="none"
 
-  
+        upArrow2.style.display="inline-block"
+        footerArticle2.style.display="none"
+
+        upArrow3.style.display="inline-block"
+        footerArticle3.style.display="none"
+
+    }
+
+});
+
     const prevBtn = document.querySelector(".prev");
     const nextBtn = document.querySelector(".next");
     const dot1 = document.querySelector("#dot1");
