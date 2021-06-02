@@ -6,12 +6,37 @@
 <body>
     <%- include("./partials/header")%>
 
-    <section class="banner">
+    <!-- <section class="banner">
         <img src="/images/banner-nike.jpg" alt="Banner de ofertas">
-        <img src="/images/banner-adidas-classic.jpg" alt="Banner de ofertas" class="none">
+        <img src="/images/banner-converse.webp" alt="Banner de ofertas" class="none">
     </section>
     <div class="dots">
         <i class="fas fa-ellipsis-h center-dot"></i>
+    </div> -->
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="/images/banner-nike.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/banner-converse.webp" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="/images/banner-adidas-classic.jpg" style="width:100%">
+        </div>
+
+        <a class="prev">&#10094;</a>
+        <a class="next">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" id="dot1"></span>
+        <span class="dot" id="dot2"></span>
+        <span class="dot" id="dot3"></span>
     </div>
 
     <main>
@@ -57,11 +82,11 @@
                 <a href="/products/<%= products[i].id %> "><img src="/images/products/<%= products[i].image %>"
                         alt=<%= products[i].name %>></a>
 
-                    <% if (products[i].discount) { %>
-                    <span class="discountTag">
+                <% if (products[i].discount) { %>
+                <span class="discountTag">
                     <i class="fas fa-tags"></i>
-                    </span>
-                   <% } %>
+                </span>
+                <% } %>
 
                 <div class="contenedor-descripcion">
                     <div><%= products[i].name %></div>
@@ -69,7 +94,7 @@
                     <span class="small">$<%= toThousand(products[i].price) %></span> $<%= toThousand(finalPrice)  %>
                     <p class="descuento"><%- products[i].discount ? `<span>${products[i].discount}% OFF</span>` : '' %>
                     </p>
-                    
+
                     <% } else { %>
                     <div class="precio-carrito">$ <%= toThousand(products[i].price) %></div>
                     <% } %>
@@ -87,13 +112,19 @@
             </div>
             <div class="images padding">
                 <i class="fas fa-chevron-left previous icons-marca"></i>
-                <a href="/search?search=NIKE" class="marca_img"><img src="images/marca-nike.png" alt="Nike" class="marca_int"></a>
-                <a href="/search?search=ADIDAS" class="marca_img"><img src="images/marca-adidas.png" alt="Adidas" class="marca_int"></a>
-                <a href="/search?search=PUMA" class="marca_img"><img src="images/marca-puma.png" alt="Puma" class="marca_int"></a>
-                <a href="/search?search=CONVERSE" class="marca_img"><img src="images/marca-converse.png" alt="Converse" class="marca_int none1"></a>
-                <a href="/search?search=VANS" class="marca_img"><img src="images/marca-vans.png" alt="Vans" class="marca_int none2"></a>
-                <a href="/search?search=NEW BALANCE" class="marca_img"><img src="images/marca-newbalance.png" alt="Newbalance" class="marca_int none2"></a>
-                <i class="fas fa-chevron-right next icons-marca"></i>
+                <a href="/search?search=NIKE" class="marca_img"><img src="images/marca-nike.png" alt="Nike"
+                        class="marca_int"></a>
+                <a href="/search?search=ADIDAS" class="marca_img"><img src="images/marca-adidas.png" alt="Adidas"
+                        class="marca_int"></a>
+                <a href="/search?search=PUMA" class="marca_img"><img src="images/marca-puma.png" alt="Puma"
+                        class="marca_int"></a>
+                <a href="/search?search=CONVERSE" class="marca_img"><img src="images/marca-converse.png" alt="Converse"
+                        class="marca_int none"></a>
+                <a href="/search?search=VANS" class="marca_img"><img src="images/marca-vans.png" alt="Vans"
+                        class="marca_int none1"></a>
+                <a href="/search?search=NEW BALANCE" class="marca_img"><img src="images/marca-newbalance.png"
+                        alt="Newbalance" class="marca_int none2"></a>
+                <i class="fas fa-chevron-right post icons-marca"></i>
             </div>
 
         </section>
@@ -116,7 +147,8 @@
 
                 <h3 class="newsletter-title">SUSCRIBITE AL NEWSLETTER</h3>
                 <div class="control-formulario">
-                    <input type="email" name="email" id="emailSuscripcion" placeholder="Ingresá tu email" class="control" required>
+                    <input type="email" name="email" id="emailSuscripcion" placeholder="Ingresá tu email"
+                        class="control" required>
                     <button type="button" class="boton-suscribe" id="botonSuscribe">SUSCRIBIRME</button>
                 </div>
 
@@ -134,7 +166,7 @@
     </main>
 
     <%- include("./partials/footer")%>
-    
+
 </body>
 
 </html>
