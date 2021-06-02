@@ -42,15 +42,12 @@ window.onload = function(){
     firstName.addEventListener('blur',function(e){
         if(firstName.value == "" ){
             firstName.classList.add('is-invalid-front');   
-            firstName.classList.remove('is-valid-front');   
             firstNameError.innerText = "Tienes que escribir un nombre"
         }else if(firstName.value.length < 2){
             firstName.classList.add('is-invalid-front');  
-            firstName.classList.remove('is-valid-front');   
             firstNameError.innerText = "Debes usar 2 caracteres o más"
         } else {
             firstName.classList.remove('is-invalid-front');
-            firstName.classList.add('is-valid-front');  
             firstNameError.innerText = ""
             form.lastName.focus();
         }
@@ -59,15 +56,12 @@ window.onload = function(){
     lastName.addEventListener('blur',function(e){
         if(lastName.value == "" ){
             lastName.classList.add('is-invalid-front');   
-            lastName.classList.remove('is-valid-front');  
             lastNameError.innerText = "Tienes que escribir un apellido"
         }else if(lastName.value.length < 2){
             lastName.classList.add('is-invalid-front');   
-            lastName.classList.remove('is-valid-front');  
             lastNameError.innerText = "Debes usar 2 caracteres o más"
         } else {
             lastName.classList.remove('is-invalid-front');
-            lastName.classList.add('is-valid-front');  
             lastNameError.innerText = ""
         }
     })
@@ -75,67 +69,54 @@ window.onload = function(){
     birthday.addEventListener('blur',function(e){
         if(birthday.value == "" ){
             birthday.classList.add('is-invalid-front');   
-            birthday.classList.remove('is-valid-front');  
             birthdayError.innerText = "Tienes que completar tú fecha de nacimiento"
         } else {
             birthday.classList.remove('is-invalid-front');
-            birthday.classList.add('is-valid-front');  
             birthdayError.innerText = ""
         }
     })
 
     email.addEventListener('blur',function(e){
         if(email.value == "" ){
-            email.classList.add('is-invalid-front');
-            email.classList.remove('is-valid-front');     
+            email.classList.add('is-invalid-front');   
             emailError.innerText = "Tienes que ingresar un correo electronico"
         } else if(!email.value.match(mailFormat)){
             emailError.innerText = "Debes ingresar un formato de correo valido"
             email.classList.add('is-invalid-front');  
-            email.classList.remove('is-valid-front');  
         } else {
             email.classList.remove('is-invalid-front');
-            email.classList.add('is-valid-front');  
             emailError.innerText = ""
         }
     })
     
     password.addEventListener('blur',function(e){
         if(password.value == "" ){
-            password.classList.add('is-invalid-front');
-            password.classList.remove('is-valid-front');     
+            password.classList.add('is-invalid-front');  
             passwordError.innerText = "Tienes que escribir una contraseña"
         }else if(password.value.length < 8){
             password.classList.add('is-invalid-front');   
-            password.classList.remove('is-valid-front');   
             passwordError.innerText = "Debes usar 8 caracteres o más"
         }else if(!password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){
             password.classList.add('is-invalid-front');   
-            password.classList.remove('is-valid-front');   
             passwordError.innerText = "Debe incluir letras mayúsculas, minúsculas, al menos un número y un carácter especial"
         } else {
             password.classList.remove('is-invalid-front');
-            password.classList.add('is-valid-front');   
             passwordError.innerText = ""
         }
     })
 
     checkPassword.addEventListener('blur',function(e){
         if(checkPassword.value == "" ){
-            checkPassword.classList.add('is-invalid-front'); 
-            checkPassword.classList.remove('is-valid-front');    
+            checkPassword.classList.add('is-invalid-front');    
             checkPasswordError.innerText = "Tienes que repetir tu contraseña"
         }else if(checkPassword.value.length < 8){
             checkPassword.classList.add('is-invalid-front');   
-            checkPassword.classList.remove('is-valid-front');  
             checkPasswordError.innerText = "Debes usar 8 caracteres o más"
         }else if(!checkPassword.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i")){
-            checkPassword.classList.add('is-invalid-front');  
-            checkPassword.classList.remove('is-valid-front');   
+            checkPassword.classList.add('is-invalid-front');    
             checkPasswordError.innerText = "Debe incluir letras mayúsculas, minúsculas, al menos un número y un carácter especial"
         } else {
             checkPassword.classList.remove('is-invalid-front');
-            checkPassword.classList.add('is-valid-front');  
             checkPasswordError.innerText = ""
         }
     })
@@ -150,13 +131,11 @@ window.onload = function(){
         
             if(!acceptedExtensions.includes(fileExtension)){
                 image.classList.add('is-invalid-front');
-                image.classList.remove('is-valid-front');     
                 imageError.innerText = "Las extensiones aceptadas son "+ acceptedExtensions.join(", ");
             
                 this.value = null;
             }else{
                 image.classList.remove('is-invalid-front');
-                image.classList.add('is-valid-front'); 
                 imageError.innerText = ""
       }
     }
