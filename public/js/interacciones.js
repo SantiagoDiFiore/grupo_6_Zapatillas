@@ -190,6 +190,7 @@ mq.addEventListener("change", () => {
     const dot1 = document.querySelector("#dot1");
     const dot2 = document.querySelector("#dot2");
     const dot3 = document.querySelector("#dot3");
+    const dot4 = document.querySelector("#dot4");
     
     var slideIndex = 1;
     showSlides(slideIndex);
@@ -220,6 +221,10 @@ mq.addEventListener("change", () => {
     
     dot3.addEventListener("click",function(){
         currentSlide(3)
+    })
+
+    dot4.addEventListener("click",function(){
+        currentSlide(4)
     })
         
     function showSlides(n) {

@@ -110,7 +110,7 @@ body{
 .linknav{
     color: black;
     text-decoration: none;
-    font-size: 12px;
+    font-size: 14px;
 }
 .banner{
     display: flex;
@@ -1659,7 +1659,7 @@ div.italic {
     }
     .linknav{
         transition: color 500ms;
-        font-size: 14px;
+        font-size: 16px;
     }
     .imagen-perfil{
         width: 35%;
@@ -1669,6 +1669,9 @@ div.italic {
     }
     .logo-bn{
         width: 20%;
+    }
+    .header-bottom-bar{
+        padding: 12px;
     }
 }
 
