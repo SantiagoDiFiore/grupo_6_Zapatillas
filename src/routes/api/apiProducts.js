@@ -3,9 +3,11 @@ const router = express.Router();
 const productsAPIController = require('../../controllers/api/productsAPIController');
 
 //Rutas
-//ruta a listado de productos API
+
+//Listado de productos API
 router.get('/', productsAPIController.list);
-//Detalle de una película API
+
+//Detalle de un producto API
 router.get('/:id', productsAPIController.detail);
 
 

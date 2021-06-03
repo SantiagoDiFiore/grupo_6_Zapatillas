@@ -8,10 +8,10 @@ const productsAPIController = {
         db.Product.findAll()
         .then(productos => {
             //filtrando las categorias de los productos
-            let enOferta=productos.filter(producto=>producto.category_id==2);
-            let ultimosAgregados=productos.filter(producto=>producto.category_id==3);
-            let destacados=productos.filter(producto=>producto.category_id==4);
-            let otros=productos.filter(producto=>producto.category_id==5);
+            let enOferta = productos.filter(producto => producto.category_id == 2);
+            let ultimosAgregados = productos.filter(producto => producto.category_id == 3);
+            let destacados = productos.filter(producto => producto.category_id == 4);
+            let otros = productos.filter(producto => producto.category_id == 5);
 
             //respuesta de la API
             let respuesta = {
@@ -19,14 +19,29 @@ const productsAPIController = {
                     status : 200,
                     count: productos.length,
                     url: 'api/products',
-                    countByCategory:{
+                    countByCategory: {
                         enOferta:enOferta.length,
                         ultimosAgregados:ultimosAgregados.length,
                         destacados:destacados.length,
                         otros:otros.length
                     }   
                 },
-                data: productos
+                data: productos.map(producto => {
+                    return { 
+                        id:producto.id,
+                        name:producto.name,
+                        description:producto.description,
+                        price:producto.price,
+                        discount:producto.discount,
+                        image:"/images/products/" + producto.image,
+                        size:producto.size,
+                        genre_id: producto.genre_id,
+                        brands_id: producto.brands_id,
+                        colors_id: producto.colors_id,
+                        category_id: producto.category_id,
+                        detail: '/api/products/' + producto.id
+                    }
+                })
             }
                 res.json(respuesta);
             })
@@ -41,13 +56,13 @@ const productsAPIController = {
                         status: 200,
                         url: '/api/products/'+id
                     },
-                    data:{
+                    data: {
                         id:producto.id,
                         name:producto.name,
                         description:producto.description,
                         price:producto.price,
                         discount:producto.discount,
-                        image:"/images/products/"+producto.image,
+                        image:"/images/products/" + producto.image,
                         size:producto.size,
                         genre_id: producto.genre_id,
                         brands_id: producto.brands_id,
@@ -60,7 +75,5 @@ const productsAPIController = {
     }
     
 }
-//image:"/images/products/"+producto.image 
-//id:producto.id,
-//name:producto.name
+
 module.exports = productsAPIController;

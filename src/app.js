@@ -48,8 +48,11 @@ const rutasMarcas= require("./routes/marcas");
 app.use("/marcas" , rutasMarcas);
 
 // ************ API Routes System require and use() ************
-const rutasApiProductos=require("./routes/api/apiProducts")
+const rutasApiProductos = require("./routes/api/apiProducts")
 app.use("/api/products", rutasApiProductos)
+
+const rutasApiUsuarios = require("./routes/api/apiUsers")
+app.use("/api/users", rutasApiUsuarios)
 
 // ************ DON'T TOUCH FROM HERE ************
 // ************ catch 404 and forward to error handler ************
