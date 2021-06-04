@@ -22,7 +22,12 @@
 
                 <div class="imagen-principal">
                     <img src=<%="/images/products/"+producto.image %> width="100%" alt=<%=producto.name%>
-                        class="main-product-image">
+                        class="main-product-image" id="mainProductImage">
+                </div>
+
+                <div class="container-zoom">
+                    <span class="close-zoom">X</span>
+                    <img src=<%="/images/products/"+producto.image %> alt=<%=producto.name%> class="image-zoom">
                 </div>
 
                 <div class="data-principal">

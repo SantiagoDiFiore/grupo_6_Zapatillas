@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-05-2021 a las 17:00:10
+-- Tiempo de generación: 04-06-2021 a las 19:34:46
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -123,11 +123,11 @@ INSERT INTO `product_cart` (`id`, `size`, `price`, `amount`, `name`, `user_id`, 
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `birthday`, `image`, `email`, `password`, `checkPassword`, `terms`, `offers`, `gender_id`) VALUES
-(1, 'Sebastian', 'Barciela', '2021-04-30', 'image-1619909626669.jpg', 'barcielasebastian@gmail.com', '$2a$10$nPjhvTNe9i2voJFc1MCK0OD99urneHGIN8YSPRXQfJuemgwp7a7IO', '$2a$10$eCv2NM8iYSP621GsornQ7eGV7IErYlpgVe5uURi51VqVMv7KVW1vm', 'terms', 'offers', 1),
-(2, 'Ramiro', 'Tanquias Cornejo', '2002-05-06', 'image-1619909594939.jpg', 'ramitanquias@hotmail.com', '$2a$10$Ffydw3OWn12PH9yAohZMiOiVbkwiWw3KdaSZxr6NnTYCsaw5h0K.a', '$2a$10$F4t6SdFPWkl9eTECpHS5JOA5uw.6fZcE/9VxepGseBLWfSpt4d9l.', 'terms', 'offers', 1),
-(3, 'Santiago', 'Di Fiore', '1998-06-11', 'image-1619909560075.jpg', 'santidifiore@gmail.com', '$2a$10$GO235cSCScBlRho2b8jV..j57ha9GDbMSbEDmkI4IZkyM9h9ji7f2', '$2a$10$hXvT4Sf67MFdXmrYjKLecOQ0ocRI/k8UFcG9/YB6ZGYV5oxMh5VfS', 'terms', 'offers', 1),
-(4, 'Prueba', 'Pruebas', '2021-04-26', 'image-1619909846601.png', 'prueba@gmail.com', '$2a$10$w/zf2FvlPVJH6vlHowbzxO.WqxnwEdZvSiJSQepW1edRWjhmco5si', '$2a$10$HmC6ByeyjRj.3mfQWpkOzumplV53Qtd/USF87ic7hJ2p84.hDuCcG', 'terms', NULL, 3);
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `birthday`, `image`, `email`, `password`, `checkPassword`, `terms`, `offers`, `isAdmin`, `gender_id`) VALUES
+(1, 'Sebastian', 'Barciela', '2021-04-30', 'image-1619909626669.jpg', 'barcielasebastian@gmail.com', '$2a$10$nPjhvTNe9i2voJFc1MCK0OD99urneHGIN8YSPRXQfJuemgwp7a7IO', '$2a$10$eCv2NM8iYSP621GsornQ7eGV7IErYlpgVe5uURi51VqVMv7KVW1vm', 'terms', 'offers', 1, 1),
+(2, 'Ramiro', 'Tanquias Cornejo', '2002-05-06', 'image-1619909594939.jpg', 'ramitanquias@hotmail.com', '$2a$10$Ffydw3OWn12PH9yAohZMiOiVbkwiWw3KdaSZxr6NnTYCsaw5h0K.a', '$2a$10$F4t6SdFPWkl9eTECpHS5JOA5uw.6fZcE/9VxepGseBLWfSpt4d9l.', 'terms', 'offers', 1, 1),
+(3, 'Santiago', 'Di Fiore', '1998-06-11', 'image-1619909560075.jpg', 'santidifiore@gmail.com', '$2a$10$GO235cSCScBlRho2b8jV..j57ha9GDbMSbEDmkI4IZkyM9h9ji7f2', '$2a$10$hXvT4Sf67MFdXmrYjKLecOQ0ocRI/k8UFcG9/YB6ZGYV5oxMh5VfS', 'terms', 'offers', 1, 1),
+(4, 'Prueba', 'Pruebas', '2021-04-26', 'image-1619909846601.png', 'prueba@gmail.com', '$2a$10$w/zf2FvlPVJH6vlHowbzxO.WqxnwEdZvSiJSQepW1edRWjhmco5si', '$2a$10$HmC6ByeyjRj.3mfQWpkOzumplV53Qtd/USF87ic7hJ2p84.hDuCcG', 'terms', NULL, 0, 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

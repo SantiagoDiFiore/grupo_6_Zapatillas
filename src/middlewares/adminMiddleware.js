@@ -1,4 +1,3 @@
-const db = require('../database/models');
 //middleware, si el usuario no esta logueado y no es admin, no puede crear productos.
 const adminMiddleware =  function(req , res , next){
     let userLogged = req.session.userLogged

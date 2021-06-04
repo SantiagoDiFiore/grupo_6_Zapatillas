@@ -81,11 +81,15 @@ window.onload = function(){
         const fileExtension = fileName.split(".").pop();
     
         if(!acceptedExtensions.includes(fileExtension)){
-            image.classList.add('is-invalid-front');   
+            image.classList.add('is-invalid-front');
             imageError.innerText = "Las extensiones aceptadas son "+ acceptedExtensions.join(", ");
         
             this.value = null;
-    }}
+        }else{
+            image.classList.remove('is-invalid-front');
+            imageError.innerText = ""
+  }
+}
 
     brand.addEventListener('blur',function(e){
         if(brand.value == 1 ){

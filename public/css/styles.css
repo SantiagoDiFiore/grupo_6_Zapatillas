@@ -846,6 +846,7 @@ img.main-product-image{
     margin-top: 10px;
     padding-top: 20px;
     background-color: white;
+    cursor: pointer;
 }
 .margin-products{
     padding: 7px;
@@ -908,7 +909,39 @@ ol.nav-site{
 .boton-talle:checked + label { 
     background-image: none;
     background-color:#d0d0d0;
-} */
+} 
+.container-zoom{
+    position: fixed;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 95%);
+    width:100%;
+    height: 100%;
+    z-index:30;
+    top:0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items:center
+}
+.close-zoom{
+    position:absolute;
+    color: white;
+    font-size: 30px;
+    top: 2%;
+    right: 5%;
+    cursor:pointer;
+}
+.image-zoom{
+    margin-top: auto;
+    margin: 5%;
+    width: 80%;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
   
 
 /*MAIN NEW PRODUCT*/

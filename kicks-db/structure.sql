@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-05-2021 a las 16:59:57
+-- Tiempo de generación: 04-06-2021 a las 19:34:33
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.2.19
 
@@ -129,6 +129,7 @@ CREATE TABLE `users` (
   `checkPassword` varchar(100) NOT NULL,
   `terms` varchar(100) NOT NULL,
   `offers` varchar(100) DEFAULT NULL,
+  `isAdmin` tinyint(1) NOT NULL DEFAULT '0',
   `gender_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 

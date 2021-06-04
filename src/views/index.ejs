@@ -6,42 +6,36 @@
 <body>
     <%- include("./partials/header")%>
 
-    <!-- <section class="banner">
-        <img src="/images/banner-nike.jpg" alt="Banner de ofertas">
-        <img src="/images/banner-converse.webp" alt="Banner de ofertas" class="none">
-    </section>
-    <div class="dots">
-        <i class="fas fa-ellipsis-h center-dot"></i>
-    </div> -->
+    <div class="carousel">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="/images/banner-nike.jpg" style="width:100%">
+            </div>
 
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="/images/banner-nike.jpg" style="width:100%">
+            <div class="mySlides fade">
+                <img src="/images/banner-vans.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/banner-adidas.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="/images/banner-puma.jpg" style="width:100%">
+            </div>
+
+            <a class="prev">&#10094;</a>
+            <a class="next">&#10095;</a>
         </div>
 
-        <div class="mySlides fade">
-            <img src="/images/banner-vans.png" style="width:100%">
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" id="dot1"></span>
+            <span class="dot" id="dot2"></span>
+            <span class="dot" id="dot3"></span>
+            <span class="dot" id="dot4"></span>
         </div>
-
-        <div class="mySlides fade">
-            <img src="/images/banner-adidas.png" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-            <img src="/images/banner-puma.jpg" style="width:100%">
-        </div>
-
-        <a class="prev">&#10094;</a>
-        <a class="next">&#10095;</a>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dot" id="dot1"></span>
-        <span class="dot" id="dot2"></span>
-        <span class="dot" id="dot3"></span>
-        <span class="dot" id="dot4"></span>
     </div>
 
     <main>

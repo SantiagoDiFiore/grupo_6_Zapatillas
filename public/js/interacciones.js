@@ -191,12 +191,20 @@ mq.addEventListener("change", () => {
     const dot2 = document.querySelector("#dot2");
     const dot3 = document.querySelector("#dot3");
     const dot4 = document.querySelector("#dot4");
-    
+
+    const carousel = document.querySelector(".carousel");
+
+    if(carousel){
+
     var slideIndex = 1;
     showSlides(slideIndex);
     
     function plusSlides(n) {
         showSlides(slideIndex += n);
+    }
+
+    function avanzar(){
+        return plusSlides(1)
     }
         
     function currentSlide(n) {
@@ -243,7 +251,22 @@ mq.addEventListener("change", () => {
         dots[slideIndex-1].className += " active";
         
     } 
-        
+    setInterval(avanzar,3500)
+}
+
+//zoom imagen product detail
+    let mainProductImage = document.querySelector("#mainProductImage")
+    let containerZoom = document.querySelector(".container-zoom")
+    let closeZoom = document.querySelector(".close-zoom")
+
+    if(mainProductImage){
+        mainProductImage.addEventListener("click",function(){
+                containerZoom.style.display = "flex"
+            closeZoom.addEventListener("click",function(){
+                containerZoom.style.display = "none"
+        })
+    })
+}
 })
 
 
