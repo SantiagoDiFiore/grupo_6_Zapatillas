@@ -1,20 +1,17 @@
 const{validationResult} = require("express-validator");
-const { json, response } = require('express');
-const fs = require('fs');
-const path = require('path');
 const db = require('../database/models');
 const Products = db.Product;
-
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const productsController = {
 
     //muestra todos los productos
-    list: (req, res) => {
+    list: async function(req, res) {
+        let userLogged = await req.session.userLogged
         Products.findAll()
         .then(response =>{
-            res.render("./products/products",{titulo:"Kicks - Productos", products: response, toThousand})
+            res.render("./products/products",{titulo:"Kicks - Productos", products: response, toThousand, userLogged})
         })
     },
 
@@ -22,10 +19,11 @@ const productsController = {
     detail: async function(req,res){
         const producto = await Products.findByPk(req.params.id)
         const products = await Products.findAll()
+        let userLogged = await req.session.userLogged
         let titulo = producto.name
         let size = JSON.parse(producto.size, 'utf-8')
         
-        res.render("./products/productDetail",{titulo, producto, products, size, toThousand})
+        res.render("./products/productDetail",{titulo, producto, products, size, toThousand, userLogged})
         
     },
 
@@ -143,14 +141,12 @@ const productsController = {
             res.render("./products/productCart" ,{titulo:"Carrito", products:Product , listado: ProductCart, userLogged, toThousand})
         }else{
             res.render("./products/productCartGuest" ,{titulo:"Carrito"})
-            
         }
         
     },
     //Guarda un producto en el carrito
     cartStore:async function(req,res){
         let usuariologueado=await req.session.userLogged;
-        
         
         if(usuariologueado){
             await db.ProductCart.create({

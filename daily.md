@@ -50,6 +50,6 @@
 
 ### **- Weekly (Sprint N°8) -**
 -2/6: Realizamos una reunion para realizar la retro, organizar el tablero y dividirnos las tareas.
-
+-3/6: Reunion para realizar las APIs de productos y de usuarios. Quedan pulir detalles.
 
 

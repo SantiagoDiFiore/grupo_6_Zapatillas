@@ -31,9 +31,11 @@
             <div class="title">
                 <h2 class="linea"><span>PRODUCTOS</span></h2>
             </div>
+            <% if (userLogged && userLogged.isAdmin == true) { %>
             <div class="centrado">
                 <a href="/products/create" class="boton-products">CREAR PRODUCTO</a>
             </div>
+            <% } %>
             <section class="destacados">
                 <% for( let i = 0; i < products.length; i++ ) { 
                       let finalPrice = products[i].discount ? (products[i].price - products[i].price * products[i].discount /

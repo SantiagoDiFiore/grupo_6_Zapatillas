@@ -86,9 +86,8 @@
                         </div>
         </form>
 
+        <% if (userLogged && userLogged.isAdmin == true) { %>
         <a href="/products/<%= producto.id %>/edit"><button type="button" class="button-edit">EDITAR</button></a>
-
-
         <form action="/products/<%=producto.id %>?_method=DELETE" method="POST" id="eliminarProducto"
             style="display: inline-flex">
             <button type="submit" class="button-edit button-delete">ELIMINAR</button>
@@ -98,30 +97,18 @@
             <button type="submit" class="button-edit botonEliminarProducto">Si</button>
             <button type="button" class="button-edit botonDenegar">No</button>
         </div>
+        <% } %>
 
         <div class="enviosgratis">
             <p class="envios1"><i class="fas fa-shipping-fast"></i>¡ENVIOS SIN CARGO A TODO EL PAÍS!</p>
         </div>
         </div>
+
         </section>
 
         <h3 class="header-details">Detalles</h3>
         <div class="descripcion">
             <p> <%=producto.description%> </p>
-            <!--  
-            <ul class="detallesLista1">
-                <li><i class="fas fa-chevron-circle-right"></i>Forro interno textil. Suela de caucho</li>
-                <li><i class="fas fa-chevron-circle-right"></i>Exterior de malla con revestimientos de gamuza y TPU</li>
-                <li><i class="fas fa-chevron-circle-right"></i>Amortiguación Adiprene+ en el antepié. Mediasuela de EVA
-                    liviana. Amortiguación Adiprene en el talón</li>
-            </ul>
-            <ul class="detallesLista2">
-                <li><i class="fas fa-chevron-circle-right"></i>Forro interno textil. Suela de caucho</li>
-                <li><i class="fas fa-chevron-circle-right"></i>Exterior de malla con revestimientos de gamuza y TPU</li>
-                <li><i class="fas fa-chevron-circle-right"></i>Amortiguación Adiprene+ en el antepié. Mediasuela de EVA
-                    liviana. Amortiguación Adiprene en el talón</li>
-            </ul>
-            -->
         </div>
 
         <h3 class="margin-products">Otros productos que podrian interesarte...</h3>

@@ -35,9 +35,13 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             allowNull: true
         },
+        isAdmin: {
+            type: DataTypes.BOOLEAN
+        },
         gender_id: {
             type: DataTypes.INTEGER  
         }
+       
     };
     let config = {
         tableName: 'users',

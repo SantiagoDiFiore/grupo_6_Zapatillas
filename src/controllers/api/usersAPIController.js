@@ -3,7 +3,7 @@ const { Op } = require("sequelize");
 
 
 const productsAPIController = {
-    //listado de productos
+    //listado de usuarios
     'list': (req, res) => {
         db.User.findAll()
         .then(users => {    
@@ -31,7 +31,7 @@ const productsAPIController = {
                 res.json(respuesta);
             })
     },
-    //detalle de un producto
+    //detalle de un usuario
     'detail': (req, res) => {
         let id = req.params.id
         db.User.findByPk(id)

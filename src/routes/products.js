@@ -4,6 +4,8 @@ const path= require("path");
 const multer= require("multer");
 const validationsProducts = require("../middlewares/validationsProducts")
 const validationsEditProducts = require("../middlewares/validationsEditProducts")
+const adminMiddleware = require("../middlewares/adminMiddleware")//middleware que no permite ingresar al crear o editar un producto si el usuario no es admin
+
 
 //configuracion de multer
 const storage = multer.diskStorage({
@@ -40,14 +42,14 @@ router.get("/productsKids", productsController.productsKids);
 router.get("/productsMarks", productsController.productsMarks);
 
 //rutas de creacion de productos
-router.get("/create",productsController.create);
+router.get("/create", adminMiddleware, productsController.create);
 router.post("/",upload.single("image"),validationsProducts ,productsController.store);
 
 //ruta a detalle de producto
 router.get("/:id", productsController.detail);
 
 //rutas de edicion de producto
-router.get("/:id/edit",productsController.edit);
+router.get("/:id/edit", adminMiddleware, productsController.edit);
 router.put("/:id", upload.single("image"),validationsEditProducts,productsController.update);
 
 //ruta de borrado de producto
