@@ -275,7 +275,7 @@ div.medios-pago{
     border: solid 1px #000000;
 }
 .newsletter{
-    margin: 15px;
+    margin: 15px 15px 0px 15px;
 }
 .newsletter-title{
     text-align: center;
@@ -888,6 +888,7 @@ ol.nav-site{
 }
 .margin-search{
     font-size: 20px;
+    margin: 175px 0px;
 }
 
 .boton-talle{
@@ -1125,6 +1126,7 @@ margin: 15px 0px 10px 0px;
 footer{
     background-color: #222021;
     color: white; 
+    margin-top:35px
 }
 .footer-article{
     display: none;
@@ -1534,7 +1536,7 @@ div.italic {
         width: 30%;
     }
     .margin-search{
-        margin: 100px 0px;
+        margin: 150px 0px;
         font-size: 25px;
     }
     .modal-container{

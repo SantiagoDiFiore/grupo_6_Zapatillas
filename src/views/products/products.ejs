@@ -8,9 +8,15 @@
 
     <main>
         <div class="products-block">
+            <% if (!userLogged || userLogged && userLogged.isAdmin == false ) { %>
+            <div class="encabezado-carrito">
+                <h3>PRODUCTOS</h3>
+            </div>
+            <% } else if (userLogged && userLogged.isAdmin == true) { %>
             <div class="encabezado-carrito">
                 <h3>PRODUCTOS <a href="/products/create" class="boton-de-compra">CREAR PRODUCTO</a></h3>
             </div>
+            <% } %>
             <br>
             <section class="elementos-carrito">
                 <% for( let i = 0; i < products.length; i++ ) { 
