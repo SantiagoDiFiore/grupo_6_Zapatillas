@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 const productsAPIController = {
     //listado de productos
     'list': (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({include:["genre", "brands", "colors", "categories"]})
         .then(productos => {
             //filtrando las categorias de los productos
             let enOferta = productos.filter(producto => producto.category_id == 2);
@@ -35,10 +35,10 @@ const productsAPIController = {
                         discount:producto.discount,
                         image:"/images/products/" + producto.image,
                         size:producto.size,
-                        genre_id: producto.genre_id,
-                        brands_id: producto.brands_id,
-                        colors_id: producto.colors_id,
-                        category_id: producto.category_id,
+                        genre: {name: producto.genre.name},
+                        brands: {name: producto.brands.name},
+                        colors: {name: producto.colors.name},
+                        categories: {name: producto.categories.name},
                         detail: '/api/products/' + producto.id
                     }
                 })
@@ -49,7 +49,7 @@ const productsAPIController = {
     //detalle de un producto
     'detail': (req, res) => {
         let id=req.params.id
-        db.Product.findByPk(id)
+        db.Product.findByPk(id, {include:["genre", "brands", "colors", "categories"]})
             .then(producto => {
                 let respuesta = {
                     meta: {
@@ -64,10 +64,10 @@ const productsAPIController = {
                         discount:producto.discount,
                         image:"/images/products/" + producto.image,
                         size:producto.size,
-                        genre_id: producto.genre_id,
-                        brands_id: producto.brands_id,
-                        colors_id: producto.colors_id,
-                        category_id: producto.category_id
+                        genre: {name: producto.genre.name},
+                        brands: {name: producto.brands.name},
+                        colors: {name: producto.colors.name},
+                        categories: {name: producto.categories.name},
                     }
                 }
                 res.json(respuesta);
