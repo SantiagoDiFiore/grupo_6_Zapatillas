@@ -13,18 +13,23 @@ const productsAPIController = {
             let destacados = productos.filter(producto => producto.category_id == 4);
             let otros = productos.filter(producto => producto.category_id == 5);
 
+        db.Category.findAll()
+        .then(categories =>{
+            let countCategories = categories
+        
             //respuesta de la API
             let respuesta = {
                 meta: {
                     status : 200,
                     count: productos.length,
                     url: 'api/products',
-                    countByCategory: {
+                    countByCategory:{ 
                         enOferta:enOferta.length,
                         ultimosAgregados:ultimosAgregados.length,
                         destacados:destacados.length,
                         otros:otros.length
-                    }   
+                    },
+                    countCategories : countCategories.length - 1
                 },
                 data: productos.map(producto => {
                     return { 
@@ -45,6 +50,7 @@ const productsAPIController = {
             }
                 res.json(respuesta);
             })
+        })
     },
     //detalle de un producto
     'detail': (req, res) => {
