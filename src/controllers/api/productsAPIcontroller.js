@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 const productsAPIController = {
     //listado de productos
     'list': (req, res) => {
-        db.Product.findAll({include:["genre", "brands", "colors", "categories"]})
+        db.Product.findAll({include:["genre", "brands", "colors", "categories"],order:[['id', 'ASC']]})
         .then(productos => {
             //filtrando las categorias de los productos
             let enOferta = productos.filter(producto => producto.category_id == 2);
