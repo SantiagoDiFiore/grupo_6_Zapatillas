@@ -4,18 +4,20 @@ const { Op } = require("sequelize");
 
 const productsAPIController = {
     //listado de productos
-    'list': (req, res) => {
-        db.Product.findAll({include:["genre", "brands", "colors", "categories"],order:[['id', 'ASC']]})
-        .then(productos => {
-            //filtrando las categorias de los productos
-            let enOferta = productos.filter(producto => producto.category_id == 2);
-            let ultimosAgregados = productos.filter(producto => producto.category_id == 3);
-            let destacados = productos.filter(producto => producto.category_id == 4);
-            let otros = productos.filter(producto => producto.category_id == 5);
+    'list':async function(req, res){
 
-        db.Category.findAll()
-        .then(categories =>{
-            let countCategories = categories
+        //consultas a la db
+       let productos= await db.Product.findAll({include:["genre", "brands", "colors", "categories"],order:[['id', 'ASC']]})
+       let categories= await db.Category.findAll()
+
+         //filtrando las categorias de los productos
+         let enOferta = productos.filter(producto => producto.category_id == 2);
+         let ultimosAgregados = productos.filter(producto => producto.category_id == 3);
+         let destacados = productos.filter(producto => producto.category_id == 4);
+         let otros = productos.filter(producto => producto.category_id == 5);
+   
+        //contando las categorias
+        let countCategories = categories
         
             //respuesta de la API
             let respuesta = {
@@ -49,8 +51,8 @@ const productsAPIController = {
                 })
             }
                 res.json(respuesta);
-            })
-        })
+            
+        
     },
     //detalle de un producto
     'detail': (req, res) => {
