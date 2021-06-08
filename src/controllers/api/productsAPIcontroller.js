@@ -13,22 +13,16 @@ const productsAPIController = {
         where: {
             id: {[Op.gt]: 1}
         }})
+        let productsInCart = await db.ProductCart.findAll()
 
-         //filtrando las categorias de los productos
-         let enOferta = productos.filter(producto => producto.category_id == 2);
-         let ultimosAgregados = productos.filter(producto => producto.category_id == 3);
-         let destacados = productos.filter(producto => producto.category_id == 4);
-         let otros = productos.filter(producto => producto.category_id == 5);
-   
-        
-        
             //respuesta de la API
             let respuesta = {
                 meta: {
                     status : 200,
                     count: productos.length,
                     url: 'api/products',
-                    countCategories : categories.length 
+                    countCategories : categories.length,
+                    productsInCart: productsInCart.length
                 },
                 data: productos.map(producto => {
                     return { 
@@ -52,12 +46,11 @@ const productsAPIController = {
                             name:category.name,
                             totalProducts:category.products.length,
                             products:category.products
-                        
                     }
-                })
+                }),
+                productsInCart: productsInCart
             }
                 res.json(respuesta);
-            
         
     },
     //detalle de un producto
