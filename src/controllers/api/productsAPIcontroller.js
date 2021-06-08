@@ -8,7 +8,11 @@ const productsAPIController = {
 
         //consultas a la db
        let productos= await db.Product.findAll({include:["genre", "brands", "colors", "categories"],order:[['id', 'ASC']]})
-       let categories= await db.Category.findAll({include:["products"]})
+       let categories= await db.Category.findAll({
+        include:["products"],
+        where: {
+            id: {[Op.gt]: 1}
+        }})
 
          //filtrando las categorias de los productos
          let enOferta = productos.filter(producto => producto.category_id == 2);
@@ -16,8 +20,7 @@ const productsAPIController = {
          let destacados = productos.filter(producto => producto.category_id == 4);
          let otros = productos.filter(producto => producto.category_id == 5);
    
-        //contando las categorias
-        let countCategories = categories
+        
         
             //respuesta de la API
             let respuesta = {
@@ -25,7 +28,7 @@ const productsAPIController = {
                     status : 200,
                     count: productos.length,
                     url: 'api/products',
-                    countCategories : countCategories.length - 1
+                    countCategories : categories.length 
                 },
                 data: productos.map(producto => {
                     return { 
