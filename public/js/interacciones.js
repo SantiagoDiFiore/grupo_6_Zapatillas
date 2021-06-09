@@ -267,6 +267,21 @@ mq.addEventListener("change", () => {
         })
     })
 }
+
+//popUp guia de talles
+let clickTalles = document.querySelector("#clickTalles")
+let containerTalles = document.querySelector(".container-talles")
+let closeTalles = document.querySelector(".close-talles")
+
+if(clickTalles){
+   clickTalles.addEventListener("click",function(e){
+            e.preventDefault()
+            containerTalles.style.display = "flex"
+        closeTalles.addEventListener("click",function(){
+            containerTalles.style.display = "none"
+    })
+})
+}
 })
 
 

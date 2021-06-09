@@ -29,6 +29,10 @@
                     <span class="close-zoom">X</span>
                     <img src=<%="/images/products/"+producto.image %> alt=<%=producto.name%> class="image-zoom">
                 </div>
+                <div class="container-talles">
+                    <span class="close-talles">X</span>
+                    <img src="/images/guia-talles.png" alt="guia-talles" class="image-talles">
+                </div>
 
                 <div class="data-principal">
                     <div class="product-body">
@@ -67,8 +71,8 @@
                                 <label for="<%= size[i] %>"><%= size[i] %></label>
                                 <% } %>
                             </div>
-                            <p class="guia-talles"><a href=# class="cfont-talles"><i
-                                        class="fas fa-ruler-horizontal"></i>
+                            <p class="guia-talles"><a href=# class="cfont-talles" id="clickTalles"><i
+                                        class="fas fa-ruler-horizontal" ></i>
                                     Guía de talles</a></p>
                         </div>
 
