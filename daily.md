@@ -53,5 +53,8 @@
 -3/6: Reunion para realizar las APIs de productos y de usuarios. Quedan pulir detalles.
 -4/6: Avanzamos con el sprint en la clase, finalizamos las APIs y comenzamos con el dashboard.
 -6/6: Realizamos una reunion para avanzar con el dashboard.
+-8/6: Realizamos una reunion para finalizar con el dashboard.
+-9/6: Ultima reunion antes de la presentacion, nos organizamos y pulimos los ultimos detalles.
+-14/5: Realizamos una reunion para planificar la presentacion del proyecto para la clase final.
 
 

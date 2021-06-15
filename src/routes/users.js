@@ -4,6 +4,7 @@ const path = require("path");
 const usersController = require("../controllers/usersController")
 const multer = require("multer");
 const validations = require("../middlewares/validationsRegister")//requerimos el middleware con las validaciones de express-validator
+const validationsEditUsers = require("../middlewares/validationsEditUsers")//middleware que no permite ingresar al login ni register si el usuario ESTÁ logueado
 const authMiddleware = require("../middlewares/authMiddleware")//middleware que no permite ingresar al perfil si el usuario No está logueado
 const guestMiddleware = require("../middlewares/guestMiddleware")//middleware que no permite ingresar al login ni register si el usuario ESTÁ logueado
 
@@ -38,7 +39,7 @@ router.get("/logout" , usersController.logout);
 
 //RUTAS DE EDICION DE USUARIO
 router.get("/edit",authMiddleware,usersController.edit);
-router.put("/edit", upload.single("image"),validations, usersController.update);
+router.put("/edit", upload.single("image"), validationsEditUsers, usersController.update);
 
 //RUTA DE BORRADO DE USUARIO
 router.delete("/delete/:id",usersController.destroy);

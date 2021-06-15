@@ -113,6 +113,7 @@ const usersController = {
     },
     update: async function(req,res){ //el formulario debe pasar primero las validaciones
         const errors = validationResult(req);
+        let userToEdit = req.session.userLogged
         const genders = await db.Gender.findAll() 
         if (!errors.isEmpty()){
             res.render("./users/userEdit" ,{titulo:"¡Hubo un error en la edicion!" , errors:errors.mapped() ,user:req.session.userLogged, old:req.body, genders,})
@@ -139,13 +140,20 @@ const usersController = {
  
         let checkPassword= req.body.checkPassword;
         let checkCrypted= bcrypt.hashSync(checkPassword,10);//hasheando checkpassword que llega
- 
+        
+        let image
+        if(req.file !=undefined){
+			image = req.file.filename //sobreescribe la imagen del producto con la que subio el usuario
+		} else {
+			image = userToEdit.image //se vuelve a guardar la misma imagen
+		}
+
         //el nuevo usuario se conforma con lo que llega del form + los password encriptados+imagen
         await Users.update({
             firstName: req.body.firstName,
             lastName: req.body.lastName,
             birthday: req.body.birthday,
-            image:req.file.filename,
+            image:image,
             email: req.body.email,
             password: passCryted,
             checkPassword: checkCrypted,

@@ -360,18 +360,15 @@ margin-top: 10%;
     margin-bottom: 10%;
 }
 .menu-open{
-    background-color: black;
+    background-color: #222021;
     position: fixed;
     z-index: 99;
     top: 0px;
     left: 0px;
-    width: 70%;
+    width: 55%;
     height: 100%;
-    max-height: 570px;
     display:none;
-    
 }
-
 .menu-close{
         font-size: 30px;
         color: white;
@@ -402,7 +399,12 @@ margin-top: 10%;
     color: #d97f11;
     text-decoration: none;
     font-size: 22px;
-    
+}
+.none-marks{
+    display: none;
+}
+.block-marks{
+    display: block;
 }
 
 /* Carousel */
@@ -888,7 +890,6 @@ ol.nav-site{
     display: none;
 }
 .margin-search{
-    font-size: 20px;
     margin: 175px 0px;
 }
 
@@ -1351,6 +1352,12 @@ div.italic {
     }
     .miniatura{
         max-height: 100%;
+    }
+    .none-marks{
+        display: block;
+    }
+    .block-marks{
+        display: none;
     }
 }
 
